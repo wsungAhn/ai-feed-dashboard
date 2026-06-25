@@ -2654,7 +2654,7 @@ An Instagram Reel discusses the Claude Opus AI model, describing it as overly ta
 function submitComment(itemId, btn) {
   const textarea = document.getElementById('comment-' + itemId);
   const comment = textarea.value.trim();
-  if (!comment) { textarea.focus(); return; }
+  if (!comment) { textarea.placeholder = '내용을 입력해주세요'; textarea.focus(); return; }
 
   const title = encodeURIComponent('comment:' + itemId);
   const body = encodeURIComponent(
@@ -2666,10 +2666,13 @@ function submitComment(itemId, btn) {
     + '&labels=ai-feed-action'
     + '&body=' + body;
 
-  window.open(url, '_blank');
+  // window.open 대신 href 직접 변경 → 팝업 차단 우회
+  btn.href = url;
+  btn.target = '_blank';
+  btn.rel = 'noopener';
   textarea.value = '';
-  btn.textContent = '✓ 제출됨';
-  setTimeout(() => { btn.textContent = '💬 의견 제출'; }, 3000);
+  btn.textContent = '✓ 이슈 창 열림';
+  setTimeout(() => { btn.textContent = '💬 의견 제출'; btn.href = '#'; }, 4000);
 }
 </script>
 </body>
