@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ai-feed 대시보드</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         background: #0f172a; color: #e2e8f0; min-height: 100vh; padding: 24px; }
+  header { max-width: 900px; margin: 0 auto 32px; display: flex;
+            justify-content: space-between; align-items: center; }
+  h1 { font-size: 22px; font-weight: 700; color: #f1f5f9; }
+  .meta { font-size: 13px; color: #64748b; }
+  .grid { max-width: 900px; margin: 0 auto;
+           display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+           gap: 16px; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px;
+           padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .card-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .platform { font-size: 12px; font-weight: 600; color: #94a3b8;
+               background: #0f172a; padding: 2px 8px; border-radius: 6px; }
+  .date { font-size: 12px; color: #475569; }
+  .summary { font-size: 14px; line-height: 1.6; color: #cbd5e1; }
+  .surfaces { display: flex; flex-wrap: wrap; gap: 6px; }
+  .badge { font-size: 12px; background: #1d4ed8; color: #bfdbfe;
+            padding: 2px 8px; border-radius: 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { font-size: 11px; color: #64748b; }
+  .card-footer { margin-top: 4px; }
+  .card-footer a { font-size: 13px; color: #60a5fa; text-decoration: none; }
+  .card-footer a:hover { text-decoration: underline; }
+  .count { font-size: 13px; color: #64748b; max-width: 900px; margin: 0 auto 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🧠 ai-feed 인사이트</h1>
+  <span class="meta">업데이트: 2026-06-25</span>
+</header>
+<p class="count">승인 대기 110건</p>
+<div class="grid">
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Voicebox는 음성 합성·클로닝·효과 처리를 로컬 환경에서 제공하는 오픈소스 AI 음성 스튜디오로 소개된다. MCP 연동을 통해 Claude Code 등의 응답을 합성 음성으로 읽는 기능과 여러 TTS 엔진 선택 기능을 제공한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#Voicebox</span> <span class="tag">#오픈소스</span> <span class="tag">#로컬 AI</span> <span class="tag">#음성 합성</span> <span class="tag">#음성 클로닝</span> <span class="tag">#TTS</span> <span class="tag">#MCP</span> <span class="tag">#Claude Code</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZ6njiYlUTu/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Claude에 짧은 명령어를 입력해 아이디어 반박, 계획 재설계, 직설적 비판, 쉬운 설명, 누락 사항 탐지를 유도하는 프롬프트 활용법을 소개한다. 복잡한 프롬프트라기보다 원하는 검토 관점을 간단한 키워드로 지정하는 방법이다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#프롬프트</span> <span class="tag">#아이디어 검증</span> <span class="tag">#계획 리뷰</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZ5cjuzsuMC/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">ChatGPT로 1분 분량의 공포 스토리를 작성하고 Clipie.ai에서 아트 스타일, 음성, 장면, 자막을 설정해 숏폼 영상을 만드는 과정을 소개한다. 영상 편집 경험 없이도 제작할 수 있다고 홍보하며, 사용한 프롬프트와 제작 과정을 담은 Notion 가이드를 댓글 참여 방식으로 제공한다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#ChatGPT</span> <span class="tag">#Clipie.ai</span> <span class="tag">#AI 영상 생성</span> <span class="tag">#공포 숏폼</span> <span class="tag">#콘텐츠 자동화</span> <span class="tag">#faceless video</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZ7sUZ2y6V1/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Higgsfield MCP를 Claude 커스텀 커넥터에 연결하면 상품 링크를 기반으로 제품 분석과 광고 영상 제작을 자동화할 수 있다고 소개한다. 촬영이나 얼굴 노출 없이 약 5분 만에 광고를 제작할 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Higgsfield</span> <span class="tag">#Claude</span> <span class="tag">#MCP</span> <span class="tag">#AI 광고 제작</span> <span class="tag">#콘텐츠 자동화</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZra_kUR9zV/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude 프롬프트 앞에 /blueprint, /critic, /steelman, /hooks 같은 명령어를 붙이면 계획 수립, 비판, 논리 강화, 후킹 문구 생성 품질이 향상된다고 주장한다. 120개 프롬프트 모음집을 댓글과 DM을 통해 배포하는 홍보성 콘텐츠다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#프롬프트</span> <span class="tag">#프롬프트 엔지니어링</span> <span class="tag">#AI 활용</span> <span class="tag">#콘텐츠 제작</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYhuhtsSG25/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">Anthropic의 사이버보안용 AI 에이전트 스킬 저장소 또는 문서를 소개하는 내용으로 보인다. SKILL.md 기반 사용법과 MITRE ATT&CK·ATLAS·D3FEND, NIST CSF 2.0·AI RMF 등의 보안 프레임워크 연계를 다룬다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Anthropic</span> <span class="tag">#Cybersecurity</span> <span class="tag">#AI Agent Skills</span> <span class="tag">#MITRE ATT&CK</span> <span class="tag">#NIST</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZ6I3uJmqhs/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">부동산 투자·임대 관리 도구를 활용해 월 약 2만 달러의 수입을 올릴 수 있다는 성공 메시지를 반복한다. InvestorLift, BiggerPockets, AffordableHousing.com, Baselane 등의 서비스가 언급된다.</p>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#부동산투자</span> <span class="tag">#임대관리</span> <span class="tag">#수익창출</span> <span class="tag">#SaaS</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZkoqGPxORH/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">초기 자본 없이 시작할 수 있는 사업으로, 인기 팟캐스트의 긴 YouTube 영상을 AI 도구 Ssemble로 짧은 클립으로 변환하고 소셜 계정에 자동 게시하는 방식을 제안한다. YouTube 채널 URL 등록, 클립 설정, 게시 예약까지 자동화하는 절차를 보여준다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 영상 클리핑</span> <span class="tag">#콘텐츠 자동화</span> <span class="tag">#숏폼 콘텐츠</span> <span class="tag">#YouTube 재가공</span> <span class="tag">#Ssemble</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZF3m6xtACN/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">AI 에이전트 비용을 줄이기 위해 작업 난이도별 모델 라우팅, 정액제 구독과 OAuth 활용, 세션별 컨텍스트 관리를 권장한다. 이를 통해 월간 AI 사용 비용을 400달러에서 50달러 미만으로 줄였다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#모델 라우팅</span> <span class="tag">#비용 최적화</span> <span class="tag">#컨텍스트 관리</span> <span class="tag">#OAuth</span> <span class="tag">#Ollama</span> <span class="tag">#로컬 AI</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZfcb85O39R/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">Instagram·TikTok 화면을 OCR로 추출한 것으로 보이나 텍스트가 심하게 손상되어 핵심 내용을 파악하기 어렵다. 바이럴 영상의 조회수·반응 지표로 추정되는 숫자가 포함되어 있지만 신뢰할 수 있는 주장은 확인되지 않는다.</p>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#OCR 오류</span> <span class="tag">#소셜미디어</span> <span class="tag">#바이럴 콘텐츠</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZyxV-tRUan/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-24</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">Claude를 활용해 영상 효과 플러그인을 즉흥적으로 개발하는 작업 과정을 보여주는 콘텐츠로 추정된다. 다만 원문 대부분이 심하게 손상된 OCR 텍스트여서 구체적인 개발 방법과 결과는 파악하기 어렵다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#vibe-coding</span> <span class="tag">#영상효과</span> <span class="tag">#플러그인개발</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZkdP-gPAYC/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Manual</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Claude를 활용해 콘텐츠 제작, 마케팅, 비즈니스 전략, 리포팅, 제품 기획을 지원하는 실전 프롬프트 모음이다. 롱폼 글쓰기, 콘텐츠 재가공, SEO, 이메일 시퀀스, 경쟁사 분석, 가격 전략, 피치덱, 제품 로드맵 등 반복 업무를 구조화된 입력과 출력 조건으로 자동화한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#프롬프트 엔지니어링</span> <span class="tag">#콘텐츠 자동화</span> <span class="tag">#마케팅</span> <span class="tag">#비즈니스 전략</span> <span class="tag">#생산성</span></div>
+  <div class="card-footer"></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Codex의 SQLite feedback 로그가 과도한 TRACE 이벤트를 지속적으로 기록해 대규모 SSD 쓰기 증폭을 유발한 문제다. 관련 수정 PR 3개가 병합되어 Codex 0.142.0부터 로그량이 크게 감소하며, 추가 수정은 0.143.0에 포함될 예정이다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Codex</span> <span class="tag">#SQLite</span> <span class="tag">#write-amplification</span> <span class="tag">#SSD-endurance</span> <span class="tag">#logging</span> <span class="tag">#performance</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@joonlee0228/post/DZ5OgVkmg2Q?xmt=AQG0RlTN3xVLMrG-7AJ0Y5ibynma0XRpRCoPxCOI6QyEIFu-CaBhuSUq1ehbBNWalYzOFZzx&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">LLM 양자화는 단순한 모델 압축이 아니라 제한된 GPU 자원에서 배포 구조와 운영 방식을 최적화하는 인프라 전략이다. 런타임에 맞는 양자화 기술을 선택하고, 품질 벤치마크와 rollback 절차를 별도로 검증해야 한다.</p>
+  <div class="surfaces"><span class="badge">📄 project-docs</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#LLM 양자화</span> <span class="tag">#GGUF</span> <span class="tag">#로컬 추론</span> <span class="tag">#GPU 메모리 최적화</span> <span class="tag">#Ollama</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@curogom/post/DZ6ipGwmKEM?xmt=AQG0hNpQZNZVtmMyQ5ZtNan7J2epoy1eDkotkn7yzHSYmsV7pbXFSzeYhur3klWrNdWsXyog&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">loop-library는 엔지니어링, 운영, 평가, 설계, 콘텐츠 제작 등 50개 이상의 업무 시나리오를 위한 오픈소스 Loop 템플릿 라이브러리다. 작업 설명을 바탕으로 적절한 Loop를 추천하거나 수정·신규 설계하며, Loop와 Skill이 분리되어 템플릿만 복사해 사용할 수도 있다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Loop Engineering</span> <span class="tag">#AI 에이전트 워크플로우</span> <span class="tag">#프롬프트 템플릿</span> <span class="tag">#오픈소스 AI</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@choi.openai/post/DZ6IoBODWHT?xmt=AQG0UWaqHo6tMVIM_Ma0yVPECwZWCItF3Bz8j9xIvl-2B3w5zUYUit5DkxoDV7UfWQh_9ks&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">LazyCodex와 insane-search를 결합한 하네스로 X, Reddit, Hacker News 등에서 트렌드를 빠르게 수집할 수 있다고 소개한다. Codex에서 `$ultraresearch` 명령을 사용해 브랜드나 개발 AI 트렌드를 조사하는 활용 사례를 제시한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#LazyCodex</span> <span class="tag">#insane-search</span> <span class="tag">#Codex</span> <span class="tag">#AI 리서치</span> <span class="tag">#소셜 트렌드 수집</span> <span class="tag">#에이전트 하네스</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@roach_log/post/DZ7ZFHMml5R?xmt=AQG0Q5FEzyavX3GzVALUJGuxYuZ3H60DLhPenqNLvomGoxGMOuNred1HC_e5mW1NAYqqgq7Y&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">600MB급 Qwen 3 0.6B 로컬 모델이 질문 분류 작업에서 실용적인 정확도와 빠른 응답을 제공했다는 사례다. 소형 로컬 모델이 특정 작업에서는 대형 클라우드 모델 없이도 비용 효율적인 대안이 될 가능성을 시사한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#Qwen 3</span> <span class="tag">#소형 언어 모델</span> <span class="tag">#로컬 추론</span> <span class="tag">#질문 분류</span> <span class="tag">#비용 최적화</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@claudeduck.kr/post/DZ68Usykxuc?xmt=AQG0MDOr_uYjefv_D4QJkDNeqNlBLEeWfOZleLoZJrVFM65thwdH7xfVvbHL4vO5Zcu6hwC3&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">여러 AI 모델과 도구의 강점을 역할별로 분담해 기획, PRD 작성, 검수, 프로토타입, MVP, 백엔드 구현을 순차적으로 수행하는 오케스트레이션 워크플로를 제안한다. Codex와 Claude Opus의 반복 검토·수정 루프 및 기존 오케스트레이션 에이전트 활용을 권장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#AI 오케스트레이션</span> <span class="tag">#멀티에이전트 워크플로</span> <span class="tag">#MVP 개발</span> <span class="tag">#Codex</span> <span class="tag">#Claude Opus</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@lwh_corvus/post/DZ6UUKRkwjc?xmt=AQG0F4Z1ZjKR-cLFzRiFhrd6okZOtrs9d3_Zk_fxPsc9RY_fsxSyhifEMAFwZtq2gtG1ouu5&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">AEON-7이 공개한 Qwen3.6-27B 기반 uncensored MLX 모델의 사용기를 예고하는 내용이다. Apple Silicon 환경의 로컬 AI 모델로 추정되지만, 구체적인 성능이나 사용 결과는 제시되지 않았다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#Qwen3.6</span> <span class="tag">#MLX</span> <span class="tag">#로컬 LLM</span> <span class="tag">#오픈소스 AI</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@zerotodaa/post/DZ7fV-qAbpr?xmt=AQG0vOlaBMQc1sMEUoVIYBTF5IA0IeDwk5lQPJoYuOOXgJjela0iaMVaQO0bp-QJdxs4kjSP&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Cline 팀은 실제 코드 저장소의 동일한 버그를 같은 도구와 환경에서 GLM-5.2와 Opus 4.8에 수정하도록 해 성능을 비교했다. 두 모델 모두 버그를 해결했지만 GLM-5.2는 110만 토큰, Opus 4.8은 66만 토큰을 사용해 작업 방식과 토큰 효율에서 차이를 보였다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#코딩 에이전트</span> <span class="tag">#모델 비교</span> <span class="tag">#토큰 효율</span> <span class="tag">#실전 벤치마크</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DZ6o5JJCZ-K?xmt=AQG0JpQbep1WNcgSCddKjvw-a96Hli9wKu8_GpI9Q1eue3dGO_-N5_YoGSk7ryaYBvgBzW_B&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude Code와 Cowork에서 PM 업무를 지원하는 스킬·워크플로 모음을 소개한다. 시장 조사, 제품 전략, 데이터 분석, 출시, 성장 등 제품 관리 전반을 AI 에이전트로 자동화할 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#PM 자동화</span> <span class="tag">#AI 에이전트</span> <span class="tag">#제품 관리</span> <span class="tag">#워크플로</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DXVwd6QiTDM/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">claude-code-skills v6.0은 Claude Code 프로젝트 전체 라이프사이클을 지원하도록 스킬을 13개에서 10개로 통합한 릴리즈다. 신규 goal-lock 스킬은 PLAN→DO→VERIFY→FINALIZE→OUTPUT 루프를 강제하고 테스트 삭제, mock 포장, 기준 완화 등 성공 위장 패턴을 탐지하도록 설계됐다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#agent skills</span> <span class="tag">#goal-lock</span> <span class="tag">#AI agent harness</span> <span class="tag">#workflow automation</span> <span class="tag">#open source</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@logue007/post/DZ6d96WE81s?xmt=AQG0D9rQ6FIg_55RN2sZd7zCENSPlgw4XXmIOhESvA00mLduk2pI-V9MyQwVC2qZEMUDRrs&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">Spring Boot 기반 전자상거래 프로젝트에서 AI를 활용해 동시성 제어 기능을 개발하는 과정에서 GPL 2.0 코드가 수정된 형태로 포함되어 운영 환경에 배포됐다는 사고 사례다. 이후 오픈소스 개발 측이 라이선스 문제를 제기했으며, 담당 개발자가 퇴사하고 책임을 AI에 돌렸다고 전해진다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#AI 코딩</span> <span class="tag">#오픈소스 라이선스</span> <span class="tag">#GPL 2.0</span> <span class="tag">#Vibe Coding</span> <span class="tag">#소프트웨어 컴플라이언스</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@soundyou/post/DZ4IDKZmbZI?xmt=AQG0CxYe4dwYnwO8vzDdc_iz_ISKRiqcdTNC3215BEHS3kH2IaovsSXmm82myH9G-MIwDUs&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude Projects에 지침을 저장해두면 주제 입력만으로 10장 분량의 한국어 카드뉴스 구성안을 자동 생성할 수 있다는 활용 사례다. 화면 문구뿐 아니라 레이아웃, 그래픽 요소, 전개 구조와 CTA까지 생성해 콘텐츠 제작을 자동화한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude Projects</span> <span class="tag">#카드뉴스 자동화</span> <span class="tag">#콘텐츠 제작</span> <span class="tag">#프롬프트</span> <span class="tag">#Instagram 캐러셀</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZFfDagyK5H/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">Claude Code와 Chrome 연동 도구를 이용해 Instagram 계정을 검색하고, 게시물을 스크롤하며 분석한 뒤 보고서까지 자동 생성할 수 있다고 소개한다. 구체적인 설치 도구와 지시문은 댓글 참여자에게 제공한다고 홍보한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#브라우저 자동화</span> <span class="tag">#Instagram 분석</span> <span class="tag">#AI 에이전트</span> <span class="tag">#Chrome 확장 프로그램</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DWWMstkE7ak/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Instagram Insights 데이터를 Windsor.ai로 연결하고 Claude를 활용해 최근 릴스 성과 분석, 계정 감사, 스크립트 및 콘텐츠 캘린더 생성을 자동화하는 워크플로를 소개한다. 조회수 외에도 저장과 공유를 가중 평가해 효과적인 훅과 포맷을 식별하고 후속 콘텐츠 전략을 수립한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Instagram Insights</span> <span class="tag">#Claude</span> <span class="tag">#Windsor.ai</span> <span class="tag">#콘텐츠 자동화</span> <span class="tag">#릴스 분석</span> <span class="tag">#프롬프트</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZAweAIT_gO/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Vercel 웹앱 배포 시 환경변수, Preview 환경, API 인증, 입력 검증, 로그, 보안 헤더, 비용 관리에서 발생하는 대표적인 실수 10가지를 제시한다. 핵심은 배포 플랫폼의 기본 설정을 신뢰하기보다 비밀정보 노출과 무단 접근을 명시적으로 방지하는 것이다.</p>
+  <div class="surfaces"><span class="badge">📄 project-docs</span></div>
+  <div class="tags"><span class="tag">#Vercel</span> <span class="tag">#웹 보안</span> <span class="tag">#환경변수</span> <span class="tag">#Next.js</span> <span class="tag">#배포</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@caffeine__coder/post/DZ3lmdSEwyV?xmt=AQG0d1OylQAnJkiM3o2RNqxZOyuHuI6afzhWJzcyugrWQ8i1TyXMN4NAgnwk35XK6Bij6do&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">1인 비즈니스에서는 화려한 앱보다 다른 사람들이 반복적으로 사용하는 기반 도구가 더 안정적인 수익원이 될 수 있다고 주장한다. 눈에 잘 띄지 않는 도구의 경제적 가치와 지속적인 수요를 강조하는 홍보성 콘텐츠다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#1인 비즈니스</span> <span class="tag">#도구 수익화</span> <span class="tag">#마이크로 SaaS</span> <span class="tag">#반복 수요</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@untilgotit/post/DZ5-wNrE_hA?xmt=AQG0BAU-5Z81i10AV3LtSJF6mTRAlCaDTdJzgSKTJbeYjTDIj5suH-XiJkFWLxKVw3gcJ4nf&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">OpenRouter는 70개 이상의 프로바이더가 제공하는 400개 이상의 AI 모델을 단일 엔드포인트로 통합한다. 모델 장애 시 fallback 라우팅과 요청에 적합한 모델을 자동 선택하는 라우팅 기능을 제공하며, Hermes Agent의 모델 제공자로 사용할 수 있다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#OpenRouter</span> <span class="tag">#AI 모델 라우팅</span> <span class="tag">#멀티 프로바이더</span> <span class="tag">#fallback</span> <span class="tag">#Hermes Agent</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@q_deep_runner/post/DZ4AU05jxCp?xmt=AQG0rnjXuvimQIG-ZgBrweT7JUny9pzgLNvfkJk_-Nk26m1HAcgNXhWiqLtHL0DSTYj1UxyM&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">피터양은 Codex를 활용해 대화에서 학습하고 응답 전 자체 평가를 수행하는 Claude Skill 구축 방식을 시연했다. 이 Skill은 역할, 사용자 맥락, 누적 학습 내용, 자체 점검 기준을 각각 관리하는 4개 텍스트 파일로 구성된다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#Claude Skill</span> <span class="tag">#Codex</span> <span class="tag">#자기개선 에이전트</span> <span class="tag">#메모리</span> <span class="tag">#응답 평가</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@softdaddy_o/post/DZ5_in5k_of?xmt=AQG0iD5ajW-sGD4af4ox4m5kgIPZUWEjU3gK24mm7RJP2TTpC5nZ12djeyzgI-N73i55r-v2&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-23</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Fugu는 사람이 고정한 라우팅 규칙 대신, 어떤 AI 모델을 언제 호출할지 학습한 AI 기반 멀티모델 오케스트레이션 시스템이다. 필요하면 자기 검토를 수행하고, 모델 장애나 구성 변경 시 다른 모델로 전환할 수 있다고 설명한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#멀티모델 오케스트레이션</span> <span class="tag">#AI 모델 라우팅</span> <span class="tag">#자동 장애 전환</span> <span class="tag">#자기 검토</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@choi.openai/post/DZ39wNbD8k0?xmt=AQG0Wg1Va8BHMyKXcO9O-GzN0WpinV_T8p2KcuR0sKCcxwfKBgUPt_kj9eJTkIjWPzG-cDY&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">스타트업 운영에서 팀을 가족이 아닌 성과 중심의 스포츠팀으로 관리하고, 주도적인 인재를 신중하게 채용해야 한다고 주장한다. 지분 보상, 지속적인 피드백, 개인 성장을 위한 대화, 명확한 커뮤니케이션을 핵심적인 인재 유지 전략으로 제안한다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#스타트업 운영</span> <span class="tag">#조직 문화</span> <span class="tag">#채용</span> <span class="tag">#인재 유지</span> <span class="tag">#ESOP</span> <span class="tag">#리더십</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DWhjAFLkiKA/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">NotebookLM을 활용해 유튜브 니치 조사, 대본 재구성, 영상 제작을 수행하고 이를 지역 업체 대상 콘텐츠 대행 서비스로 수익화하는 5단계 방법을 제안한다. 무료 도구만으로 제작비를 최소화하고 월 300달러 규모의 서비스를 판매할 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#NotebookLM</span> <span class="tag">#페이스리스 유튜브</span> <span class="tag">#콘텐츠 자동화</span> <span class="tag">#유튜브 수익화</span> <span class="tag">#AI 서비스 사업</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZ4WJ-YRyMC/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Google Maps에서 지역 사업체 정보를 수집한 뒤 Claude로 영업·웹사이트 기획을 생성하고, AI 비즈니스 구축 도구로 랜딩 페이지와 챗봇을 만드는 자동화 흐름을 소개한다. 완성된 서비스를 해당 사업체에 판매해 수익화할 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#지역 사업체 자동화</span> <span class="tag">#리드 생성</span> <span class="tag">#웹사이트 생성</span> <span class="tag">#AI 서비스 수익화</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZvYgxvilny/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Seedance 2.0으로 유명인의 공항 등장 장면처럼 연출한 15초 AI 영상 프롬프트를 공유하는 홍보성 콘텐츠다. 군중, 플래시, 경호원, 고급 차량 탑승 장면을 시간대별로 구체화하고 댓글 참여를 유도한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Seedance 2.0</span> <span class="tag">#AI 영상 생성</span> <span class="tag">#영상 프롬프트</span> <span class="tag">#숏폼 콘텐츠</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DXvAosRTVjA/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">InVideo의 Agent One이 3개의 레퍼런스와 초 단위 콘티를 바탕으로 키프레임·스토리보드를 구성하고, 16개 샷을 각각 4~5초 영상으로 생성한다는 홍보 콘텐츠다. 이전 클립의 마지막 프레임을 다음 클립의 레퍼런스로 사용해 장면 간 연속성을 유지한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 영상 생성</span> <span class="tag">#InVideo Agent One</span> <span class="tag">#스토리보드 자동화</span> <span class="tag">#영상 연속성</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DY11mN-yKi6/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Claude를 활용해 수요가 높은 디지털 상품을 기획하고 Instagram 콘텐츠와 판매 전략을 구축해 단기간에 매출을 냈다고 홍보한다. 구체적인 시스템과 프롬프트는 유료 7일 프로그램 및 댓글 유도를 통해 제공한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#디지털 상품</span> <span class="tag">#Instagram 마케팅</span> <span class="tag">#AI 수익화</span> <span class="tag">#프롬프트 마케팅</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZdcSaAD7o7/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">한 개발자가 Claude를 활용해 Polymarket 자동매매 시스템을 구축하고, 사람의 개입 없이 하룻밤 동안 47건을 거래해 847달러의 수익을 냈다고 주장한다. 시스템은 GitHub 저장소 7개를 연결해 거래 데이터와 대형 지갑 및 내부자 활동을 분석하고 실시간으로 거래를 실행한 것으로 설명된다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#AI 에이전트</span> <span class="tag">#자동매매</span> <span class="tag">#Polymarket</span> <span class="tag">#트레이딩 봇</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DWZp0rbkt-U/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude Code로 카드뉴스 기획과 스크립트를 만들고, 디자인 도구에서 HTML로 내보낸 뒤 Figma로 가져와 레이어별로 수정하는 워크플로우를 소개한다. 반복적인 디자인은 AI에 맡기고 사람이 핵심 기획에 집중하면 제작 시간과 토큰 사용을 줄일 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#HTML to Figma</span> <span class="tag">#카드뉴스 자동화</span> <span class="tag">#콘텐츠 제작</span> <span class="tag">#프롬프트 템플릿</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYEwJ_0x42G/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">텍스트는 Claude 기반 자동매매 봇이 비트코인, NASDAQ, 원유, 금, S&P 500을 거래해 월 3,000달러를 벌 수 있다고 주장한다. 자산별로 평균회귀·모멘텀 돌파·추세추종 전략을 적용하고, 손절·변동성 기반 포지션 크기·상관관계 필터로 위험을 관리한다고 설명한다.</p>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 트레이딩 봇</span> <span class="tag">#평균회귀</span> <span class="tag">#추세추종</span> <span class="tag">#리스크 관리</span> <span class="tag">#Claude 자동화</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZtUNy2vvy5/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Yorby라는 AI 소셜 미디어 마케팅 도구로 바이럴 영상 URL을 분석하고, 원본의 심리적 유발 요소와 형식을 활용해 새로운 콘텐츠 아이디어를 생성하는 과정을 소개한다. 생성 결과에는 영상 문구, 촬영 구도, 오디오, 반복 재생 방식과 효과 분석이 포함된다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Yorby</span> <span class="tag">#AI 콘텐츠 생성</span> <span class="tag">#소셜 미디어 마케팅</span> <span class="tag">#바이럴 영상 분석</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DUYjZZUEXYf/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude용 프롬프트를 활용해 소셜 미디어 훅, 릴스, 캐러셀, CTA 등을 생성하고 콘텐츠를 재활용하는 방법을 소개한다. 작성자는 이 방식으로 3개월 만에 팔로워 4만 명 이상을 확보했다고 주장하며, 댓글 키워드를 통한 리드 수집을 유도한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#콘텐츠 마케팅</span> <span class="tag">#프롬프트 엔지니어링</span> <span class="tag">#소셜 미디어</span> <span class="tag">#리드 생성</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DXR1lo-NWCW/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude Code의 성능과 작업 방식을 개선하는 도구로 Sequential Thinking, Superpowers, Context7, Code Simplifier를 추천한다. 각 도구가 추론 보조, spec-driven 개발, 최신 문서 조회, 코드 단순화를 담당한다고 주장하며 설치를 유도한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#MCP</span> <span class="tag">#Sequential Thinking</span> <span class="tag">#Superpowers</span> <span class="tag">#Context7</span> <span class="tag">#Code Simplifier</span> <span class="tag">#AI 코딩 도구</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DXlDlY7E07o/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude Code의 웹 디자인·모션 작업에 유용한 6개 스킬로 stitch-skill, taste-skill, impeccable, remotion, hyperframes, gsap을 추천한다. 70개 이상의 스킬을 테스트한 결과 이 조합이 디자인 일관성, 코드 개선, 영상·웹 애니메이션 제작 워크플로를 크게 단순화했다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#design skills</span> <span class="tag">#web design</span> <span class="tag">#motion graphics</span> <span class="tag">#Remotion</span> <span class="tag">#GSAP</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DX2oGBDN7M0/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">브라우저 자동화, 멀티플랫폼 리서치, 자연어 데이터 분석, 다이어그램 생성을 지원하는 오픈소스 AI 도구 4개를 소개한다. Claude Code 등의 코딩 에이전트에 skill 또는 plugin 형태로 연결해 업무를 자동화할 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#Claude Code</span> <span class="tag">#오픈소스</span> <span class="tag">#브라우저 자동화</span> <span class="tag">#AI skills</span> <span class="tag">#DuckDB</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DXgeN8ok4lR/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Microsoft Azure의 Windows Server VM에 WSL과 Ubuntu를 설치한 뒤 OpenClaw 저장소를 복제해 실행하는 튜토리얼이다. Mac Mini 구매 없이 Azure 무료 계정으로 OpenClaw를 운영할 수 있다고 주장하며, 상세 지침은 댓글을 통한 DM으로 제공한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#OpenClaw</span> <span class="tag">#Microsoft Azure</span> <span class="tag">#WSL</span> <span class="tag">#Ubuntu</span> <span class="tag">#클라우드 VM</span> <span class="tag">#AI 에이전트</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DXAT1v2gaJU/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">영상은 AI 기반 사이버보안 도구 7개를 소개하며 침투 테스트, 보안 운영, 코드 취약점 수정, LLM 취약점 스캔, 프롬프트 공격 방어 등의 자동화 기능을 강조한다. 확인된 도구는 PentestGPT, Microsoft Security Copilot, DeepCode AI, NVIDIA Garak, Lakera Guard이며 2개 도구의 상세 정보는 누락됐다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 보안</span> <span class="tag">#사이버보안</span> <span class="tag">#LLM 보안</span> <span class="tag">#침투 테스트</span> <span class="tag">#취약점 스캔</span> <span class="tag">#오픈소스 AI</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYrj7mgMopw/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">영상은 Claude prompt를 단순히 저장하는 대신 재사용 가능한 8개 파일로 구성하라고 권장한다. 구체적인 파일 목록과 설정 방법은 영상 본문이 아닌 caption에 있다고 안내한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#prompt-management</span> <span class="tag">#agent-setup</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYtzSLqElDH/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">영상은 Perplexity, Playwright, Firecrawl, Glif, Chrome DevTools 등 5개 MCP 서버를 활용해 Claude의 인터넷 검색, 브라우저 자동화, 웹 크롤링, 이미지·영상 생성 기능을 확장하는 방법을 소개한다. 이를 통해 Claude를 단순 챗봇이 아닌 외부 도구와 상호작용하는 에이전트형 작업 환경으로 활용할 수 있다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#MCP</span> <span class="tag">#Claude Code</span> <span class="tag">#브라우저 자동화</span> <span class="tag">#웹 크롤링</span> <span class="tag">#AI 에이전트</span> <span class="tag">#오픈소스 AI 도구</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DY1NC_zGFbQ/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">영상은 Claude 프롬프트를 개별적으로 북마크하는 대신 재사용 가능한 8개 파일로 구성하라고 권한다. 구체적인 파일 목록과 설정 방법은 영상이 아닌 캡션에 있다고 안내한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#prompt-management</span> <span class="tag">#agent-configuration</span> <span class="tag">#workflow</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYy89HqE4WI/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">제품 출시를 위한 간단한 기술 스택으로 Claude, GitHub, Vercel, Supabase, Stripe를 제안한다. 다만 가장 중요한 요소는 목록에 없다고 암시하며, 구체적인 내용은 제공되지 않은 캡션으로 유도한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#AI 코딩</span> <span class="tag">#제품 개발 스택</span> <span class="tag">#SaaS 개발</span> <span class="tag">#Claude</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DY22VtJh3SB/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">Claude를 활용해 예산 수립, 고금리 저축계좌 비교, 부채 상환 계획, 기초 투자 전략, 부업 아이디어를 얻는 5가지 프롬프트를 소개한다. 개인 재무 정보를 입력하면 맞춤형 조언을 받을 수 있다는 내용이지만, 한 주말 만에 재정 문제 전체를 해결한다는 표현은 과장되어 있다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#프롬프트</span> <span class="tag">#개인 재무</span> <span class="tag">#재무 자동화</span> <span class="tag">#부업</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DX05OyCozyY/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">영상은 일부 AI 스타트업의 Series A 가치보다 더 가치 있다고 주장하는 오픈소스 저장소 5개를 소개하려는 콘텐츠다. 그러나 제공된 구간에는 저장소 목록이나 가치 평가 근거가 포함되지 않았다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#오픈소스</span> <span class="tag">#AI 저장소</span> <span class="tag">#AI 스타트업</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYH0A64NmO9/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">과학 연구와 데이터 분석에서 자주 사용하는 R 패키지 5개를 소개한다. patchwork, Plotly, ComplexHeatmap, ggstatsplot, gganimate를 활용해 결합형·대화형·통계형·애니메이션 시각화를 만들 수 있다고 설명한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#R</span> <span class="tag">#데이터 시각화</span> <span class="tag">#과학 연구</span> <span class="tag">#Plotly</span> <span class="tag">#ggplot2 생태계</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DY3L70qsoy0/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Instagram Reel은 Anthropic의 GitHub 저장소에서 SKILL.md를 내려받아 Claude 프로젝트에 추가하면 Claude의 성능과 작업 방식을 개선할 수 있다고 안내한다. 이를 통해 Claude가 즉시 Anthropic 엔지니어처럼 행동한다는 결과를 주장한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#Anthropic Skills</span> <span class="tag">#SKILL.md</span> <span class="tag">#에이전트 지침</span></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DY6xDPSst4A/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+In this video, a developer introduces a tool called Hookify, which helps prevent repetitive AI mistakes by implementing 'Harness Engineering.' This methodology, introduced by Mitchell Hashimoto, focuses on fixing the environment instead of blaming the AI by setting guidelines so errors don't recur. Hookify, an official Anthropic tool, helps users define such rules easily, which not only improves workflow but also saves thousands of tokens b</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYE9AN5tqGa/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+The audio is an uptempo, energetic electronic track with synthesized vocals repeating phrases like 'You should be loving me' and 'Everything else seems fine' over a driving beat.
+
+[Visible text / cards]
+- [00:00] Girsta AI NEWS (Top header including social handle @Girsta)
+- [00:00] AI Release: Claude can now control TradingView charts and run backtesting through a local MCP bridge (Main video caption text overlay)
+- [00:00] CLAUDE FABLS 5 -</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZzdYr0tg8D/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+The speaker explains how to use 'claude agents' to manage multiple AI agents simultaneously within the terminal, rather than opening separate windows for each. This integrated dashboard view allows for easier tracking of agent statuses and tasks.
+
+[Spoken key points]
+- When running multiple AI processes, use the 'claude agents' command instead of separate terminals.
+- This opens an 'agent view' dashboard within the terminal.
+- The dashboard</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZzqVz-MCfb/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+The video features upbeat pop music with a brief spoken segment from a user-generated content (UGC) ad. The narrator explains that by simply providing a product link, Higgsfield AI can analyze the product features, select a model, and automatically generate a high-quality 15-second UGC-style video without needing to leave the chat interface.
+
+[Spoken key points]
+- If your skin feels dull, this Tree Hut Vanilla Shea Sugar Scrub is my go-to.
+</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZMldHkzJeC/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+The video features high-energy background music with overlapping vocals. No direct speech from the creator is present; the message is conveyed through a progression of text overlays and screen recordings illustrating an AI video editing workflow.
+
+[Spoken key points]
+- A heavy background track plays continuously without spoken narration.
+
+[Visible text / cards]
+- [00:00] editors, are we cooked? (Intro text overlay on a person looking concer</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZwN03mN9M5/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+The video features upbeat, rhythmic pop/electronic music accompanied by a female voice singing lyrics about being 'hot' and a 'party girl.' No spoken instructional content is provided in the audio.
+
+[Spoken key points]
+- "I make a b****" (lyrics extract)
+- "365 party girl" (lyrics extract)
+- "Should we do it again?" (lyrics extract)
+
+[Visible text / cards]
+- [00:00] Higgsfield, GPT, Claude, Gemini (Four app icons at the top of the screen su</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYt8g8Yx2V0/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+The video features upbeat French music with the lyrics 'Ou t'es, papa?' repeating throughout. There is no spoken commentary by the creator.
+
+[Visible text / cards]
+- [00:00] The 5 Claude codes that made me stop using it like a basic ChatGPT alternative (Main title overlay at the top of the screen throughout the video.)
+- [00:02] my full setup is in the caption ↘↖ (A second overlay that appears at the bottom of the screen briefly.)
+
+[Combine</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DYmE8wXiCSr/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+This video shows how to connect Claude (an AI) to a Robinhood trading account for automated and high-level trading assistance. The process involves using Robinhood's Agentic beta, copying a trading MCP link, adding it as a custom connector in Claude's interface, and setting up an agentic trading account. The AI can then be prompted to perform tasks like deep research on stocks, creating watchlists, and scheduling trading tasks that monitor </p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZsM7KVMx59/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">[Instagram Reel multimodal extraction]
+
+[Audio summary]
+An Instagram Reel discusses the Claude Opus AI model, describing it as overly talkative or anxious when used for coding. The narrator introduces a new repository called opus-fable-mode, which aim to replicate the more direct, efficient, and results-oriented working style of the suspended Fable model through specific behavioral controls and auditing tools.
+
+[Spoken key points]
+- Claude Opus is perceived as too talkative or anxious for coding</p>
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  <div class="card-footer"><a href="https://www.instagram.com/reel/DZm-_RXtr4q/" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">529 plan을 stock-heavy index portfolio로 운용하면 장기적으로 연평균 7% 이상 수익을 기대할 수 있으며, 자녀 출생 직후부터 매달 500달러씩 18년간 납입하면 원금 108,000달러가 약 190,000달러로 증가할 수 있다는 내용이다. 교육 목적 사용 시 투자 성장분은 tax-free이지만, 비교육 목적 사용 시 penalty와 세금이 발생하며 FAFSA에서는 부모 자산으로 반영된다는 점을 설명한다.</p>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#529-plan</span> <span class="tag">#education-savings</span> <span class="tag">#tax-advantaged-account</span> <span class="tag">#investment-return</span> <span class="tag">#FAFSA</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@crna_all_you_can_do/post/DPK6UWijOAH?xmt=AQG0HT-5NXj5I49rApcnP2f7x6O9TMRM56u29XLmyamvb3EmO_B5BTKJ27mwP6WlE2EMox4&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">캐나다 RESP Family Plan을 활용해 자녀 교육비를 장기적으로 준비하자는 내용이다. 월 $209 자동 투자로 CESG 최대 혜택을 노리고, BCTESG까지 신청하면 수익률에 따라 약 $75k~$173k까지 마련할 수 있다고 주장한다.</p>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#RESP</span> <span class="tag">#education-savings</span> <span class="tag">#CESG</span> <span class="tag">#BCTESG</span> <span class="tag">#family-finance</span> <span class="tag">#Canada</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@tjworld12/post/DNb9L6lPV2L?xmt=AQG0UbmuymBEE1Z4k4L4XLbHre8WIjhj-y9I87AgXmzzT9nW0-_BfTyRBwZeFFnIl0rSU6iu&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Apify MCP Server는 Claude Desktop에서 자연어로 웹 스크래핑을 자동화할 수 있게 해주는 MCP 서버다. 1,800개 이상의 사전 구축 웹 스크래퍼를 실행해 소셜 미디어, 검색 결과, 경쟁사 가격, 논문 정보 등을 수집·요약할 수 있다고 설명한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#MCP</span> <span class="tag">#Claude Desktop</span> <span class="tag">#web scraping</span> <span class="tag">#Apify</span> <span class="tag">#automation</span> <span class="tag">#data collection</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@alex_ai_mcp/post/DP7n6iuiFrH?xmt=AQG0oXfwfNhLxNwnyi2RhqwX9OOAX35XusMlMM8hye5N2TZVjrx7eFEmWXbr-dppkLIZNDA&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">짧은 Python 코드만으로 개인 금융 어드바이저를 만들 수 있으며, 그 방식이 완전 오픈소스로 제공된다는 주장이다. 구체적인 구현, 프로젝트명, 성능, 법적 준수 여부는 제시되지 않았다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Python</span> <span class="tag">#open-source</span> <span class="tag">#financial-advisor</span> <span class="tag">#AI-tools</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@quantscience_/post/DQB91YlkueI?xmt=AQG0ziDlJ3ONbcAeQyval2Gq1QYr7V3pJHh9D6JZIMDWMUnNq6whLh4ZxMD9BIsfJpkf3kWA&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">ML Engineer/ML Research Engineer에게 numpy, PyTorch, pandas 이후 중요한 역량은 실험을 빠르고 안정적으로 반복할 수 있는 스택이다. W&B, Hydra, Accelerate/FSDP/DeepSpeed, torch.compile, FlashAttention/xFormers, Triton 등이 실험 관리, 분산 학습, 성능 최적화에 유용한 도구로 제시된다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">📄 project-docs</span></div>
+  <div class="tags"><span class="tag">#ML engineering</span> <span class="tag">#experiment tracking</span> <span class="tag">#distributed training</span> <span class="tag">#performance optimization</span> <span class="tag">#PyTorch</span> <span class="tag">#AI tools</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@moovzi_/post/DTFyiCHEjVC?xmt=AQG0e4OjBw2tnSSyAAm8lZpi7kUWA_E44PLBx3V2JgPi9mWsYGMyafe7_a1w3zQW5Ow71HeU&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">NotebookLM의 핵심 가치는 단순 요약이 아니라 사용자가 넣은 자료를 기반으로 다양한 산출물을 자동 생성하는 데 있다. Sources에 자료를 넣으면 Chat이 질의응답과 요지 파악을 돕고, Studio는 같은 소스를 오디오, 비디오, 마인드맵, 리포트, 퀴즈, 슬라이드 등으로 변환한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#NotebookLM</span> <span class="tag">#AI 생산성</span> <span class="tag">#자료 기반 자동화</span> <span class="tag">#콘텐츠 변환</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@miniminim71/post/DUMxZd3D1t5?xmt=AQG0b6lKxHuk831NYwJOqYgYOvACv4N2fQ4EzJjES4CRLNo1HlBHQcKHYP-VD8t-iq1W_vor&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Andrej Karpathy의 LLM 기반 코딩 철학을 반영한 코딩 에이전트용 필수 프롬프트를 소개한다. CLAUDE.MD에 추가하면 에이전트의 불필요한 작업이나 시행착오를 줄일 수 있다는 주장이다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#coding-agent</span> <span class="tag">#prompt-engineering</span> <span class="tag">#claude-md</span> <span class="tag">#llm-coding</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@leehc_09/post/DU2qIQCkSJg?xmt=AQG0NaehE4GpgjU8k3h3Ojwvoj0I5gm6SFxrhkmLuIIahnKLS8CHWaCaMMMEPeeOk9raMpo&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">AI에게 앱 제작을 요청할 때 기본 설계가 웹페이지 중심으로 잡히는 경우가 많으며, 'Electron 앱'이라고 명시하면 PC에 설치되는 데스크톱 앱을 목표로 하게 된다는 내용이다. Electron을 구현 방법이 아니라 바이브코딩에서 자주 등장하는 용어로 간단히 설명하려는 글이다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Electron</span> <span class="tag">#desktop-app</span> <span class="tag">#vibe-coding</span> <span class="tag">#AI-coding</span> <span class="tag">#terminology</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@miniminim71/post/DU2UbjZj0yj?xmt=AQG0oVtiy0L_Gl8X2SdCt_gke5uDkwAfECqDb9cwWhrem5GdoUCIGcWoJvPPyLRO-me_f_ng&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">텍스트는 팀리더-팀원-하위 에이전트 구조로 대규모 병렬 리서치와 구현을 수행하는 멀티에이전트 워크플로우를 설명한다. 리서치 단계와 구현 단계를 분리하고, 중간 승인 후 팀 구성을 바꿔 재실행하는 방식으로 품질을 높인다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#multi-agent-workflow</span> <span class="tag">#parallel-research</span> <span class="tag">#agent-orchestration</span> <span class="tag">#code-review</span> <span class="tag">#automation</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@ddg.kang/post/DU5yMCLk9BT?xmt=AQG0gKCXAHAORJES5gCsNDfbm7aKD1kje5vK07uAAG-B0FhZyi_YS4r2jyKkeG89DWszONmz&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">AI 코딩 에이전트 팀모드에서 작업 단위가 끝난 하위 에이전트를 교체하고 이전 결과 요약만 전달하면 컨텍스트 과부하를 줄일 수 있다는 주장이다. 리더 에이전트가 기억을 유지한 채 팀원 에이전트를 자동 교체하는 워크플로우를 만들면 속도와 정확도가 좋아진다고 제안한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#컨텍스트 관리</span> <span class="tag">#멀티에이전트 워크플로우</span> <span class="tag">#Claude Code</span> <span class="tag">#코딩 자동화</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@ddg.kang/post/DU5t0ULE45Q?xmt=AQG0F2zfdy8qILFc7QG5MEZ7vgGuf0Bvc5r3gON_nC58JdYzV2lVGddG_ibpg_9GwXWTkHYm&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">래리는 초기 게시물이 미숙했지만 실패와 성공을 반복하며 자신만의 규칙과 공식을 만들었다고 말한다. 스킬 파일을 설치하면 그의 시행착오는 줄일 수 있지만, 사용자가 자기 시스템을 만들려면 고유한 실패 경험이 필요하다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#skill-file</span> <span class="tag">#creator-workflow</span> <span class="tag">#learning-process</span> <span class="tag">#ai-agent-tools</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DVIK8tdiWZT?xmt=AQG0ZEnFV0D91IOSMBjH3yrM4taxykVVc_n410zoS1MRnByjD4AncuBQMFoNeRhwQqBSFH30&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">여러 스타트업의 Excel 자동화는 단순한 VLOOKUP 대체 수준에 머물렀다는 평가가 제시된다. Anthropic의 Claude Cowork 또는 Claude for Excel이 더 실무적인 Excel 활용 가이드로 소개된다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#Excel 자동화</span> <span class="tag">#Anthropic</span> <span class="tag">#AI 생산성</span> <span class="tag">#업무 자동화</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DVKcLDEEwsi?xmt=AQG0DCNBcCTxRTmJzczDTw26PLEM3GtBoQbgSDhh1nvS3-NCV-rm-xZOSl0ZYgFXHlxsUnNk&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Gstack은 Claude Code에 설치해 슬래시 커맨드로 여러 전문가 역할을 사용할 수 있는 무료 도구로 소개된다. 작성자는 사용 후 생산성이 2배 이상 향상된 것 같다고 주장하며 강하게 추천하고 있다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#gstack</span> <span class="tag">#claude-code</span> <span class="tag">#ai-tools</span> <span class="tag">#productivity</span> <span class="tag">#slash-commands</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@automation_claire/post/DWEQ_KPklqK?xmt=AQG0x4ftqlMGEDPrmUmfWs3QiROL8XYNMaFNGYcwV3cU6g-AdPlGeFAm2Lfj26pxOCOZUUE4&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Feynman Claude Code라는 연구용 오픈소스 에이전트가 논문 분석 요청에 대해 출처가 포함된 메타 분석을 생성할 수 있다고 소개한다. MIT 라이선스 기반 무료 도구라는 점을 강조하지만, 구체적인 기능 설명은 텍스트가 중간에 끊겨 있다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#오픈소스 에이전트</span> <span class="tag">#논문 분석</span> <span class="tag">#연구 자동화</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DWVKZUOCU-c?xmt=AQG00nWgHt54gvE-MN4RKCYilh4J85d0BqQxZ70i4ySsPZwQXu25K-NCmWrgRO96xKrXrDw1&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">글쓴이는 주식시장이 개인 투자자보다 기관 중심으로 움직이며, 투자자는 단순한 매수·매도보다 시장 구조를 이해해야 한다고 주장한다. 특히 미국 주식시장은 기관 간 경쟁, 성장주 매집, 헤지펀드 롱숏, 레버리지 사냥, 마켓메이커 활동이 얽힌 전쟁터라고 설명한다.</p>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#주식시장</span> <span class="tag">#시장구조</span> <span class="tag">#기관투자자</span> <span class="tag">#미국주식</span> <span class="tag">#성장주</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@irendebate/post/DW48BvnEkBS?xmt=AQG0WIsob17z9Kq4roFbEYzoZ6UApzGROFGK-4x5QEeyJw2fNdGbN6SQcKy6uSXHI6Vf-PY&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">긴 자연어 프롬프트를 CLI 옵션처럼 짧고 명확한 플래그 형태로 줄이는 방법을 소개한다. 예시는 말투 유지, AI스러운 표현 제거, 원의도 보존, 3회 정제를 `rewrite --my-voice --antislop --higher-fidelity --refine-3x`로 압축한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#prompt-engineering</span> <span class="tag">#prompt-compression</span> <span class="tag">#workflow</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@hosi.oobo/post/DXOTUSklWuo?xmt=AQG02voR4v03dYWYcox4-XaKI8IE75471DVb3Od-BhHomR3BZpdtUYxd6cjLQorxStArTeh8&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">MIT, 하버드, 스탠퍼드 등 주요 대학의 수학·물리·화학 무료 강의 링크를 정리한 GitHub 레포를 소개한다. 학교, 교수, 분야별로 기초과학 강의를 모아 정주행할 수 있다는 내용이다.</p>
+  <div class="surfaces"><span class="badge">📄 project-docs</span></div>
+  <div class="tags"><span class="tag">#무료강의</span> <span class="tag">#기초과학</span> <span class="tag">#github</span> <span class="tag">#온라인교육</span> <span class="tag">#대학강의</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@hyle.ai.kr/post/DXTcumHmJm6?xmt=AQG0WtvDmdp0CkN6_CYFFAh-BhUudz9MDFJRcK7NymNd6KIavpz1u_V-TY80OnHZCRa6hHKK&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">투자 분석 에이전트 개발 과정에서 무료 API 조합을 활용하면 비용 없이 빠른 요약, 분석, 검색, 시장 데이터 수집이 가능하다는 내용이다. 특히 Groq API의 Llama 3.3 70B가 로컬 Ollama Qwen 2.5 32B보다 훨씬 빠르다고 주장하며, 유료 결제 전 무료 API부터 사용해보라고 권한다.</p>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#무료 API</span> <span class="tag">#Groq</span> <span class="tag">#Ollama</span> <span class="tag">#투자 분석</span> <span class="tag">#LLM</span> <span class="tag">#시장 데이터</span> <span class="tag">#FRED</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@honeybee.moment/post/DXTMrjVkihq?xmt=AQG0JhX_ocnw8q_kddbV_gpZnBfV_D18fty0r7mqz3PLNXDj15dPXy-6hqv_6ul86SRqoHNk&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">4월 12일 공개된 어떤 프로젝트가 4월 19일까지 1,352개의 GitHub stars를 얻었다는 내용이다. 작성자는 이들이 여러 도메인에서 'LLM에게 픽셀 대신 표현을 제공한다'는 동일한 접근을 반복 적용하는 점에 주목한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#LLM</span> <span class="tag">#AI 에이전트</span> <span class="tag">#멀티모달</span> <span class="tag">#오픈소스</span> <span class="tag">#브라우저 자동화</span> <span class="tag">#영상 AI</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@sweet_bkan/post/DXT1mnhkiNA?xmt=AQG0yL__h4hz7V01FQzH2qKi099dSyKSl_k8KuZMeqWw0PeH8fyLEujNNvvUkJaKTUpB8QU&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">토이 프로젝트가 갑자기 트래픽을 받으며 무료 티어 한도를 초과하는 상황을 예로 들고, 서비스를 접기보다 최적화·인프라·애널리틱스 대응을 해야 한다고 주장한다. 개발 지식이 부족한 바이브코더도 위기 대응 절차를 프롬프트화해 AI 도움을 받을 수 있다는 메시지다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#바이브코딩</span> <span class="tag">#인프라</span> <span class="tag">#최적화</span> <span class="tag">#Firebase</span> <span class="tag">#트래픽급증</span> <span class="tag">#AI활용</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@darkest_alex/post/DXt_3y_EqSl?xmt=AQG0LlSGkmh-USFTJ92GpvtfRjYqDDbnq-jt2QdmYlOTO9mIx9z5PvNgev01_O3mR9ffWMU&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+  </div>
+  <p class="summary">로컬 AI를 제대로 공부하는 방법을 소개하겠다는 짧은 안내성 문구다. 구체적인 학습 방법이나 검증 가능한 세부 정보는 포함되어 있지 않다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#로컬 AI</span> <span class="tag">#AI 학습</span> <span class="tag">#교육 콘텐츠</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@slamslam__/post/DXyDg4wk8wB?xmt=AQG0VHae4-Rg5wThWvPkmFsFlpx0oIC2fW9SAO4wqyS2tOOR-X23G8gnbmOngSnbfTRsUAmK&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#22c55e;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+  </div>
+  <p class="summary">AI를 활용해 빠르게 기능만 구현하는 방식은 서비스 안정성과 비즈니스 리스크를 키울 수 있다는 경고다. 특히 데이터베이스 설계에서 PK/FK, 참조 무결성, ACID 트랜잭션을 반드시 요구해야 한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#architecture</span> <span class="tag">#database</span> <span class="tag">#data-integrity</span> <span class="tag">#ACID</span> <span class="tag">#AI-coding</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@anovel1004/post/DXyhOYUkU2F?xmt=AQG0r2nQlgHGRGoL7uRxLWirK3xr7roJA-V6UuoPExRnYwv5lH-hWdvrcTMkXaUCVrZQbow&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">텍스트는 매달 AI 구독료를 줄이기 위해 로컬 컴퓨터에 무료 AI 개발 환경을 구축하자는 메시지를 전달한다. 구글의 Gemma 4와 에이전트 IDE Antigravity 조합이 개발자들 사이에서 주목받고 있다고 소개한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#local-ai</span> <span class="tag">#gemma</span> <span class="tag">#agent-ide</span> <span class="tag">#developer-tools</span> <span class="tag">#ai-subscription</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@work.less.better/post/DYHLiXegbdB?xmt=AQG0tFbhyFVCasRM2OvrdXWitN7Ye9kpsjuHUoSg-9tD3NOPVoYMTJvszHnilmvUXBVf8Ek&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">GitHub의 Open-Generative-AI라는 오픈소스 저장소가 이미지, 비디오, 립싱크, 200개 이상의 LLM 통합을 제공한다고 소개한다. ChatGPT, Midjourney, Sora의 오픈소스 대체제를 한곳에 모은 생태계라고 주장한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#open-source-ai</span> <span class="tag">#generative-ai</span> <span class="tag">#github-repository</span> <span class="tag">#ai-tools</span> <span class="tag">#llm</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@qjc.ai/post/DYGsAL_k0YQ?xmt=AQG01de5kxOEg0Cg9CtEi1dc9IXO6is79FTUfG-svEyN60VeGI9c8oti07eucbtJQSH_ICG4&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude, ChatGPT, Gemini, NotebookLM의 실무 활용 팁을 소개한다. 디자인 좌표 추출, 개인화된 일정 요약, 실시간 리서치 결과의 지식 저장소화가 핵심이다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude</span> <span class="tag">#ChatGPT</span> <span class="tag">#Gemini</span> <span class="tag">#NotebookLM</span> <span class="tag">#AI workflow</span> <span class="tag">#personalization</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@work.less.better/post/DYJIqU2AVKK?xmt=AQG0xXguRreZQ9lKTamerfMJdu_C5P8-zhrwRdeND2W-atQ7l6j_87oohYtmuQ0VNMGrymw&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Claude Code 사용 시 생성된 코드 일부가 재작성되며, 그 비용을 줄이기 위해 65줄짜리 Markdown 파일이 도움이 된다는 주장이다. 해당 단일 파일 GitHub repo가 큰 관심을 받았고, 후속 분석 글이 문제의식과 맞닿아 있었다고 설명한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#AI coding</span> <span class="tag">#prompting</span> <span class="tag">#developer workflow</span> <span class="tag">#GitHub repo</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DYXO8a8CW8B?xmt=AQG0BrF5uEZktaGQsAUs_GSGdbU48O3JqxYSTrfQPs8tDtlTD_wSFw4-Cobs1AgBVNdzc4c2&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">8B급 소형 로컬 LLM도 적절한 가드레일을 적용하면 매우 높은 정답률을 낼 수 있다는 사례를 소개한다. 핵심 메시지는 더 큰 모델보다 환각을 줄이는 제약과 검증 구조가 성능에 크게 영향을 줄 수 있다는 점이다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#local-llm</span> <span class="tag">#guardrails</span> <span class="tag">#small-models</span> <span class="tag">#hallucination-reduction</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@chanworks0416/post/DYi90FJjWvQ?xmt=AQG0E7MG-IB9__WPzHR6G5IoFR3jxLKblDT5YRLlr9ZZJIE_vz92_3GAwD-l2kka315kA10M&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">opencairn-post-feature는 작업 완료 시 단순 종료 대신 검증, diff review, 문서 업데이트, commit readiness를 강제로 확인하게 하는 후처리 절차다. 변경 유형에 따라 i18n parity, focused test, PR/review, 다음 세션 handoff까지 점검하도록 요구한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">📄 project-docs</span></div>
+  <div class="tags"><span class="tag">#workflow</span> <span class="tag">#post-feature-checklist</span> <span class="tag">#codex</span> <span class="tag">#review</span> <span class="tag">#testing</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@kimsungbin1119/post/DYWlYXnE3eO?xmt=AQG0FDO5a9khHEw3bXm_fst4O_9ZHUHd40vR14_CqFRxXJAsovhBQEoJf6HxzBCu6lEYygmt&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">작성자는 GPT-5.5 Pro를 사용해 간단히 만든 한국어판 블룸버그 터미널 형태의 결과물을 보고 품질이 예상보다 높다고 평가했다. AI 도구를 활용한 금융 정보 제품 프로토타이핑 가능성을 시사한다.</p>
+  <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#GPT-5.5 Pro</span> <span class="tag">#AI 프로토타이핑</span> <span class="tag">#금융 도구</span> <span class="tag">#한국어 터미널</span> <span class="tag">#AI 제품 개발</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@youngchangjo/post/DY3wIehCU7o?xmt=AQG0s_IkQL9JgkZk4T3DMPr9lvMAjEQub0o4351dKV4I9Tkc-tx3o1DY0cIjffKf7CUkJcnY&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">tw93은 Claude로 만든 투자 리서치 리포트의 내용은 좋지만 HTML 출력물이 반복적으로 촌스럽고 획일적이라는 문제를 발견했다. 그는 AI의 문서 생성 능력 부족이 아니라 디자인·출력 제약의 문제라고 보고 Kami를 만들었다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 문서 생성</span> <span class="tag">#Claude</span> <span class="tag">#HTML 리포트</span> <span class="tag">#Kami</span> <span class="tag">#AI 도구</span> <span class="tag">#디자인 제약</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DY19bQviYYD?xmt=AQG0-Afblx83D2zm0XYDyZsGFNQHeMIez_VRMUdPnZ2fdBIa5F-4bW44e2H3hvaSA76c57E&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">a16z의 Joe Schmidt IV 글을 바탕으로 AI 앱 레이어가 완전히 죽은 것은 아니지만, OpenAI와 Anthropic이 직접 장악한 영역에서는 경쟁이 어렵다는 주장을 소개한다. 코딩, 글쓰기, 이미지 생성처럼 모델 성능이 제품 품질을 거의 결정하는 영역은 대형 AI 랩이 유리하므로, 같은 방식의 Codex나 Claude Code를 만드는 전략은 위험하다는 내용이다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 앱 레이어</span> <span class="tag">#OpenAI</span> <span class="tag">#Anthropic</span> <span class="tag">#AI 제품 전략</span> <span class="tag">#AI 코딩 도구</span> <span class="tag">#a16z</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@aicoffeechat/post/DY3FyNakwxE?xmt=AQG0P_aEu-OusPHLJDfXhG9xAlBfzmJ9IMJryJocSubYfg0_0rLdnBAU6ZKMCGz6qdRLpIxa&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Understand-Anything이 이번 주 GitHub Trending 1위에 올랐다고 소개한다. 이 오픈소스는 코드베이스 전체를 AI가 탐색 가능한 인터랙티브 지식 그래프로 변환하는 도구라고 설명된다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#GitHub Trending</span> <span class="tag">#open-source</span> <span class="tag">#codebase analysis</span> <span class="tag">#knowledge graph</span> <span class="tag">#AI developer tools</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@obangti/post/DZL_NcFFqem?xmt=AQG0pXkSrWdzEs-cFbNYl2-H5c3Phvzuo4vYMGM05Md3AJ_oj7QKDBio63F8OcnYzExWSzx4&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">제미니 12B 모델과 로컬 AI 에이전트를 활용해 구조생물학 기반 신약개발 가설 생성기를 만들 수 있다는 내용이다. Tamarind, Neurosnap, Boltz-2 같은 도구와 구조 데이터를 결합해 단순 문서 검색을 넘어 분자 설계 가설 검증 에이전트로 확장하는 방향을 제안한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Gemini</span> <span class="tag">#local AI agent</span> <span class="tag">#drug discovery</span> <span class="tag">#structural biology</span> <span class="tag">#Agentic RAG</span> <span class="tag">#bio AI</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@doyounkim82/post/DZPBGmnEQV-?xmt=AQG0psCOLwN1vrwQEOozQOoj8JD8-4sH3cyBkD7L5-tdAnpp72WSOWuxGJtI7ffSpo_Peu3Y&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">AI 기능을 데모에서 제품으로 전환할 때 핵심은 화려한 기능보다 반복 가능성이다. 실제 입력 20개를 수집해 성공/부분성공/실패로 라벨링한 뒤 기준을 통과해야 UI 개선에 들어가야 한다는 방법론을 제안한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#AI 제품화</span> <span class="tag">#프롬프트 평가</span> <span class="tag">#실패 샘플</span> <span class="tag">#품질 검증</span> <span class="tag">#반복 가능성</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@verbio_labs/post/DZPimyGksui?xmt=AQG0u06Lo4sm8EHhu0cV-7shtjKXPS1mC7BYZ08DkGIGPHxYGoPEtkInKmQrPo-aP8A2zTw-&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">작성자는 AI 기반 자동 영상 편집이 이미 가능하다고 주장한다. Claude 구독만 있으면 영상 편집 자동화가 간단하며, 사람들이 포기하는 이유는 기술적 한계를 제대로 이해하지 못하기 때문이라고 설명한다.</p>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 영상 편집</span> <span class="tag">#Claude</span> <span class="tag">#자동화</span> <span class="tag">#콘텐츠 제작</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@moment.ryan/post/DZXJjrSk0nF?xmt=AQG0ko5s27hQIQqcx_xK40t6uRWBnObmgg_uJHpQg0gtsy7EDEweGYvw2wSL2NP-1OYPc8U&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">OpenAI와 Anthropic이 개발자 사용자를 두고 경쟁하는 가운데, 일부 사용자는 Codex와 Claude Code 중 하나를 선택하지 않고 함께 사용하는 흐름을 보이고 있다. 텍스트는 Claude를 설계 역할, GPT/Codex를 구현 역할로 나누는 'architect loop' 방식을 두 모델을 결합하는 실용적 패턴으로 제시한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Codex</span> <span class="tag">#Claude Code</span> <span class="tag">#OpenAI</span> <span class="tag">#Anthropic</span> <span class="tag">#AI 개발 워크플로</span> <span class="tag">#멀티모델 에이전트</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DZcB7R_iZ8L?xmt=AQG0XvR0Yp6f1xbbdELjq9lDsYa27qRaxiZkOUosny-Xp6l_d2d4Dd8fYpe3HbJz5YN1Irc&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Peter Steinberger가 코딩 에이전트를 직접 프롬프트하기보다 에이전트가 따를 루프를 설계해야 한다는 관점을 제시했고, 그 실제 사례를 GitHub에 공개했다는 내용이다. 공개된 실물은 코드가 아니라 문서 두 장으로 구성된 루프라고 설명한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#coding-agent</span> <span class="tag">#agent-loop</span> <span class="tag">#prompt-engineering</span> <span class="tag">#github</span> <span class="tag">#workflow-design</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DZc1iUcCcIi?xmt=AQG0z4EUUst0L_3jNcvfIxUZOW_eI2i7xsMhl_QR9MlQPbLvW4Q7jKEzHjxYaVRXKbihFUuA&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">IREN 차트 사례를 통해 기관 매집 분석 매매법을 설명한다. 핵심은 단순 차트매매가 아니라 펀더멘털 훼손 여부, 기관 수급, 변동성 구조를 함께 보고 하락 원인이 기업 문제인지 시장 디레버리징인지 구분하는 것이다.</p>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#기관매집</span> <span class="tag">#수급분석</span> <span class="tag">#변동성</span> <span class="tag">#성장주</span> <span class="tag">#shake-out</span> <span class="tag">#stop-loss-hunting</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@irendebate/post/DZmZQT2ncHX?xmt=AQG075_WzwZdPFw5pAH65Z2lZ2N_q8SeVwiD5JZeGHS328uJTY4aOWsKK_ya27bGI3ZHvUev&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">Scientific Agent Skills는 생물학·화학 등 전문 데이터베이스와 연결되는 140개 이상의 R&D 스킬을 에이전트에 주입할 수 있다고 소개된다. 로컬 데이터 보존, 개인 API 키 사용, 클라우드 기반 계산·실험 설계 확장 구조를 제공하는 오픈소스 연구 워크스페이스로 설명된다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#scientific-agents</span> <span class="tag">#r&d</span> <span class="tag">#open-source</span> <span class="tag">#research-workspace</span> <span class="tag">#ai-agents</span> <span class="tag">#scientific-computing</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@mori_mement0/post/DZqqA1CE4PY?xmt=AQG0xVy84Dsn_ThXivfW6_J7vC7quStCOrquYyiLrvWHwHmtrQL9luyyXHlDEhFpKQjDuuM&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">고정 VWAP(Anchored VWAP)을 특정 차트 이벤트에 고정해 이후 매수·매도 세력의 평균 단가와 유불리를 읽는 방법을 설명한다. 거래량이 큰 급락봉, 강한 돌파봉, 고점 돌파 실패봉 등 기준점에 따라 해석이 달라진다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#Anchored VWAP</span> <span class="tag">#기술적 분석</span> <span class="tag">#차트 분석</span> <span class="tag">#거래량</span> <span class="tag">#평균 단가</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@qentra_kade/post/DZxi6NsmYWO?xmt=AQG02j77-NpQB_9BPx4TUmspOMXXlgHhiz_llUPx7UZc8ZPFW9nXN8aNz3PxZ3_Pwk7BMufN&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">DiffusionGemma를 실제 사용해 본 결과 문장 요약과 검색 작업에서 뛰어난 성능을 보였다는 평가다. 텍스트 확산 모델이 자기회귀 모델을 넘기 어렵다고 보던 과거 판단과 달리, 2026년 Brendan O'Donoghue가 DiffusionGemma를 공개했다는 점을 강조한다.</p>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#DiffusionGemma</span> <span class="tag">#text-diffusion</span> <span class="tag">#AI-models</span> <span class="tag">#Google-DeepMind</span> <span class="tag">#summarization</span> <span class="tag">#search</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@aikorea24/post/DZ1K_P2n3gO?xmt=AQG08AdFRy6oKUuFEVo9i57O7Xx34aU0hhgoADsAOWqD8ImFbNFp-jucDJMjId0GDbek8XY&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">와이코프 이론의 매집·분산 구조를 설명하며, 스프링과 UTAD를 통해 세력의 매수·매도 흔적을 읽는 방법을 소개한다. 마지막에는 차트에서 와이코프 구조를 자동 감지하고 GPT로 진입·손절·목표가를 산출하는 도구 또는 코드 아이디어로 연결된다.</p>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#와이코프</span> <span class="tag">#기술적분석</span> <span class="tag">#차트분석</span> <span class="tag">#스프링</span> <span class="tag">#UTAD</span> <span class="tag">#트레이딩도구</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@qentra_kade/post/DZ1fcveGedj?xmt=AQG0a_w-Rn1qL--CLNUlue3Ontzg8c2rQ6OfHCc0LOQike8rOrXNtf0sTjowFz4MRLytX8sq&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">omnigent-ai/omnigent는 여러 코딩 에이전트를 교체해 쓰면서 정책, 샌드박스, 협업 레이어를 통합하려는 오픈소스 AI agent meta-harness로 소개된다. 글은 개별 AI 에이전트를 추가하기보다 하네스 표준화가 팀의 자동화 설계와 개발 속도에 더 중요하다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#오픈소스</span> <span class="tag">#코딩 에이전트</span> <span class="tag">#agent harness</span> <span class="tag">#개발 자동화</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@verbio_labs/post/DZ3c-wrEmQs?xmt=AQG0zmPCS0PKs9J1N5kbSK_QmP2SQVN69oJOYVl_UsoFkmNGXiPjKvYPhdAL6-mJI5qnpMrF&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">AI가 생성한 코드는 겉으로는 잘 동작해도 보안상 신뢰할 수 없을 수 있다는 점을 지적한다. 특히 한 조사에서 AI 작성 코드의 절반 가까이에 알려진 보안 약점이 포함됐다는 사례를 들어, 작동 여부와 안전성 사이의 간극을 메워야 한다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#AI 코드 생성</span> <span class="tag">#보안 취약점</span> <span class="tag">#코드 리뷰</span> <span class="tag">#소프트웨어 품질</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG0Leb72z-OJN6K1seXeVlUhzawGy7pT2_YSheswOHv8n7ttvUqaW7TVADFHieO0lhRtrE6&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">AI가 생성한 코드는 동작하더라도 신뢰성과 보안이 보장되지 않을 수 있다. 한 조사에서 AI 생성 코드의 상당수에 알려진 보안 약점이 포함됐다는 점을 근거로, 실행 가능성과 안전성 사이의 간극을 메우는 방법이 필요하다고 주장한다.</p>
+  <div class="surfaces"><span class="badge">⚡ codex</span> <span class="badge">🤖 claude-code</span> <span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#AI 코드 생성</span> <span class="tag">#보안</span> <span class="tag">#코드 리뷰</span> <span class="tag">#소프트웨어 품질</span> <span class="tag">#개발 방법론</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG082GPBh4yVI8xW2Ps49nVn0tsqNOivDFVEOalW7GvCEZnhqB8JNQNf2m2yi53kAAS8ZU3&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-21</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+  </div>
+  <p class="summary">텍스트는 와이코프 매집·분산 구조를 설명하며, 가격 박스권과 거래량 변화, 스프링과 UTAD를 통해 세력의 매수·매도 흔적을 해석하는 방법을 소개한다. 마지막에는 차트 기반으로 와이코프 구조를 자동 분석하고 GPT로 진입·손절·목표가를 생성하는 도구/코드 아이디어를 제시한다.</p>
+  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#와이코프</span> <span class="tag">#차트분석</span> <span class="tag">#기술적분석</span> <span class="tag">#트레이딩</span> <span class="tag">#GPT자동화</span></div>
+  <div class="card-footer"><a href="https://www.threads.com/@qentra_kade/post/DZ1fcveGedj" target="_blank" rel="noopener">🔗 원문</a></div>
+</div>
+</div>
+</body>
+</html>
