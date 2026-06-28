@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 16px;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .summary-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .summary-card-label {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .summary-card-value {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .project-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        details {
+            cursor: pointer;
+        }
+        summary {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        summary:hover {
+            background-color: #334155;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .project-name {
+            font-weight: 600;
+            flex: 1;
+        }
+        .project-last {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .project-content {
+            padding: 0 16px 16px;
+            border-top: 1px solid #334155;
+        }
+        .commits-section,
+        .handoffs-section,
+        .p0-section {
+            margin-bottom: 12px;
+        }
+        .section-label {
+            font-size: 11px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .commit-item,
+        .item {
+            background-color: #0f172a;
+            border-left: 3px solid #334155;
+            padding: 8px 12px;
+            margin-bottom: 4px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        .commit-hash {
+            color: #64748b;
+            font-family: "Monaco", monospace;
+            font-size: 11px;
+        }
+        .commit-msg {
+            color: #e2e8f0;
+        }
+        .commit-when {
+            color: #94a3b8;
+            font-size: 11px;
+        }
+        .empty {
+            color: #64748b;
+            font-size: 12px;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 48px;
+            padding-top: 16px;
+            border-top: 1px solid #334155;
+        }
+        @media (max-width: 640px) {
+            .summary {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PM Dashboard</h1>
+        </header>
+
+        <div class="summary">
+            <div class="summary-card">
+                <div class="summary-card-label">Active Projects</div>
+                <div class="summary-card-value">4</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-card-label">Today Commits</div>
+                <div class="summary-card-value">10</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-card-label">Pending Handoffs</div>
+                <div class="summary-card-value">7</div>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #f59e0b;"></span>
+                        <span class="project-name">CARIP</span>
+                        <span class="project-last">4 weeks ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">38a7744</span> <span class="commit-msg">fix: address Hermes audit issues #4 #5 #7</span></div>
+                                <div class="commit-when">4 weeks ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">4f94ee9</span> <span class="commit-msg">feat: CARIP MVP — CA unclaimed assets search with SoS status matching</span></div>
+                                <div class="commit-when">4 weeks ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">b69231f</span> <span class="commit-msg">chore: add session context checkpoints</span></div>
+                                <div class="commit-when">4 weeks ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="empty">No handoffs</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="project-name">ai-feed</span>
+                        <span class="project-last">5 hours ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">3db778f</span> <span class="commit-msg">feat: 승인 시 자동 적용 + 대시보드 이슈 번호 표시</span></div>
+                                <div class="commit-when">5 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">b5019b8</span> <span class="commit-msg">fix: push_dashboard nothing-to-commit 에러 무시</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">8eed5f6</span> <span class="commit-msg">fix: 대시보드 피드백 지연 개선</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-06-28-pm-dashboard</div>
+                            <div class="item">2026-06-28-agent-reach-integration</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="item">출처</div>
+                            <div class="item">AI-001</div>
+                            <div class="item">🔄 진행 중</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="project-name">alphabot</span>
+                        <span class="project-last">6 hours ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">20b2341</span> <span class="commit-msg">chore: AlphaBot 6h 스냅샷 — cycle #3924 @ 2026-06-28 08:55 UTC</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">57592e3</span> <span class="commit-msg">merge: feature/openrouter-ensemble → main</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">9842b03</span> <span class="commit-msg">feat: 앙상블 리서치 에이전트 + 소셜 시그널 수집기</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-06-27-openrouter-ensemble</div>
+                            <div class="item">2026-06-22-handoff</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="project-name">frankencrawler</span>
+                        <span class="project-last">6 hours ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">b2fab0f</span> <span class="commit-msg">merge: feature/tts-chatterbox → dev</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">9656411</span> <span class="commit-msg">feat: ChatterboxEngine + MCP speak 툴 (AI-016/AI-018)</span></div>
+                                <div class="commit-when">6 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">7bf60d5</span> <span class="commit-msg">feat: 프레임 OCR Apple Vision 우선 (한국어 정확도 우수)</span></div>
+                                <div class="commit-when">2 days ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">2026-06-27-tts-followup</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="project-name">trader</span>
+                        <span class="project-last">2 days ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">65b57aa</span> <span class="commit-msg">chore: weekly handoff 2026-06-26</span></div>
+                                <div class="commit-when">2 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">0b3acae</span> <span class="commit-msg">feat: add Webull full-universe stream capacity probe</span></div>
+                                <div class="commit-when">5 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">b07bc1e</span> <span class="commit-msg">feat: add Webull market data provider</span></div>
+                                <div class="commit-when">5 days ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="empty">No handoffs</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <footer>
+            Updated: 2026-06-28 14:32 UTC
+        </footer>
+    </div>
+</body>
+</html>
