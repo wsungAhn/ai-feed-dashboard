@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="15">
 <title>ai-feed 대시보드</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1481,9 +1480,46 @@ const DISMISSED_KEY = 'aifeed_dismissed';
 const COMMENTED_KEY = 'aifeed_commented';
 const OCR_LOCK_KEY = 'aifeed_ocr_locked';
 const SERVER_OCR_LOCKED = false;
+const RESPONDED_IDS = ["feed_c12a51b926604f53b1672bb0624ca67e", "feed_b9d9536ecfdd452983e0ccbfe5a6d25f", "feed_eb6afe3d049d422fa5e39288559c35f4", "feed_39720643e8fb46dc81cf3a248b05d008", "feed_abc33c12724946db94b7af6d91a99c40", "feed_072b2fb05bb642c3901b100a3abb9f64"];
+const COMMENT_TTL_MS = 3 * 24 * 60 * 60 * 1000; // 3일
 
 function getDismissed() { return JSON.parse(localStorage.getItem(DISMISSED_KEY) || '[]'); }
-function getCommented() { return JSON.parse(localStorage.getItem(COMMENTED_KEY) || '[]'); }
+
+// COMMENTED_KEY는 {id: timestamp} 맵. 구버전(배열) 자동 마이그레이션.
+function getCommented() {
+  const raw = JSON.parse(localStorage.getItem(COMMENTED_KEY) || '{}');
+  if (Array.isArray(raw)) {
+    const now = Date.now();
+    const map = {};
+    raw.forEach(id => { map[id] = now; });
+    localStorage.setItem(COMMENTED_KEY, JSON.stringify(map));
+    return map;
+  }
+  return raw;
+}
+
+// 3일 이내 + 아직 미응답인 ID 목록
+function getActiveCommentedIds() {
+  const map = getCommented();
+  const now = Date.now();
+  return Object.keys(map).filter(id =>
+    !RESPONDED_IDS.includes(id) && now - map[id] < COMMENT_TTL_MS
+  );
+}
+
+// 입력 중 새로고침 방지 — textarea/input 포커스 시 타이머 중단
+let _refreshTimer;
+function _scheduleRefresh() {
+  clearTimeout(_refreshTimer);
+  _refreshTimer = setTimeout(() => location.reload(), 600000);
+}
+document.addEventListener('focusin', e => {
+  if (e.target.matches('textarea, input')) clearTimeout(_refreshTimer);
+});
+document.addEventListener('focusout', e => {
+  if (e.target.matches('textarea, input')) _scheduleRefresh();
+});
+_scheduleRefresh();
 
 function dismissCard(id) {
   const dismissed = getDismissed();
@@ -1497,7 +1533,7 @@ function dismissCard(id) {
 
 function markCommented(id) {
   const commented = getCommented();
-  if (!commented.includes(id)) commented.push(id);
+  commented[id] = Date.now();
   localStorage.setItem(COMMENTED_KEY, JSON.stringify(commented));
   const card = document.getElementById('card-' + id);
   if (card) {
@@ -1512,7 +1548,15 @@ function markCommented(id) {
 
 function toggleCommentBox(id) {
   const box = document.getElementById('comment-box-' + id);
-  if (box) box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  if (!box) return;
+  const opening = box.style.display === 'none';
+  box.style.display = opening ? 'block' : 'none';
+  if (opening) {
+    clearTimeout(_refreshTimer); // box 열리면 새로고침 중단
+    setTimeout(() => { const ta = box.querySelector('textarea'); if (ta) ta.focus(); }, 50);
+  } else {
+    _scheduleRefresh(); // box 닫히면 타이머 재개
+  }
 }
 
 function submitComment(id) {
@@ -1524,7 +1568,8 @@ function submitComment(id) {
     + '&body=' + encodeURIComponent(text);
   window.open(url, '_blank');
   markCommented(id);
-  toggleCommentBox(id);
+  box = document.getElementById('comment-box-' + id);
+  if (box) { box.style.display = 'none'; _scheduleRefresh(); }
   document.getElementById('comment-text-' + id).value = '';
 }
 
@@ -1539,11 +1584,19 @@ function lockOcrButtons() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
+
+  // 응답완료·3일 만료 항목 자동 정리
+  const activeIds = getActiveCommentedIds();
+  const activeMap = {};
+  const allCommented = getCommented();
+  activeIds.forEach(id => { activeMap[id] = allCommented[id]; });
+  localStorage.setItem(COMMENTED_KEY, JSON.stringify(activeMap));
+
   getDismissed().forEach(id => {
     const card = document.getElementById('card-' + id);
     if (card) card.classList.add('dismissed');
   });
-  getCommented().forEach(id => {
+  activeIds.forEach(id => {
     const card = document.getElementById('card-' + id);
     if (card) {
       card.classList.add('commented');
