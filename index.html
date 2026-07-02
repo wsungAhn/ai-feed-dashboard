@@ -100,15 +100,27 @@
   <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#프로젝트 설정</span> <span class="tag">#AI 코딩 도구</span> <span class="tag">#문서 정리</span></div>
   <div class="apply-plan">승인 시 → ~/.claude/CLAUDE.md에 추가 (Claude Code 세션마다 참조)</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-02T21:37</div>
+    <div class="response-body">적용 가능하다. ai-feed는 이미 CLAUDE.md + 메모리 시스템을 운영 중이지만, 현재 설계 참조가 `~/agent_hub/refs/`(글로벌)로 분산돼 있다. 프로젝트 고유 설계 문서들(파이프라인, PM 대시보드 아키텍처, 피드 분류 로직)을 `docs/design-*.md` 구조로 정리하고, 프로젝트 `.claude/settings.json`에 `firecrawl-local`, `pm_server` 같은 로컬 도구 설정을 추가하면 더 자체 완결적이 된다.
+
+**다음 단계:**
+1. ai-feed의 `docs/` 디렉토리 구조 정규화 (현재 메모리와 중복 제거)
+2. 설계 문서 템플릿 작성 (`design-pm-dashboard.md`, `design-feed-classifier.md`)
+3. 프로젝트 `.claude/settings.json` 생성 후 로컬 도구·훅 등록</div>
+    <div class="response-actions">
+      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa" class="btn-approve" target="_blank"
+         onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">✅ 승인</a>
+      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa" class="btn-reject" target="_blank"
+         onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">⏭ 스킵</a>
+      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_8403489077744407ab81bf97baee41aa" class="btn-debunk" target="_blank"
+         onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">❌ 터무니없음</a>
+      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
+         onclick="markCommented('feed_8403489077744407ab81bf97baee41aa'); return true;">💬 재피드백</a>
+    </div>
+  </div>
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa" target="_blank"
-       onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa"  target="_blank"
-       onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_8403489077744407ab81bf97baee41aa"  target="_blank"
-       onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">🚫 알고보니 별로</a>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_8403489077744407ab81bf97baee41aa')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DaM7oVaPOdW/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
@@ -2058,7 +2070,7 @@ const DISMISSED_KEY = 'aifeed_dismissed';
 const COMMENTED_KEY = 'aifeed_commented';
 const OCR_LOCK_KEY = 'aifeed_ocr_locked';
 const SERVER_OCR_LOCKED = false;
-const RESPONDED_IDS = ["feed_eb37829bed08495a9116bd938d62fbf4", "feed_c12a51b926604f53b1672bb0624ca67e", "feed_b9d9536ecfdd452983e0ccbfe5a6d25f", "feed_39d8bcc45ed14427af7186784cb95996", "feed_eb6afe3d049d422fa5e39288559c35f4", "feed_39720643e8fb46dc81cf3a248b05d008", "feed_abc33c12724946db94b7af6d91a99c40", "feed_072b2fb05bb642c3901b100a3abb9f64", "feed_28b60e805431400c8d3798581773b722"];
+const RESPONDED_IDS = ["feed_8403489077744407ab81bf97baee41aa", "feed_eb37829bed08495a9116bd938d62fbf4", "feed_c12a51b926604f53b1672bb0624ca67e", "feed_b9d9536ecfdd452983e0ccbfe5a6d25f", "feed_39d8bcc45ed14427af7186784cb95996", "feed_eb6afe3d049d422fa5e39288559c35f4", "feed_39720643e8fb46dc81cf3a248b05d008", "feed_abc33c12724946db94b7af6d91a99c40", "feed_072b2fb05bb642c3901b100a3abb9f64", "feed_28b60e805431400c8d3798581773b722"];
 const COMMENT_TTL_MS = 3 * 24 * 60 * 60 * 1000; // 3일
 
 function getDismissed() { return JSON.parse(localStorage.getItem(DISMISSED_KEY) || '[]'); }
