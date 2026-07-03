@@ -1914,21 +1914,34 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
 <script>
 // ── 인증 ──────────────────────────────────────────────────────────────
 // 이 페이지는 GitHub Pages(다른 오리진)에 배포되므로 pm_server를 절대
-// URL로 호출한다. 토큰은 ?token= 최초 진입 → localStorage 저장(재방문 시 자동).
+// URL로 호출한다. localStorage는 오리진별로 분리돼 pm.mwco.io에서 저장한
+// 토큰이 이 오리진엔 없을 수 있다 — 토큰이 없으면 그 자리에서 prompt로
+// 받아 이 오리진의 localStorage에 저장한다(재방문 시 자동 재사용).
 const PM_API = 'https://pm.mwco.io';
-const API_TOKEN = new URLSearchParams(location.search).get('token')
-                   || localStorage.getItem('pm_token') || '';
-if (API_TOKEN) localStorage.setItem('pm_token', API_TOKEN);
+
+const urlToken = new URLSearchParams(location.search).get('token');
+if (urlToken) localStorage.setItem('pm_token', urlToken);
+
+function getToken() {
+  let t = localStorage.getItem('pm_token');
+  if (!t) {
+    t = prompt('PM API 토큰을 입력하세요 (최초 1회만, 이 브라우저에 저장됩니다):');
+    if (t) localStorage.setItem('pm_token', t);
+  }
+  return t || '';
+}
 
 async function apiPost(path, body) {
+  const token = getToken();
   const r = await fetch(PM_API + path, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      ...(API_TOKEN ? {'Authorization': 'Bearer ' + API_TOKEN} : {}),
+      ...(token ? {'Authorization': 'Bearer ' + token} : {}),
     },
     body: JSON.stringify(body),
   });
+  if (r.status === 401) localStorage.removeItem('pm_token'); // 잘못된/만료 토큰 → 다음 시도 시 재입력 유도
   const data = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(data.detail || ('HTTP ' + r.status));
   return data;
