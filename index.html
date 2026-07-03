@@ -80,54 +80,8 @@
   <span class="meta">업데이트: 2026-07-03</span>
 </header>
 
-<p class="count">승인 대기 50건</p>
+<p class="count">승인 대기 49건</p>
 <div class="grid">
-
-<div class="card" id="card-feed_256f8f4fdf064361a1442ef724d7b053" data-id="feed_256f8f4fdf064361a1442ef724d7b053">
-  <div class="card-header">
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-30</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">공개된 정보를 활용하는 OSINT만으로도 개인의 삶과 활동을 상당히 상세히 파악할 수 있다는 내용이다. 비밀번호 해킹 없이도 공개 데이터가 위협 행위자에게 악용될 수 있으며, 개인정보 노출과 보안 리스크를 경고한다.</p>
-  <ul class="claims"><li>위협 행위자는 OSINT를 사용해 공개 데이터를 수집하고 분석할 수 있다.</li><li>비밀번호를 해킹하지 않아도 공개 정보만으로 개인의 생활이나 활동을 상당 부분 추적할 수 있다.</li><li>공개된 개인정보는 사이버 공격이나 사회공학 공격에 악용될 수 있다.</li></ul>
-  <div class="surfaces"><span class="badge">📄 project-docs</span></div>
-  <div class="tags"><span class="tag">#OSINT</span> <span class="tag">#cybersecurity</span> <span class="tag">#privacy</span> <span class="tag">#infosec</span> <span class="tag">#red-teaming</span></div>
-  <div class="apply-plan">승인 시 → 프로젝트 설계 문서 반영 제안 생성</div>
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-03T02:33</div>
-    <div class="response-body">충분히 참고할 만합니다. 공개 데이터 노출 지점 찾기는 실제 보안 감사(개인·기업 footprint)의 핵심 항목이거든요. 
-
-**다음 단계 (구체적):**
-1. **스킬 검토** — `/cso` 스킬이 이미 OSINT 체크리스트를 갖고 있는지 확인 (소셜미디어, 공개 레지스트리, DNS, WHOIS 등)
-2. **ai-feed 통합** — 이 아이템을 &quot;보안 위협 신호&quot; 카테고리로 분류·분석해서, PM 대시보드나 감사 리포트에 자동 반영되게 할지 검토
-3. **테스트 케이스** — 실제 감사 대상(예: 가상 회사)에 OSINT 스캔 돌려보고, 결과 품질 평가
-
-어느 방향이 맞을지 알려주면 더 구체적으로 도와드릴 수 있습니다.</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="decide('feed_256f8f4fdf064361a1442ef724d7b053','approve')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_256f8f4fdf064361a1442ef724d7b053','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_256f8f4fdf064361a1442ef724d7b053','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_256f8f4fdf064361a1442ef724d7b053')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_256f8f4fdf064361a1442ef724d7b053&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_256f8f4fdf064361a1442ef724d7b053" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/DaIzCa0Dbgq/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_256f8f4fdf064361a1442ef724d7b053" style="display:none">
-    <textarea id="comment-text-feed_256f8f4fdf064361a1442ef724d7b053" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_256f8f4fdf064361a1442ef724d7b053')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_256f8f4fdf064361a1442ef724d7b053')">취소</button>
-    </div>
-  </div>
-</div>
 
 <div class="card" id="card-feed_c0115150ed5a442ea0593525a75c0e96" data-id="feed_c0115150ed5a442ea0593525a75c0e96">
   <div class="card-header">
@@ -1876,15 +1830,16 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
 const PM_API = 'https://pm.mwco.io';
 
 const urlToken = new URLSearchParams(location.search).get('token');
-if (urlToken) localStorage.setItem('pm_token', urlToken);
+if (urlToken) localStorage.setItem('pm_token', urlToken.trim());
 
 function getToken() {
   let t = localStorage.getItem('pm_token');
   if (!t) {
     t = prompt('PM API 토큰을 입력하세요 (최초 1회만, 이 브라우저에 저장됩니다):');
-    if (t) localStorage.setItem('pm_token', t);
+    // 복사 시 앞뒤 공백·줄바꿈이 붙으면 서버가 거부(401)하므로 반드시 정리
+    if (t) { t = t.trim(); localStorage.setItem('pm_token', t); }
   }
-  return t || '';
+  return (t || '').trim();
 }
 
 async function apiPost(path, body) {
