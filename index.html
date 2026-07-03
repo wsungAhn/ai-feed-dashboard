@@ -16,15 +16,11 @@
            display: flex; flex-direction: column; gap: 16px; }
   .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px;
            padding: 18px; display: flex; flex-direction: column; gap: 10px; }
-  .card.dismissed { display: none !important; }
-  .card.commented { border-color: #6366f1; box-shadow: 0 0 0 2px #6366f133; }
   .card.locked { opacity: 0.55; filter: grayscale(0.6); pointer-events: none;
                   border-style: dashed; }
   .badge-lock { font-size: 11px; background: #64748b; color: #fff;
                  padding: 2px 8px; border-radius: 999px; }
   .locked-note { font-size: 12px; color: #94a3b8; font-style: italic; }
-  .badge-comment { font-size: 11px; background: #6366f1; color: #fff;
-                    padding: 2px 8px; border-radius: 999px; margin-left: 4px; }
   .card-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .platform { font-size: 12px; font-weight: 600; color: #94a3b8;
                background: #0f172a; padding: 2px 8px; border-radius: 6px; }
@@ -109,14 +105,10 @@
 2. 설계 문서 템플릿 작성 (`design-pm-dashboard.md`, `design-feed-classifier.md`)
 3. 프로젝트 `.claude/settings.json` 생성 후 로컬 도구·훅 등록</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_8403489077744407ab81bf97baee41aa" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_8403489077744407ab81bf97baee41aa" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_8403489077744407ab81bf97baee41aa')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_8403489077744407ab81bf97baee41aa&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_8403489077744407ab81bf97baee41aa'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_8403489077744407ab81bf97baee41aa','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_8403489077744407ab81bf97baee41aa','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_8403489077744407ab81bf97baee41aa','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_8403489077744407ab81bf97baee41aa')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -159,14 +151,10 @@
 
 어느 방향이 맞을지 알려주면 더 구체적으로 도와드릴 수 있습니다.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_256f8f4fdf064361a1442ef724d7b053&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_256f8f4fdf064361a1442ef724d7b053" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_256f8f4fdf064361a1442ef724d7b053')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_256f8f4fdf064361a1442ef724d7b053&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_256f8f4fdf064361a1442ef724d7b053" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_256f8f4fdf064361a1442ef724d7b053')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_256f8f4fdf064361a1442ef724d7b053&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_256f8f4fdf064361a1442ef724d7b053" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_256f8f4fdf064361a1442ef724d7b053')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_256f8f4fdf064361a1442ef724d7b053&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_256f8f4fdf064361a1442ef724d7b053'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_256f8f4fdf064361a1442ef724d7b053','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_256f8f4fdf064361a1442ef724d7b053','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_256f8f4fdf064361a1442ef724d7b053','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_256f8f4fdf064361a1442ef724d7b053')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -200,12 +188,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_c0115150ed5a442ea0593525a75c0e96&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_c0115150ed5a442ea0593525a75c0e96" target="_blank"
-       onclick="dismissCard('feed_c0115150ed5a442ea0593525a75c0e96')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_c0115150ed5a442ea0593525a75c0e96&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_c0115150ed5a442ea0593525a75c0e96"  target="_blank"
-       onclick="dismissCard('feed_c0115150ed5a442ea0593525a75c0e96')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_c0115150ed5a442ea0593525a75c0e96&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_c0115150ed5a442ea0593525a75c0e96"  target="_blank"
-       onclick="dismissCard('feed_c0115150ed5a442ea0593525a75c0e96')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_c0115150ed5a442ea0593525a75c0e96','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_c0115150ed5a442ea0593525a75c0e96','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_c0115150ed5a442ea0593525a75c0e96','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_c0115150ed5a442ea0593525a75c0e96')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c0115150ed5a442ea0593525a75c0e96&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c0115150ed5a442ea0593525a75c0e96" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZfjiBMiDzb/?img_index=7" target="_blank" rel="noopener">🔗 원문</a>
@@ -236,12 +221,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_1d28f32442f84a4690369a02530637c8&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_1d28f32442f84a4690369a02530637c8" target="_blank"
-       onclick="dismissCard('feed_1d28f32442f84a4690369a02530637c8')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_1d28f32442f84a4690369a02530637c8&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_1d28f32442f84a4690369a02530637c8"  target="_blank"
-       onclick="dismissCard('feed_1d28f32442f84a4690369a02530637c8')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_1d28f32442f84a4690369a02530637c8&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_1d28f32442f84a4690369a02530637c8"  target="_blank"
-       onclick="dismissCard('feed_1d28f32442f84a4690369a02530637c8')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_1d28f32442f84a4690369a02530637c8','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_1d28f32442f84a4690369a02530637c8','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_1d28f32442f84a4690369a02530637c8','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_1d28f32442f84a4690369a02530637c8')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1d28f32442f84a4690369a02530637c8&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1d28f32442f84a4690369a02530637c8" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DZqXF-1vPzg/" target="_blank" rel="noopener">🔗 원문</a>
@@ -272,12 +254,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_773e6b4b3abe4e46af5cd9ee6434e759&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_773e6b4b3abe4e46af5cd9ee6434e759" target="_blank"
-       onclick="dismissCard('feed_773e6b4b3abe4e46af5cd9ee6434e759')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_773e6b4b3abe4e46af5cd9ee6434e759&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_773e6b4b3abe4e46af5cd9ee6434e759"  target="_blank"
-       onclick="dismissCard('feed_773e6b4b3abe4e46af5cd9ee6434e759')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_773e6b4b3abe4e46af5cd9ee6434e759&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_773e6b4b3abe4e46af5cd9ee6434e759"  target="_blank"
-       onclick="dismissCard('feed_773e6b4b3abe4e46af5cd9ee6434e759')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_773e6b4b3abe4e46af5cd9ee6434e759','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_773e6b4b3abe4e46af5cd9ee6434e759','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_773e6b4b3abe4e46af5cd9ee6434e759','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_773e6b4b3abe4e46af5cd9ee6434e759')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_773e6b4b3abe4e46af5cd9ee6434e759&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_773e6b4b3abe4e46af5cd9ee6434e759" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DaKbmYKpODZ/" target="_blank" rel="noopener">🔗 원문</a>
@@ -308,12 +287,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_a71a778be93647e9866a7e4db3832cdf&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_a71a778be93647e9866a7e4db3832cdf" target="_blank"
-       onclick="dismissCard('feed_a71a778be93647e9866a7e4db3832cdf')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_a71a778be93647e9866a7e4db3832cdf&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_a71a778be93647e9866a7e4db3832cdf"  target="_blank"
-       onclick="dismissCard('feed_a71a778be93647e9866a7e4db3832cdf')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_a71a778be93647e9866a7e4db3832cdf&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_a71a778be93647e9866a7e4db3832cdf"  target="_blank"
-       onclick="dismissCard('feed_a71a778be93647e9866a7e4db3832cdf')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_a71a778be93647e9866a7e4db3832cdf','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_a71a778be93647e9866a7e4db3832cdf','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_a71a778be93647e9866a7e4db3832cdf','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_a71a778be93647e9866a7e4db3832cdf')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_a71a778be93647e9866a7e4db3832cdf&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_a71a778be93647e9866a7e4db3832cdf" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DaKuaaqERGd/?img_index=5" target="_blank" rel="noopener">🔗 원문</a>
@@ -344,12 +320,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_9e9dd26d132944f7b7f4c7c1fba98ade&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_9e9dd26d132944f7b7f4c7c1fba98ade" target="_blank"
-       onclick="dismissCard('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_9e9dd26d132944f7b7f4c7c1fba98ade&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_9e9dd26d132944f7b7f4c7c1fba98ade"  target="_blank"
-       onclick="dismissCard('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_9e9dd26d132944f7b7f4c7c1fba98ade&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_9e9dd26d132944f7b7f4c7c1fba98ade"  target="_blank"
-       onclick="dismissCard('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_9e9dd26d132944f7b7f4c7c1fba98ade&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_9e9dd26d132944f7b7f4c7c1fba98ade" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DaDoy0cMQVt/" target="_blank" rel="noopener">🔗 원문</a>
@@ -380,12 +353,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_b71074614fa3450f85ce492715f62ec1&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_b71074614fa3450f85ce492715f62ec1" target="_blank"
-       onclick="dismissCard('feed_b71074614fa3450f85ce492715f62ec1')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_b71074614fa3450f85ce492715f62ec1&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_b71074614fa3450f85ce492715f62ec1"  target="_blank"
-       onclick="dismissCard('feed_b71074614fa3450f85ce492715f62ec1')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_b71074614fa3450f85ce492715f62ec1&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_b71074614fa3450f85ce492715f62ec1"  target="_blank"
-       onclick="dismissCard('feed_b71074614fa3450f85ce492715f62ec1')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_b71074614fa3450f85ce492715f62ec1')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_b71074614fa3450f85ce492715f62ec1&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_b71074614fa3450f85ce492715f62ec1" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZplcqPE9Ph/?img_index=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -416,12 +386,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_632dc0fdc8e74fdb852637a57649e09c&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_632dc0fdc8e74fdb852637a57649e09c" target="_blank"
-       onclick="dismissCard('feed_632dc0fdc8e74fdb852637a57649e09c')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_632dc0fdc8e74fdb852637a57649e09c&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_632dc0fdc8e74fdb852637a57649e09c"  target="_blank"
-       onclick="dismissCard('feed_632dc0fdc8e74fdb852637a57649e09c')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_632dc0fdc8e74fdb852637a57649e09c&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_632dc0fdc8e74fdb852637a57649e09c"  target="_blank"
-       onclick="dismissCard('feed_632dc0fdc8e74fdb852637a57649e09c')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_632dc0fdc8e74fdb852637a57649e09c')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_632dc0fdc8e74fdb852637a57649e09c&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_632dc0fdc8e74fdb852637a57649e09c" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZ68PJLkV8O/?img_index=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -452,12 +419,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_c95f0d6fe7544847839943e65f1cb8cc&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_c95f0d6fe7544847839943e65f1cb8cc" target="_blank"
-       onclick="dismissCard('feed_c95f0d6fe7544847839943e65f1cb8cc')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_c95f0d6fe7544847839943e65f1cb8cc&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_c95f0d6fe7544847839943e65f1cb8cc"  target="_blank"
-       onclick="dismissCard('feed_c95f0d6fe7544847839943e65f1cb8cc')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_c95f0d6fe7544847839943e65f1cb8cc&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_c95f0d6fe7544847839943e65f1cb8cc"  target="_blank"
-       onclick="dismissCard('feed_c95f0d6fe7544847839943e65f1cb8cc')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_c95f0d6fe7544847839943e65f1cb8cc')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c95f0d6fe7544847839943e65f1cb8cc&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c95f0d6fe7544847839943e65f1cb8cc" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     
@@ -495,14 +459,10 @@
 2. 유사 creator(Stacking Benjamins, Russell Brunson 등) 비교 분석으로 업계 SOP 맵핑
 3. ai-feed 자체의 engagement funnel에 이 insights 적용 (현재 issue_responder/pm_watcher 외 lead nurture 단계 추가)</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_eb37829bed08495a9116bd938d62fbf4&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_eb37829bed08495a9116bd938d62fbf4" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_eb37829bed08495a9116bd938d62fbf4')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_eb37829bed08495a9116bd938d62fbf4&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_eb37829bed08495a9116bd938d62fbf4" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_eb37829bed08495a9116bd938d62fbf4')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_eb37829bed08495a9116bd938d62fbf4&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_eb37829bed08495a9116bd938d62fbf4" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_eb37829bed08495a9116bd938d62fbf4')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_eb37829bed08495a9116bd938d62fbf4&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_eb37829bed08495a9116bd938d62fbf4'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_eb37829bed08495a9116bd938d62fbf4','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_eb37829bed08495a9116bd938d62fbf4','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_eb37829bed08495a9116bd938d62fbf4','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_eb37829bed08495a9116bd938d62fbf4')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -536,12 +496,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_5beb575803bb4e43a64eb47cf4578523&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_5beb575803bb4e43a64eb47cf4578523" target="_blank"
-       onclick="dismissCard('feed_5beb575803bb4e43a64eb47cf4578523')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_5beb575803bb4e43a64eb47cf4578523&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_5beb575803bb4e43a64eb47cf4578523"  target="_blank"
-       onclick="dismissCard('feed_5beb575803bb4e43a64eb47cf4578523')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_5beb575803bb4e43a64eb47cf4578523&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_5beb575803bb4e43a64eb47cf4578523"  target="_blank"
-       onclick="dismissCard('feed_5beb575803bb4e43a64eb47cf4578523')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_5beb575803bb4e43a64eb47cf4578523','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_5beb575803bb4e43a64eb47cf4578523','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_5beb575803bb4e43a64eb47cf4578523','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_5beb575803bb4e43a64eb47cf4578523')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_5beb575803bb4e43a64eb47cf4578523&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_5beb575803bb4e43a64eb47cf4578523" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     
@@ -572,12 +529,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_b0114943c35845c584ab2c1275151353&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_b0114943c35845c584ab2c1275151353" target="_blank"
-       onclick="dismissCard('feed_b0114943c35845c584ab2c1275151353')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_b0114943c35845c584ab2c1275151353&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_b0114943c35845c584ab2c1275151353"  target="_blank"
-       onclick="dismissCard('feed_b0114943c35845c584ab2c1275151353')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_b0114943c35845c584ab2c1275151353&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_b0114943c35845c584ab2c1275151353"  target="_blank"
-       onclick="dismissCard('feed_b0114943c35845c584ab2c1275151353')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_b0114943c35845c584ab2c1275151353','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_b0114943c35845c584ab2c1275151353','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_b0114943c35845c584ab2c1275151353','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_b0114943c35845c584ab2c1275151353')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_b0114943c35845c584ab2c1275151353&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_b0114943c35845c584ab2c1275151353" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DaC2IkeCetJ?xmt=AQG0qYNOQj5jta8hEr2OzkK_JVs0xdjKMHi4vjUFdwfqQTdX6a7ZCYTka6tKL3eqHIjcyz4&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -608,12 +562,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_011fce49049e450ea2e1fdb6914c37a9&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_011fce49049e450ea2e1fdb6914c37a9" target="_blank"
-       onclick="dismissCard('feed_011fce49049e450ea2e1fdb6914c37a9')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_011fce49049e450ea2e1fdb6914c37a9&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_011fce49049e450ea2e1fdb6914c37a9"  target="_blank"
-       onclick="dismissCard('feed_011fce49049e450ea2e1fdb6914c37a9')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_011fce49049e450ea2e1fdb6914c37a9&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_011fce49049e450ea2e1fdb6914c37a9"  target="_blank"
-       onclick="dismissCard('feed_011fce49049e450ea2e1fdb6914c37a9')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_011fce49049e450ea2e1fdb6914c37a9','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_011fce49049e450ea2e1fdb6914c37a9','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_011fce49049e450ea2e1fdb6914c37a9','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_011fce49049e450ea2e1fdb6914c37a9')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_011fce49049e450ea2e1fdb6914c37a9&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_011fce49049e450ea2e1fdb6914c37a9" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DYPZ9mfR9Io/" target="_blank" rel="noopener">🔗 원문</a>
@@ -644,12 +595,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_5395accc432e452295e0440980b3bf51&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_5395accc432e452295e0440980b3bf51" target="_blank"
-       onclick="dismissCard('feed_5395accc432e452295e0440980b3bf51')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_5395accc432e452295e0440980b3bf51&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_5395accc432e452295e0440980b3bf51"  target="_blank"
-       onclick="dismissCard('feed_5395accc432e452295e0440980b3bf51')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_5395accc432e452295e0440980b3bf51&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_5395accc432e452295e0440980b3bf51"  target="_blank"
-       onclick="dismissCard('feed_5395accc432e452295e0440980b3bf51')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_5395accc432e452295e0440980b3bf51','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_5395accc432e452295e0440980b3bf51','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_5395accc432e452295e0440980b3bf51','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_5395accc432e452295e0440980b3bf51')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_5395accc432e452295e0440980b3bf51&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_5395accc432e452295e0440980b3bf51" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DaDosuEAGh5/" target="_blank" rel="noopener">🔗 원문</a>
@@ -680,12 +628,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_f701829588334c74a076d65732b4ba70&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_f701829588334c74a076d65732b4ba70" target="_blank"
-       onclick="dismissCard('feed_f701829588334c74a076d65732b4ba70')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_f701829588334c74a076d65732b4ba70&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_f701829588334c74a076d65732b4ba70"  target="_blank"
-       onclick="dismissCard('feed_f701829588334c74a076d65732b4ba70')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_f701829588334c74a076d65732b4ba70&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_f701829588334c74a076d65732b4ba70"  target="_blank"
-       onclick="dismissCard('feed_f701829588334c74a076d65732b4ba70')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_f701829588334c74a076d65732b4ba70','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f701829588334c74a076d65732b4ba70','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f701829588334c74a076d65732b4ba70','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_f701829588334c74a076d65732b4ba70')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f701829588334c74a076d65732b4ba70&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f701829588334c74a076d65732b4ba70" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DZJvyV4TyDX/" target="_blank" rel="noopener">🔗 원문</a>
@@ -716,12 +661,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_53d3948f6f58474390210faa67202315&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_53d3948f6f58474390210faa67202315" target="_blank"
-       onclick="dismissCard('feed_53d3948f6f58474390210faa67202315')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_53d3948f6f58474390210faa67202315&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_53d3948f6f58474390210faa67202315"  target="_blank"
-       onclick="dismissCard('feed_53d3948f6f58474390210faa67202315')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_53d3948f6f58474390210faa67202315&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_53d3948f6f58474390210faa67202315"  target="_blank"
-       onclick="dismissCard('feed_53d3948f6f58474390210faa67202315')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_53d3948f6f58474390210faa67202315','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_53d3948f6f58474390210faa67202315','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_53d3948f6f58474390210faa67202315','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_53d3948f6f58474390210faa67202315')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_53d3948f6f58474390210faa67202315&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_53d3948f6f58474390210faa67202315" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@focusrefresh/post/DZ8XP3RkrJF?xmt=AQG0SoZVJEv1nkxlHIH7Oqj8BAGMJyikvGCUdXFBM8wQbkfGHiFE9D5oK_IOtDGK5l8p2KCZ&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -752,12 +694,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_f3ffa620cafc40c6a44db066d12decd4&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_f3ffa620cafc40c6a44db066d12decd4" target="_blank"
-       onclick="dismissCard('feed_f3ffa620cafc40c6a44db066d12decd4')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_f3ffa620cafc40c6a44db066d12decd4&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_f3ffa620cafc40c6a44db066d12decd4"  target="_blank"
-       onclick="dismissCard('feed_f3ffa620cafc40c6a44db066d12decd4')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_f3ffa620cafc40c6a44db066d12decd4&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_f3ffa620cafc40c6a44db066d12decd4"  target="_blank"
-       onclick="dismissCard('feed_f3ffa620cafc40c6a44db066d12decd4')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_f3ffa620cafc40c6a44db066d12decd4','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f3ffa620cafc40c6a44db066d12decd4','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f3ffa620cafc40c6a44db066d12decd4','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_f3ffa620cafc40c6a44db066d12decd4')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f3ffa620cafc40c6a44db066d12decd4&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f3ffa620cafc40c6a44db066d12decd4" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZKJ4vHk9K3/?img_index=2" target="_blank" rel="noopener">🔗 원문</a>
@@ -797,14 +736,10 @@
 
 신뢰성 조사 후 판단하는 게 맞다. 필요하면 firecrawl로 사이트 스크래핑해서 실제 기능 확인할 수도 있다.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_c12a51b926604f53b1672bb0624ca67e&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_c12a51b926604f53b1672bb0624ca67e" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_c12a51b926604f53b1672bb0624ca67e')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_c12a51b926604f53b1672bb0624ca67e&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_c12a51b926604f53b1672bb0624ca67e" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_c12a51b926604f53b1672bb0624ca67e')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_c12a51b926604f53b1672bb0624ca67e&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_c12a51b926604f53b1672bb0624ca67e" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_c12a51b926604f53b1672bb0624ca67e')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_c12a51b926604f53b1672bb0624ca67e&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_c12a51b926604f53b1672bb0624ca67e'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_c12a51b926604f53b1672bb0624ca67e')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -838,12 +773,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_f1f6898157ea48fca64a135cfb756bdd&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_f1f6898157ea48fca64a135cfb756bdd" target="_blank"
-       onclick="dismissCard('feed_f1f6898157ea48fca64a135cfb756bdd')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_f1f6898157ea48fca64a135cfb756bdd&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_f1f6898157ea48fca64a135cfb756bdd"  target="_blank"
-       onclick="dismissCard('feed_f1f6898157ea48fca64a135cfb756bdd')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_f1f6898157ea48fca64a135cfb756bdd&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_f1f6898157ea48fca64a135cfb756bdd"  target="_blank"
-       onclick="dismissCard('feed_f1f6898157ea48fca64a135cfb756bdd')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_f1f6898157ea48fca64a135cfb756bdd','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f1f6898157ea48fca64a135cfb756bdd','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f1f6898157ea48fca64a135cfb756bdd','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_f1f6898157ea48fca64a135cfb756bdd')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f1f6898157ea48fca64a135cfb756bdd&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f1f6898157ea48fca64a135cfb756bdd" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DY9tQo3FJ5M/?img_index=2" target="_blank" rel="noopener">🔗 원문</a>
@@ -874,12 +806,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_ef671ee124c349d08fc6fe5c40bcb02d&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_ef671ee124c349d08fc6fe5c40bcb02d" target="_blank"
-       onclick="dismissCard('feed_ef671ee124c349d08fc6fe5c40bcb02d')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_ef671ee124c349d08fc6fe5c40bcb02d&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_ef671ee124c349d08fc6fe5c40bcb02d"  target="_blank"
-       onclick="dismissCard('feed_ef671ee124c349d08fc6fe5c40bcb02d')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_ef671ee124c349d08fc6fe5c40bcb02d&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_ef671ee124c349d08fc6fe5c40bcb02d"  target="_blank"
-       onclick="dismissCard('feed_ef671ee124c349d08fc6fe5c40bcb02d')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_ef671ee124c349d08fc6fe5c40bcb02d','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_ef671ee124c349d08fc6fe5c40bcb02d','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_ef671ee124c349d08fc6fe5c40bcb02d','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_ef671ee124c349d08fc6fe5c40bcb02d')">💬 의견</button>
     
     <a href="https://www.instagram.com/reel/DWWMstkE7ak/" target="_blank" rel="noopener">🔗 원문</a>
@@ -910,12 +839,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_f6661e3c464846059ce68e1e301064ed&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_f6661e3c464846059ce68e1e301064ed" target="_blank"
-       onclick="dismissCard('feed_f6661e3c464846059ce68e1e301064ed')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_f6661e3c464846059ce68e1e301064ed&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_f6661e3c464846059ce68e1e301064ed"  target="_blank"
-       onclick="dismissCard('feed_f6661e3c464846059ce68e1e301064ed')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_f6661e3c464846059ce68e1e301064ed&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_f6661e3c464846059ce68e1e301064ed"  target="_blank"
-       onclick="dismissCard('feed_f6661e3c464846059ce68e1e301064ed')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_f6661e3c464846059ce68e1e301064ed','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f6661e3c464846059ce68e1e301064ed','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f6661e3c464846059ce68e1e301064ed','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_f6661e3c464846059ce68e1e301064ed')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f6661e3c464846059ce68e1e301064ed&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f6661e3c464846059ce68e1e301064ed" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DXbbHcWE-9d/" target="_blank" rel="noopener">🔗 원문</a>
@@ -946,12 +872,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_fd210e2683144274bd3948a33d23b38d&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_fd210e2683144274bd3948a33d23b38d" target="_blank"
-       onclick="dismissCard('feed_fd210e2683144274bd3948a33d23b38d')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_fd210e2683144274bd3948a33d23b38d&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_fd210e2683144274bd3948a33d23b38d"  target="_blank"
-       onclick="dismissCard('feed_fd210e2683144274bd3948a33d23b38d')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_fd210e2683144274bd3948a33d23b38d&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_fd210e2683144274bd3948a33d23b38d"  target="_blank"
-       onclick="dismissCard('feed_fd210e2683144274bd3948a33d23b38d')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_fd210e2683144274bd3948a33d23b38d','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_fd210e2683144274bd3948a33d23b38d','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_fd210e2683144274bd3948a33d23b38d','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_fd210e2683144274bd3948a33d23b38d')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fd210e2683144274bd3948a33d23b38d&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fd210e2683144274bd3948a33d23b38d" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DYrj7mgMopw/" target="_blank" rel="noopener">🔗 원문</a>
@@ -982,12 +905,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_fa7a6f0ac0ea49679070341ff40d86af&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_fa7a6f0ac0ea49679070341ff40d86af" target="_blank"
-       onclick="dismissCard('feed_fa7a6f0ac0ea49679070341ff40d86af')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_fa7a6f0ac0ea49679070341ff40d86af&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_fa7a6f0ac0ea49679070341ff40d86af"  target="_blank"
-       onclick="dismissCard('feed_fa7a6f0ac0ea49679070341ff40d86af')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_fa7a6f0ac0ea49679070341ff40d86af&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_fa7a6f0ac0ea49679070341ff40d86af"  target="_blank"
-       onclick="dismissCard('feed_fa7a6f0ac0ea49679070341ff40d86af')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_fa7a6f0ac0ea49679070341ff40d86af','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_fa7a6f0ac0ea49679070341ff40d86af','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_fa7a6f0ac0ea49679070341ff40d86af','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_fa7a6f0ac0ea49679070341ff40d86af')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fa7a6f0ac0ea49679070341ff40d86af&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fa7a6f0ac0ea49679070341ff40d86af" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DYy89HqE4WI/" target="_blank" rel="noopener">🔗 원문</a>
@@ -1018,12 +938,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_fb60108acfd449b1bd8e7dc4a4e6c3ce&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_fb60108acfd449b1bd8e7dc4a4e6c3ce" target="_blank"
-       onclick="dismissCard('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_fb60108acfd449b1bd8e7dc4a4e6c3ce&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_fb60108acfd449b1bd8e7dc4a4e6c3ce"  target="_blank"
-       onclick="dismissCard('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_fb60108acfd449b1bd8e7dc4a4e6c3ce&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_fb60108acfd449b1bd8e7dc4a4e6c3ce"  target="_blank"
-       onclick="dismissCard('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_fb60108acfd449b1bd8e7dc4a4e6c3ce')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fb60108acfd449b1bd8e7dc4a4e6c3ce&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fb60108acfd449b1bd8e7dc4a4e6c3ce" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZAa119kyWr/" target="_blank" rel="noopener">🔗 원문</a>
@@ -1054,12 +971,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_fefbc302f66e408baff49dcf44bd7933&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_fefbc302f66e408baff49dcf44bd7933" target="_blank"
-       onclick="dismissCard('feed_fefbc302f66e408baff49dcf44bd7933')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_fefbc302f66e408baff49dcf44bd7933&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_fefbc302f66e408baff49dcf44bd7933"  target="_blank"
-       onclick="dismissCard('feed_fefbc302f66e408baff49dcf44bd7933')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_fefbc302f66e408baff49dcf44bd7933&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_fefbc302f66e408baff49dcf44bd7933"  target="_blank"
-       onclick="dismissCard('feed_fefbc302f66e408baff49dcf44bd7933')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_fefbc302f66e408baff49dcf44bd7933','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_fefbc302f66e408baff49dcf44bd7933','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_fefbc302f66e408baff49dcf44bd7933','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_fefbc302f66e408baff49dcf44bd7933')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fefbc302f66e408baff49dcf44bd7933&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fefbc302f66e408baff49dcf44bd7933" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZ0F_VSgF04/" target="_blank" rel="noopener">🔗 원문</a>
@@ -1103,14 +1017,10 @@
 
 어느 프로젝트에 붙일지(alphabot/trader), 어떤 수준의 통합을 원하는지 말해주면 더 구체화할 수 있다.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_b9d9536ecfdd452983e0ccbfe5a6d25f&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_b9d9536ecfdd452983e0ccbfe5a6d25f" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_b9d9536ecfdd452983e0ccbfe5a6d25f&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_b9d9536ecfdd452983e0ccbfe5a6d25f" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_b9d9536ecfdd452983e0ccbfe5a6d25f&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_b9d9536ecfdd452983e0ccbfe5a6d25f" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_b9d9536ecfdd452983e0ccbfe5a6d25f&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_b9d9536ecfdd452983e0ccbfe5a6d25f'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_b9d9536ecfdd452983e0ccbfe5a6d25f','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_b9d9536ecfdd452983e0ccbfe5a6d25f','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_b9d9536ecfdd452983e0ccbfe5a6d25f','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1155,14 +1065,10 @@
 
 현재 code 수정 중인 파일들(`dashboard.py`, `github_watcher.py`)이 있는데, 이 작업도 포함할까요?</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_39d8bcc45ed14427af7186784cb95996&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_39d8bcc45ed14427af7186784cb95996" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_39d8bcc45ed14427af7186784cb95996')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_39d8bcc45ed14427af7186784cb95996&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_39d8bcc45ed14427af7186784cb95996" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_39d8bcc45ed14427af7186784cb95996')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_39d8bcc45ed14427af7186784cb95996&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_39d8bcc45ed14427af7186784cb95996" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_39d8bcc45ed14427af7186784cb95996')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_39d8bcc45ed14427af7186784cb95996&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_39d8bcc45ed14427af7186784cb95996'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_39d8bcc45ed14427af7186784cb95996','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_39d8bcc45ed14427af7186784cb95996','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_39d8bcc45ed14427af7186784cb95996','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_39d8bcc45ed14427af7186784cb95996')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1196,12 +1102,9 @@
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_28afc3de19dc4936adeab64bc9b905f6&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_28afc3de19dc4936adeab64bc9b905f6" target="_blank"
-       onclick="dismissCard('feed_28afc3de19dc4936adeab64bc9b905f6')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_28afc3de19dc4936adeab64bc9b905f6&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_28afc3de19dc4936adeab64bc9b905f6"  target="_blank"
-       onclick="dismissCard('feed_28afc3de19dc4936adeab64bc9b905f6')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_28afc3de19dc4936adeab64bc9b905f6&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_28afc3de19dc4936adeab64bc9b905f6"  target="_blank"
-       onclick="dismissCard('feed_28afc3de19dc4936adeab64bc9b905f6')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_28afc3de19dc4936adeab64bc9b905f6','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_28afc3de19dc4936adeab64bc9b905f6','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_28afc3de19dc4936adeab64bc9b905f6','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_28afc3de19dc4936adeab64bc9b905f6')">💬 의견</button>
     
     <a href="https://www.instagram.com/reel/DZsM7KVMx59/" target="_blank" rel="noopener">🔗 원문</a>
@@ -1241,14 +1144,10 @@
 
 이 부분을 깊이 파려면 firecrawl-local 프로젝트 설계 문서를 먼저 봐야 할 것 같은데, 지금 진행 중인 작업에 우선순위가 있으면 말해줘.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_eb6afe3d049d422fa5e39288559c35f4&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_eb6afe3d049d422fa5e39288559c35f4" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_eb6afe3d049d422fa5e39288559c35f4')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_eb6afe3d049d422fa5e39288559c35f4&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_eb6afe3d049d422fa5e39288559c35f4" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_eb6afe3d049d422fa5e39288559c35f4')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_eb6afe3d049d422fa5e39288559c35f4&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_eb6afe3d049d422fa5e39288559c35f4" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_eb6afe3d049d422fa5e39288559c35f4')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_eb6afe3d049d422fa5e39288559c35f4&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_eb6afe3d049d422fa5e39288559c35f4'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_eb6afe3d049d422fa5e39288559c35f4','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_eb6afe3d049d422fa5e39288559c35f4','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_eb6afe3d049d422fa5e39288559c35f4','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_eb6afe3d049d422fa5e39288559c35f4')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1291,14 +1190,10 @@
 
 프로젝트명 or 코드 예시가 있으면 디버해줄 수 있습니다.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_39720643e8fb46dc81cf3a248b05d008&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_39720643e8fb46dc81cf3a248b05d008" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_39720643e8fb46dc81cf3a248b05d008')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_39720643e8fb46dc81cf3a248b05d008&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_39720643e8fb46dc81cf3a248b05d008" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_39720643e8fb46dc81cf3a248b05d008')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_39720643e8fb46dc81cf3a248b05d008&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_39720643e8fb46dc81cf3a248b05d008" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_39720643e8fb46dc81cf3a248b05d008')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_39720643e8fb46dc81cf3a248b05d008&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_39720643e8fb46dc81cf3a248b05d008'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_39720643e8fb46dc81cf3a248b05d008','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_39720643e8fb46dc81cf3a248b05d008','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_39720643e8fb46dc81cf3a248b05d008','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_39720643e8fb46dc81cf3a248b05d008')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1341,14 +1236,10 @@
 
 Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_abc33c12724946db94b7af6d91a99c40&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_abc33c12724946db94b7af6d91a99c40" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_abc33c12724946db94b7af6d91a99c40')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_abc33c12724946db94b7af6d91a99c40&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_abc33c12724946db94b7af6d91a99c40" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_abc33c12724946db94b7af6d91a99c40')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_abc33c12724946db94b7af6d91a99c40&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_abc33c12724946db94b7af6d91a99c40" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_abc33c12724946db94b7af6d91a99c40')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_abc33c12724946db94b7af6d91a99c40&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_abc33c12724946db94b7af6d91a99c40'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_abc33c12724946db94b7af6d91a99c40','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_abc33c12724946db94b7af6d91a99c40','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_abc33c12724946db94b7af6d91a99c40','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_abc33c12724946db94b7af6d91a99c40')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1391,14 +1282,10 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
 
 메모리에 이 패턴을 기록하고, 시작할?</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_072b2fb05bb642c3901b100a3abb9f64&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_072b2fb05bb642c3901b100a3abb9f64" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_072b2fb05bb642c3901b100a3abb9f64')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_072b2fb05bb642c3901b100a3abb9f64&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_072b2fb05bb642c3901b100a3abb9f64" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_072b2fb05bb642c3901b100a3abb9f64')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_072b2fb05bb642c3901b100a3abb9f64&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_072b2fb05bb642c3901b100a3abb9f64" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_072b2fb05bb642c3901b100a3abb9f64')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_072b2fb05bb642c3901b100a3abb9f64&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_072b2fb05bb642c3901b100a3abb9f64'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_072b2fb05bb642c3901b100a3abb9f64','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_072b2fb05bb642c3901b100a3abb9f64','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_072b2fb05bb642c3901b100a3abb9f64','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_072b2fb05bb642c3901b100a3abb9f64')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1432,12 +1319,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_29586fd0ba704847b5797c2ed9b6f514&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_29586fd0ba704847b5797c2ed9b6f514" target="_blank"
-       onclick="dismissCard('feed_29586fd0ba704847b5797c2ed9b6f514')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_29586fd0ba704847b5797c2ed9b6f514&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_29586fd0ba704847b5797c2ed9b6f514"  target="_blank"
-       onclick="dismissCard('feed_29586fd0ba704847b5797c2ed9b6f514')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_29586fd0ba704847b5797c2ed9b6f514&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_29586fd0ba704847b5797c2ed9b6f514"  target="_blank"
-       onclick="dismissCard('feed_29586fd0ba704847b5797c2ed9b6f514')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_29586fd0ba704847b5797c2ed9b6f514','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_29586fd0ba704847b5797c2ed9b6f514','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_29586fd0ba704847b5797c2ed9b6f514','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_29586fd0ba704847b5797c2ed9b6f514')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_29586fd0ba704847b5797c2ed9b6f514&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_29586fd0ba704847b5797c2ed9b6f514" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@hosi.oobo/post/DXOTUSklWuo?xmt=AQG02voR4v03dYWYcox4-XaKI8IE75471DVb3Od-BhHomR3BZpdtUYxd6cjLQorxStArTeh8&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1477,14 +1361,10 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
 
 스레드 텍스트를 복사해서 주면 바로 **`로컬 AI 학습 가이드`** 항목으로 등록해서 dashboard &amp; feed에 추가할 수 있습니다.</div>
     <div class="response-actions">
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_28b60e805431400c8d3798581773b722&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_28b60e805431400c8d3798581773b722" class="btn-approve" target="_blank"
-         onclick="dismissCard('feed_28b60e805431400c8d3798581773b722')">✅ 승인</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_28b60e805431400c8d3798581773b722&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_28b60e805431400c8d3798581773b722" class="btn-reject" target="_blank"
-         onclick="dismissCard('feed_28b60e805431400c8d3798581773b722')">⏭ 스킵</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_28b60e805431400c8d3798581773b722&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_28b60e805431400c8d3798581773b722" class="btn-debunk" target="_blank"
-         onclick="dismissCard('feed_28b60e805431400c8d3798581773b722')">❌ 터무니없음</a>
-      <a href="https://github.com/wsungAhn/ai-feed/issues/new?title=comment%3Afeed_28b60e805431400c8d3798581773b722&labels=ai-feed-action&body=%EC%9D%98%EA%B2%AC+%EC%9E%85%EB%A0%A5" class="btn-comment" target="_blank"
-         onclick="markCommented('feed_28b60e805431400c8d3798581773b722'); return true;">💬 재피드백</a>
+      <button class="btn-approve" onclick="decide('feed_28b60e805431400c8d3798581773b722','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_28b60e805431400c8d3798581773b722','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_28b60e805431400c8d3798581773b722','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_28b60e805431400c8d3798581773b722')">💬 재피드백</button>
     </div>
   </div>
   <div class="actions">
@@ -1518,12 +1398,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_e7092fcd8de04120b2528514281127a3&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_e7092fcd8de04120b2528514281127a3" target="_blank"
-       onclick="dismissCard('feed_e7092fcd8de04120b2528514281127a3')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_e7092fcd8de04120b2528514281127a3&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_e7092fcd8de04120b2528514281127a3"  target="_blank"
-       onclick="dismissCard('feed_e7092fcd8de04120b2528514281127a3')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_e7092fcd8de04120b2528514281127a3&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_e7092fcd8de04120b2528514281127a3"  target="_blank"
-       onclick="dismissCard('feed_e7092fcd8de04120b2528514281127a3')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_e7092fcd8de04120b2528514281127a3','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_e7092fcd8de04120b2528514281127a3','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_e7092fcd8de04120b2528514281127a3','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_e7092fcd8de04120b2528514281127a3')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e7092fcd8de04120b2528514281127a3&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e7092fcd8de04120b2528514281127a3" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DY19bQviYYD?xmt=AQG0-Afblx83D2zm0XYDyZsGFNQHeMIez_VRMUdPnZ2fdBIa5F-4bW44e2H3hvaSA76c57E&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1554,12 +1431,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_22049b9fce8a442cafec66a84140cd25&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_22049b9fce8a442cafec66a84140cd25" target="_blank"
-       onclick="dismissCard('feed_22049b9fce8a442cafec66a84140cd25')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_22049b9fce8a442cafec66a84140cd25&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_22049b9fce8a442cafec66a84140cd25"  target="_blank"
-       onclick="dismissCard('feed_22049b9fce8a442cafec66a84140cd25')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_22049b9fce8a442cafec66a84140cd25&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_22049b9fce8a442cafec66a84140cd25"  target="_blank"
-       onclick="dismissCard('feed_22049b9fce8a442cafec66a84140cd25')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_22049b9fce8a442cafec66a84140cd25','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_22049b9fce8a442cafec66a84140cd25','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_22049b9fce8a442cafec66a84140cd25','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_22049b9fce8a442cafec66a84140cd25')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_22049b9fce8a442cafec66a84140cd25&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_22049b9fce8a442cafec66a84140cd25" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@aicoffeechat/post/DY3FyNakwxE?xmt=AQG0P_aEu-OusPHLJDfXhG9xAlBfzmJ9IMJryJocSubYfg0_0rLdnBAU6ZKMCGz6qdRLpIxa&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1590,12 +1464,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_00ddc4742e794428abf23f7ac1e0b5ac&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_00ddc4742e794428abf23f7ac1e0b5ac" target="_blank"
-       onclick="dismissCard('feed_00ddc4742e794428abf23f7ac1e0b5ac')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_00ddc4742e794428abf23f7ac1e0b5ac&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_00ddc4742e794428abf23f7ac1e0b5ac"  target="_blank"
-       onclick="dismissCard('feed_00ddc4742e794428abf23f7ac1e0b5ac')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_00ddc4742e794428abf23f7ac1e0b5ac&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_00ddc4742e794428abf23f7ac1e0b5ac"  target="_blank"
-       onclick="dismissCard('feed_00ddc4742e794428abf23f7ac1e0b5ac')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_00ddc4742e794428abf23f7ac1e0b5ac','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_00ddc4742e794428abf23f7ac1e0b5ac','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_00ddc4742e794428abf23f7ac1e0b5ac','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_00ddc4742e794428abf23f7ac1e0b5ac')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_00ddc4742e794428abf23f7ac1e0b5ac&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_00ddc4742e794428abf23f7ac1e0b5ac" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@obangti/post/DZL_NcFFqem?xmt=AQG0pXkSrWdzEs-cFbNYl2-H5c3Phvzuo4vYMGM05Md3AJ_oj7QKDBio63F8OcnYzExWSzx4&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1626,12 +1497,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_2ea05f08318b43508f2b4b305b4ca9fe&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_2ea05f08318b43508f2b4b305b4ca9fe" target="_blank"
-       onclick="dismissCard('feed_2ea05f08318b43508f2b4b305b4ca9fe')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_2ea05f08318b43508f2b4b305b4ca9fe&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_2ea05f08318b43508f2b4b305b4ca9fe"  target="_blank"
-       onclick="dismissCard('feed_2ea05f08318b43508f2b4b305b4ca9fe')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_2ea05f08318b43508f2b4b305b4ca9fe&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_2ea05f08318b43508f2b4b305b4ca9fe"  target="_blank"
-       onclick="dismissCard('feed_2ea05f08318b43508f2b4b305b4ca9fe')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_2ea05f08318b43508f2b4b305b4ca9fe','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_2ea05f08318b43508f2b4b305b4ca9fe','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_2ea05f08318b43508f2b4b305b4ca9fe','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_2ea05f08318b43508f2b4b305b4ca9fe')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_2ea05f08318b43508f2b4b305b4ca9fe&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_2ea05f08318b43508f2b4b305b4ca9fe" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@doyounkim82/post/DZPBGmnEQV-?xmt=AQG0psCOLwN1vrwQEOozQOoj8JD8-4sH3cyBkD7L5-tdAnpp72WSOWuxGJtI7ffSpo_Peu3Y&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1662,12 +1530,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_7e4238bf6eec42b0bb169b7f659e2073&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_7e4238bf6eec42b0bb169b7f659e2073" target="_blank"
-       onclick="dismissCard('feed_7e4238bf6eec42b0bb169b7f659e2073')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_7e4238bf6eec42b0bb169b7f659e2073&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_7e4238bf6eec42b0bb169b7f659e2073"  target="_blank"
-       onclick="dismissCard('feed_7e4238bf6eec42b0bb169b7f659e2073')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_7e4238bf6eec42b0bb169b7f659e2073&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_7e4238bf6eec42b0bb169b7f659e2073"  target="_blank"
-       onclick="dismissCard('feed_7e4238bf6eec42b0bb169b7f659e2073')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_7e4238bf6eec42b0bb169b7f659e2073','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_7e4238bf6eec42b0bb169b7f659e2073','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_7e4238bf6eec42b0bb169b7f659e2073','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_7e4238bf6eec42b0bb169b7f659e2073')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_7e4238bf6eec42b0bb169b7f659e2073&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_7e4238bf6eec42b0bb169b7f659e2073" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@verbio_labs/post/DZPimyGksui?xmt=AQG0u06Lo4sm8EHhu0cV-7shtjKXPS1mC7BYZ08DkGIGPHxYGoPEtkInKmQrPo-aP8A2zTw-&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1698,12 +1563,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_3f8709ee060141eb80bd854448d53aaf&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_3f8709ee060141eb80bd854448d53aaf" target="_blank"
-       onclick="dismissCard('feed_3f8709ee060141eb80bd854448d53aaf')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_3f8709ee060141eb80bd854448d53aaf&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_3f8709ee060141eb80bd854448d53aaf"  target="_blank"
-       onclick="dismissCard('feed_3f8709ee060141eb80bd854448d53aaf')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_3f8709ee060141eb80bd854448d53aaf&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_3f8709ee060141eb80bd854448d53aaf"  target="_blank"
-       onclick="dismissCard('feed_3f8709ee060141eb80bd854448d53aaf')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_3f8709ee060141eb80bd854448d53aaf','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_3f8709ee060141eb80bd854448d53aaf','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_3f8709ee060141eb80bd854448d53aaf','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_3f8709ee060141eb80bd854448d53aaf')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_3f8709ee060141eb80bd854448d53aaf&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_3f8709ee060141eb80bd854448d53aaf" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@moment.ryan/post/DZXJjrSk0nF?xmt=AQG0ko5s27hQIQqcx_xK40t6uRWBnObmgg_uJHpQg0gtsy7EDEweGYvw2wSL2NP-1OYPc8U&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1734,12 +1596,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_3d72745a9c674a589ac553f2a1761582&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_3d72745a9c674a589ac553f2a1761582" target="_blank"
-       onclick="dismissCard('feed_3d72745a9c674a589ac553f2a1761582')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_3d72745a9c674a589ac553f2a1761582&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_3d72745a9c674a589ac553f2a1761582"  target="_blank"
-       onclick="dismissCard('feed_3d72745a9c674a589ac553f2a1761582')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_3d72745a9c674a589ac553f2a1761582&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_3d72745a9c674a589ac553f2a1761582"  target="_blank"
-       onclick="dismissCard('feed_3d72745a9c674a589ac553f2a1761582')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_3d72745a9c674a589ac553f2a1761582','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_3d72745a9c674a589ac553f2a1761582','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_3d72745a9c674a589ac553f2a1761582','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_3d72745a9c674a589ac553f2a1761582')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_3d72745a9c674a589ac553f2a1761582&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_3d72745a9c674a589ac553f2a1761582" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DZcB7R_iZ8L?xmt=AQG0XvR0Yp6f1xbbdELjq9lDsYa27qRaxiZkOUosny-Xp6l_d2d4Dd8fYpe3HbJz5YN1Irc&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1770,12 +1629,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_abb61c0ce66c4d0f969ec7654c2f1278&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_abb61c0ce66c4d0f969ec7654c2f1278" target="_blank"
-       onclick="dismissCard('feed_abb61c0ce66c4d0f969ec7654c2f1278')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_abb61c0ce66c4d0f969ec7654c2f1278&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_abb61c0ce66c4d0f969ec7654c2f1278"  target="_blank"
-       onclick="dismissCard('feed_abb61c0ce66c4d0f969ec7654c2f1278')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_abb61c0ce66c4d0f969ec7654c2f1278&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_abb61c0ce66c4d0f969ec7654c2f1278"  target="_blank"
-       onclick="dismissCard('feed_abb61c0ce66c4d0f969ec7654c2f1278')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_abb61c0ce66c4d0f969ec7654c2f1278','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_abb61c0ce66c4d0f969ec7654c2f1278','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_abb61c0ce66c4d0f969ec7654c2f1278','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_abb61c0ce66c4d0f969ec7654c2f1278')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_abb61c0ce66c4d0f969ec7654c2f1278&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_abb61c0ce66c4d0f969ec7654c2f1278" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DZc1iUcCcIi?xmt=AQG0z4EUUst0L_3jNcvfIxUZOW_eI2i7xsMhl_QR9MlQPbLvW4Q7jKEzHjxYaVRXKbihFUuA&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1806,12 +1662,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_b91474ee23064ecda2a0c6bd4c3a5e70&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_b91474ee23064ecda2a0c6bd4c3a5e70" target="_blank"
-       onclick="dismissCard('feed_b91474ee23064ecda2a0c6bd4c3a5e70')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_b91474ee23064ecda2a0c6bd4c3a5e70&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_b91474ee23064ecda2a0c6bd4c3a5e70"  target="_blank"
-       onclick="dismissCard('feed_b91474ee23064ecda2a0c6bd4c3a5e70')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_b91474ee23064ecda2a0c6bd4c3a5e70&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_b91474ee23064ecda2a0c6bd4c3a5e70"  target="_blank"
-       onclick="dismissCard('feed_b91474ee23064ecda2a0c6bd4c3a5e70')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_b91474ee23064ecda2a0c6bd4c3a5e70','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_b91474ee23064ecda2a0c6bd4c3a5e70','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_b91474ee23064ecda2a0c6bd4c3a5e70','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_b91474ee23064ecda2a0c6bd4c3a5e70')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_b91474ee23064ecda2a0c6bd4c3a5e70&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_b91474ee23064ecda2a0c6bd4c3a5e70" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@irendebate/post/DZmZQT2ncHX?xmt=AQG075_WzwZdPFw5pAH65Z2lZ2N_q8SeVwiD5JZeGHS328uJTY4aOWsKK_ya27bGI3ZHvUev&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1842,12 +1695,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_8b2544a668e342d1b9f0ff7a8cd432df&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_8b2544a668e342d1b9f0ff7a8cd432df" target="_blank"
-       onclick="dismissCard('feed_8b2544a668e342d1b9f0ff7a8cd432df')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_8b2544a668e342d1b9f0ff7a8cd432df&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_8b2544a668e342d1b9f0ff7a8cd432df"  target="_blank"
-       onclick="dismissCard('feed_8b2544a668e342d1b9f0ff7a8cd432df')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_8b2544a668e342d1b9f0ff7a8cd432df&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_8b2544a668e342d1b9f0ff7a8cd432df"  target="_blank"
-       onclick="dismissCard('feed_8b2544a668e342d1b9f0ff7a8cd432df')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_8b2544a668e342d1b9f0ff7a8cd432df','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_8b2544a668e342d1b9f0ff7a8cd432df','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_8b2544a668e342d1b9f0ff7a8cd432df','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_8b2544a668e342d1b9f0ff7a8cd432df')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_8b2544a668e342d1b9f0ff7a8cd432df&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_8b2544a668e342d1b9f0ff7a8cd432df" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@mori_mement0/post/DZqqA1CE4PY?xmt=AQG0xVy84Dsn_ThXivfW6_J7vC7quStCOrquYyiLrvWHwHmtrQL9luyyXHlDEhFpKQjDuuM&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1878,12 +1728,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_0ac44eb2140949af8538a8de36cb6100&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_0ac44eb2140949af8538a8de36cb6100" target="_blank"
-       onclick="dismissCard('feed_0ac44eb2140949af8538a8de36cb6100')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_0ac44eb2140949af8538a8de36cb6100&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_0ac44eb2140949af8538a8de36cb6100"  target="_blank"
-       onclick="dismissCard('feed_0ac44eb2140949af8538a8de36cb6100')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_0ac44eb2140949af8538a8de36cb6100&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_0ac44eb2140949af8538a8de36cb6100"  target="_blank"
-       onclick="dismissCard('feed_0ac44eb2140949af8538a8de36cb6100')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_0ac44eb2140949af8538a8de36cb6100','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_0ac44eb2140949af8538a8de36cb6100','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_0ac44eb2140949af8538a8de36cb6100','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_0ac44eb2140949af8538a8de36cb6100')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_0ac44eb2140949af8538a8de36cb6100&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_0ac44eb2140949af8538a8de36cb6100" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@qentra_kade/post/DZxi6NsmYWO?xmt=AQG02j77-NpQB_9BPx4TUmspOMXXlgHhiz_llUPx7UZc8ZPFW9nXN8aNz3PxZ3_Pwk7BMufN&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1914,12 +1761,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_f5f7f285198b4fc384b02f20c95f5e61&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_f5f7f285198b4fc384b02f20c95f5e61" target="_blank"
-       onclick="dismissCard('feed_f5f7f285198b4fc384b02f20c95f5e61')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_f5f7f285198b4fc384b02f20c95f5e61&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_f5f7f285198b4fc384b02f20c95f5e61"  target="_blank"
-       onclick="dismissCard('feed_f5f7f285198b4fc384b02f20c95f5e61')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_f5f7f285198b4fc384b02f20c95f5e61&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_f5f7f285198b4fc384b02f20c95f5e61"  target="_blank"
-       onclick="dismissCard('feed_f5f7f285198b4fc384b02f20c95f5e61')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_f5f7f285198b4fc384b02f20c95f5e61','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f5f7f285198b4fc384b02f20c95f5e61','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f5f7f285198b4fc384b02f20c95f5e61','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_f5f7f285198b4fc384b02f20c95f5e61')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f5f7f285198b4fc384b02f20c95f5e61&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f5f7f285198b4fc384b02f20c95f5e61" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@aikorea24/post/DZ1K_P2n3gO?xmt=AQG08AdFRy6oKUuFEVo9i57O7Xx34aU0hhgoADsAOWqD8ImFbNFp-jucDJMjId0GDbek8XY&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1950,12 +1794,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_9a38e8a5b0d946eead093a16428c26f8&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_9a38e8a5b0d946eead093a16428c26f8" target="_blank"
-       onclick="dismissCard('feed_9a38e8a5b0d946eead093a16428c26f8')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_9a38e8a5b0d946eead093a16428c26f8&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_9a38e8a5b0d946eead093a16428c26f8"  target="_blank"
-       onclick="dismissCard('feed_9a38e8a5b0d946eead093a16428c26f8')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_9a38e8a5b0d946eead093a16428c26f8&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_9a38e8a5b0d946eead093a16428c26f8"  target="_blank"
-       onclick="dismissCard('feed_9a38e8a5b0d946eead093a16428c26f8')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_9a38e8a5b0d946eead093a16428c26f8','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_9a38e8a5b0d946eead093a16428c26f8','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_9a38e8a5b0d946eead093a16428c26f8','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_9a38e8a5b0d946eead093a16428c26f8')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_9a38e8a5b0d946eead093a16428c26f8&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_9a38e8a5b0d946eead093a16428c26f8" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@qentra_kade/post/DZ1fcveGedj?xmt=AQG0a_w-Rn1qL--CLNUlue3Ontzg8c2rQ6OfHCc0LOQike8rOrXNtf0sTjowFz4MRLytX8sq&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -1986,12 +1827,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_4185d638f27f49b9ae407f37afbcd007&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_4185d638f27f49b9ae407f37afbcd007" target="_blank"
-       onclick="dismissCard('feed_4185d638f27f49b9ae407f37afbcd007')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_4185d638f27f49b9ae407f37afbcd007&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_4185d638f27f49b9ae407f37afbcd007"  target="_blank"
-       onclick="dismissCard('feed_4185d638f27f49b9ae407f37afbcd007')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_4185d638f27f49b9ae407f37afbcd007&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_4185d638f27f49b9ae407f37afbcd007"  target="_blank"
-       onclick="dismissCard('feed_4185d638f27f49b9ae407f37afbcd007')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_4185d638f27f49b9ae407f37afbcd007','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_4185d638f27f49b9ae407f37afbcd007','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_4185d638f27f49b9ae407f37afbcd007','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_4185d638f27f49b9ae407f37afbcd007')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_4185d638f27f49b9ae407f37afbcd007&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_4185d638f27f49b9ae407f37afbcd007" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@verbio_labs/post/DZ3c-wrEmQs?xmt=AQG0zmPCS0PKs9J1N5kbSK_QmP2SQVN69oJOYVl_UsoFkmNGXiPjKvYPhdAL6-mJI5qnpMrF&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -2022,12 +1860,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_ed2befd878c5416192840c97e8379ad8&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_ed2befd878c5416192840c97e8379ad8" target="_blank"
-       onclick="dismissCard('feed_ed2befd878c5416192840c97e8379ad8')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_ed2befd878c5416192840c97e8379ad8&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_ed2befd878c5416192840c97e8379ad8"  target="_blank"
-       onclick="dismissCard('feed_ed2befd878c5416192840c97e8379ad8')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_ed2befd878c5416192840c97e8379ad8&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_ed2befd878c5416192840c97e8379ad8"  target="_blank"
-       onclick="dismissCard('feed_ed2befd878c5416192840c97e8379ad8')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_ed2befd878c5416192840c97e8379ad8','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_ed2befd878c5416192840c97e8379ad8','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_ed2befd878c5416192840c97e8379ad8','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_ed2befd878c5416192840c97e8379ad8')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_ed2befd878c5416192840c97e8379ad8&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_ed2befd878c5416192840c97e8379ad8" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG0Leb72z-OJN6K1seXeVlUhzawGy7pT2_YSheswOHv8n7ttvUqaW7TVADFHieO0lhRtrE6&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -2058,12 +1893,9 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
   
   <div class="actions">
     
-    <a class="btn-approve" href="https://github.com/wsungAhn/ai-feed/issues/new?title=approve%3Afeed_7a02936c512d4c53b21b242b44294927&labels=ai-feed-action&body=%EC%8A%B9%EC%9D%B8+%EC%9A%94%EC%B2%AD%3A+feed_7a02936c512d4c53b21b242b44294927" target="_blank"
-       onclick="dismissCard('feed_7a02936c512d4c53b21b242b44294927')">✅ 승인</a>
-    <a class="btn-reject"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=skip%3Afeed_7a02936c512d4c53b21b242b44294927&labels=ai-feed-action&body=%EC%8A%A4%ED%82%B5+%EC%9A%94%EC%B2%AD%3A+feed_7a02936c512d4c53b21b242b44294927"  target="_blank"
-       onclick="dismissCard('feed_7a02936c512d4c53b21b242b44294927')">❌ 스킵</a>
-    <a class="btn-debunk"  href="https://github.com/wsungAhn/ai-feed/issues/new?title=debunk%3Afeed_7a02936c512d4c53b21b242b44294927&labels=ai-feed-action&body=%EC%95%8C%EA%B3%A0%EB%B3%B4%EB%8B%88+%EB%B3%84%EB%A1%9C%3A+feed_7a02936c512d4c53b21b242b44294927"  target="_blank"
-       onclick="dismissCard('feed_7a02936c512d4c53b21b242b44294927')">🚫 알고보니 별로</a>
+    <button class="btn-approve" onclick="decide('feed_7a02936c512d4c53b21b242b44294927','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_7a02936c512d4c53b21b242b44294927','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_7a02936c512d4c53b21b242b44294927','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_7a02936c512d4c53b21b242b44294927')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_7a02936c512d4c53b21b242b44294927&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_7a02936c512d4c53b21b242b44294927" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG082GPBh4yVI8xW2Ps49nVn0tsqNOivDFVEOalW7GvCEZnhqB8JNQNf2m2yi53kAAS8ZU3&slof=1" target="_blank" rel="noopener">🔗 원문</a>
@@ -2080,73 +1912,50 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
 </div>
 </div>
 <script>
-const DISMISSED_KEY = 'aifeed_dismissed';
-const COMMENTED_KEY = 'aifeed_commented';
+// ── 인증 ──────────────────────────────────────────────────────────────
+// 이 페이지는 GitHub Pages(다른 오리진)에 배포되므로 pm_server를 절대
+// URL로 호출한다. 토큰은 ?token= 최초 진입 → localStorage 저장(재방문 시 자동).
+const PM_API = 'https://pm.mwco.io';
+const API_TOKEN = new URLSearchParams(location.search).get('token')
+                   || localStorage.getItem('pm_token') || '';
+if (API_TOKEN) localStorage.setItem('pm_token', API_TOKEN);
+
+async function apiPost(path, body) {
+  const r = await fetch(PM_API + path, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(API_TOKEN ? {'Authorization': 'Bearer ' + API_TOKEN} : {}),
+    },
+    body: JSON.stringify(body),
+  });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(data.detail || ('HTTP ' + r.status));
+  return data;
+}
+
 const OCR_LOCK_KEY = 'aifeed_ocr_locked';
 const SERVER_OCR_LOCKED = false;
-const RESPONDED_IDS = ["feed_8403489077744407ab81bf97baee41aa", "feed_256f8f4fdf064361a1442ef724d7b053", "feed_eb37829bed08495a9116bd938d62fbf4", "feed_c12a51b926604f53b1672bb0624ca67e", "feed_b9d9536ecfdd452983e0ccbfe5a6d25f", "feed_39d8bcc45ed14427af7186784cb95996", "feed_eb6afe3d049d422fa5e39288559c35f4", "feed_39720643e8fb46dc81cf3a248b05d008", "feed_abc33c12724946db94b7af6d91a99c40", "feed_072b2fb05bb642c3901b100a3abb9f64", "feed_28b60e805431400c8d3798581773b722"];
-const COMMENT_TTL_MS = 3 * 24 * 60 * 60 * 1000; // 3일
 
-function getDismissed() { return JSON.parse(localStorage.getItem(DISMISSED_KEY) || '[]'); }
+// 승인/거절 근거를 명시적으로 남긴다(판정 장부, ADR §4.5-4) — 버튼마다
+// 합리적 기본값을 미리 채워두고 필요하면 사용자가 고쳐 쓴다.
+const DECISION_DEFAULT_REASON = {
+  approve: '대시보드 승인',
+  skip: 'skip-no-interest',
+  debunk: 'skip-debunked',
+};
 
-// COMMENTED_KEY는 {id: timestamp} 맵. 구버전(배열) 자동 마이그레이션.
-function getCommented() {
-  const raw = JSON.parse(localStorage.getItem(COMMENTED_KEY) || '{}');
-  if (Array.isArray(raw)) {
-    const now = Date.now();
-    const map = {};
-    raw.forEach(id => { map[id] = now; });
-    localStorage.setItem(COMMENTED_KEY, JSON.stringify(map));
-    return map;
-  }
-  return raw;
-}
-
-// 3일 이내 + 아직 미응답인 ID 목록
-function getActiveCommentedIds() {
-  const map = getCommented();
-  const now = Date.now();
-  return Object.keys(map).filter(id =>
-    !RESPONDED_IDS.includes(id) && now - map[id] < COMMENT_TTL_MS
-  );
-}
-
-// 입력 중 새로고침 방지 — textarea/input 포커스 시 타이머 중단
-let _refreshTimer;
-function _scheduleRefresh() {
-  clearTimeout(_refreshTimer);
-  _refreshTimer = setTimeout(() => location.reload(), 600000);
-}
-document.addEventListener('focusin', e => {
-  if (e.target.matches('textarea, input')) clearTimeout(_refreshTimer);
-});
-document.addEventListener('focusout', e => {
-  if (e.target.matches('textarea, input')) _scheduleRefresh();
-});
-_scheduleRefresh();
-
-function dismissCard(id) {
-  const dismissed = getDismissed();
-  if (!dismissed.includes(id)) dismissed.push(id);
-  localStorage.setItem(DISMISSED_KEY, JSON.stringify(dismissed));
-  setTimeout(() => {
+// ── 판정: pm_server API 직접 호출 (GitHub 이슈 우회 경로 폐기) ──
+async function decide(id, action) {
+  const reason = prompt('판정 근거 (한 줄):', DECISION_DEFAULT_REASON[action] || '');
+  if (reason === null) return; // 취소
+  try {
+    await apiPost(`/feed/${id}/decision`, {action, reason});
     const card = document.getElementById('card-' + id);
-    if (card) card.classList.add('dismissed');
-  }, 300);
-}
-
-function markCommented(id) {
-  const commented = getCommented();
-  commented[id] = Date.now();
-  localStorage.setItem(COMMENTED_KEY, JSON.stringify(commented));
-  const card = document.getElementById('card-' + id);
-  if (card) {
-    card.classList.add('commented');
-    const header = card.querySelector('.card-header');
-    if (header && !header.querySelector('.badge-comment')) {
-      header.insertAdjacentHTML('beforeend', '<span class="badge-comment">💬 의견 검토 중</span>');
-    }
-    card.closest('.grid').prepend(card);
+    if (card) card.remove();
+    updateCount();
+  } catch (e) {
+    alert('처리 실패: ' + e.message);
   }
 }
 
@@ -2155,26 +1964,34 @@ function toggleCommentBox(id) {
   if (!box) return;
   const opening = box.style.display === 'none';
   box.style.display = opening ? 'block' : 'none';
-  if (opening) {
-    clearTimeout(_refreshTimer); // box 열리면 새로고침 중단
-    setTimeout(() => { const ta = box.querySelector('textarea'); if (ta) ta.focus(); }, 50);
-  } else {
-    _scheduleRefresh(); // box 닫히면 타이머 재개
-  }
+  if (opening) setTimeout(() => { const ta = box.querySelector('textarea'); if (ta) ta.focus(); }, 50);
 }
 
-function submitComment(id) {
-  const text = document.getElementById('comment-text-' + id).value.trim();
+// 즉시 동기 응답 — 예전엔 GitHub 이슈 생성 후 poller가 15분 간격으로 처리해
+// "며칠째 의견검토중" 정체가 발생했다. 지금은 몇 초 내로 답이 와서 그 자리에 표시한다.
+async function submitComment(id) {
+  const ta = document.getElementById('comment-text-' + id);
+  const text = ta.value.trim();
   if (!text) return;
-  const url = 'https://github.com/wsungAhn/ai-feed/issues/new'
-    + '?title=comment%3A' + encodeURIComponent(id)
-    + '&labels=ai-feed-action'
-    + '&body=' + encodeURIComponent(text);
-  window.open(url, '_blank');
-  markCommented(id);
-  box = document.getElementById('comment-box-' + id);
-  if (box) { box.style.display = 'none'; _scheduleRefresh(); }
-  document.getElementById('comment-text-' + id).value = '';
+  const box = document.getElementById('comment-box-' + id);
+  const submitBtn = box.querySelector('.btn-comment-submit');
+  submitBtn.disabled = true; submitBtn.textContent = '처리 중...';
+  try {
+    const {response} = await apiPost(`/feed/${id}/comment`, {message: text});
+    const card = document.getElementById('card-' + id);
+    const now = new Date().toISOString().slice(0, 16);
+    box.insertAdjacentHTML('beforebegin', `
+      <div class="claude-response">
+        <div class="response-meta">🤖 Claude 응답 · ${now}</div>
+        <div class="response-body">${response.replace(/</g,'&lt;')}</div>
+      </div>`);
+    box.style.display = 'none';
+    ta.value = '';
+  } catch (e) {
+    alert('처리 실패: ' + e.message);
+  } finally {
+    submitBtn.disabled = false; submitBtn.textContent = '제출';
+  }
 }
 
 function lockOcrButtons() {
@@ -2186,39 +2003,19 @@ function lockOcrButtons() {
   });
 }
 
+function updateCount() {
+  const total = document.querySelectorAll('.card').length;
+  const countEl = document.querySelector('.count');
+  if (countEl) countEl.textContent = `승인 대기 ${total}건`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  const grid = document.querySelector('.grid');
-
-  // 응답완료·3일 만료 항목 자동 정리
-  const activeIds = getActiveCommentedIds();
-  const activeMap = {};
-  const allCommented = getCommented();
-  activeIds.forEach(id => { activeMap[id] = allCommented[id]; });
-  localStorage.setItem(COMMENTED_KEY, JSON.stringify(activeMap));
-
-  getDismissed().forEach(id => {
-    const card = document.getElementById('card-' + id);
-    if (card) card.classList.add('dismissed');
-  });
-  activeIds.forEach(id => {
-    const card = document.getElementById('card-' + id);
-    if (card) {
-      card.classList.add('commented');
-      const header = card.querySelector('.card-header');
-      if (header && !header.querySelector('.badge-comment')) {
-        header.insertAdjacentHTML('beforeend', '<span class="badge-comment">💬 의견 검토 중</span>');
-      }
-      if (grid) grid.prepend(card);
-    }
-  });
   if (SERVER_OCR_LOCKED || localStorage.getItem(OCR_LOCK_KEY)) {
     lockOcrButtons();
   } else {
     localStorage.removeItem(OCR_LOCK_KEY);
   }
-  const total = document.querySelectorAll('.card:not(.dismissed)').length;
-  const countEl = document.querySelector('.count');
-  if (countEl) countEl.textContent = `승인 대기 ${total}건`;
+  updateCount();
 });
 </script>
 </body>
