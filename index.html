@@ -172,12 +172,25 @@
   <div class="tags"><span class="tag">#loop-engineering</span> <span class="tag">#ai-code-agents</span> <span class="tag">#automation</span> <span class="tag">#codex</span> <span class="tag">#claude-code</span> <span class="tag">#mcp</span> <span class="tag">#ci-automation</span> <span class="tag">#open-source</span></div>
   <div class="apply-plan">승인 시 → ~/.codex/AGENTS.md에 추가 (Codex 작업 규칙 반영)</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-03T21:57</div>
+    <div class="response-body">Loop Engineering을 직접 적용하려면, 먼저 **CARIP 파이프라인의 10단계 자동화**(ingestion → normalization → matching → scoring)를 Loop의 skill library + scheduled template로 구성하는 게 가장 직접적이다. 현재 ai-feed의 LaunchAgent 패턴보다 Loop가 isolated workspace, validation twin agents, persistent state 제공해서 더 견고한 무인 자동화를 만들 수 있다.
+
+**다음 단계 3개:**
+1. **비교 분석**: Loop Engineering 레포 clone → 현재 `/loop` + LaunchAgent 패턴과의 차이점 정리 (특히 validation twin agents 활용 여부)
+2. **파이롯 설계**: CARIP의 CA unclaimed assets ingestion step 하나를 Loop template으로 재작성 (schedule + skill + validation)
+3. **배운 점 적용**: PM 대시보드 구축 때 실패한 &quot;조용한 실패, 레이스 조건&quot; 체크리스트를 Loop 설계에 반영
+
+프로덕션 배포 전에 [PM 대시보드 교훈 메모](file:///Users/Mung/.claude/projects/-Users-Mung-dev-ai-feed/memory/pm-dashboard-lessons.md)를 다시 읽고 접근하길 권한다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_9e9dd26d132944f7b7f4c7c1fba98ade','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_9e9dd26d132944f7b7f4c7c1fba98ade&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_9e9dd26d132944f7b7f4c7c1fba98ade" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DaDoy0cMQVt/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
