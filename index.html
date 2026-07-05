@@ -80,8 +80,41 @@
   <span class="meta">업데이트: 2026-07-05</span>
 </header>
 
-<p class="count">승인 대기 52건</p>
+<p class="count">승인 대기 53건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_98a2204601ba459ab8dc957c9896a944" data-id="feed_98a2204601ba459ab8dc957c9896a944">
+  <div class="card-header">
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-05</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">AI를 활용한 초집중 학습 전략 5가지 소개. 실용적 오류 학습, 핵심 문장 탐지, 맞춤형 7일 학습 경로 등 실전 중심 접근 강조.</p>
+  <ul class="claims"><li>4시간 내 기술 숙련 가능 주장</li><li>실수 시뮬레이션을 통한 깊은 학습 효과</li><li>개인 맞춤형 학습 경로 생성 가능성</li></ul>
+  <div class="surfaces"><span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#AI학습</span> <span class="tag">#개인화교육</span> <span class="tag">#오류기반학습</span></div>
+  <div class="apply-plan">승인 시 ~/.claude/PROMPTS.md에 'Error Simulator / Learning Curve Disruptor' 프롬프트 템플릿 추가 및 사용 사례 기록</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="decide('feed_98a2204601ba459ab8dc957c9896a944','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_98a2204601ba459ab8dc957c9896a944','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_98a2204601ba459ab8dc957c9896a944','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_98a2204601ba459ab8dc957c9896a944')">💬 의견</button>
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_98a2204601ba459ab8dc957c9896a944&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_98a2204601ba459ab8dc957c9896a944" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_98a2204601ba459ab8dc957c9896a944" style="display:none">
+    <textarea id="comment-text-feed_98a2204601ba459ab8dc957c9896a944" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_98a2204601ba459ab8dc957c9896a944')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_98a2204601ba459ab8dc957c9896a944')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_75702827af814eec87631359b6c4de8e" data-id="feed_75702827af814eec87631359b6c4de8e">
   <div class="card-header">
@@ -548,12 +581,25 @@
   <div class="tags"><span class="tag">#책추천</span> <span class="tag">#베스트셀러</span> <span class="tag">#다크심리학</span> <span class="tag">#심리학</span></div>
   <div class="apply-plan">승인 시 project-docs의 콘텐츠 아이디어/독서 메모 섹션에 『다크심리학2』를 심리·설득·행동분석 참고 후보로 기록하되, 실제 활용 전 핵심 주장과 출처 검증을 추가한다.</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:28</div>
+    <div class="response-body">Instagram 직접 접근이 제한되어 있습니다. 
+
+**다음 단계 제안:**
+1. 이미지 파일을 직접 제공해주시거나 로컬 경로 공유 → Vision API로 텍스트 추출
+2. 추출 결과(이미지 텍스트)와 현재 AI 분석(캡션 기반) 비교
+3. &quot;이미지에 담긴 핵심 정보 vs 캡션에서 포착한 내용&quot; 차이를 프롬프트에 기록
+
+어느 형태의 이미지가 있는지 확인할까요? 또는 `ai-feed search &quot;OCR&quot;` 등으로 기존 텍스트 추출 파이프라인 활용할 수도 있습니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_632dc0fdc8e74fdb852637a57649e09c')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_632dc0fdc8e74fdb852637a57649e09c')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_632dc0fdc8e74fdb852637a57649e09c&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_632dc0fdc8e74fdb852637a57649e09c" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DZ68PJLkV8O/?img_index=1" target="_blank" rel="noopener">🔗 원문</a>
   </div>
