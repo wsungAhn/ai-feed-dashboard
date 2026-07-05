@@ -76,6 +76,26 @@
                          padding: 6px 14px; font-size: 13px; cursor: pointer; }
   .btn-comment-cancel { background: #475569; color: #fff; border: none; border-radius: 6px;
                          padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+                    display: flex; align-items: center; justify-content: center;
+                    z-index: 1000; }
+  .modal-box { background: #1e293b; border: 1px solid #334155; border-radius: 10px;
+               padding: 20px; width: min(420px, 90vw); display: flex;
+               flex-direction: column; gap: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+  .modal-title { font-size: 14px; color: #e2e8f0; line-height: 1.5; }
+  .modal-input { background: #0f172a; border: 1px solid #475569; border-radius: 6px;
+                 color: #e2e8f0; font-size: 13px; padding: 8px; width: 100%;
+                 font-family: inherit; box-sizing: border-box; }
+  .modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+  .modal-btn-ok { background: #1d4ed8; color: #fff; border: none; border-radius: 6px;
+                  padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .modal-btn-cancel { background: #475569; color: #fff; border: none; border-radius: 6px;
+                       padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+           background: #1e293b; border: 1px solid #ef4444; color: #fecaca; padding: 10px 16px;
+           border-radius: 8px; font-size: 13px; max-width: 90vw; box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+           opacity: 0; transition: opacity 0.2s, transform 0.2s; z-index: 1100; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
@@ -1197,10 +1217,55 @@ const PM_API = 'https://pm.mwco.io';
 const urlToken = new URLSearchParams(location.search).get('token');
 if (urlToken) localStorage.setItem('pm_token', urlToken.trim());
 
-function getToken() {
+// window.prompt/alert는 크롬이 반복 호출 시 "추가 대화상자 차단" 체크박스를
+// 띄우고, 사용자가 한 번이라도 체크하면 그 뒤로는 조용히 null을 반환한다 —
+// 승인 버튼이 진짜로 죽은 것처럼 보이는 버그의 근본 원인. 인페이지 모달로 대체.
+function showModal({title, defaultValue = '', okLabel = '확인', showInput = true}) {
+  return new Promise(resolve => {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = `
+      <div class="modal-box">
+        <div class="modal-title"></div>
+        ${showInput ? '<input class="modal-input" type="text">' : ''}
+        <div class="modal-actions">
+          <button class="modal-btn-cancel">취소</button>
+          <button class="modal-btn-ok"></button>
+        </div>
+      </div>`;
+    overlay.querySelector('.modal-title').textContent = title;
+    overlay.querySelector('.modal-btn-ok').textContent = okLabel;
+    const input = overlay.querySelector('.modal-input');
+    if (input) input.value = defaultValue;
+    document.body.appendChild(overlay);
+    if (input) { input.focus(); input.select(); }
+    const cleanup = result => { overlay.remove(); resolve(result); };
+    overlay.querySelector('.modal-btn-cancel').onclick = () => cleanup(null);
+    overlay.querySelector('.modal-btn-ok').onclick = () => cleanup(input ? input.value.trim() : true);
+    if (input) input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') cleanup(input.value.trim());
+      if (e.key === 'Escape') cleanup(null);
+    });
+    overlay.addEventListener('click', e => { if (e.target === overlay) cleanup(null); });
+  });
+}
+
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('show'));
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 250);
+  }, 4000);
+}
+
+async function getToken() {
   let t = localStorage.getItem('pm_token');
   if (!t) {
-    t = prompt('PM API 토큰을 입력하세요 (최초 1회만, 이 브라우저에 저장됩니다):');
+    t = await showModal({title: 'PM API 토큰을 입력하세요 (최초 1회만, 이 브라우저에 저장됩니다):'});
     // 복사 시 앞뒤 공백·줄바꿈이 붙으면 서버가 거부(401)하므로 반드시 정리
     if (t) { t = t.trim(); localStorage.setItem('pm_token', t); }
   }
@@ -1208,7 +1273,7 @@ function getToken() {
 }
 
 async function apiPost(path, body) {
-  const token = getToken();
+  const token = await getToken();
   const r = await fetch(PM_API + path, {
     method: 'POST',
     headers: {
@@ -1246,7 +1311,10 @@ function removeCard(id) {
 
 // ── 판정: pm_server API 직접 호출 (GitHub 이슈 우회 경로 폐기) ──
 async function decide(id, action) {
-  const reason = prompt('판정 근거 (한 줄):', DECISION_DEFAULT_REASON[action] || '');
+  const reason = await showModal({
+    title: '판정 근거 (한 줄):',
+    defaultValue: DECISION_DEFAULT_REASON[action] || '',
+  });
   if (reason === null) return; // 취소
   try {
     await apiPost(`/feed/${id}/decision`, {action, reason});
@@ -1255,10 +1323,10 @@ async function decide(id, action) {
     if (e.status === 409) {
       // 정적 페이지가 갱신되기 전 백그라운드에서 이미 처리된 항목 — 서버가
       // 알려준 대로 안내하고, 더 눌러봐야 소용없으니 카드를 치운다.
-      alert(e.message);
+      showToast(e.message);
       removeCard(id);
     } else {
-      alert('처리 실패: ' + e.message);
+      showToast('처리 실패: ' + e.message);
     }
   }
 }
@@ -1292,7 +1360,7 @@ async function submitComment(id) {
     box.style.display = 'none';
     ta.value = '';
   } catch (e) {
-    alert('처리 실패: ' + e.message);
+    showToast('처리 실패: ' + e.message);
   } finally {
     submitBtn.disabled = false; submitBtn.textContent = '제출';
   }
