@@ -580,8 +580,16 @@
   <div class="apply-plan">승인 시 project-docs의 콘텐츠 아이디어/독서 메모 섹션에 『다크심리학2』를 심리·설득·행동분석 참고 후보로 기록하되, 실제 활용 전 핵심 주장과 출처 검증을 추가한다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:31</div>
-    <div class="response-body">경로를 현재 컨텍스트에서 못 찾았습니다. 스크린샷 파일명이나 저장 위치를 다시 확인해주거나, 현재 작업 디렉토리(`~/dev/ai-feed`) 내에서 최근 이미지 파일들을 검색해서 찾아볼까요? 파일명만 알려주면 바로 Vision으로 텍스트 추출 후 현재 분석과 비교할 수 있습니다.</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:37</div>
+    <div class="response-body">메모리 기록 완료. 다음 단계는:
+
+**이미지 텍스트 추출 → 캡션과 비교 → 프롬프트 개선에 반영**
+
+1. 스크린샷 파일 경로 확인 → Vision으로 이미지 내 실제 텍스트(책 내용, 강조 문구) 추출
+2. 현재 AI 분석(캡션만 기반 &quot;베스트셀러 해시태그&quot;) vs 추출 텍스트 비교
+3. &quot;캡션이 누락한 구체적 내용&quot; → 프롬프트 개선 데이터 세트에 추가
+
+다른 프로젝트에서 해당 OCR 파이프라인 돌아가면 이 아이템도 함께 처리할 수 있도록 메모리에 링크 연결했습니다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','skip')">⏭ 스킵</button>
