@@ -85,6 +85,40 @@
 <p class="count">승인 대기 31건</p>
 <div class="grid">
 
+<div class="card" id="card-feed_4341144550104836b173ee1aef7364c5" data-id="feed_4341144550104836b173ee1aef7364c5">
+  <div class="card-header">
+    <span class="item-tag" title="feed_4341144550104836b173ee1aef7364c5">#43411445</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-05</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">AI 작업 흐름 최적화 전략: 하위 에이전트 활용, 계획 모드 강제, 지속적 자기 개선 루프 도입.</p>
+  <ul class="claims"><li>복잡한 작업은 하위 에이전트를 통해 병렬 처리하고 메인 컨텍스트를 깨끗하게 유지</li><li>3단계 이상의 작업은 반드시 계획 모드에서 구체적 사양을 작성하여 실행</li></ul>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#ai-agents</span> <span class="tag">#workflow-optimization</span></div>
+  <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /workflow /subagent 접두어 추가</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="decide('feed_4341144550104836b173ee1aef7364c5','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_4341144550104836b173ee1aef7364c5','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_4341144550104836b173ee1aef7364c5','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_4341144550104836b173ee1aef7364c5')">💬 의견</button>
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_4341144550104836b173ee1aef7364c5&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_4341144550104836b173ee1aef7364c5" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_4341144550104836b173ee1aef7364c5" style="display:none">
+    <textarea id="comment-text-feed_4341144550104836b173ee1aef7364c5" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_4341144550104836b173ee1aef7364c5')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_4341144550104836b173ee1aef7364c5')">취소</button>
+    </div>
+  </div>
+</div>
+
 <div class="card" id="card-feed_c0115150ed5a442ea0593525a75c0e96" data-id="feed_c0115150ed5a442ea0593525a75c0e96">
   <div class="card-header">
     <span class="item-tag" title="feed_c0115150ed5a442ea0593525a75c0e96">#c0115150</span>
@@ -184,8 +218,10 @@
   <div class="apply-plan">승인 시 → AI 도구 동향 트래커에 추가</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T15:18</div>
-    <div class="response-body">Agent가 firecrawl로 sume.so를 크롤링하기 위해 권한이 필요합니다. 진행해도 될까요?</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T15:43</div>
+    <div class="response-body">죄송합니다. 권한을 이미 승인해주셨는데 제가 또 물어봤네요. 
+
+사용자님의 의견은 ai-feed PM 태스크 e091e423으로 등록되어 있으니, 다음 세션에서 firecrawl로 sume.so 신뢰성 조사를 진행하겠습니다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','skip')">⏭ 스킵</button>
@@ -205,40 +241,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_c12a51b926604f53b1672bb0624ca67e')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c12a51b926604f53b1672bb0624ca67e')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_fd210e2683144274bd3948a33d23b38d" data-id="feed_fd210e2683144274bd3948a33d23b38d">
-  <div class="card-header">
-    <span class="item-tag" title="feed_fd210e2683144274bd3948a33d23b38d">#fd210e26</span>
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-22</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">보안 워크플로우 전반에 AI 도구가 IDE, SOC, bug bounty, LLM stack까지 확산되고 있다는 내용이다. PentestGPT, BurpGPT, Microsoft Security Copilot, Snyk DeepCode AI, Hexstrike AI, Garak, Lakera Guard를 각각 침투 테스트, 취약점 탐지, 보안 운영, SAST, LLM 보안, AI 방화벽 용도로 소개한다.</p>
-  <ul class="claims"><li>PentestGPT v1.0.0은 recon부터 exploitation, reporting까지 지원하는 오픈소스 agentic AI 침투 테스트 도구이며 XBOW security benchmark에서 86.5%를 기록했다.</li><li>BurpGPT는 Burp Suite 확장으로 각 request를 LLM에 보내 passive scanning을 수행하고 logic flaw를 탐지한다고 주장한다.</li><li>Microsoft Security Copilot은 Defender, Sentinel, Entra, Purview 안에서 자연어 기반 alert triage와 response를 지원한다.</li><li>Snyk DeepCode AI는 Snyk Code의 hybrid AI SAST 엔진이며 19개 이상 언어에서 약 80% autofix accuracy를 제공한다고 주장한다.</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
-  <div class="tags"><span class="tag">#ai-security</span> <span class="tag">#llm-security</span> <span class="tag">#cybersecurity</span> <span class="tag">#pentesting</span> <span class="tag">#devsecops</span> <span class="tag">#security-tools</span></div>
-  <div class="apply-plan">승인 시 project-docs의 security tooling 조사 문서가 있다면 AI security tools 섹션에 PentestGPT, Garak, Lakera Guard를 후보로 추가하고, 각 도구별 검증 항목으로 license, data exposure, local/Ollama 지원, benchmark 출처를 기록한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_fd210e2683144274bd3948a33d23b38d','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_fd210e2683144274bd3948a33d23b38d','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_fd210e2683144274bd3948a33d23b38d','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_fd210e2683144274bd3948a33d23b38d')">💬 의견</button>
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fd210e2683144274bd3948a33d23b38d&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fd210e2683144274bd3948a33d23b38d" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/reel/DYrj7mgMopw/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_fd210e2683144274bd3948a33d23b38d" style="display:none">
-    <textarea id="comment-text-feed_fd210e2683144274bd3948a33d23b38d" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_fd210e2683144274bd3948a33d23b38d')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fd210e2683144274bd3948a33d23b38d')">취소</button>
     </div>
   </div>
 </div>
