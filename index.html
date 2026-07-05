@@ -536,13 +536,14 @@
   <div class="apply-plan">승인 시 ai-feed 콘텐츠 분류 로직에서 Instagram식 책 홍보 캡션을 ai-business 후보로 태깅하되, 단순 구매 유도 문구는 낮은 우선순위로 처리하도록 분류 규칙에 예외를 추가한다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:35</div>
-    <div class="response-body">알겠다. 경로를 분리하겠다.
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:40</div>
+    <div class="response-body">알겠다. 이번에는 **ai-feed 쪽부터 먼저** 진행하겠다.
 
-**ai-feed 쪽**: Apple Vision 로컬 OCR 프로토 + extract 단계 통합 설계 진행 (내가 지금 함)
-**프랑켄 쪽**: 이미지 OCR 기능 제안서(요구사항·아키텍처·ROI) 작성 후 PM 핸드오프 (별개)
+1. Apple Vision 프로토 + extract 단계 조건부 이미지 OCR 설계 완료
+2. 프랑켄 제안서 작성 후 PM 핸드오프
+3. 핸드오프 완료되면 보고 후, 메모리(`instagram-book-ocr-case.md` + `cardnews-ocr-strategy.md`) 최신화
 
-먼저 메모리 업데이트하고, ai-feed에서 Apple Vision 최소 구현부터 시작할게. 프랑켄 제안서는 그다음에 작성해서 PM한테 넘기겠다.</div>
+지금 바로 시작할게. image.txt의 이미지 경로를 읽고 Apple Vision 로컬 테스트 프로토 만든 후, extract 단계에 통합할 지점까지 문서화하겠다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','skip')">⏭ 스킵</button>
