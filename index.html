@@ -80,7 +80,7 @@
   <span class="meta">업데이트: 2026-07-05</span>
 </header>
 
-<p class="count">승인 대기 34건</p>
+<p class="count">승인 대기 33건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_c0115150ed5a442ea0593525a75c0e96" data-id="feed_c0115150ed5a442ea0593525a75c0e96">
@@ -97,12 +97,10 @@
   <div class="apply-plan">승인 시 → AI 도구 동향 트래커에 추가</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-03T21:56</div>
-    <div class="response-body">Instagram 포스트 접근 권한이 필요한데, 포스트의 10개 프로젝트 목록이 뭔지 직접 알려주면 각 프로젝트를 빠르게 분석해줄 수 있다. 
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T15:14</div>
+    <div class="response-body">browse 스킬로 Instagram 포스트 이미지 직접 가져오는 거 시도해볼 수 있다. 공개 포스트면 대부분 가능하다. 안 되면 스크린샷 줘 — 그럼 Vision으로 텍스트 추출해서 프로젝트명 뽑고, 각각 GitHub 저장소 들어가서 실제 경쟁력 있는지 판단할 수 있다.
 
-포스트 캡션이나 이미지 텍스트에 있는 프로젝트 이름들을 복사-붙여넣기 해주면, **각 프로젝트별 GitHub 저장소→README→핵심 기능·별 수·커뮤니티 활동도**를 조사해서 &quot;정말 경쟁할 만한가&quot;를 평가할 수 있다. 그 후 관심 기술 영역(예: AI 도구, 개발자 유틸리티)별로 그룹화하거나, 프로젝트 성숙도별 분류도 가능하다.
-
-어떤 부분부터 시작할까?</div>
+지금 바로 시작해볼까?</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_c0115150ed5a442ea0593525a75c0e96','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_c0115150ed5a442ea0593525a75c0e96','skip')">⏭ 스킵</button>
@@ -122,51 +120,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_c0115150ed5a442ea0593525a75c0e96')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c0115150ed5a442ea0593525a75c0e96')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_b71074614fa3450f85ce492715f62ec1" data-id="feed_b71074614fa3450f85ce492715f62ec1">
-  <div class="card-header">
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-28</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">게시물은 '다크심리학2' 책 구매 링크가 프로필에 있다고 안내하는 홍보성 캡션이다. 핵심 정보는 책 제목, 구매 경로, 관련 해시태그뿐이다.</p>
-  <ul class="claims"><li>'다크심리학2' 책 구매 링크가 @dark.motivaion._ 프로필에 있다.</li><li>게시물은 #다크심리학 및 #다크심리학2 해시태그를 사용한다.</li></ul>
-  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#책</span> <span class="tag">#심리학</span> <span class="tag">#마케팅</span> <span class="tag">#소셜미디어</span></div>
-  <div class="apply-plan">승인 시 ai-feed 콘텐츠 분류 로직에서 Instagram식 책 홍보 캡션을 ai-business 후보로 태깅하되, 단순 구매 유도 문구는 낮은 우선순위로 처리하도록 분류 규칙에 예외를 추가한다.</div>
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:40</div>
-    <div class="response-body">알겠다. 이번에는 **ai-feed 쪽부터 먼저** 진행하겠다.
-
-1. Apple Vision 프로토 + extract 단계 조건부 이미지 OCR 설계 완료
-2. 프랑켄 제안서 작성 후 PM 핸드오프
-3. 핸드오프 완료되면 보고 후, 메모리(`instagram-book-ocr-case.md` + `cardnews-ocr-strategy.md`) 최신화
-
-지금 바로 시작할게. image.txt의 이미지 경로를 읽고 Apple Vision 로컬 테스트 프로토 만든 후, extract 단계에 통합할 지점까지 문서화하겠다.</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','approve')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_b71074614fa3450f85ce492715f62ec1')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_b71074614fa3450f85ce492715f62ec1&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_b71074614fa3450f85ce492715f62ec1" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/DZplcqPE9Ph/?img_index=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_b71074614fa3450f85ce492715f62ec1" style="display:none">
-    <textarea id="comment-text-feed_b71074614fa3450f85ce492715f62ec1" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_b71074614fa3450f85ce492715f62ec1')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b71074614fa3450f85ce492715f62ec1')">취소</button>
     </div>
   </div>
 </div>
