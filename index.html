@@ -503,15 +503,15 @@
   <div class="apply-plan">승인 시 ai-feed 콘텐츠 분류 로직에서 Instagram식 책 홍보 캡션을 ai-business 후보로 태깅하되, 단순 구매 유도 문구는 낮은 우선순위로 처리하도록 분류 규칙에 예외를 추가한다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:25</div>
-    <div class="response-body">firecrawl-local은 **웹 크롤링 + 텍스트 추출만** 지원 — 로컬 이미지 OCR은 없다. **Apple Vision으로 가는 게 맞다.**
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:27</div>
+    <div class="response-body">진행하겠다. 다음 단계:
 
-다음:
-1. Python에서 `Vision` 프레임워크 호출 프로토타입 만들기 (macOS에만, 경량)
-2. `extract` 단계에 조건 추가: 캡션 confidence &lt; 0.6이면 이미지도 함께 처리
-3. queue.txt 항목 수집할 때 이미지 경로도 함께 저장
+1. **메모리 확인 &amp; 업데이트** — 기존 &quot;카드뉴스 OCR 전략&quot; 메모리 최신화 (Apple Vision + 조건부 처리 세부 사항)
+2. **Apple Vision 프로토** — Python에서 로컬 이미지 텍스트 추출하는 최소 코드 작성
+3. **image.txt 데이터** — 당신이 저장한 이미지 경로 읽고 Vision으로 테스트 돌리기
+4. **ai-feed extract 단계 통합 설계** — 캡션 confidence 조건 + 이미지 OCR 로직 추가 지점 문서화
 
-이미지.txt가 이미 있으니 먼저 프로토 테스트할 데이터는 충분하다. 진행할까?</div>
+이미 Instagram 사례가 있으니 정확도 검증도 가능하다. 시작할래?</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','skip')">⏭ 스킵</button>
