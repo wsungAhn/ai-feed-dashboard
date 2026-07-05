@@ -80,7 +80,7 @@
   <span class="meta">업데이트: 2026-07-05</span>
 </header>
 
-<p class="count">승인 대기 53건</p>
+<p class="count">승인 대기 51건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_98a2204601ba459ab8dc957c9896a944" data-id="feed_98a2204601ba459ab8dc957c9896a944">
@@ -575,15 +575,8 @@
   <div class="apply-plan">승인 시 project-docs의 콘텐츠 아이디어/독서 메모 섹션에 『다크심리학2』를 심리·설득·행동분석 참고 후보로 기록하되, 실제 활용 전 핵심 주장과 출처 검증을 추가한다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:30</div>
-    <div class="response-body">메모리에서 카드뉴스 OCR 전략을 찾았습니다. Apple Vision 로컬 처리로 이미지 내 실제 텍스트를 추출한 뒤, 현재 캡션 기반 분석과 비교하는 방식입니다.
-
-**이 Instagram 아이템에 적용:**
-1. 스크린샷 이미지 파일 제공 → Vision으로 이미지 내 텍스트 추출
-2. 추출 텍스트(실제 콘텐츠) vs 현재 AI 분석(캡션만 기반) 비교
-3. 불일치 부분 기록해서 프롬프트 개선에 반영
-
-파일명이나 로컬 경로 있으면 바로 시작할 수 있습니다.</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:31</div>
+    <div class="response-body">경로를 현재 컨텍스트에서 못 찾았습니다. 스크린샷 파일명이나 저장 위치를 다시 확인해주거나, 현재 작업 디렉토리(`~/dev/ai-feed`) 내에서 최근 이미지 파일들을 검색해서 찾아볼까요? 파일명만 알려주면 바로 Vision으로 텍스트 추출 후 현재 분석과 비교할 수 있습니다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_632dc0fdc8e74fdb852637a57649e09c','skip')">⏭ 스킵</button>
@@ -603,72 +596,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_632dc0fdc8e74fdb852637a57649e09c')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_632dc0fdc8e74fdb852637a57649e09c')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_011fce49049e450ea2e1fdb6914c37a9" data-id="feed_011fce49049e450ea2e1fdb6914c37a9">
-  <div class="card-header">
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-27</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">현대 디지털 제품에서 AI Agent가 핵심 기반이 되고 있으며, production-grade Agent는 단순 API 연결을 넘어 orchestration, memory, tool integration, evaluation, monitoring이 필요하다는 내용이다. Jaiinfoway는 기업용 AI Agent 생태계 구축과 자동화 프레임워크를 제공한다고 주장한다.</p>
-  <ul class="claims"><li>Production-grade AI Agent는 LLM API 연결만으로 충분하지 않다.</li><li>AI Agent 구축에는 prompt engineering, multi-agent orchestration, vector database, MCP server architecture, evaluation, latency optimization, monitoring 등이 필요하다.</li><li>Jaiinfoway는 기업용 AI ecosystem architecture와 deployment strategy를 지원한다.</li></ul>
-  <div class="surfaces"><span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#ai-agent</span> <span class="tag">#llm-orchestration</span> <span class="tag">#rag</span> <span class="tag">#mcp</span> <span class="tag">#enterprise-ai</span> <span class="tag">#workflow-automation</span></div>
-  <div class="apply-plan">승인 시 docs/design-ai-agent-architecture.md에 production-grade AI Agent 체크리스트 섹션을 추가하고, orchestration, memory, tool integration, evaluation, monitoring, deployment 항목을 설계 검토 기준으로 정리한다. 프롬프트 운영 문서가 있다면 system instruction design과 evaluation feedback loop 항목을 추가한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_011fce49049e450ea2e1fdb6914c37a9','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_011fce49049e450ea2e1fdb6914c37a9','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_011fce49049e450ea2e1fdb6914c37a9','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_011fce49049e450ea2e1fdb6914c37a9')">💬 의견</button>
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_011fce49049e450ea2e1fdb6914c37a9&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_011fce49049e450ea2e1fdb6914c37a9" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/reel/DYPZ9mfR9Io/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_011fce49049e450ea2e1fdb6914c37a9" style="display:none">
-    <textarea id="comment-text-feed_011fce49049e450ea2e1fdb6914c37a9" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_011fce49049e450ea2e1fdb6914c37a9')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_011fce49049e450ea2e1fdb6914c37a9')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_5395accc432e452295e0440980b3bf51" data-id="feed_5395accc432e452295e0440980b3bf51">
-  <div class="card-header">
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-27</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">Instagram 계정 성장과 콘텐츠 성과 개선을 위한 프롬프트 모음이다. 각 프롬프트는 콘텐츠 전략 감사, 첫 줄 카피 작성, 얼굴 없는 콘텐츠 포맷 제작, 이탈 지점 분석, 권위 있는 포지셔닝 개선에 초점을 둔다.</p>
-  <ul class="claims"><li>Instagram 콘텐츠는 단순히 좋아요를 받는 것보다 팔로우할 이유를 만들어야 성장에 유리하다고 주장한다.</li><li>첫 줄이 Instagram 콘텐츠의 성과에서 가장 중요하다고 주장한다.</li><li>얼굴 노출이나 trending audio 없이도 Instagram 계정을 100K 이상 성장시킬 수 있다고 주장한다.</li><li>콘텐츠의 각 줄은 다음 줄을 보게 만들 만큼의 긴장감을 만들어야 한다고 주장한다.</li></ul>
-  <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#instagram-growth</span> <span class="tag">#content-strategy</span> <span class="tag">#prompt-engineering</span> <span class="tag">#copywriting</span> <span class="tag">#creator-positioning</span></div>
-  <div class="apply-plan">승인 시 project-docs 또는 prompt 라이브러리의 콘텐츠 제작 섹션에 Instagram 성장용 프롬프트 템플릿으로 추가한다. 특히 첫 줄 hook, retention edit, positioning rewrite 패턴을 재사용 가능한 prompt snippets로 정리한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_5395accc432e452295e0440980b3bf51','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_5395accc432e452295e0440980b3bf51','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_5395accc432e452295e0440980b3bf51','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_5395accc432e452295e0440980b3bf51')">💬 의견</button>
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_5395accc432e452295e0440980b3bf51&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_5395accc432e452295e0440980b3bf51" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/reel/DaDosuEAGh5/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_5395accc432e452295e0440980b3bf51" style="display:none">
-    <textarea id="comment-text-feed_5395accc432e452295e0440980b3bf51" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_5395accc432e452295e0440980b3bf51')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5395accc432e452295e0440980b3bf51')">취소</button>
     </div>
   </div>
 </div>
