@@ -582,12 +582,27 @@
   <div class="tags"><span class="tag">#game-ui</span> <span class="tag">#ocr</span> <span class="tag">#mobile-game</span></div>
   
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:18</div>
+    <div class="response-body">JSON 파일을 보니 **모든 아이템이 `source_url: null`이고 `source_platform: &quot;Manual&quot;`**입니다. 즉, 직접 수동 입력되었고 원본 URL이 저장되지 않은 상태네요.
+
+게임 화면 OCR 아이템의 경우:
+1. **링크 소실 아님** — 처음부터 URL을 기록하지 않고 수집된 것 (Manual source)
+2. **복구 불가** — 원본 출처 메타데이터가 DB에 없음
+
+**다음 단계 제안:**
+- 이 아이템은 AI/trading/비즈니스와 무관한 게임 화면이므로 **피드에서 제외하거나 별도 보관** 추천
+- 향후 수집 시 출처(URL, 플랫폼, 캡처 시간)를 **필수 메타로 저장**하는 파이프라인 개선
+- 현재 manual 수집 아이템들의 출처 복구가 필요하면 dashboard에서 **source 필드 추가** 작업 검토</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_c95f0d6fe7544847839943e65f1cb8cc')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_c95f0d6fe7544847839943e65f1cb8cc','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c95f0d6fe7544847839943e65f1cb8cc')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c95f0d6fe7544847839943e65f1cb8cc&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c95f0d6fe7544847839943e65f1cb8cc" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     
   </div>
