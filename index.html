@@ -503,8 +503,10 @@
   <div class="apply-plan">승인 시 ai-feed 콘텐츠 분류 로직에서 Instagram식 책 홍보 캡션을 ai-business 후보로 태깅하되, 단순 구매 유도 문구는 낮은 우선순위로 처리하도록 분류 규칙에 예외를 추가한다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:12</div>
-    <div class="response-body">Instagram 직접 접근이 막혀있네. 대신 스크린샷을 보여줄래? 그럼 AI 분석과 실제 콘텐츠를 직접 대조해서 정확도 확인하고, 빠진 게 있으면 지적해줄 수 있어. 또는 스크린샷 없이라면 현재 분석(&quot;책 홍보 + 해시태그&quot;)이 맞는 것 같은데, 혹시 추가 정보(댓글, 링크 구조, 계정 특성)까지 포함해야 하는 건 아닌지 말해줄래?</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:13</div>
+    <div class="response-body">`이미지.txt` 파일 경로 알려주면 바로 읽어서 현재 AI 분석과 대조해줄게. 파일이 어디에 있나? 
+
+혹은 직접 `이미지.txt` 내용만 복붙해주면, 1) AI 분석이 놓친 부분 2) 잘못 분석한 부분 3) 추가되어야 할 정보를 명확히 지적해서, 피드 분류 정확도를 올릴 수 있어.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','skip')">⏭ 스킵</button>
