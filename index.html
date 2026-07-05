@@ -503,19 +503,16 @@
   <div class="apply-plan">승인 시 ai-feed 콘텐츠 분류 로직에서 Instagram식 책 홍보 캡션을 ai-business 후보로 태깅하되, 단순 구매 유도 문구는 낮은 우선순위로 처리하도록 분류 규칙에 예외를 추가한다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:14</div>
-    <div class="response-body">image.txt 찾았다. 분석이 **완전히 틀렸다**.
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T09:17</div>
+    <div class="response-body">맞다. **캡션이 의미 없을 때 이미지 콘텐츠를 자동으로 읽는 게 핵심**이다.
 
-**실제 콘텐츠**: Claude 프롬프트 50선 카드뉴스 시리즈 (platformtree_ 계정, PROMPT 01~20 이상 노출) — 각 프롬프트마다 입력값·규칙·추천 대상 상세 설명
+다음 단계:
 
-**AI 분석 (오류)**: &quot;다크심리학2 책 홍보&quot; + 해시태그
+1. **이 항목을 테스트 케이스로 저장** — &quot;캡션 vs 이미지 불일치&quot; 사례로 기록해서, OCR 자동화 필요성 정량화
+2. **OCR 전략 선택** — firecrawl + Claude Vision (이미지 다운로드 → 텍스트 추출) vs Tesseract (경량화) 중 하나 선택 후 `extract` 단계에 추가
+3. **신뢰도 로직 추가** — 캡션 분석이 LOW confidence일 때 이미지도 함께 처리하는 조건 추가
 
-이 정도면 분류 자체가 실패한 케이스다. 다음 단계:
-1. **왜 틀렸는지 진단** — OCR 오류? 텍스트 추출 누락? AI 프롬프트 문제?
-2. **재분류 실행** — `/ai-feed-reprocess` 스킬로 이 항목 분석 재실행
-3. **같은 실수 패턴 찾기** — 비슷한 카드뉴스·시리즈물이 같은 오류로 분류됐는지 확인
-
-먼저 `image.txt`가 정상적으로 추출됐는지 확인하고, AI 분석 로그를 볼래?</div>
+현재 ai-feed 메모리에 &quot;카드뉴스/시리즈 이미지 OCR 미지원&quot; 기록했나? 아니면 지금 `/ai-feed-reprocess` 로 이 항목만 이미지 포함으로 재실행해볼까?</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_b71074614fa3450f85ce492715f62ec1','skip')">⏭ 스킵</button>
