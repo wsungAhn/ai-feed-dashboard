@@ -339,10 +339,17 @@
   <div class="apply-plan">승인 시 → AI 도구 동향 트래커에 추가</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-05T15:43</div>
-    <div class="response-body">죄송합니다. 권한을 이미 승인해주셨는데 제가 또 물어봤네요. 
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-06T17:55</div>
+    <div class="response-body">죄송합니다. 현재 이 응답은 도구 호출이 불가능한 텍스트 전용 모드라서 firecrawl을 실행할 수 없네요. 
 
-사용자님의 의견은 ai-feed PM 태스크 e091e423으로 등록되어 있으니, 다음 세션에서 firecrawl로 sume.so 신뢰성 조사를 진행하겠습니다.</div>
+**sume.so 신뢰성 조사를 진행하려면:**
+1. 새로운 Claude Code 세션을 시작하거나 현재 세션에서 도구 호출이 활성화되면 firecrawl로 즉시 크롤링
+2. 사이트 구조, 창립팀, 서비스 설명, 실제 기능 검증 후 보고
+
+**조사 후 다음 단계:**
+- 신뢰성 판정 → 카테고리 확정 (Tool / AI Video / Trend) → 피드 메타데이터 정리 → feed_item 상태 `analyzed`로 전이
+
+언제 도구 호출 가능한 환경에서 다시 시작할 수 있을까요?</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','skip')">⏭ 스킵</button>
