@@ -109,7 +109,7 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<p class="count">승인 대기 28건</p>
+<p class="count">승인 대기 26건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_88564fb5003941f9a9e559dc6767adf0" data-id="feed_88564fb5003941f9a9e559dc6767adf0">
@@ -356,12 +356,25 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
   <div class="tags"></div>
   
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-11T18:10</div>
+    <div class="response-body">이 작업은 레포 조사와 방안 설계가 필요한데, 현재 세션은 텍스트 전용이라 웹 접근과 파일 읽기가 불가능합니다. 
+
+인터랙티브 Claude로 전환해서 진행하세요:
+```bash
+cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_c8832a552fdc4ab38a121b595e76d63a
+```
+
+그러면 Threads 피드 맥락과 함께 GitHub 레포(synthetic-sciences/openscience)를 실시간으로 조사해서, ai-feed 파이프라인에 어떻게 통합할지(데이터 수집 → 분석 → 추천 → 적용) 설계안을 제시해드리겠습니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_c8832a552fdc4ab38a121b595e76d63a','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_c8832a552fdc4ab38a121b595e76d63a','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_c8832a552fdc4ab38a121b595e76d63a','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_c8832a552fdc4ab38a121b595e76d63a')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_c8832a552fdc4ab38a121b595e76d63a','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_c8832a552fdc4ab38a121b595e76d63a','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_c8832a552fdc4ab38a121b595e76d63a','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c8832a552fdc4ab38a121b595e76d63a')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c8832a552fdc4ab38a121b595e76d63a&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c8832a552fdc4ab38a121b595e76d63a" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@_beancurd_/post/DabO343DLys?xmt=AQG09LkrPzMI2OjCYVZH7P_Yb8BQnmfE9BC5yvkhB54C-GHOaX1cEMj-7-VXVrjQNZhNXWo&slof=1" target="_blank" rel="noopener">🔗 원문</a>
   </div>
@@ -372,56 +385,6 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_c8832a552fdc4ab38a121b595e76d63a')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c8832a552fdc4ab38a121b595e76d63a')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_c12a51b926604f53b1672bb0624ca67e" data-id="feed_c12a51b926604f53b1672bb0624ca67e">
-  <div class="card-header">
-    <span class="item-tag" title="feed_c12a51b926604f53b1672bb0624ca67e">#c12a51b9</span>
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-24</span>
-    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    
-  </div>
-  <p class="summary">입력 텍스트는 Instagram/Reels로 보이는 바이럴 영상 캡션과 OCR 잡음이 대부분이며, 명확한 정보성 내용은 거의 없다. 영상 품질이 높다는 반응과 조회·좋아요 등 일부 지표로 보이는 숫자가 포함되어 있지만 맥락과 원문 신뢰도가 낮다.</p>
-  <ul class="claims"><li>Instagram 또는 Reels 관련 영상 캡션에 '#릴스', '#바이럴' 태그가 포함되어 있다.</li><li>텍스트에는 750K, 1.2K, 4,455,443, 750,090, 121,970, 1,015,009 등 소셜 지표로 보이는 숫자가 포함되어 있다.</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#instagram</span> <span class="tag">#reels</span> <span class="tag">#viral</span> <span class="tag">#ocr-noise</span></div>
-  <div class="apply-plan">승인 시 → AI 도구 동향 트래커에 추가</div>
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-06T17:55</div>
-    <div class="response-body">죄송합니다. 현재 이 응답은 도구 호출이 불가능한 텍스트 전용 모드라서 firecrawl을 실행할 수 없네요. 
-
-**sume.so 신뢰성 조사를 진행하려면:**
-1. 새로운 Claude Code 세션을 시작하거나 현재 세션에서 도구 호출이 활성화되면 firecrawl로 즉시 크롤링
-2. 사이트 구조, 창립팀, 서비스 설명, 실제 기능 검증 후 보고
-
-**조사 후 다음 단계:**
-- 신뢰성 판정 → 카테고리 확정 (Tool / AI Video / Trend) → 피드 메타데이터 정리 → feed_item 상태 `analyzed`로 전이
-
-언제 도구 호출 가능한 환경에서 다시 시작할 수 있을까요?</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','approve')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_c12a51b926604f53b1672bb0624ca67e','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_c12a51b926604f53b1672bb0624ca67e')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    
-    <a href="https://www.instagram.com/reel/DZyxV-tRUan/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_c12a51b926604f53b1672bb0624ca67e" style="display:none">
-    <textarea id="comment-text-feed_c12a51b926604f53b1672bb0624ca67e" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_c12a51b926604f53b1672bb0624ca67e')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c12a51b926604f53b1672bb0624ca67e')">취소</button>
     </div>
   </div>
 </div>
@@ -524,41 +487,6 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_6028001b5c44415ab
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_39d8bcc45ed14427af7186784cb95996')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_39d8bcc45ed14427af7186784cb95996')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_28afc3de19dc4936adeab64bc9b905f6" data-id="feed_28afc3de19dc4936adeab64bc9b905f6">
-  <div class="card-header">
-    <span class="item-tag" title="feed_28afc3de19dc4936adeab64bc9b905f6">#28afc3de</span>
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-22</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">작성자는 Claude에 Robinhood 접근 권한을 부여해 시장 리서치, watchlist 생성, scheduled task 설정을 수행하게 했다고 주장한다. 콘텐츠는 가이드 유도형 홍보 문구이며, 금융 조언이 아닌 교육용이라고 명시한다.</p>
-  <ul class="claims"><li>Claude가 Robinhood 계정에 full access를 받았다.</li><li>Claude가 5개의 에이전트를 실행해 시장을 리서치했다.</li><li>Claude가 watchlist를 만들고 scheduled task를 설정했다.</li><li>작성자는 댓글로 “AGENT”를 남기면 full guide를 보내겠다고 했다.</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#claude</span> <span class="tag">#ai-agents</span> <span class="tag">#robinhood</span> <span class="tag">#stocks</span> <span class="tag">#automation</span> <span class="tag">#trading-safety</span></div>
-  <div class="apply-plan">승인 시 → ~/.claude/CLAUDE.md에 추가 (Claude Code 세션마다 참조)</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_28afc3de19dc4936adeab64bc9b905f6','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_28afc3de19dc4936adeab64bc9b905f6','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_28afc3de19dc4936adeab64bc9b905f6','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_28afc3de19dc4936adeab64bc9b905f6')">💬 의견</button>
-    
-    <a href="https://www.instagram.com/reel/DZsM7KVMx59/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_28afc3de19dc4936adeab64bc9b905f6" style="display:none">
-    <textarea id="comment-text-feed_28afc3de19dc4936adeab64bc9b905f6" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_28afc3de19dc4936adeab64bc9b905f6')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_28afc3de19dc4936adeab64bc9b905f6')">취소</button>
     </div>
   </div>
 </div>
