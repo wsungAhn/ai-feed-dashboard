@@ -109,7 +109,7 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<p class="count">승인 대기 37건</p>
+<p class="count">승인 대기 36건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_bb1e25d48bbf43788d510c4f78731fb8" data-id="feed_bb1e25d48bbf43788d510c4f78731fb8">
@@ -754,58 +754,6 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_6028001b5c44415ab
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_6028001b5c44415ab8d4292796f5e2f6')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6028001b5c44415ab8d4292796f5e2f6')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_b9d9536ecfdd452983e0ccbfe5a6d25f" data-id="feed_b9d9536ecfdd452983e0ccbfe5a6d25f">
-  <div class="card-header">
-    <span class="item-tag" title="feed_b9d9536ecfdd452983e0ccbfe5a6d25f">#b9d9536e</span>
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-22</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">공개 GitHub 프로젝트가 Claude Code를 로컬 TradingView Desktop과 연결해 차트 조작, Pine Script 작성, 전략 생성 및 백테스트를 수행하도록 한다. 다만 TradingView 공식 제휴가 아니며 문서화되지 않은 내부 인터페이스에 의존해 업데이트 시 깨질 수 있다는 한계가 있다.</p>
-  <ul class="claims"><li>공개 GitHub 프로젝트가 Claude Code를 로컬 TradingView Desktop 앱과 Chrome DevTools Protocol로 연결한다.</li><li>해당 도구는 차트 읽기, 심볼 및 타임프레임 변경, Pine Script 작성, 연결 health check를 지원한다고 주장한다.</li><li>저장소는 replay mode, alerts, drawings, screenshots, chart layouts 기능도 처리할 수 있다고 설명한다.</li><li>4월에 게시된 별도 데모들은 TradingView 안에서 전략 생성 및 백테스트를 수행하는 사용 사례를 보여준다.</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#Claude Code</span> <span class="tag">#TradingView</span> <span class="tag">#Pine Script</span> <span class="tag">#Chrome DevTools Protocol</span> <span class="tag">#trading automation</span> <span class="tag">#backtesting</span> <span class="tag">#MCP</span></div>
-  <div class="apply-plan">승인 시 → ~/.claude/CLAUDE.md에 추가 (Claude Code 세션마다 참조)</div>
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-06-29T02:32</div>
-    <div class="response-body">## 의견: 유망하지만 신뢰성 위험
-
-공식 API가 없는 내부 인터페이스 의존은 장기 유지의 약점이지만, **의사결정 레이어로서의 Claude Code 가치**는 충분하다. TradingView 포팅보다는 **독립적인 전략 생성(Pine Script 코드젠) → 수동 백테스트 또는 오픈소스 백테스터 연결**이 더 현실적이다.
-
-## 다음 단계
-
-1. **현재 프로젝트 구조 확인** — ~/dev/Auto_bot 또는 ~/dev/trader의 엔트리포인트 파악
-2. **TradingView 자동화 경계 설정** — 공개 API(주로 웹소켓/REST) vs. 내부 인터페이스 분리
-3. **PoC 스코프 축소** — &quot;Pine Script 자동 생성&quot; 단독으로 먼저 검증 (차트 조작은 별도)
-4. **연구 문서 작성** — 한계/기회/구현 옵션 정리 후 결정
-
-어느 프로젝트에 붙일지(alphabot/trader), 어떤 수준의 통합을 원하는지 말해주면 더 구체화할 수 있다.</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="decide('feed_b9d9536ecfdd452983e0ccbfe5a6d25f','approve')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_b9d9536ecfdd452983e0ccbfe5a6d25f','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_b9d9536ecfdd452983e0ccbfe5a6d25f','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    
-    <a href="https://www.instagram.com/reel/DZzdYr0tg8D/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_b9d9536ecfdd452983e0ccbfe5a6d25f" style="display:none">
-    <textarea id="comment-text-feed_b9d9536ecfdd452983e0ccbfe5a6d25f" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b9d9536ecfdd452983e0ccbfe5a6d25f')">취소</button>
     </div>
   </div>
 </div>
