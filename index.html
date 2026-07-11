@@ -555,15 +555,18 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_6028001b5c44415ab
   <div class="apply-plan">승인 시 → AI 도구 동향 트래커에 추가</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-06-29T02:48</div>
-    <div class="response-body">Threads 페이지를 직접 열 수 없었는데, 원문에 구체적인 프로젝트명이나 GitHub 링크가 있었다면 그걸 알려주세요. 없다면 웹 검색으로 &quot;Python personal finance advisor open source&quot; 계열의 인기 프로젝트(LangChain Agent, AutoGPT 기반 등)를 찾고, 구현 코드·기술 검증·규제 준수(금융 서비스 법령) 여부를 평가할 수 있습니다. 
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-11T18:16</div>
+    <div class="response-body">현재 텍스트 전용 환경이라 GitHub를 직접 열 수 없습니다. 웹 접근이 필요한 작업이므로, 로컬에서 인터랙티브 Claude로 전환해주세요:
 
-**다음 단계:**
-1. **프로젝트 특정** → 프로젝트명/URL 제공 시 코드 직접 분석
-2. **아키텍처 검증** → 실제 얼마나 간단한지, 의존성·비용 확인  
-3. **적용 판단** → ai-feed에 통합 가치 있는지 평가 (예: 리뷰 증강 or 독립 피처)
+```bash
+cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_39720643e8fb46dc81cf3a248b05d008
+```
 
-프로젝트명 or 코드 예시가 있으면 디버해줄 수 있습니다.</div>
+이 명령이 전체 대화 맥락을 담은 대화형 세션을 연다면, 거기서 URL을 직접 분석해드릴 수 있습니다.
+
+**일반 정보**: OpenBB는 금융 데이터·포트폴리오 분석 오픈소스 플랫폼인데, `experimental-openbb-platform-agent` 레포는 LLM 에이전트 래퍼로 보입니다. Jupyter notebook이라면 구현 복잡도, 의존성(API 키 필요 여부), ai-feed 통합 가치(금융 뉴스 필터링? 실시간 어드바이스?)를 평가할 수 있습니다.
+
+인터랙티브 세션에서 README와 notebook을 읽고 구체적 평가를 드리겠습니다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_39720643e8fb46dc81cf3a248b05d008','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_39720643e8fb46dc81cf3a248b05d008','skip')">⏭ 스킵</button>
