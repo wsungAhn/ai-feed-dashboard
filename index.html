@@ -120,7 +120,7 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">승인됨 · 적용 보류 (1)</h2>
+<h2 class="section-title">승인됨 · 적용 보류 (4)</h2>
 <section class="pending-section">
   <div class="grid">
 
@@ -142,46 +142,68 @@
     
   </div>
 </div>
-  </div>
-</section>
-<h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 30건</p>
-<div class="grid">
 
-<div class="card" id="card-feed_74ebd198ce24476bac1d3a34d6bb508e" data-id="feed_74ebd198ce24476bac1d3a34d6bb508e">
+<div class="card pending-apply" id="card-feed_74ebd198ce24476bac1d3a34d6bb508e" data-id="feed_74ebd198ce24476bac1d3a34d6bb508e">
   <div class="card-header">
     <span class="item-tag" title="feed_74ebd198ce24476bac1d3a34d6bb508e">#74ebd198</span>
-    
     <span class="platform">Instagram</span>
     <span class="date">2026-07-12</span>
     <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
   </div>
   <p class="summary">기관 자금 이탈 시 차트에 나타나는 경고 신호(볼린저 밴드 이탈 실패, 다크 클라우드 커버, 데드크로스)를 포착해 기계적 손절로 자본을 보존하는 원칙 매매를 강조. 거래량 동반 슈팅스타·고점 갭 하락 발생 시 즉각 대응 필요.</p>
-  <ul class="claims"><li>볼린저 밴드 상단 돌파 후 안착 실패는 추세 붕괴 전조다</li><li>고점에서 다크 클라우드 커버·장대음봉·데드크로스 연쇄 출현은 단순 조정 이상의 신호다</li><li>거래량 동반 슈팅스타 캔들·고점 갭 하락 시 즉각 대응이 자본 보존에 유효하다</li></ul>
+  <div class="pending-reason">자동적용 기준 미달: confidence=medium</div>
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#손절</span> <span class="tag">#캔들패턴</span> <span class="tag">#볼린저밴드</span> <span class="tag">#데드크로스</span> <span class="tag">#기관자금이탈</span> <span class="tag">#추세분석</span> <span class="tag">#리스크관리</span></div>
-  <div class="apply-plan">승인 시 alphabot의 exit signal 로직(예: ~/dev/Auto_bot 내 signal 또는 strategy 모듈)에 볼린저 밴드 상단 안착 실패 + 거래량 동반 슈팅스타/장대음봉 조건을 조합한 이탈 트리거를 추가 검토</div>
-  
   <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_74ebd198ce24476bac1d3a34d6bb508e','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_74ebd198ce24476bac1d3a34d6bb508e','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_74ebd198ce24476bac1d3a34d6bb508e','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_74ebd198ce24476bac1d3a34d6bb508e')">💬 의견</button>
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_74ebd198ce24476bac1d3a34d6bb508e&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_74ebd198ce24476bac1d3a34d6bb508e" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <button class="btn-approve" onclick="applyNow('feed_74ebd198ce24476bac1d3a34d6bb508e')">지금 적용</button>
+    <button class="btn-reject" onclick="dismissPending('feed_74ebd198ce24476bac1d3a34d6bb508e')">적용 안 함</button>
     <a href="https://www.instagram.com/reel/DaoqFcaRJ8t/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
-  
-  <div class="comment-box" id="comment-box-feed_74ebd198ce24476bac1d3a34d6bb508e" style="display:none">
-    <textarea id="comment-text-feed_74ebd198ce24476bac1d3a34d6bb508e" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_74ebd198ce24476bac1d3a34d6bb508e')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_74ebd198ce24476bac1d3a34d6bb508e')">취소</button>
-    </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_abb6f076a44d4ac193125a64894ea48d" data-id="feed_abb6f076a44d4ac193125a64894ea48d">
+  <div class="card-header">
+    <span class="item-tag" title="feed_abb6f076a44d4ac193125a64894ea48d">#abb6f076</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-12</span>
+    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">트레이딩 봇이 S&P500/NASDAQ(15분 평균회귀), 비트코인(1시간 모멘텀 브레이크아웃), 금·오일(4시간 추세추종) 등 자산별로 다른 전략을 구사한다. 리스크 관리는 트레이드당 고정 1% 손절 + 변동성 기반 포지션 사이징 + 상관관계 필터. Claude Fable이 로직 업데이트를 담당하고, Claude Cowork가 하루 2회 시장/포트폴리오 리포트를 전송한다.</p>
+  <div class="pending-reason">자동적용 기준 미달: confidence=low</div>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#trading-bot</span> <span class="tag">#multi-asset</span> <span class="tag">#mean-reversion</span> <span class="tag">#momentum</span> <span class="tag">#trend-following</span> <span class="tag">#risk-management</span> <span class="tag">#claude-agent</span> <span class="tag">#position-sizing</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="applyNow('feed_abb6f076a44d4ac193125a64894ea48d')">지금 적용</button>
+    <button class="btn-reject" onclick="dismissPending('feed_abb6f076a44d4ac193125a64894ea48d')">적용 안 함</button>
+    
   </div>
 </div>
+
+<div class="card pending-apply" id="card-feed_88564fb5003941f9a9e559dc6767adf0" data-id="feed_88564fb5003941f9a9e559dc6767adf0">
+  <div class="card-header">
+    <span class="item-tag" title="feed_88564fb5003941f9a9e559dc6767adf0">#88564fb5</span>
+    <span class="platform">Instagram</span>
+    <span class="date">2026-07-11</span>
+    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">유튜브 성공의 80%는 기획(썸네일·인트로·댓글)에서 결정된다. 클로드 코드와 YouTube API를 연동해 평균 대비 4배 이상 조회수를 기록한 레퍼런스 영상을 자동 추출하는 시스템을 구축할 수 있다. 촬영 전 썸네일 확정이 핵심 순서 원칙이다.</p>
+  <div class="pending-reason">자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#유튜브</span> <span class="tag">#콘텐츠기획</span> <span class="tag">#claude-code</span> <span class="tag">#자동화</span> <span class="tag">#YouTube API</span> <span class="tag">#썸네일</span> <span class="tag">#레퍼런스추출</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="applyNow('feed_88564fb5003941f9a9e559dc6767adf0')">지금 적용</button>
+    <button class="btn-reject" onclick="dismissPending('feed_88564fb5003941f9a9e559dc6767adf0')">적용 안 함</button>
+    <a href="https://www.instagram.com/p/Dae-SW3iT70/?img_index=6" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+</div>
+  </div>
+</section>
+<h2 class="section-title">승인 대기</h2>
+<p class="count">승인 대기 27건</p>
+<div class="grid">
 
 <div class="card" id="card-feed_a0a005dbb537409d925510c7c7c7e07e" data-id="feed_a0a005dbb537409d925510c7c7c7e07e">
   <div class="card-header">
@@ -198,12 +220,25 @@
   <div class="tags"><span class="tag">#options-selling</span> <span class="tag">#leveraged-ETF</span> <span class="tag">#IV</span> <span class="tag">#premium-selling</span> <span class="tag">#SOXL</span> <span class="tag">#TSLL</span> <span class="tag">#NVDL</span> <span class="tag">#TQQQ</span></div>
   <div class="apply-plan">승인 시 alphabot 전략 리서치 노트에 레버리지 ETF(SOXL/NVDL/TSLL/TQQQ) 주간 옵션 프리미엄 셀링 전략을 후보군으로 추가하고, IV rank 필터 및 최대 손실 한도 조건을 반드시 병기할 것</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-12T03:45</div>
+    <div class="response-body">대시보드(**pm.mwco.io/feed**)에서 이 아이템을 **&quot;Apply&quot;** 상태로 변경하면 백엔드가 거래를 실행하는 게 설계인데, 현재 ai-feed이 실제로 옵션 거래(프리미엄 셀링)까지 자동화하는지 확인이 필요합니다.
+
+다음 단계:
+1. **대시보드 상태 확인** — 이 아이템이 현재 어느 단계(Recommended/Review)인지, Apply 버튼이 활성인지 확인
+2. **apply 로직 검토** — `src/ai_feed/review.py`나 `src/ai_feed/storage.py`에서 옵션 거래 연동 여부 확인 (있으면 직진, 없으면 → 수동 거래 또는 외부 시스템(trader/alphabot) 위임 필요)
+3. **Task Contract 필요** — 실제 라이브 거래는 명시적 승인 문서 필요 (현 규칙: Task Contract 없이 프로덕션 거래 진입점 실행 금지)
+
+로컬에서 보려면: `cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_a0a005dbb537409d925510c7c7c7e07e` (현재 상태·available actions 보임).</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_a0a005dbb537409d925510c7c7c7e07e','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_a0a005dbb537409d925510c7c7c7e07e','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_a0a005dbb537409d925510c7c7c7e07e','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_a0a005dbb537409d925510c7c7c7e07e')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_a0a005dbb537409d925510c7c7c7e07e','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_a0a005dbb537409d925510c7c7c7e07e','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_a0a005dbb537409d925510c7c7c7e07e','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_a0a005dbb537409d925510c7c7c7e07e')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_a0a005dbb537409d925510c7c7c7e07e&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_a0a005dbb537409d925510c7c7c7e07e" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DaplW27Oe4k/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
@@ -214,76 +249,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_a0a005dbb537409d925510c7c7c7e07e')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a0a005dbb537409d925510c7c7c7e07e')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_abb6f076a44d4ac193125a64894ea48d" data-id="feed_abb6f076a44d4ac193125a64894ea48d">
-  <div class="card-header">
-    <span class="item-tag" title="feed_abb6f076a44d4ac193125a64894ea48d">#abb6f076</span>
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-07-12</span>
-    <span style="background:#94a3b8;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    
-  </div>
-  <p class="summary">트레이딩 봇이 S&P500/NASDAQ(15분 평균회귀), 비트코인(1시간 모멘텀 브레이크아웃), 금·오일(4시간 추세추종) 등 자산별로 다른 전략을 구사한다. 리스크 관리는 트레이드당 고정 1% 손절 + 변동성 기반 포지션 사이징 + 상관관계 필터. Claude Fable이 로직 업데이트를 담당하고, Claude Cowork가 하루 2회 시장/포트폴리오 리포트를 전송한다.</p>
-  <ul class="claims"><li>S&P500·NASDAQ에는 15분 캔들 기반 평균회귀(mean reversion) 전략 적용</li><li>비트코인에는 1시간 차트의 고볼륨 돌파 모멘텀 전략 적용</li><li>금·오일에는 4시간 차트 추세추종(trend-following) 전략 적용</li><li>모든 트레이드에 1% 하드 손절 적용, 변동성에 따라 포지션 사이즈 조정</li></ul>
-  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#trading-bot</span> <span class="tag">#multi-asset</span> <span class="tag">#mean-reversion</span> <span class="tag">#momentum</span> <span class="tag">#trend-following</span> <span class="tag">#risk-management</span> <span class="tag">#claude-agent</span> <span class="tag">#position-sizing</span></div>
-  <div class="apply-plan">승인 시 alphabot에서 자산 클래스별 타임프레임·전략 분리(지수→평균회귀, 암호화폐→모멘텀, 원자재→추세추종) 및 correlation filter(NASDAQ/SPY 동시 롱 조건)를 ~/dev/Auto_bot/docs/design-*.md에 아이디어로 기록하고, 리스크 모듈에 per-trade 1% 하드 손절 + 변동성 기반 포지션 사이징 패턴 도입 검토</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_abb6f076a44d4ac193125a64894ea48d','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_abb6f076a44d4ac193125a64894ea48d','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_abb6f076a44d4ac193125a64894ea48d','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_abb6f076a44d4ac193125a64894ea48d')">💬 의견</button>
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_abb6f076a44d4ac193125a64894ea48d&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_abb6f076a44d4ac193125a64894ea48d" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_abb6f076a44d4ac193125a64894ea48d" style="display:none">
-    <textarea id="comment-text-feed_abb6f076a44d4ac193125a64894ea48d" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_abb6f076a44d4ac193125a64894ea48d')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_abb6f076a44d4ac193125a64894ea48d')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_88564fb5003941f9a9e559dc6767adf0" data-id="feed_88564fb5003941f9a9e559dc6767adf0">
-  <div class="card-header">
-    <span class="item-tag" title="feed_88564fb5003941f9a9e559dc6767adf0">#88564fb5</span>
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-07-11</span>
-    <span style="background:#f59e0b;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">유튜브 성공의 80%는 기획(썸네일·인트로·댓글)에서 결정된다. 클로드 코드와 YouTube API를 연동해 평균 대비 4배 이상 조회수를 기록한 레퍼런스 영상을 자동 추출하는 시스템을 구축할 수 있다. 촬영 전 썸네일 확정이 핵심 순서 원칙이다.</p>
-  <ul class="claims"><li>유튜브 성공의 80%는 기획(썸네일 50% + 인트로·댓글 30%)이 결정한다</li><li>클로드 코드 + YouTube API로 채널 평균 대비 4배 이상 조회수 영상 자동 추출 가능</li><li>썸네일은 촬영 전에 미리 확정해야 한다</li><li>인기 채널도 대부분 타 채널 썸네일을 레퍼런스로 사용한다</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#유튜브</span> <span class="tag">#콘텐츠기획</span> <span class="tag">#claude-code</span> <span class="tag">#자동화</span> <span class="tag">#YouTube API</span> <span class="tag">#썸네일</span> <span class="tag">#레퍼런스추출</span></div>
-  <div class="apply-plan">승인 시 ~/agent_hub 또는 ai-feed 프로젝트에 YouTube Data API v3를 연동하는 레퍼런스 추출 스크립트(`scripts/youtube_ref_extractor.py`)를 생성하고, 주제어 입력 → 채널 평균 조회수 계산 → 4배 이상 영상 필터링 → 썸네일 URL·제목 출력 파이프라인을 구현한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="decide('feed_88564fb5003941f9a9e559dc6767adf0','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_88564fb5003941f9a9e559dc6767adf0','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_88564fb5003941f9a9e559dc6767adf0','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_88564fb5003941f9a9e559dc6767adf0')">💬 의견</button>
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_88564fb5003941f9a9e559dc6767adf0&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_88564fb5003941f9a9e559dc6767adf0" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/Dae-SW3iT70/?img_index=6" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_88564fb5003941f9a9e559dc6767adf0" style="display:none">
-    <textarea id="comment-text-feed_88564fb5003941f9a9e559dc6767adf0" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_88564fb5003941f9a9e559dc6767adf0')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_88564fb5003941f9a9e559dc6767adf0')">취소</button>
     </div>
   </div>
 </div>
