@@ -124,28 +124,9 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">승인됨 · 적용 보류 (16)</h2>
+<h2 class="section-title">승인됨 · 적용 보류 (15)</h2>
 <section class="pending-section">
   <div class="grid">
-
-<div class="card pending-apply" id="card-feed_00d04e76697341a1978127e40fd7b4b9" data-id="feed_00d04e76697341a1978127e40fd7b4b9">
-  <div class="card-header">
-    <span class="item-tag" title="feed_00d04e76697341a1978127e40fd7b4b9">#00d04e76</span>
-    <span class="platform">Instagram</span>
-    <span class="date">2026-07-12</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    <span class="badge-pending">승인됨 · 적용 보류</span>
-  </div>
-  <p class="summary">MACD 골든크로스/데드크로스와 RSI 50~70 구간을 교차 검증하는 추세 추종 매매법. 매수 조건은 MACD 골든크로스 + RSI 50~70 안착이며, 매도 조건은 MACD 데드크로스 또는 RSI 50선 이탈. 트레이더 로스 캐머의 방법론으로 소개됨.</p>
-  <div class="pending-reason">자동적용 기준 미달: confidence=medium</div>
-  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
-  <div class="tags"><span class="tag">#MACD</span> <span class="tag">#RSI</span> <span class="tag">#기술적분석</span> <span class="tag">#추세추종</span> <span class="tag">#골든크로스</span> <span class="tag">#데드크로스</span> <span class="tag">#매매법</span></div>
-  <div class="actions">
-    <button class="btn-approve" onclick="applyNow('feed_00d04e76697341a1978127e40fd7b4b9')">지금 적용</button>
-    <button class="btn-reject" onclick="dismissPending('feed_00d04e76697341a1978127e40fd7b4b9')">적용 안 함</button>
-    <a href="https://www.instagram.com/reel/DaSVB8wObXs/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-</div>
 
 <div class="card pending-apply" id="card-feed_9c0e5d4c68904c2ea66b987ecd967b2c" data-id="feed_9c0e5d4c68904c2ea66b987ecd967b2c">
   <div class="card-header">
@@ -454,12 +435,34 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
   <div class="tags"><span class="tag">#키움증권</span> <span class="tag">#자동매매</span> <span class="tag">#파이썬</span> <span class="tag">#오픈소스</span> <span class="tag">#조건검색식</span> <span class="tag">#백테스팅</span> <span class="tag">#입문</span></div>
   <div class="apply-plan">승인 시 직접 적용 가치 낮음. 참고 수준이라면 ~/dev/Auto_bot/docs/ 또는 agent_hub의 alphabot 관련 project_profile에 '키움 오픈소스 레퍼런스 링크(GitHub 검색어: 키움증권 자동매매 파이썬 오픈소스)' 메모 정도로 보관.</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-12T22:08</div>
+    <div class="response-body">현재 이 세션은 텍스트 전용이라 직접 코드 검토가 불가능합니다. 키움증권 오픈소스 구조를 실제로 비교하려면 로컬 세션으로 전환이 필요합니다.
+
+**다음 단계:**
+
+1. **로컬 세션 시작**: 작업 디렉토리로 이동 후 Claude 열기
+   ```bash
+   cd ~/dev/trader &amp;&amp; claude
+   ```
+   
+2. **비교 포인트 스캔**: 
+   - 키움증권 코드의 주문 API 패턴 (조건검색 번호 → 즉시 실행)
+   - trader의 `src/` 자동매매 진입점과 비교
+   - 백테스팅 검증 로직이 우리 파이프라인에 있는지 확인
+
+3. **적용 아이디어** (미리): 입문자 가이드 방식의 &quot;조건식 번호 교체로 즉시 실행&quot; 패턴이 우리 AlphaBot의 스트래티지 로딩과 유사할 가능성 — 온보딩 개선 차원의 인사이트가 나올 수 있습니다.
+
+로컬 세션에서 `/debug` 또는 Codex와 함께 trader 구조를 빠르게 매핑하고 싶으신가요?</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_1bcd9a116ed14a049cf96c460ac63ddd')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_1bcd9a116ed14a049cf96c460ac63ddd')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1bcd9a116ed14a049cf96c460ac63ddd&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1bcd9a116ed14a049cf96c460ac63ddd" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@laon_happy_day/post/Dar-B8Jj86H?xmt=AQG0P0dmLbImP2SBBm6yK-WagxXLOUOBfjafg6wJEXze8kGd00wx6RRdWrA80eUpm8vVhDYp&slof=1" target="_blank" rel="noopener">🔗 원문</a>
   </div>
@@ -489,12 +492,30 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
   <div class="tags"><span class="tag">#local-llm</span> <span class="tag">#MoE</span> <span class="tag">#GLM</span> <span class="tag">#C</span> <span class="tag">#low-memory</span> <span class="tag">#disk-streaming</span> <span class="tag">#colibri</span></div>
   <div class="apply-plan">승인 시 로컬 모델 실험 관심 있다면 colibri를 클론해 GLM-5.2 GGUF를 다운로드 후 MacBook 25GB RAM 환경에서 추론 속도 벤치마크 → ~/agent_hub/hub/ai-trends.md 로컬AI 섹션에 결과 기록</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-12T22:09</div>
+    <div class="response-body">**테스트 방향 정리:**
+Colibri는 MoE 특성상 ai-broker의 모델 선택 로직(selector)과, alphabot의 가중치 앙상블에 모두 맞다. 먼저 로컬에서 GLM-5.2 설정으로 추론 레이턴시·메모리 프로필 측정 → ai-broker 라우터에 &quot;Colibri-25GB&quot; 옵션 추가 → 기존 테스트 스윗(accuracy/latency 벤치)으로 baseline과 비교하는 순서.
+
+**다음 단계:**
+1. `docs/design-colibri-integration.md` 작성 — ai-broker/alphabot 각각 적용점 정의  
+2. 로컬 테스트 스크립트 (`scripts/test_colibri_inference.py`) 구성 → 메모리·속도 기초 실측  
+3. 기존 앙상블 모델과의 비교 프레임 수립 (정확도 유지·비용 감소 기준)
+
+인터랙티브 세션에서 시작하려면:
+```bash
+cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
+```
+로 이 아이템 컨텍스트를 열고 테스트 계획 수립을 시작할 수 있다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_abfd6a22aa2440ab99a71f0ba9b94aa9')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','approve')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_abfd6a22aa2440ab99a71f0ba9b94aa9')">💬 의견</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_abfd6a22aa2440ab99a71f0ba9b94aa9&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_abfd6a22aa2440ab99a71f0ba9b94aa9" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@thechrisshort/post/DarRi_km9Ha?xmt=AQG0rmYJ55wmLB06lV2s0JZJ7Sg7d35x72ZS5_5weQiBMNMXV7lPuMGnXCvEcg9wpsWOSNQ&slof=1" target="_blank" rel="noopener">🔗 원문</a>
   </div>
