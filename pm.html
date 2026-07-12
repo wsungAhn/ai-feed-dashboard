@@ -11,8 +11,8 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #0f172a;
-            color: #e2e8f0;
+            background-color: #faf7f2;
+            color: #1c1917;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             padding: 16px;
         }
@@ -21,125 +21,135 @@
             margin: 0 auto;
         }
         header {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e8e2d5;
         }
         h1 {
-            font-size: 28px;
-            margin-bottom: 16px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 26px;
+            margin-bottom: 0;
+            color: #1c1917;
+            letter-spacing: -0.3px;
         }
         .summary {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 16px;
+            gap: 12px;
             margin-bottom: 24px;
         }
         .summary-card {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            padding: 16px;
+            background-color: #fff;
+            border: 1px solid #e8e2d5;
+            border-radius: 6px;
+            padding: 14px 16px;
         }
         .summary-card-label {
-            font-size: 12px;
-            color: #94a3b8;
-            margin-bottom: 8px;
+            font-size: 11px;
+            color: #a8a29e;
+            margin-bottom: 6px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            font-weight: 600;
         }
         .summary-card-value {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 700;
+            color: #1c1917;
         }
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 16px;
+            gap: 12px;
             margin-bottom: 32px;
         }
         .project-card {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #e8e2d5;
+            border-radius: 6px;
             overflow: hidden;
         }
         details {
             cursor: pointer;
         }
         summary {
-            padding: 16px;
+            padding: 14px 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             user-select: none;
-            transition: background-color 0.2s;
+            transition: background-color 0.15s;
         }
         summary:hover {
-            background-color: #334155;
+            background-color: #faf7f2;
         }
         .status-dot {
             display: inline-block;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
         }
         .project-name {
             font-weight: 600;
             flex: 1;
+            font-size: 14px;
+            color: #1c1917;
         }
         .project-last {
-            font-size: 12px;
-            color: #94a3b8;
+            font-size: 11px;
+            color: #a8a29e;
         }
         .project-content {
-            padding: 0 16px 16px;
-            border-top: 1px solid #334155;
+            padding: 0 16px 14px;
+            border-top: 1px solid #f0ebe3;
         }
         .commits-section,
         .handoffs-section,
         .p0-section {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            margin-top: 12px;
         }
         .section-label {
-            font-size: 11px;
-            color: #64748b;
+            font-size: 10px;
+            color: #a8a29e;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             margin-bottom: 6px;
             font-weight: 600;
         }
         .commit-item,
         .item {
-            background-color: #0f172a;
-            border-left: 3px solid #334155;
-            padding: 8px 12px;
+            background-color: #faf7f2;
+            border-left: 2px solid #e8e2d5;
+            padding: 7px 10px;
             margin-bottom: 4px;
             font-size: 13px;
             line-height: 1.4;
         }
         .commit-hash {
-            color: #64748b;
+            color: #a8a29e;
             font-family: "Monaco", monospace;
             font-size: 11px;
         }
         .commit-msg {
-            color: #e2e8f0;
+            color: #1c1917;
         }
         .commit-when {
-            color: #94a3b8;
+            color: #a8a29e;
             font-size: 11px;
         }
         .empty {
-            color: #64748b;
+            color: #c2bdb6;
             font-size: 12px;
             font-style: italic;
         }
         footer {
             text-align: center;
-            color: #64748b;
+            color: #a8a29e;
             font-size: 12px;
             margin-top: 48px;
             padding-top: 16px;
-            border-top: 1px solid #334155;
+            border-top: 1px solid #e8e2d5;
         }
         @media (max-width: 640px) {
             .summary {
@@ -167,7 +177,7 @@
             </div>
             <div class="summary-card">
                 <div class="summary-card-label">Today Commits</div>
-                <div class="summary-card-value">11</div>
+                <div class="summary-card-value">17</div>
             </div>
             <div class="summary-card">
                 <div class="summary-card-label">Pending Handoffs</div>
@@ -179,24 +189,24 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">ai-feed</span>
-                        <span class="project-last">61 minutes ago</span>
+                        <span class="project-last">21 minutes ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">943b166</span> <span class="commit-msg">chore: PM status update 2026-07-12 07:57</span></div>
+                                <div><span class="commit-hash">6d60b72</span> <span class="commit-msg">style(dashboard): Kami 디자인 시스템 적용 — 파치먼트 캔버스 + 잉크블루 단일 강조색</span></div>
+                                <div class="commit-when">21 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">0c0eab2</span> <span class="commit-msg">feat: HunyuanOCR-1.5 provider 신설 + 벤치마크 스크립트</span></div>
+                                <div class="commit-when">48 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">2af46ac</span> <span class="commit-msg">chore: PM status update 2026-07-12 08:57</span></div>
                                 <div class="commit-when">61 minutes ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">689f4a3</span> <span class="commit-msg">chore: dashboard data 2026-07-12</span></div>
-                                <div class="commit-when">2 hours ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">7722f76</span> <span class="commit-msg">chore: dashboard data 2026-07-12</span></div>
-                                <div class="commit-when">2 hours ago</div>
                             </div>
                         </div>
                         <div class="handoffs-section">
@@ -215,23 +225,23 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">alphabot</span>
-                        <span class="project-last">2 days ago</span>
+                        <span class="project-last">30 minutes ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
+                                <div><span class="commit-hash">7fa68e5</span> <span class="commit-msg">research: 레버리지 ETF 숏프리미엄 전략 시드 및 브리프 등록</span></div>
+                                <div class="commit-when">30 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">24a164c</span> <span class="commit-msg">feat: RSI 다이버전스 + 50선 확인 필터 시드 & 브리프 등록</span></div>
+                                <div class="commit-when">43 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
                                 <div><span class="commit-hash">a4c8b73</span> <span class="commit-msg">docs: 세션 마무리 — auto-commit pathspec 교훈 + codex exec 운영 규약 기록</span></div>
-                                <div class="commit-when">2 days ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">3484abf</span> <span class="commit-msg">fix: auto_commit_and_push() git commit에 pathspec 누락 수정 (Tier 1)</span></div>
-                                <div class="commit-when">2 days ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">8598b90</span> <span class="commit-msg">docs: transfer probation 핸드오프 리뷰 로그에 커밋 레이스 기록</span></div>
                                 <div class="commit-when">2 days ago</div>
                             </div>
                         </div>
@@ -251,20 +261,20 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">frankencrawler</span>
-                        <span class="project-last">35 hours ago</span>
+                        <span class="project-last">2 days ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">aecc94a</span> <span class="commit-msg">release: v0.12.0</span></div>
-                                <div class="commit-when">35 hours ago</div>
+                                <div class="commit-when">2 days ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">b7f61ed</span> <span class="commit-msg">feat: corpus entity/relation knowledge graph (storage, API, SDK, MCP)</span></div>
-                                <div class="commit-when">35 hours ago</div>
+                                <div class="commit-when">2 days ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">df9ce91</span> <span class="commit-msg">docs(cowork): 커밋 훅 Ollama timeout 대응 절차 명시</span></div>
@@ -287,13 +297,17 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #10b981;"></span>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">trader</span>
-                        <span class="project-last">2 days ago</span>
+                        <span class="project-last">54 minutes ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">a17396f</span> <span class="commit-msg">feat(strategies): add Casper 90-min NY ORB + FVG retest strategy</span></div>
+                                <div class="commit-when">54 minutes ago</div>
+                            </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">567b906</span> <span class="commit-msg">weekly handoff: 2026-07-10</span></div>
                                 <div class="commit-when">2 days ago</div>
@@ -301,10 +315,6 @@
                             <div class="commit-item">
                                 <div><span class="commit-hash">38830f6</span> <span class="commit-msg">docs: 3자 합병 trader 이사회 입장 문서 — 거래소 모델·Allocation Committee</span></div>
                                 <div class="commit-when">2 days ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">cb36088</span> <span class="commit-msg">ops: 잔존 숏 6종목 청산 + 예산 재계산 2차 반영 (2026-07-08)</span></div>
-                                <div class="commit-when">4 days ago</div>
                             </div>
                         </div>
                         <div class="handoffs-section">
@@ -323,7 +333,7 @@
         </div>
 
         <footer>
-            Updated: 2026-07-12 15:57 UTC
+            Updated: 2026-07-12 16:58 UTC
         </footer>
     </div>
 </body>
