@@ -16,8 +16,19 @@
            display: flex; flex-direction: column; gap: 16px; }
   .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px;
            padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .card.pending-apply { background: #172033; border-color: #0e7490; }
   .card.locked { opacity: 0.55; filter: grayscale(0.6); pointer-events: none;
                   border-style: dashed; }
+  .section-title { max-width: 900px; margin: 24px auto 12px; font-size: 15px;
+                   font-weight: 700; color: #e2e8f0; }
+  .pending-section { max-width: 900px; margin: 0 auto 8px; padding: 12px;
+                     background: #082f49; border: 1px solid #0e7490; border-radius: 10px; }
+  .pending-section .grid { margin: 0; }
+  .badge-pending { font-size: 11px; background: #0e7490; color: #cffafe;
+                    padding: 2px 8px; border-radius: 999px; }
+  .pending-reason { font-size: 13px; color: #bae6fd; background: #0f172a;
+                    border-left: 3px solid #06b6d4; padding: 8px 10px; border-radius: 4px;
+                    line-height: 1.5; }
   .badge-lock { font-size: 11px; background: #64748b; color: #fff;
                  padding: 2px 8px; border-radius: 999px; }
   .badge-ocr-needed { font-size: 11px; background: #7c2d12; color: #fed7aa;
@@ -109,6 +120,13 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
+<h2 class="section-title">승인됨 · 적용 보류 (0)</h2>
+<section class="pending-section">
+  <div class="grid">
+<p>적용 보류 항목이 없습니다.</p>
+  </div>
+</section>
+<h2 class="section-title">승인 대기</h2>
 <p class="count">승인 대기 26건</p>
 <div class="grid">
 
@@ -1325,6 +1343,50 @@ async function decide(id, action) {
   }
 }
 
+async function applyNow(id) {
+  const ok = await showModal({
+    title: '자동적용 보류 사유를 확인했습니다. 지금 적용할까요?',
+    okLabel: '지금 적용',
+    showInput: false,
+  });
+  if (!ok) return;
+  try {
+    const result = await apiPost(`/feed/${id}/apply-now`, {});
+    if (result.status === 'no-targets') {
+      showToast(result.detail || '적용 대상 없음');
+      return;
+    }
+    removeCard(id);
+  } catch (e) {
+    if (e.status === 409) {
+      showToast(e.message);
+      removeCard(id);
+    } else {
+      showToast('처리 실패: ' + e.message);
+    }
+  }
+}
+
+async function dismissPending(id) {
+  const ok = await showModal({
+    title: '이 항목을 적용하지 않고 숨길까요?',
+    okLabel: '적용 안 함',
+    showInput: false,
+  });
+  if (!ok) return;
+  try {
+    await apiPost(`/feed/${id}/dismiss-pending`, {});
+    removeCard(id);
+  } catch (e) {
+    if (e.status === 409) {
+      showToast(e.message);
+      removeCard(id);
+    } else {
+      showToast('처리 실패: ' + e.message);
+    }
+  }
+}
+
 function toggleCommentBox(id) {
   const box = document.getElementById('comment-box-' + id);
   if (!box) return;
@@ -1370,7 +1432,7 @@ function lockOcrButtons() {
 }
 
 function updateCount() {
-  const total = document.querySelectorAll('.card').length;
+  const total = document.querySelectorAll('.card:not(.pending-apply)').length;
   const countEl = document.querySelector('.count');
   if (countEl) countEl.textContent = `승인 대기 ${total}건`;
 }
