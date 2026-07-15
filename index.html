@@ -135,7 +135,7 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 15건</p>
+<p class="count">승인 대기 14건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_0c412c3f35c045aeab2ba39a57f666a4" data-id="feed_0c412c3f35c045aeab2ba39a57f666a4">
@@ -156,22 +156,17 @@
   <div class="apply-plan">승인 시 ~/agent_hub/refs/mcp-tools.md에 24개 MCP 버킷 분류 및 직업별 추천 조합 섹션을 추가하거나, ~/.claude/CLAUDE.md MCP 툴 참조 섹션에 버킷 체계 링크 추가</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-15T16:17</div>
-    <div class="response-body">태스크 a604bf05로 등록되었군요. 간단히 답하겠습니다.
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-15T21:11</div>
+    <div class="response-body">**Sentry 적용 전략**
 
-**Sequential-thinking**  
-MCP 서버가 아니라 Claude 추론 설정입니다. extended thinking을 로컬에서 활성화하려면 모델 정의에서 budgetTokens를 설정해야 하는데, Haiku 같은 경량 모델은 지원 안 할 수 있습니다. 정확히 어떤 기능을 원하는지 확인 후 설치 판단이 필요합니다.
+ai-feed는 무인 데몬(queue 워처, digest 생성, image-text 처리)이 많으므로 silent failure 감지가 핵심입니다. 구체적으로:
 
-**Perplexity vs Brave Search**  
-- **Perplexity**: 실시간 웹 + 자체 LLM 요약 → 분석 속도 빠름, 비용 중간
-- **Brave Search**: 프라이버시 중심, 광고 없는 인덱스 → 비용 낮음, 원본 링크 정확도 높음
+1. **LaunchAgent 진입점들** (issue_responder, pm_watcher 등)에 Sentry SDK 초기화 + 각 워커 함수를 try/except로 래핑해 `sentry.capture_exception()` 호출
+2. **pm_server의 Flask 미들웨어**에 Sentry 통합 → API 500 에러 자동 감지
+3. **상태 전이 오류**는 storage.py의 ALLOWED_TRANSITIONS 위반 시 예외 발생 → Sentry로 자동 그룹화
+4. Slack webhook으로 critical 에러만 즉시 알림 (digest 같은 비긴급은 대시보드에만 집계)
 
-ai-feed 피드에서는 최신 AI 트렌드 수집이 핵심이므로 **Perplexity 추가가 우선**으로 보입니다 (실시간성). Brave는 2순위.
-
-**Sentry**  
-에러 추적/모니터링 플랫폼입니다. queue 워처, digest 생성 같은 백그라운드 작업에서 예외 발생 시 자동 감지·알림·그룹화합니다. pm_server 다운타임 감지에도 유용합니다. ai-feed 데몬들의 silent failure를 잡는 데 효과적입니다.
-
-실제 설치·검토는 로컬 세션에서 진행하겠습니다.</div>
+**다음 단계**: Sentry.io 프로젝트 생성 → DSN 받아서 `.env.example`에 추가 → 각 워커에 SDK 통합 → 의도적 에러로 파이프라인 검증. 설계 문서는 `docs/design-observability-sentry.md`로 먼저 작성하고 시작하면 좋습니다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_0c412c3f35c045aeab2ba39a57f666a4','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_0c412c3f35c045aeab2ba39a57f666a4','skip')">⏭ 스킵</button>
@@ -191,56 +186,6 @@ ai-feed 피드에서는 최신 AI 트렌드 수집이 핵심이므로 **Perplexi
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_0c412c3f35c045aeab2ba39a57f666a4')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0c412c3f35c045aeab2ba39a57f666a4')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_1d5fe8da93124b1e9eb7163d50bef205" data-id="feed_1d5fe8da93124b1e9eb7163d50bef205">
-  <div class="card-header">
-    <span class="item-tag" title="feed_1d5fe8da93124b1e9eb7163d50bef205">#1d5fe8da</span>
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-07-15</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    
-  </div>
-  <p class="summary">[Caption]
-dik_chart 📊 보조지표 : 볼린저 밴드 + RSI 📈 매수타점 : 상단 돌파 후 밴드 눌림목 + RSI 지지 공략 조건 1 [추세 폭발]: 가격이 횡보하며 수축하던 볼린저 밴드의 상단을 강력한 장대양봉으로 상향 돌파하며 추세 팽창을 시작합니다. 조건 2 [밴드 리테스트]: 돌파 후 급등하던 캔들이 부드럽게 눌림(조정)을 주며 볼린저 밴드 상단이나 중심선 부근까지 내려와 지지받는 캔들이 출현합니다. 조건 3 [RSI 컨펌]: 가격이 눌릴 때, RSI 지표가 중심선인 50선 부근에서 강력하게 지지받고 위로 고개를 드는 순간을 확인합니다. 📉 매도타점 : 하단 이탈 후 되돌림 저항 + RSI 저항 공략 조건 1 [추세 폭발]: 가격이 볼린저 밴드의 하단(파란선)을 강력한 장대음봉으로 하향 돌파하며 강력한 하락 추세를 켭니다. 조건 2 [밴드 리테스트]: 이탈 후 급락하던 캔들이 일시적으로 반등(되돌림)을 주며 볼린저 밴드 하단이나 중심선 부근까지 올라와 저항을 맞</p>
-  
-  <div class="surfaces"></div>
-  <div class="tags"></div>
-  
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-15T16:15</div>
-    <div class="response-body">좋아. 로컬 대시보드로 이 피드 아이템을 열어서 상태 전이 + trader 핸드오프를 진행하자:
-
-```bash
-cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_1d5fe8da93124b1e9eb7163d50bef205
-```
-
-거기서 이 아이템을 `trader/bollinger-rsi` 태그로 마킹한 후 상태를 `recommend` → `apply`로 전이하면, 자동으로 trader 쪽 전략 업데이트 큐에 올라간다. 이미지 캡처(전략 조건 1/2/3)도 함께 저장되니 trader 구현팀이 바로 쓸 수 있어.</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="decide('feed_1d5fe8da93124b1e9eb7163d50bef205','approve')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_1d5fe8da93124b1e9eb7163d50bef205','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_1d5fe8da93124b1e9eb7163d50bef205','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_1d5fe8da93124b1e9eb7163d50bef205')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1d5fe8da93124b1e9eb7163d50bef205&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1d5fe8da93124b1e9eb7163d50bef205" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/reel/DaxUGiOOWQJ/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_1d5fe8da93124b1e9eb7163d50bef205" style="display:none">
-    <textarea id="comment-text-feed_1d5fe8da93124b1e9eb7163d50bef205" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_1d5fe8da93124b1e9eb7163d50bef205')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1d5fe8da93124b1e9eb7163d50bef205')">취소</button>
     </div>
   </div>
 </div>
