@@ -19,24 +19,28 @@
   .card { background: #fff; border: 1px solid #e8e2d5; border-radius: 8px;
            padding: 16px 18px; display: flex; flex-direction: column; gap: 10px;
            box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-  .card.pending-apply { background: #f0f9ff; border-color: #bae6fd; }
+  .card.pending-apply { background: #faf7f2; border-color: #d0c8bc; }
   .card.locked { opacity: 0.5; filter: grayscale(0.4); pointer-events: none;
                   border-style: dashed; }
   .section-title { max-width: 900px; margin: 24px auto 12px;
                    font-family: Georgia, 'Times New Roman', serif;
                    font-size: 15px; font-weight: 700; color: #1c1917; }
   .pending-section { max-width: 900px; margin: 0 auto 8px; padding: 12px;
-                     background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; }
+                     background: #faf7f2; border: 1px solid #d0c8bc; border-radius: 8px; }
   .pending-section .grid { margin: 0; }
-  .badge-pending { font-size: 11px; background: #e0f2fe; color: #0369a1;
+  .badge-pending { font-size: 11px; background: #dbeafe; color: #1d4ed8;
                     padding: 2px 8px; border-radius: 999px; }
-  .pending-reason { font-size: 13px; color: #0369a1; background: #f0f9ff;
-                    border-left: 3px solid #38bdf8; padding: 8px 10px; border-radius: 4px;
+  .pending-reason { font-size: 13px; color: #44403c; background: #faf7f2;
+                    border-left: 3px solid #c9bfb0; padding: 8px 10px; border-radius: 4px;
                     line-height: 1.5; }
-  .badge-lock { font-size: 11px; background: #f5f5f4; color: #78716c;
+  .badge-lock { font-size: 11px; background: #f5f0e8; color: #78716c;
                  padding: 2px 8px; border-radius: 999px; }
-  .badge-ocr-needed { font-size: 11px; background: #fff7ed; color: #c2410c;
+  .badge-ocr-needed { font-size: 11px; background: #fef9c3; color: #92400e;
                        padding: 2px 8px; border-radius: 999px; }
+  .badge-extraction { font-size: 11px; background: #fce7e7; color: #9f1239;
+                       padding: 2px 8px; border-radius: 4px; }
+  .badge-retryable { font-size: 11px; background: #dbeafe; color: #1d4ed8;
+                      padding: 2px 8px; border-radius: 4px; }
   .locked-note { font-size: 12px; color: #a8a29e; font-style: italic; }
   .card-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .platform { font-size: 11px; font-weight: 600; color: #78716c;
@@ -51,13 +55,13 @@
   .issue-num { font-size: 11px; color: #1d4ed8; text-decoration: none; font-family: monospace; }
   .issue-num:hover { text-decoration: underline; }
   .item-tag { font-size: 11px; color: #a8a29e; font-family: monospace;
-               background: #f5f5f4; padding: 1px 6px; border-radius: 3px; }
+               background: #f5f0e8; padding: 1px 6px; border-radius: 3px; }
   .card-footer { margin-top: 4px; }
   .card-footer a { font-size: 13px; color: #1d4ed8; text-decoration: none; }
   .card-footer a:hover { text-decoration: underline; }
   .claims { margin: 0; padding-left: 16px; font-size: 13px; color: #78716c; line-height: 1.7; }
-  .apply-plan { font-size: 12px; color: #0369a1; background: #f0f9ff;
-                 border-left: 3px solid #38bdf8; padding: 6px 10px; border-radius: 4px; }
+  .apply-plan { font-size: 12px; color: #44403c; background: #faf7f2;
+                 border-left: 3px solid #c9bfb0; padding: 6px 10px; border-radius: 4px; }
   .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
   .btn-approve { background: #15803d; color: #fff; border: none; border-radius: 6px;
                   padding: 6px 14px; font-size: 13px; cursor: pointer; text-decoration: none; }
@@ -72,17 +76,17 @@
               padding: 6px 14px; font-size: 13px; cursor: pointer; text-decoration: none; }
   .btn-ocr.disabled { background: #e7e5e4; color: #a8a29e; pointer-events: none;
                        cursor: not-allowed; }
-  .claude-response { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 6px;
+  .claude-response { background: #faf7f2; border: 1px solid #e8e2d5; border-radius: 6px;
                       padding: 12px; display: flex; flex-direction: column; gap: 8px; }
-  .response-meta { font-size: 12px; color: #0369a1; font-weight: 600; }
+  .response-meta { font-size: 12px; color: #1d4ed8; font-weight: 600; }
   .response-body { font-size: 13px; color: #1c1917; line-height: 1.6; white-space: pre-wrap; }
   .response-actions { display: flex; flex-wrap: wrap; gap: 8px; }
   .mirror-banner { max-width: 900px; margin: 0 auto 16px; background: #faf7f2;
                     border: 1px solid #e8e2d5; color: #78716c; border-radius: 6px;
                     padding: 8px 12px; font-size: 12px; }
   .mirror-banner a { color: #1d4ed8; }
-  .ocr-lock-banner { max-width: 900px; margin: 0 auto 16px; background: #fff7ed;
-                      border: 1px solid #fdba74; color: #9a3412; border-radius: 6px;
+  .ocr-lock-banner { max-width: 900px; margin: 0 auto 16px; background: #fef9c3;
+                      border: 1px solid #fde68a; color: #92400e; border-radius: 6px;
                       padding: 10px 12px; font-size: 13px; line-height: 1.5; }
   .count { font-size: 13px; color: #a8a29e; max-width: 900px; margin: 0 auto 16px; }
   .comment-box { background: #faf7f2; border: 1px solid #e8e2d5; border-radius: 6px;
@@ -141,7 +145,7 @@
     
     <span class="platform">Instagram</span>
     <span class="date">2026-07-15</span>
-    <span style="background:#f5f5f4;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
     
   </div>
   <p class="summary">[Caption]
@@ -227,7 +231,7 @@ dik_chart 📊 보조지표 : 볼린저 밴드 + RSI 📈 매수타점 : 상단 
     
     <span class="platform">Threads</span>
     <span class="date">2026-07-13</span>
-    <span style="background:#dcfce7;color:#15803d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
     
   </div>
   <p class="summary">video-use는 browser-use 팀이 만든 MIT 라이선스 영상 편집 에이전트로, 영상을 직접 보지 않고 오디오 전사(ElevenLabs Scribe) 결과 텍스트로 읽어 편집한다. Claude Code와 대화만으로 컷 편집·색보정·자막·자기검증까지 처리하며, 3만 프레임 대신 12KB 텍스트로 토큰 비용을 극적으로 절감한다. 서브에이전트 병렬 렌더링과 최대 3회 self-eval 루프로 품질을 보완한다.</p>
@@ -263,7 +267,7 @@ dik_chart 📊 보조지표 : 볼린저 밴드 + RSI 📈 매수타점 : 상단 
     
     <span class="platform">Threads</span>
     <span class="date">2026-07-12</span>
-    <span style="background:#f5f5f4;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
     
   </div>
   <p class="summary">키움증권 자동매매 파이썬 오픈소스 코드를 GitHub/위키독스에서 찾아 복사 후, 조건검색식 번호만 교체해 즉시 실행하는 방법을 소개하는 입문자 가이드. 백테스팅을 통한 사전 검증을 다음 단계로 제시함.</p>
@@ -375,7 +379,7 @@ cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
     
     <span class="platform">Web</span>
     <span class="date">2026-07-12</span>
-    <span style="background:#dcfce7;color:#15803d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
     
   </div>
   <p class="summary">MiaoYan은 macOS용 경량 로컬 퍼스트 Markdown 노트 앱으로, Swift 6 네이티브로 작성되어 분할 편집기·미리보기, WikiLink 백링크, LaTeX, Mermaid를 지원한다. iCloud/Nutstore 등 외부 클라우드 클라이언트를 통한 동기화를 지원하며 CLI 인터페이스도 제공한다. GitHub Stars 8.4k, MIT 라이선스 오픈소스.</p>
@@ -411,7 +415,7 @@ cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
     
     <span class="platform">Web</span>
     <span class="date">2026-07-12</span>
-    <span style="background:#dcfce7;color:#15803d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
     
   </div>
   <p class="summary">Pake는 Rust/Tauri 기반으로 웹페이지를 단 한 줄 명령어로 데스크톱 앱(macOS/Windows/Linux)으로 패키징하는 오픈소스 CLI 툴이다. Electron 대비 인스톨러 크기 20배 작고 메모리 사용량이 낮으며, 59.8k GitHub 스타를 보유한 검증된 프로젝트다. CLI, GitHub Actions 온라인 빌드, 로컬 커스텀 개발 세 가지 경로를 지원한다.</p>
@@ -447,7 +451,7 @@ cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
     
     <span class="platform">Instagram</span>
     <span class="date">2026-06-22</span>
-    <span style="background:#f5f5f4;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
     
   </div>
   <p class="summary">Microsoft Azure 무료 계정으로 가상 머신을 생성하고, RDP를 통해 Windows를 실행한 뒤 Ubuntu 터미널에서 OpenCLaW(오픈소스 AI 도구)를 무료로 설치·실행하는 방법을 소개한다. Mac 없이도 클라우드 VM을 통해 무료로 사용 가능하다는 점을 강조한다.</p>
@@ -549,7 +553,7 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
     
     <span class="platform">Threads</span>
     <span class="date">2026-06-22</span>
-    <span style="background:#f5f5f4;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
     
   </div>
   <p class="summary">로컬 AI를 제대로 공부하는 방법을 소개하겠다는 짧은 안내성 문구다. 구체적인 학습 방법이나 검증 가능한 세부 정보는 포함되어 있지 않다.</p>
