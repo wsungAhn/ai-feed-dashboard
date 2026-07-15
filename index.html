@@ -72,6 +72,9 @@
   .btn-comment { background: #1d4ed8; color: #fff; border: none; border-radius: 6px;
                   padding: 6px 14px; font-size: 13px; cursor: pointer; text-decoration: none;
                   display: inline-block; margin-top: 6px; }
+  .btn-delegate { background: #7c3aed; color: #fff; border: none; border-radius: 6px;
+                   padding: 6px 14px; font-size: 13px; cursor: pointer; text-decoration: none;
+                   display: inline-block; margin-top: 6px; }
   .btn-ocr { background: #0f766e; color: #fff; border: none; border-radius: 6px;
               padding: 6px 14px; font-size: 13px; cursor: pointer; text-decoration: none; }
   .btn-ocr.disabled { background: #e7e5e4; color: #a8a29e; pointer-events: none;
@@ -99,6 +102,12 @@
                          padding: 6px 14px; font-size: 13px; cursor: pointer; }
   .btn-comment-cancel { background: #e7e5e4; color: #44403c; border: none; border-radius: 4px;
                          padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .delegate-box { background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 6px;
+                   padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .delegate-select { background: #fff; border: 1px solid #ddd6fe; border-radius: 4px;
+                      color: #1c1917; font-size: 13px; padding: 8px; font-family: inherit; }
+  .btn-delegate-submit { background: #7c3aed; color: #fff; border: none; border-radius: 4px;
+                          padding: 6px 14px; font-size: 13px; cursor: pointer; }
   .modal-overlay { position: fixed; inset: 0; background: rgba(28,25,23,0.45);
                     display: flex; align-items: center; justify-content: center;
                     z-index: 1000; }
@@ -156,28 +165,33 @@
   <div class="apply-plan">승인 시 ~/agent_hub/refs/mcp-tools.md에 24개 MCP 버킷 분류 및 직업별 추천 조합 섹션을 추가하거나, ~/.claude/CLAUDE.md MCP 툴 참조 섹션에 버킷 체계 링크 추가</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-15T21:11</div>
-    <div class="response-body">**Sentry 적용 전략**
-
-ai-feed는 무인 데몬(queue 워처, digest 생성, image-text 처리)이 많으므로 silent failure 감지가 핵심입니다. 구체적으로:
-
-1. **LaunchAgent 진입점들** (issue_responder, pm_watcher 등)에 Sentry SDK 초기화 + 각 워커 함수를 try/except로 래핑해 `sentry.capture_exception()` 호출
-2. **pm_server의 Flask 미들웨어**에 Sentry 통합 → API 500 에러 자동 감지
-3. **상태 전이 오류**는 storage.py의 ALLOWED_TRANSITIONS 위반 시 예외 발생 → Sentry로 자동 그룹화
-4. Slack webhook으로 critical 에러만 즉시 알림 (digest 같은 비긴급은 대시보드에만 집계)
-
-**다음 단계**: Sentry.io 프로젝트 생성 → DSN 받아서 `.env.example`에 추가 → 각 워커에 SDK 통합 → 의도적 에러로 파이프라인 검증. 설계 문서는 `docs/design-observability-sentry.md`로 먼저 작성하고 시작하면 좋습니다.</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-15T21:46</div>
+    <div class="response-body">ai-feed PM 태스크로 위임했습니다 (task_id: ba04e11e).</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_0c412c3f35c045aeab2ba39a57f666a4','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_0c412c3f35c045aeab2ba39a57f666a4','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_0c412c3f35c045aeab2ba39a57f666a4','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_0c412c3f35c045aeab2ba39a57f666a4')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_0c412c3f35c045aeab2ba39a57f666a4')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_0c412c3f35c045aeab2ba39a57f666a4&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_0c412c3f35c045aeab2ba39a57f666a4" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_0c412c3f35c045aeab2ba39a57f666a4" style="display:none">
+    <select id="delegate-project-feed_0c412c3f35c045aeab2ba39a57f666a4" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_0c412c3f35c045aeab2ba39a57f666a4" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">Claude MCP 서버 24개를 5개 버킷(기본 엔진·웹리서치·업무앱·개발자동화·데이터제작)으로 분류한 입문 가이드. 직업군별(개발자·마케터·크리에이터·기획자·데이터)로 5개씩 추천 조합을 제시. 전부 설치 말고 역할에 맞는 5개 조합부터 시작하라는 실용적 온보딩 전략.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_0c412c3f35c045aeab2ba39a57f666a4')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_0c412c3f35c045aeab2ba39a57f666a4')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_0c412c3f35c045aeab2ba39a57f666a4" style="display:none">
@@ -208,35 +222,33 @@ ai-feed는 무인 데몬(queue 워처, digest 생성, image-text 처리)이 많�
   <div class="apply-plan">승인 시 직접 적용 가치 낮음. 참고 수준이라면 ~/dev/Auto_bot/docs/ 또는 agent_hub의 alphabot 관련 project_profile에 '키움 오픈소스 레퍼런스 링크(GitHub 검색어: 키움증권 자동매매 파이썬 오픈소스)' 메모 정도로 보관.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-07-12T22:08</div>
-    <div class="response-body">현재 이 세션은 텍스트 전용이라 직접 코드 검토가 불가능합니다. 키움증권 오픈소스 구조를 실제로 비교하려면 로컬 세션으로 전환이 필요합니다.
-
-**다음 단계:**
-
-1. **로컬 세션 시작**: 작업 디렉토리로 이동 후 Claude 열기
-   ```bash
-   cd ~/dev/trader &amp;&amp; claude
-   ```
-   
-2. **비교 포인트 스캔**: 
-   - 키움증권 코드의 주문 API 패턴 (조건검색 번호 → 즉시 실행)
-   - trader의 `src/` 자동매매 진입점과 비교
-   - 백테스팅 검증 로직이 우리 파이프라인에 있는지 확인
-
-3. **적용 아이디어** (미리): 입문자 가이드 방식의 &quot;조건식 번호 교체로 즉시 실행&quot; 패턴이 우리 AlphaBot의 스트래티지 로딩과 유사할 가능성 — 온보딩 개선 차원의 인사이트가 나올 수 있습니다.
-
-로컬 세션에서 `/debug` 또는 Codex와 함께 trader 구조를 빠르게 매핑하고 싶으신가요?</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-15T21:47</div>
+    <div class="response-body">trader PM 태스크로 위임했습니다 (task_id: d19b8822).</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','approve')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_1bcd9a116ed14a049cf96c460ac63ddd','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_1bcd9a116ed14a049cf96c460ac63ddd')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_1bcd9a116ed14a049cf96c460ac63ddd')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1bcd9a116ed14a049cf96c460ac63ddd&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1bcd9a116ed14a049cf96c460ac63ddd" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@laon_happy_day/post/Dar-B8Jj86H?xmt=AQG0P0dmLbImP2SBBm6yK-WagxXLOUOBfjafg6wJEXze8kGd00wx6RRdWrA80eUpm8vVhDYp&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_1bcd9a116ed14a049cf96c460ac63ddd" style="display:none">
+    <select id="delegate-project-feed_1bcd9a116ed14a049cf96c460ac63ddd" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_1bcd9a116ed14a049cf96c460ac63ddd" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">키움증권 자동매매 파이썬 오픈소스 코드를 GitHub/위키독스에서 찾아 복사 후, 조건검색식 번호만 교체해 즉시 실행하는 방법을 소개하는 입문자 가이드. 백테스팅을 통한 사전 검증을 다음 단계로 제시함.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_1bcd9a116ed14a049cf96c460ac63ddd')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_1bcd9a116ed14a049cf96c460ac63ddd')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_1bcd9a116ed14a049cf96c460ac63ddd" style="display:none">
@@ -286,12 +298,26 @@ cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
       <button class="btn-reject" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_abfd6a22aa2440ab99a71f0ba9b94aa9','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_abfd6a22aa2440ab99a71f0ba9b94aa9')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_abfd6a22aa2440ab99a71f0ba9b94aa9')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_abfd6a22aa2440ab99a71f0ba9b94aa9&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_abfd6a22aa2440ab99a71f0ba9b94aa9" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@thechrisshort/post/DarRi_km9Ha?xmt=AQG0rmYJ55wmLB06lV2s0JZJ7Sg7d35x72ZS5_5weQiBMNMXV7lPuMGnXCvEcg9wpsWOSNQ&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_abfd6a22aa2440ab99a71f0ba9b94aa9" style="display:none">
+    <select id="delegate-project-feed_abfd6a22aa2440ab99a71f0ba9b94aa9" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_abfd6a22aa2440ab99a71f0ba9b94aa9" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">Colibri는 순수 C로 작성된 초경량 추론 엔진으로, 744B MoE 파라미터의 GLM-5.2 모델을 25GB RAM 소비자 머신에서 실행 가능하게 한다. 외부 의존성 없이 전문가(experts)를 디스크에서 스트리밍하는 방식으로 메모리 제약을 극복한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_abfd6a22aa2440ab99a71f0ba9b94aa9')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_abfd6a22aa2440ab99a71f0ba9b94aa9')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_abfd6a22aa2440ab99a71f0ba9b94aa9" style="display:none">
@@ -327,8 +353,22 @@ cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
     <button class="btn-reject" onclick="decide('feed_fec8ad1e265347fbaf15649c1c0f41d2','skip')">❌ 스킵</button>
     <button class="btn-debunk" onclick="decide('feed_fec8ad1e265347fbaf15649c1c0f41d2','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_fec8ad1e265347fbaf15649c1c0f41d2')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_fec8ad1e265347fbaf15649c1c0f41d2')">📤 위임</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fec8ad1e265347fbaf15649c1c0f41d2&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fec8ad1e265347fbaf15649c1c0f41d2" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://github.com/tw93/miaoyan" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_fec8ad1e265347fbaf15649c1c0f41d2" style="display:none">
+    <select id="delegate-project-feed_fec8ad1e265347fbaf15649c1c0f41d2" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_fec8ad1e265347fbaf15649c1c0f41d2" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">MiaoYan은 macOS용 경량 로컬 퍼스트 Markdown 노트 앱으로, Swift 6 네이티브로 작성되어 분할 편집기·미리보기, WikiLink 백링크, LaTeX, Mermaid를 지원한다. iCloud/Nutstore 등 외부 클라우드 클라이언트를 통한 동기화를 지원하며 CLI 인터페이스도 제공한다. GitHub Stars 8.4k, MIT 라이선스 오픈소스.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_fec8ad1e265347fbaf15649c1c0f41d2')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_fec8ad1e265347fbaf15649c1c0f41d2')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_fec8ad1e265347fbaf15649c1c0f41d2" style="display:none">
@@ -364,8 +404,22 @@ cd ~/dev/ai-feed &amp;&amp; ai-feed board-local &lt;feed-item-id&gt;
     <button class="btn-reject" onclick="decide('feed_fa0657321ef3454db4df1f4a69f61ef4','skip')">❌ 스킵</button>
     <button class="btn-debunk" onclick="decide('feed_fa0657321ef3454db4df1f4a69f61ef4','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_fa0657321ef3454db4df1f4a69f61ef4')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_fa0657321ef3454db4df1f4a69f61ef4')">📤 위임</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_fa0657321ef3454db4df1f4a69f61ef4&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_fa0657321ef3454db4df1f4a69f61ef4" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://github.com/tw93/pake" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_fa0657321ef3454db4df1f4a69f61ef4" style="display:none">
+    <select id="delegate-project-feed_fa0657321ef3454db4df1f4a69f61ef4" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_fa0657321ef3454db4df1f4a69f61ef4" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">Pake는 Rust/Tauri 기반으로 웹페이지를 단 한 줄 명령어로 데스크톱 앱(macOS/Windows/Linux)으로 패키징하는 오픈소스 CLI 툴이다. Electron 대비 인스톨러 크기 20배 작고 메모리 사용량이 낮으며, 59.8k GitHub 스타를 보유한 검증된 프로젝트다. CLI, GitHub Actions 온라인 빌드, 로컬 커스텀 개발 세 가지 경로를 지원한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_fa0657321ef3454db4df1f4a69f61ef4')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_fa0657321ef3454db4df1f4a69f61ef4')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_fa0657321ef3454db4df1f4a69f61ef4" style="display:none">
@@ -414,12 +468,26 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_6028001b5c44415ab
       <button class="btn-reject" onclick="decide('feed_6028001b5c44415ab8d4292796f5e2f6','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_6028001b5c44415ab8d4292796f5e2f6','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_6028001b5c44415ab8d4292796f5e2f6')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_6028001b5c44415ab8d4292796f5e2f6')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_6028001b5c44415ab8d4292796f5e2f6&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_6028001b5c44415ab8d4292796f5e2f6" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DXAT1v2gaJU/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_6028001b5c44415ab8d4292796f5e2f6" style="display:none">
+    <select id="delegate-project-feed_6028001b5c44415ab8d4292796f5e2f6" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_6028001b5c44415ab8d4292796f5e2f6" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">Microsoft Azure 무료 계정으로 가상 머신을 생성하고, RDP를 통해 Windows를 실행한 뒤 Ubuntu 터미널에서 OpenCLaW(오픈소스 AI 도구)를 무료로 설치·실행하는 방법을 소개한다. Mac 없이도 클라우드 VM을 통해 무료로 사용 가능하다는 점을 강조한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_6028001b5c44415ab8d4292796f5e2f6')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_6028001b5c44415ab8d4292796f5e2f6')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_6028001b5c44415ab8d4292796f5e2f6" style="display:none">
@@ -464,12 +532,26 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
       <button class="btn-reject" onclick="decide('feed_abc33c12724946db94b7af6d91a99c40','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_abc33c12724946db94b7af6d91a99c40','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_abc33c12724946db94b7af6d91a99c40')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_abc33c12724946db94b7af6d91a99c40')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_abc33c12724946db94b7af6d91a99c40&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_abc33c12724946db94b7af6d91a99c40" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@ddg.kang/post/DU5yMCLk9BT?xmt=AQG0gKCXAHAORJES5gCsNDfbm7aKD1kje5vK07uAAG-B0FhZyi_YS4r2jyKkeG89DWszONmz&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_abc33c12724946db94b7af6d91a99c40" style="display:none">
+    <select id="delegate-project-feed_abc33c12724946db94b7af6d91a99c40" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_abc33c12724946db94b7af6d91a99c40" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">텍스트는 팀리더-팀원-하위 에이전트 구조로 대규모 병렬 리서치와 구현을 수행하는 멀티에이전트 워크플로우를 설명한다. 리서치 단계와 구현 단계를 분리하고, 중간 승인 후 팀 구성을 바꿔 재실행하는 방식으로 품질을 높인다고 주장한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_abc33c12724946db94b7af6d91a99c40')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_abc33c12724946db94b7af6d91a99c40')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_abc33c12724946db94b7af6d91a99c40" style="display:none">
@@ -514,12 +596,26 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
       <button class="btn-reject" onclick="decide('feed_28b60e805431400c8d3798581773b722','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_28b60e805431400c8d3798581773b722','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_28b60e805431400c8d3798581773b722')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_28b60e805431400c8d3798581773b722')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_28b60e805431400c8d3798581773b722&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_28b60e805431400c8d3798581773b722" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@slamslam__/post/DXyDg4wk8wB?xmt=AQG0VHae4-Rg5wThWvPkmFsFlpx0oIC2fW9SAO4wqyS2tOOR-X23G8gnbmOngSnbfTRsUAmK&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_28b60e805431400c8d3798581773b722" style="display:none">
+    <select id="delegate-project-feed_28b60e805431400c8d3798581773b722" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_28b60e805431400c8d3798581773b722" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">로컬 AI를 제대로 공부하는 방법을 소개하겠다는 짧은 안내성 문구다. 구체적인 학습 방법이나 검증 가능한 세부 정보는 포함되어 있지 않다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_28b60e805431400c8d3798581773b722')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_28b60e805431400c8d3798581773b722')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_28b60e805431400c8d3798581773b722" style="display:none">
@@ -555,8 +651,22 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
     <button class="btn-reject" onclick="decide('feed_22049b9fce8a442cafec66a84140cd25','skip')">❌ 스킵</button>
     <button class="btn-debunk" onclick="decide('feed_22049b9fce8a442cafec66a84140cd25','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_22049b9fce8a442cafec66a84140cd25')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_22049b9fce8a442cafec66a84140cd25')">📤 위임</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_22049b9fce8a442cafec66a84140cd25&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_22049b9fce8a442cafec66a84140cd25" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@aicoffeechat/post/DY3FyNakwxE?xmt=AQG0P_aEu-OusPHLJDfXhG9xAlBfzmJ9IMJryJocSubYfg0_0rLdnBAU6ZKMCGz6qdRLpIxa&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_22049b9fce8a442cafec66a84140cd25" style="display:none">
+    <select id="delegate-project-feed_22049b9fce8a442cafec66a84140cd25" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_22049b9fce8a442cafec66a84140cd25" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">a16z의 Joe Schmidt IV 글을 바탕으로 AI 앱 레이어가 완전히 죽은 것은 아니지만, OpenAI와 Anthropic이 직접 장악한 영역에서는 경쟁이 어렵다는 주장을 소개한다. 코딩, 글쓰기, 이미지 생성처럼 모델 성능이 제품 품질을 거의 결정하는 영역은 대형 AI 랩이 유리하므로, 같은 방식의 Codex나 Claude Code를 만드는 전략은 위험하다는 내용이다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_22049b9fce8a442cafec66a84140cd25')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_22049b9fce8a442cafec66a84140cd25')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_22049b9fce8a442cafec66a84140cd25" style="display:none">
@@ -592,8 +702,22 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
     <button class="btn-reject" onclick="decide('feed_7e4238bf6eec42b0bb169b7f659e2073','skip')">❌ 스킵</button>
     <button class="btn-debunk" onclick="decide('feed_7e4238bf6eec42b0bb169b7f659e2073','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_7e4238bf6eec42b0bb169b7f659e2073')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_7e4238bf6eec42b0bb169b7f659e2073')">📤 위임</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_7e4238bf6eec42b0bb169b7f659e2073&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_7e4238bf6eec42b0bb169b7f659e2073" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@verbio_labs/post/DZPimyGksui?xmt=AQG0u06Lo4sm8EHhu0cV-7shtjKXPS1mC7BYZ08DkGIGPHxYGoPEtkInKmQrPo-aP8A2zTw-&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_7e4238bf6eec42b0bb169b7f659e2073" style="display:none">
+    <select id="delegate-project-feed_7e4238bf6eec42b0bb169b7f659e2073" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_7e4238bf6eec42b0bb169b7f659e2073" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">AI 기능을 데모에서 제품으로 전환할 때 핵심은 화려한 기능보다 반복 가능성이다. 실제 입력 20개를 수집해 성공/부분성공/실패로 라벨링한 뒤 기준을 통과해야 UI 개선에 들어가야 한다는 방법론을 제안한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_7e4238bf6eec42b0bb169b7f659e2073')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_7e4238bf6eec42b0bb169b7f659e2073')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_7e4238bf6eec42b0bb169b7f659e2073" style="display:none">
@@ -629,8 +753,22 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
     <button class="btn-reject" onclick="decide('feed_3f8709ee060141eb80bd854448d53aaf','skip')">❌ 스킵</button>
     <button class="btn-debunk" onclick="decide('feed_3f8709ee060141eb80bd854448d53aaf','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_3f8709ee060141eb80bd854448d53aaf')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_3f8709ee060141eb80bd854448d53aaf')">📤 위임</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_3f8709ee060141eb80bd854448d53aaf&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_3f8709ee060141eb80bd854448d53aaf" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@moment.ryan/post/DZXJjrSk0nF?xmt=AQG0ko5s27hQIQqcx_xK40t6uRWBnObmgg_uJHpQg0gtsy7EDEweGYvw2wSL2NP-1OYPc8U&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_3f8709ee060141eb80bd854448d53aaf" style="display:none">
+    <select id="delegate-project-feed_3f8709ee060141eb80bd854448d53aaf" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_3f8709ee060141eb80bd854448d53aaf" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">작성자는 AI 기반 자동 영상 편집이 이미 가능하다고 주장한다. Claude 구독만 있으면 영상 편집 자동화가 간단하며, 사람들이 포기하는 이유는 기술적 한계를 제대로 이해하지 못하기 때문이라고 설명한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_3f8709ee060141eb80bd854448d53aaf')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_3f8709ee060141eb80bd854448d53aaf')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_3f8709ee060141eb80bd854448d53aaf" style="display:none">
@@ -666,8 +804,22 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
     <button class="btn-reject" onclick="decide('feed_3d72745a9c674a589ac553f2a1761582','skip')">❌ 스킵</button>
     <button class="btn-debunk" onclick="decide('feed_3d72745a9c674a589ac553f2a1761582','debunk')">🚫 알고보니 별로</button>
     <button class="btn-comment" onclick="toggleCommentBox('feed_3d72745a9c674a589ac553f2a1761582')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_3d72745a9c674a589ac553f2a1761582')">📤 위임</button>
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_3d72745a9c674a589ac553f2a1761582&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_3d72745a9c674a589ac553f2a1761582" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@unclejobs.ai/post/DZcB7R_iZ8L?xmt=AQG0XvR0Yp6f1xbbdELjq9lDsYa27qRaxiZkOUosny-Xp6l_d2d4Dd8fYpe3HbJz5YN1Irc&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_3d72745a9c674a589ac553f2a1761582" style="display:none">
+    <select id="delegate-project-feed_3d72745a9c674a589ac553f2a1761582" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_3d72745a9c674a589ac553f2a1761582" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">OpenAI와 Anthropic이 개발자 사용자를 두고 경쟁하는 가운데, 일부 사용자는 Codex와 Claude Code 중 하나를 선택하지 않고 함께 사용하는 흐름을 보이고 있다. 텍스트는 Claude를 설계 역할, GPT/Codex를 구현 역할로 나누는 &#x27;architect loop&#x27; 방식을 두 모델을 결합하는 실용적 패턴으로 제시한다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_3d72745a9c674a589ac553f2a1761582')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_3d72745a9c674a589ac553f2a1761582')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_3d72745a9c674a589ac553f2a1761582" style="display:none">
@@ -715,12 +867,26 @@ Threads 링크를 읽고 구체적 매핑을 하고 싶으면 말해.</div>
       <button class="btn-reject" onclick="decide('feed_9a38e8a5b0d946eead093a16428c26f8','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_9a38e8a5b0d946eead093a16428c26f8','debunk')">❌ 터무니없음</button>
       <button class="btn-comment" onclick="toggleCommentBox('feed_9a38e8a5b0d946eead093a16428c26f8')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_9a38e8a5b0d946eead093a16428c26f8')">📤 위임</button>
     </div>
   </div>
   <div class="actions">
     
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_9a38e8a5b0d946eead093a16428c26f8&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_9a38e8a5b0d946eead093a16428c26f8" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/@qentra_kade/post/DZ1fcveGedj?xmt=AQG0a_w-Rn1qL--CLNUlue3Ontzg8c2rQ6OfHCc0LOQike8rOrXNtf0sTjowFz4MRLytX8sq&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_9a38e8a5b0d946eead093a16428c26f8" style="display:none">
+    <select id="delegate-project-feed_9a38e8a5b0d946eead093a16428c26f8" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_9a38e8a5b0d946eead093a16428c26f8" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">와이코프 이론의 매집·분산 구조를 설명하며, 스프링과 UTAD를 통해 세력의 매수·매도 흔적을 읽는 방법을 소개한다. 마지막에는 차트에서 와이코프 구조를 자동 감지하고 GPT로 진입·손절·목표가를 산출하는 도구 또는 코드 아이디어로 연결된다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_9a38e8a5b0d946eead093a16428c26f8')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_9a38e8a5b0d946eead093a16428c26f8')">취소</button>
+    </div>
   </div>
   
   <div class="comment-box" id="comment-box-feed_9a38e8a5b0d946eead093a16428c26f8" style="display:none">
@@ -934,6 +1100,41 @@ async function submitComment(id) {
     showToast('처리 실패: ' + e.message);
   } finally {
     submitBtn.disabled = false; submitBtn.textContent = '제출';
+  }
+}
+
+function toggleDelegateBox(id) {
+  const box = document.getElementById('delegate-box-' + id);
+  if (!box) return;
+  const opening = box.style.display === 'none';
+  box.style.display = opening ? 'block' : 'none';
+  if (opening) setTimeout(() => { const sel = box.querySelector('select'); if (sel) sel.focus(); }, 50);
+}
+
+// classify_intent()의 CHANGE_VERBS/LOOKUP_VERBS 고정목록 룩업을 아예 안 거치는
+// 경로 — 프로젝트·지시문을 사람이 직접 채우므로 오분류가 구조적으로 불가능하다
+// (2026-07-15, "전달해줘"/"체크하고 연구해줘"가 ask로 오분류돼 자동위임 누락된 것의 대안).
+async function submitDelegate(id) {
+  const sel = document.getElementById('delegate-project-' + id);
+  const ta = document.getElementById('delegate-text-' + id);
+  const project = sel.value;
+  const text = ta.value.trim();
+  if (!project) { showToast('프로젝트를 선택하세요'); return; }
+  if (!text) { showToast('지시문을 입력하세요'); return; }
+  const box = document.getElementById('delegate-box-' + id);
+  const submitBtn = box.querySelector('.btn-delegate-submit');
+  submitBtn.disabled = true; submitBtn.textContent = '위임 중...';
+  try {
+    const result = await apiPost(`/feed/${id}/delegate`, {project, instruction: text});
+    box.insertAdjacentHTML('beforebegin', `
+      <div class="claude-response">
+        <div class="response-meta">📤 ${result.project} PM 위임 완료 · task_id ${result.task_id}</div>
+      </div>`);
+    box.style.display = 'none';
+  } catch (e) {
+    showToast('위임 실패: ' + e.message);
+  } finally {
+    submitBtn.disabled = false; submitBtn.textContent = '위임';
   }
 }
 
