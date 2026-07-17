@@ -161,7 +161,7 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">⏳ 실행계획 검토 대기 (63)</h2>
+<h2 class="section-title">⏳ 실행계획 검토 대기 (59)</h2>
 <section class="pending-section">
   <div class="grid">
 
@@ -1117,74 +1117,6 @@
   </div>
 </div>
 
-<div class="card pending-apply apply-action-review" id="card-apply_action_task_6f8360180bd9700476f47790" data-id="apply_action_task_6f8360180bd9700476f47790">
-  <div class="card-header">
-    <span class="item-tag" title="apply_action_task_6f8360180bd9700476f47790">#apply_ac</span>
-    <span class="platform">apply action</span>
-    <span class="date">2026-07-15</span>
-    
-  </div>
-  <p class="summary">프롬프트 대신 루프(자동 반복 시스템)를 설계하자는 &#x27;Loop Engineering&#x27; 패턴 모음. npm 패키지 5종(loop-init, loop-audit, loop-cost, loop-sync, loop-context)으로 에이전트 스킬·상태파일·검증자를 스캐폴딩하고 Loop Ready 점수를 매긴다. 저장소 자체가 데일리 트리아지 루프로 운영되며 STATE.md가 자동 갱신된다.</p>
-  <div class="apply-action-source"></div>
-  <div class="apply-action-text">~/agent_hub/refs/workflow.md에 &#x27;Loop Engineering 패턴&#x27; 섹션을 추가하고, 현재 /loop 스킬 운영 방식을 loop-init 스캐폴드(STATE.md + verifier + triage skill 3종 세트) 기준으로 점검해 누락 구성요소를 보완한다</div>
-  <div class="actions">
-    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_6f8360180bd9700476f47790')">승인</button>
-    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_6f8360180bd9700476f47790')">거절</button>
-    
-  </div>
-  <div class="apply-action-box" id="apply-action-box-apply_action_task_6f8360180bd9700476f47790" style="display:none">
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="action-type-apply_action_task_6f8360180bd9700476f47790">action_type</label>
-      <select id="action-type-apply_action_task_6f8360180bd9700476f47790" class="apply-action-select">
-        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
-      </select>
-    </div>
-    <div class="apply-action-field">
-      <div class="apply-action-path-header">
-        <label class="apply-action-label">target_paths</label>
-        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_6f8360180bd9700476f47790')">경로 추가</button>
-      </div>
-      <div class="apply-action-paths" id="target-paths-apply_action_task_6f8360180bd9700476f47790">
-        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
-      </div>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
-      <div class="apply-action-radio-group">
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_6f8360180bd9700476f47790" value="file_marker_created"
-                 onchange="toggleVerificationPathInput('apply_action_task_6f8360180bd9700476f47790')">
-          파일에 마커 남기기
-        </label>
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_6f8360180bd9700476f47790" value="manual_only" checked
-                 onchange="toggleVerificationPathInput('apply_action_task_6f8360180bd9700476f47790')">
-          수동으로 확인
-        </label>
-      </div>
-    </div>
-    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_6f8360180bd9700476f47790" style="display:none">
-      <label class="apply-action-label" for="verification-path-apply_action_task_6f8360180bd9700476f47790">verification_path</label>
-      <input id="verification-path-apply_action_task_6f8360180bd9700476f47790" class="apply-action-input" type="text" placeholder="검증 경로">
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="normalized-plan-apply_action_task_6f8360180bd9700476f47790">normalized_plan</label>
-      <textarea id="normalized-plan-apply_action_task_6f8360180bd9700476f47790" class="comment-textarea normalized-plan-textarea"
-                rows="4">~/agent_hub/refs/workflow.md에 &#x27;Loop Engineering 패턴&#x27; 섹션을 추가하고, 현재 /loop 스킬 운영 방식을 loop-init 스캐폴드(STATE.md + verifier + triage skill 3종 세트) 기준으로 점검해 누락 구성요소를 보완한다</textarea>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="final-risk-apply_action_task_6f8360180bd9700476f47790">final_risk_level</label>
-      <select id="final-risk-apply_action_task_6f8360180bd9700476f47790" class="apply-action-select">
-        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
-      </select>
-    </div>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_6f8360180bd9700476f47790')">승인</button>
-      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_6f8360180bd9700476f47790')">취소</button>
-    </div>
-  </div>
-</div>
-
 <div class="card pending-apply apply-action-review" id="card-apply_action_task_113a40d87741a9cdb19dc6c5" data-id="apply_action_task_113a40d87741a9cdb19dc6c5">
   <div class="card-header">
     <span class="item-tag" title="apply_action_task_113a40d87741a9cdb19dc6c5">#apply_ac</span>
@@ -1249,74 +1181,6 @@
     <div class="comment-actions">
       <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_113a40d87741a9cdb19dc6c5')">승인</button>
       <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_113a40d87741a9cdb19dc6c5')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card pending-apply apply-action-review" id="card-apply_action_task_253e5790d17d23ab20327485" data-id="apply_action_task_253e5790d17d23ab20327485">
-  <div class="card-header">
-    <span class="item-tag" title="apply_action_task_253e5790d17d23ab20327485">#apply_ac</span>
-    <span class="platform">apply action</span>
-    <span class="date">2026-07-15</span>
-    
-  </div>
-  <p class="summary">21st.dev, Framer Motion, UI/UX Pro Max 세 가지 도구를 Claude나 AI 코딩 도우미에 함께 설치하면 AI가 생성한 홈페이지의 품질을 크게 높일 수 있다는 실용 팁. AI 단독 생성 결과물의 &#x27;티 남는&#x27; 문제를 이 툴셋으로 보완할 수 있다고 주장한다.</p>
-  <div class="apply-action-source"></div>
-  <div class="apply-action-text">21st.dev MCP 서버 + framer-motion npm 패키지를 Claude Code 환경에 연동하는 방안을 검토; 실제 적용 시 ~/.claude/settings.json 또는 프로젝트별 .claude/settings.json에 21st.dev MCP 설정 추가</div>
-  <div class="actions">
-    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_253e5790d17d23ab20327485')">승인</button>
-    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_253e5790d17d23ab20327485')">거절</button>
-    
-  </div>
-  <div class="apply-action-box" id="apply-action-box-apply_action_task_253e5790d17d23ab20327485" style="display:none">
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="action-type-apply_action_task_253e5790d17d23ab20327485">action_type</label>
-      <select id="action-type-apply_action_task_253e5790d17d23ab20327485" class="apply-action-select">
-        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
-      </select>
-    </div>
-    <div class="apply-action-field">
-      <div class="apply-action-path-header">
-        <label class="apply-action-label">target_paths</label>
-        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_253e5790d17d23ab20327485')">경로 추가</button>
-      </div>
-      <div class="apply-action-paths" id="target-paths-apply_action_task_253e5790d17d23ab20327485">
-        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
-      </div>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
-      <div class="apply-action-radio-group">
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_253e5790d17d23ab20327485" value="file_marker_created"
-                 onchange="toggleVerificationPathInput('apply_action_task_253e5790d17d23ab20327485')">
-          파일에 마커 남기기
-        </label>
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_253e5790d17d23ab20327485" value="manual_only" checked
-                 onchange="toggleVerificationPathInput('apply_action_task_253e5790d17d23ab20327485')">
-          수동으로 확인
-        </label>
-      </div>
-    </div>
-    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_253e5790d17d23ab20327485" style="display:none">
-      <label class="apply-action-label" for="verification-path-apply_action_task_253e5790d17d23ab20327485">verification_path</label>
-      <input id="verification-path-apply_action_task_253e5790d17d23ab20327485" class="apply-action-input" type="text" placeholder="검증 경로">
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="normalized-plan-apply_action_task_253e5790d17d23ab20327485">normalized_plan</label>
-      <textarea id="normalized-plan-apply_action_task_253e5790d17d23ab20327485" class="comment-textarea normalized-plan-textarea"
-                rows="4">21st.dev MCP 서버 + framer-motion npm 패키지를 Claude Code 환경에 연동하는 방안을 검토; 실제 적용 시 ~/.claude/settings.json 또는 프로젝트별 .claude/settings.json에 21st.dev MCP 설정 추가</textarea>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="final-risk-apply_action_task_253e5790d17d23ab20327485">final_risk_level</label>
-      <select id="final-risk-apply_action_task_253e5790d17d23ab20327485" class="apply-action-select">
-        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
-      </select>
-    </div>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_253e5790d17d23ab20327485')">승인</button>
-      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_253e5790d17d23ab20327485')">취소</button>
     </div>
   </div>
 </div>
@@ -1389,74 +1253,6 @@
   </div>
 </div>
 
-<div class="card pending-apply apply-action-review" id="card-apply_action_task_ee26fecefb80a3f055c82b48" data-id="apply_action_task_ee26fecefb80a3f055c82b48">
-  <div class="card-header">
-    <span class="item-tag" title="apply_action_task_ee26fecefb80a3f055c82b48">#apply_ac</span>
-    <span class="platform">apply action</span>
-    <span class="date">2026-07-15</span>
-    
-  </div>
-  <p class="summary">바이브 코딩 비전공자가 AI와 협업할 때, AI는 기존 코드를 리팩터링하지 않고 그 위에 임시방편 코드를 덧씌우는 경향이 있다. 이를 막으려면 AI가 근본적인 재설계를 강제받는 제어 장치(프롬프트 규칙, 구조적 가이드라인)가 필요하다.</p>
-  <div class="apply-action-source"><a href="https://www.threads.com/@doorand.dev/post/Dab35x7AX_1?xmt=AQG0xoAgH_WRwvNmhysM7iMIrWzhx_x_nZlqnWhxF08Hpi2aJk19Pvn5hYA9I43b3SnYvGda&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
-  <div class="apply-action-text">~/.claude/CLAUDE.md의 절대 규칙 섹션에 &#x27;AI 근본 회피 금지&#x27; 규칙 추가 — 기존 코드 위에 임시방편 패치 금지, 구조적 문제 발견 시 리팩터링 먼저 제안하도록 명시. 또는 cowork/CONVENTIONS.md에 Codex 핸드오프 시 &#x27;기존 코드 구조 평가 후 리팩터링 여부 판단&#x27; 단계를 §1에 추가.</div>
-  <div class="actions">
-    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_ee26fecefb80a3f055c82b48')">승인</button>
-    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_ee26fecefb80a3f055c82b48')">거절</button>
-    <a href="https://www.threads.com/@doorand.dev/post/Dab35x7AX_1?xmt=AQG0xoAgH_WRwvNmhysM7iMIrWzhx_x_nZlqnWhxF08Hpi2aJk19Pvn5hYA9I43b3SnYvGda&slof=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  <div class="apply-action-box" id="apply-action-box-apply_action_task_ee26fecefb80a3f055c82b48" style="display:none">
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="action-type-apply_action_task_ee26fecefb80a3f055c82b48">action_type</label>
-      <select id="action-type-apply_action_task_ee26fecefb80a3f055c82b48" class="apply-action-select">
-        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
-      </select>
-    </div>
-    <div class="apply-action-field">
-      <div class="apply-action-path-header">
-        <label class="apply-action-label">target_paths</label>
-        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_ee26fecefb80a3f055c82b48')">경로 추가</button>
-      </div>
-      <div class="apply-action-paths" id="target-paths-apply_action_task_ee26fecefb80a3f055c82b48">
-        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
-      </div>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
-      <div class="apply-action-radio-group">
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_ee26fecefb80a3f055c82b48" value="file_marker_created"
-                 onchange="toggleVerificationPathInput('apply_action_task_ee26fecefb80a3f055c82b48')">
-          파일에 마커 남기기
-        </label>
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_ee26fecefb80a3f055c82b48" value="manual_only" checked
-                 onchange="toggleVerificationPathInput('apply_action_task_ee26fecefb80a3f055c82b48')">
-          수동으로 확인
-        </label>
-      </div>
-    </div>
-    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_ee26fecefb80a3f055c82b48" style="display:none">
-      <label class="apply-action-label" for="verification-path-apply_action_task_ee26fecefb80a3f055c82b48">verification_path</label>
-      <input id="verification-path-apply_action_task_ee26fecefb80a3f055c82b48" class="apply-action-input" type="text" placeholder="검증 경로">
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="normalized-plan-apply_action_task_ee26fecefb80a3f055c82b48">normalized_plan</label>
-      <textarea id="normalized-plan-apply_action_task_ee26fecefb80a3f055c82b48" class="comment-textarea normalized-plan-textarea"
-                rows="4">~/.claude/CLAUDE.md의 절대 규칙 섹션에 &#x27;AI 근본 회피 금지&#x27; 규칙 추가 — 기존 코드 위에 임시방편 패치 금지, 구조적 문제 발견 시 리팩터링 먼저 제안하도록 명시. 또는 cowork/CONVENTIONS.md에 Codex 핸드오프 시 &#x27;기존 코드 구조 평가 후 리팩터링 여부 판단&#x27; 단계를 §1에 추가.</textarea>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="final-risk-apply_action_task_ee26fecefb80a3f055c82b48">final_risk_level</label>
-      <select id="final-risk-apply_action_task_ee26fecefb80a3f055c82b48" class="apply-action-select">
-        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
-      </select>
-    </div>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_ee26fecefb80a3f055c82b48')">승인</button>
-      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_ee26fecefb80a3f055c82b48')">취소</button>
-    </div>
-  </div>
-</div>
-
 <div class="card pending-apply apply-action-review" id="card-apply_action_task_42648c2b2fd2717c1d459ab7" data-id="apply_action_task_42648c2b2fd2717c1d459ab7">
   <div class="card-header">
     <span class="item-tag" title="apply_action_task_42648c2b2fd2717c1d459ab7">#apply_ac</span>
@@ -1521,74 +1317,6 @@
     <div class="comment-actions">
       <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_42648c2b2fd2717c1d459ab7')">승인</button>
       <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_42648c2b2fd2717c1d459ab7')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card pending-apply apply-action-review" id="card-apply_action_task_d9dacc80410fd3f50b0ceca1" data-id="apply_action_task_d9dacc80410fd3f50b0ceca1">
-  <div class="card-header">
-    <span class="item-tag" title="apply_action_task_d9dacc80410fd3f50b0ceca1">#apply_ac</span>
-    <span class="platform">apply action</span>
-    <span class="date">2026-07-15</span>
-    
-  </div>
-  <p class="summary">AI 또는 소프트웨어 의사결정 체크리스트의 핵심 요소로, 현재 구현 비용과 미래 기술 부채 비용을 명시적으로 비교하는 프레임을 제안한다. 단기 비용만 보지 않고 장기 유지보수 부담까지 정량화해 트레이드오프를 가시화하는 방법론이다.</p>
-  <div class="apply-action-source"><a href="https://www.threads.com/@doorand.dev/post/Dab360AAR2M?xmt=AQG0NAU5zH7ChsjvYUTtoON2SSOngAuFEpfMnQfbTa8_1y1oCt59S4d0BICAsuK5ZVgOfO4&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
-  <div class="apply-action-text">~/agent_hub/refs/review-tiers.md 또는 engineering.md의 설계 체크리스트 섹션에 &#x27;현재 구현 비용 vs 미래 기술 부채 비용 비교&#x27; 항목을 Tier 판단 기준으로 추가</div>
-  <div class="actions">
-    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_d9dacc80410fd3f50b0ceca1')">승인</button>
-    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_d9dacc80410fd3f50b0ceca1')">거절</button>
-    <a href="https://www.threads.com/@doorand.dev/post/Dab360AAR2M?xmt=AQG0NAU5zH7ChsjvYUTtoON2SSOngAuFEpfMnQfbTa8_1y1oCt59S4d0BICAsuK5ZVgOfO4&slof=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  <div class="apply-action-box" id="apply-action-box-apply_action_task_d9dacc80410fd3f50b0ceca1" style="display:none">
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="action-type-apply_action_task_d9dacc80410fd3f50b0ceca1">action_type</label>
-      <select id="action-type-apply_action_task_d9dacc80410fd3f50b0ceca1" class="apply-action-select">
-        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
-      </select>
-    </div>
-    <div class="apply-action-field">
-      <div class="apply-action-path-header">
-        <label class="apply-action-label">target_paths</label>
-        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_d9dacc80410fd3f50b0ceca1')">경로 추가</button>
-      </div>
-      <div class="apply-action-paths" id="target-paths-apply_action_task_d9dacc80410fd3f50b0ceca1">
-        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
-      </div>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
-      <div class="apply-action-radio-group">
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_d9dacc80410fd3f50b0ceca1" value="file_marker_created"
-                 onchange="toggleVerificationPathInput('apply_action_task_d9dacc80410fd3f50b0ceca1')">
-          파일에 마커 남기기
-        </label>
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_d9dacc80410fd3f50b0ceca1" value="manual_only" checked
-                 onchange="toggleVerificationPathInput('apply_action_task_d9dacc80410fd3f50b0ceca1')">
-          수동으로 확인
-        </label>
-      </div>
-    </div>
-    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_d9dacc80410fd3f50b0ceca1" style="display:none">
-      <label class="apply-action-label" for="verification-path-apply_action_task_d9dacc80410fd3f50b0ceca1">verification_path</label>
-      <input id="verification-path-apply_action_task_d9dacc80410fd3f50b0ceca1" class="apply-action-input" type="text" placeholder="검증 경로">
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="normalized-plan-apply_action_task_d9dacc80410fd3f50b0ceca1">normalized_plan</label>
-      <textarea id="normalized-plan-apply_action_task_d9dacc80410fd3f50b0ceca1" class="comment-textarea normalized-plan-textarea"
-                rows="4">~/agent_hub/refs/review-tiers.md 또는 engineering.md의 설계 체크리스트 섹션에 &#x27;현재 구현 비용 vs 미래 기술 부채 비용 비교&#x27; 항목을 Tier 판단 기준으로 추가</textarea>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="final-risk-apply_action_task_d9dacc80410fd3f50b0ceca1">final_risk_level</label>
-      <select id="final-risk-apply_action_task_d9dacc80410fd3f50b0ceca1" class="apply-action-select">
-        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
-      </select>
-    </div>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_d9dacc80410fd3f50b0ceca1')">승인</button>
-      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_d9dacc80410fd3f50b0ceca1')">취소</button>
     </div>
   </div>
 </div>
