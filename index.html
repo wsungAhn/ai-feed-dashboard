@@ -1015,6 +1015,24 @@ async function apiPost(path, body) {
   return data;
 }
 
+async function apiGet(path) {
+  const token = await getToken();
+  const r = await fetch(PM_API + path, {
+    method: 'GET',
+    headers: {
+      ...(token ? {'Authorization': 'Bearer ' + token} : {}),
+    },
+  });
+  if (r.status === 401) localStorage.removeItem('pm_token');
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const err = new Error(data.detail || ('HTTP ' + r.status));
+    err.status = r.status;
+    throw err;
+  }
+  return data;
+}
+
 const OCR_LOCK_KEY = 'aifeed_ocr_locked';
 const SERVER_OCR_LOCKED = false;
 
@@ -1173,6 +1191,10 @@ function toggleApplyActionForm(taskId) {
   if (!box) return;
   const opening = box.style.display === 'none';
   box.style.display = opening ? 'block' : 'none';
+  if (opening && !box.dataset.draftLoaded) {
+    box.dataset.draftLoaded = 'pending';
+    loadApplyActionDraft(taskId, box);
+  }
   if (opening) {
     setTimeout(() => {
       const select = box.querySelector('select');
@@ -1200,6 +1222,65 @@ function toggleVerificationPathInput(taskId) {
     `input[name="verification-type-${taskId}"]:checked`
   );
   box.style.display = selected && selected.value === 'file_marker_created' ? 'block' : 'none';
+}
+
+async function loadApplyActionDraft(taskId, box) {
+  const submitBtn = box.querySelector('.btn-delegate-submit');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = '초안 불러오는 중...';
+  }
+  try {
+    const draftResult = await apiGet(`/feed/apply-action/${taskId}/draft`);
+    const draft = draftResult.draft || {};
+    if (draft.action_type) {
+      const actionType = document.getElementById(`action-type-${taskId}`);
+      if (actionType) actionType.value = draft.action_type;
+    }
+    if (Array.isArray(draft.target_paths) && draft.target_paths.length) {
+      const container = document.getElementById(`target-paths-${taskId}`);
+      if (container) {
+        container.innerHTML = '';
+        draft.target_paths.forEach((path, index) => {
+          const input = document.createElement('input');
+          input.className = 'apply-action-input target-path-input';
+          input.type = 'text';
+          input.value = path;
+          input.placeholder = `대상 경로 ${index + 1}`;
+          container.appendChild(input);
+        });
+      }
+    }
+    if (draft.verification_type) {
+      const radio = box.querySelector(
+        `input[name="verification-type-${taskId}"][value="${draft.verification_type}"]`
+      );
+      if (radio) {
+        radio.checked = true;
+        toggleVerificationPathInput(taskId);
+      }
+    }
+    if (draft.verification_path) {
+      const verificationPath = document.getElementById(`verification-path-${taskId}`);
+      if (verificationPath) verificationPath.value = draft.verification_path;
+    }
+    if (draft.normalized_plan) {
+      const normalizedPlan = document.getElementById(`normalized-plan-${taskId}`);
+      if (normalizedPlan) normalizedPlan.value = draft.normalized_plan;
+    }
+    if (draft.final_risk_level) {
+      const finalRisk = document.getElementById(`final-risk-${taskId}`);
+      if (finalRisk) finalRisk.value = draft.final_risk_level;
+    }
+    box.dataset.draftLoaded = 'done';
+  } catch (e) {
+    box.dataset.draftLoaded = 'failed';
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '승인';
+    }
+  }
 }
 
 async function submitApplyActionApproval(taskId) {
