@@ -41,6 +41,8 @@
                        padding: 2px 8px; border-radius: 4px; }
   .badge-retryable { font-size: 11px; background: #dbeafe; color: #1d4ed8;
                       padding: 2px 8px; border-radius: 4px; }
+  .badge-auto-risk { font-size: 11px; background: #e0e7ff; color: #4338ca;
+                      padding: 2px 8px; border-radius: 4px; }
   .locked-note { font-size: 12px; color: #a8a29e; font-style: italic; }
   .card-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .platform { font-size: 11px; font-weight: 600; color: #78716c;
@@ -62,6 +64,28 @@
   .claims { margin: 0; padding-left: 16px; font-size: 13px; color: #78716c; line-height: 1.7; }
   .apply-plan { font-size: 12px; color: #44403c; background: #faf7f2;
                  border-left: 3px solid #c9bfb0; padding: 6px 10px; border-radius: 4px; }
+  .apply-action-review { background: #fffaf2; border-color: #e4d9c8; }
+  .apply-action-source { font-size: 12px; color: #78716c; }
+  .apply-action-source a { color: #1d4ed8; text-decoration: none; }
+  .apply-action-source a:hover { text-decoration: underline; }
+  .apply-action-text { font-size: 13px; line-height: 1.65; color: #292524; white-space: pre-wrap;
+                        background: #faf7f2; border-left: 3px solid #c9bfb0; padding: 8px 10px;
+                        border-radius: 4px; }
+  .apply-action-box { background: #faf7f2; border: 1px solid #e8e2d5; border-radius: 6px;
+                       padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .apply-action-field { display: flex; flex-direction: column; gap: 6px; }
+  .apply-action-label { font-size: 12px; color: #78716c; font-weight: 600; }
+  .apply-action-path-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .apply-action-paths { display: flex; flex-direction: column; gap: 6px; }
+  .apply-action-radio-group { display: flex; flex-wrap: wrap; gap: 12px; }
+  .apply-action-radio { font-size: 13px; color: #44403c; display: inline-flex; align-items: center; gap: 6px; }
+  .apply-action-input { background: #fff; border: 1px solid #e8e2d5; border-radius: 4px;
+                         color: #1c1917; font-size: 13px; padding: 8px; width: 100%;
+                         font-family: inherit; box-sizing: border-box; }
+  .apply-action-select { background: #fff; border: 1px solid #e8e2d5; border-radius: 4px;
+                          color: #1c1917; font-size: 13px; padding: 8px; width: 100%;
+                          font-family: inherit; }
+  .normalized-plan-textarea { min-height: 100px; }
   .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
   .btn-approve { background: #15803d; color: #fff; border: none; border-radius: 6px;
                   padding: 6px 14px; font-size: 13px; cursor: pointer; text-decoration: none; }
@@ -137,6 +161,12 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
+<h2 class="section-title">⏳ 실행계획 검토 대기 (0)</h2>
+<section class="pending-section">
+  <div class="grid">
+<p>검토 대기 항목이 없습니다.</p>
+  </div>
+</section>
 <h2 class="section-title">승인됨 · 적용 보류 (0)</h2>
 <section class="pending-section">
   <div class="grid">
@@ -1138,6 +1168,115 @@ async function submitDelegate(id) {
   }
 }
 
+function toggleApplyActionForm(taskId) {
+  const box = document.getElementById('apply-action-box-' + taskId);
+  if (!box) return;
+  const opening = box.style.display === 'none';
+  box.style.display = opening ? 'block' : 'none';
+  if (opening) {
+    setTimeout(() => {
+      const select = box.querySelector('select');
+      if (select) select.focus();
+    }, 50);
+  }
+}
+
+function addTargetPathInput(taskId) {
+  const container = document.getElementById('target-paths-' + taskId);
+  if (!container) return;
+  const count = container.querySelectorAll('.target-path-input').length + 1;
+  const input = document.createElement('input');
+  input.className = 'apply-action-input target-path-input';
+  input.type = 'text';
+  input.placeholder = `대상 경로 ${count}`;
+  container.appendChild(input);
+  input.focus();
+}
+
+function toggleVerificationPathInput(taskId) {
+  const box = document.getElementById('verification-path-wrap-' + taskId);
+  if (!box) return;
+  const selected = document.querySelector(
+    `input[name="verification-type-${taskId}"]:checked`
+  );
+  box.style.display = selected && selected.value === 'file_marker_created' ? 'block' : 'none';
+}
+
+async function submitApplyActionApproval(taskId) {
+  const box = document.getElementById('apply-action-box-' + taskId);
+  if (!box) return;
+  const submitBtn = box.querySelector('.btn-delegate-submit');
+  const actionType = document.getElementById(`action-type-${taskId}`).value;
+  const normalizedPlan = document.getElementById(`normalized-plan-${taskId}`).value.trim();
+  const finalRiskLevel = document.getElementById(`final-risk-${taskId}`).value;
+  const verificationTypeEl = document.querySelector(
+    `input[name="verification-type-${taskId}"]:checked`
+  );
+  const verificationType = verificationTypeEl ? verificationTypeEl.value : '';
+  const targetPaths = Array.from(
+    document.querySelectorAll(`#target-paths-${taskId} .target-path-input`)
+  )
+    .map(input => input.value.trim())
+    .filter(Boolean);
+  const verificationPathEl = document.getElementById(`verification-path-${taskId}`);
+  const verificationPath = verificationPathEl ? verificationPathEl.value.trim() : '';
+
+  if (!actionType) {
+    showToast('action_type을 선택하세요');
+    return;
+  }
+  if (!normalizedPlan) {
+    showToast('normalized_plan을 입력하세요');
+    return;
+  }
+  if (verificationType === 'file_marker_created' && !verificationPath) {
+    showToast('verification_path를 입력하세요');
+    return;
+  }
+  if (actionType !== 'manual_only' && targetPaths.length === 0) {
+    showToast('경로를 1개 이상 입력하세요');
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = '승인 중...';
+  try {
+    const result = await apiPost(`/feed/apply-action/${taskId}/approve`, {
+      action_type: actionType,
+      target_paths: targetPaths,
+      verification_type: verificationType,
+      verification_path: verificationType === 'file_marker_created' ? verificationPath : null,
+      normalized_plan: normalizedPlan,
+      final_risk_level: finalRiskLevel,
+    });
+    showToast(
+      result.redirected
+        ? '하드정책에 의해 수동처리로 전환됨'
+        : '승인 완료: ' + result.task_status
+    );
+    removeCard(taskId);
+  } catch (e) {
+    showToast('처리 실패: ' + e.message);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = '승인';
+  }
+}
+
+async function rejectApplyAction(taskId) {
+  const reason = await showModal({
+    title: '거절 사유:',
+    defaultValue: '',
+  });
+  if (reason === null) return;
+  try {
+    await apiPost(`/feed/apply-action/${taskId}/reject`, {reason});
+    removeCard(taskId);
+  } catch (e) {
+    showToast('처리 실패: ' + e.message);
+  }
+}
+
 function lockOcrButtons() {
   localStorage.setItem(OCR_LOCK_KEY, String(Date.now()));
   document.querySelectorAll('.btn-ocr').forEach(button => {
@@ -1148,7 +1287,7 @@ function lockOcrButtons() {
 }
 
 function updateCount() {
-  const total = document.querySelectorAll('.card:not(.pending-apply)').length;
+  const total = document.querySelectorAll('.card:not(.pending-apply):not(.apply-action-review)').length;
   const countEl = document.querySelector('.count');
   if (countEl) countEl.textContent = `승인 대기 ${total}건`;
 }
