@@ -161,77 +161,9 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">⏳ 실행계획 검토 대기 (80)</h2>
+<h2 class="section-title">⏳ 실행계획 검토 대기 (79)</h2>
 <section class="pending-section">
   <div class="grid">
-
-<div class="card pending-apply apply-action-review" id="card-apply_action_task_12ae69d7453a1e714711be71" data-id="apply_action_task_12ae69d7453a1e714711be71">
-  <div class="card-header">
-    <span class="item-tag" title="apply_action_task_12ae69d7453a1e714711be71">#apply_ac</span>
-    <span class="platform">apply action</span>
-    <span class="date">2026-07-15</span>
-    
-  </div>
-  <p class="summary">Claude를 단순 질의응답 도구가 아니라 개인 튜터처럼 쓰려면 프롬프트 구조가 핵심이라는 내용이다. guided prompts, testing, correction, active recall, 약점 진단, 실전 적용을 통해 학습을 더 빠르고 깊게 만들 수 있다고 주장한다.</p>
-  <div class="apply-action-source"><a href="https://www.instagram.com/p/DZ0F_VSgF04/" target="_blank" rel="noopener">🔗 원문</a></div>
-  <div class="apply-action-text">~/agent_hub/refs/engineering.md 또는 Claude 관련 prompt 문서의 학습/리서치 섹션에 &#x27;tutor mode&#x27; 패턴을 추가한다. 구성은 목표 설정, 단계별 설명, active recall 질문, 오답 correction, 약점 요약, 실전 적용 과제 순서로 정의한다.</div>
-  <div class="actions">
-    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_12ae69d7453a1e714711be71')">승인</button>
-    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_12ae69d7453a1e714711be71')">거절</button>
-    <a href="https://www.instagram.com/p/DZ0F_VSgF04/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  <div class="apply-action-box" id="apply-action-box-apply_action_task_12ae69d7453a1e714711be71" style="display:none">
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="action-type-apply_action_task_12ae69d7453a1e714711be71">action_type</label>
-      <select id="action-type-apply_action_task_12ae69d7453a1e714711be71" class="apply-action-select">
-        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
-      </select>
-    </div>
-    <div class="apply-action-field">
-      <div class="apply-action-path-header">
-        <label class="apply-action-label">target_paths</label>
-        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_12ae69d7453a1e714711be71')">경로 추가</button>
-      </div>
-      <div class="apply-action-paths" id="target-paths-apply_action_task_12ae69d7453a1e714711be71">
-        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
-      </div>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
-      <div class="apply-action-radio-group">
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_12ae69d7453a1e714711be71" value="file_marker_created"
-                 onchange="toggleVerificationPathInput('apply_action_task_12ae69d7453a1e714711be71')">
-          파일에 마커 남기기
-        </label>
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_12ae69d7453a1e714711be71" value="manual_only" checked
-                 onchange="toggleVerificationPathInput('apply_action_task_12ae69d7453a1e714711be71')">
-          수동으로 확인
-        </label>
-      </div>
-    </div>
-    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_12ae69d7453a1e714711be71" style="display:none">
-      <label class="apply-action-label" for="verification-path-apply_action_task_12ae69d7453a1e714711be71">verification_path</label>
-      <input id="verification-path-apply_action_task_12ae69d7453a1e714711be71" class="apply-action-input" type="text" placeholder="검증 경로">
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="normalized-plan-apply_action_task_12ae69d7453a1e714711be71">normalized_plan</label>
-      <textarea id="normalized-plan-apply_action_task_12ae69d7453a1e714711be71" class="comment-textarea normalized-plan-textarea"
-                rows="4">~/agent_hub/refs/engineering.md 또는 Claude 관련 prompt 문서의 학습/리서치 섹션에 &#x27;tutor mode&#x27; 패턴을 추가한다. 구성은 목표 설정, 단계별 설명, active recall 질문, 오답 correction, 약점 요약, 실전 적용 과제 순서로 정의한다.</textarea>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="final-risk-apply_action_task_12ae69d7453a1e714711be71">final_risk_level</label>
-      <select id="final-risk-apply_action_task_12ae69d7453a1e714711be71" class="apply-action-select">
-        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
-      </select>
-    </div>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_12ae69d7453a1e714711be71')">승인</button>
-      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_12ae69d7453a1e714711be71')">취소</button>
-    </div>
-  </div>
-</div>
 
 <div class="card pending-apply apply-action-review" id="card-apply_action_task_f3d477f0afe6fba1d6c8be2f" data-id="apply_action_task_f3d477f0afe6fba1d6c8be2f">
   <div class="card-header">
