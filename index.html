@@ -157,7 +157,7 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-07-19</span>
+  <span class="meta">업데이트: 2026-07-20</span>
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
@@ -193,8 +193,218 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 24건</p>
+<p class="count">승인 대기 28건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_73c895c4df3d44a6ac28fdd0777c6f1a" data-id="feed_73c895c4df3d44a6ac28fdd0777c6f1a">
+  <div class="card-header">
+    <span class="item-tag" title="feed_73c895c4df3d44a6ac28fdd0777c6f1a">#73c895c4</span>
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-20</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">앤트로픽 엔지니어 강연 기반 AI 에이전트 설계 3단계 프레임워크. 1단계 질문(if-then 적합성·비용·도구·리스크), 2단계 설계(무대·도구·지침·함정), 3단계 점검(10~20K 토큰 제약 에이전트 관점 누락 탐지). 핵심 메시지는 에이전트를 무조건 만들지 말고 가치·적합성 먼저 검증하라.</p>
+  <ul class="claims"><li>앤트로픽 엔지니어가 공식 강연에서 모든 작업에 에이전트를 만들지 말라고 직접 발언함</li><li>에이전트 설계 전 if-then 적합성·단위 비용(130~150원)·도구 연결·실패 피해 규모 4가지를 먼저 검증해야 함</li><li>에이전트 시스템 프롬프트는 목표와 금지선을 포함한 붙여 쓰는 형태로 설계해야 함</li><li>실전 에이전트는 10~20K 토큰 제약 안에서 동작하므로 정보 범위 한계를 설계 단계에서 점검해야 함</li></ul>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#AI에이전트</span> <span class="tag">#에이전트설계</span> <span class="tag">#시스템프롬프트</span> <span class="tag">#앤트로픽</span> <span class="tag">#에이전트프레임워크</span> <span class="tag">#ROI검증</span></div>
+  <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md의 '절대 규칙' 섹션 또는 ~/agent_hub/refs/workflow.md에 에이전트 신규 설계 전 체크리스트(if-then 적합성 → 단위 비용 정당성 → 필요 도구 목록 → 실패 피해 규모)를 게이트 항목으로 추가하고, 시스템 프롬프트 작성 시 '목표 + 금지선' 템플릿을 명시</div>
+  
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-07-20T13:03</div>
+    <div class="response-body">agent_hub PM 태스크로 위임했습니다 (task_id: 2101719e).</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="decide('feed_73c895c4df3d44a6ac28fdd0777c6f1a','approve')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_73c895c4df3d44a6ac28fdd0777c6f1a','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_73c895c4df3d44a6ac28fdd0777c6f1a','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">💬 재피드백</button>
+      <button class="btn-delegate" onclick="toggleDelegateBox('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">📤 위임</button>
+    </div>
+  </div>
+  <div class="actions">
+    
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_73c895c4df3d44a6ac28fdd0777c6f1a&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_73c895c4df3d44a6ac28fdd0777c6f1a" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_73c895c4df3d44a6ac28fdd0777c6f1a" style="display:none">
+    <select id="delegate-project-feed_73c895c4df3d44a6ac28fdd0777c6f1a" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="regime-signals">regime-signals</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_73c895c4df3d44a6ac28fdd0777c6f1a" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">앤트로픽 엔지니어 강연 기반 AI 에이전트 설계 3단계 프레임워크. 1단계 질문(if-then 적합성·비용·도구·리스크), 2단계 설계(무대·도구·지침·함정), 3단계 점검(10~20K 토큰 제약 에이전트 관점 누락 탐지). 핵심 메시지는 에이전트를 무조건 만들지 말고 가치·적합성 먼저 검증하라.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_73c895c4df3d44a6ac28fdd0777c6f1a" style="display:none">
+    <textarea id="comment-text-feed_73c895c4df3d44a6ac28fdd0777c6f1a" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_ba9992cccc2141c691a189257921f6c5" data-id="feed_ba9992cccc2141c691a189257921f6c5">
+  <div class="card-header">
+    <span class="item-tag" title="feed_ba9992cccc2141c691a189257921f6c5">#ba9992cc</span>
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-19</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">seb.ai가 Fable 5 모델로 24/7 AI 트레이더를 구축한 사례 소개. 마켓 스캐너 → 시그널 엔진 → 트레이드 플래너 → 리스크 모듈 → 모니터 루프 → 최종 결정의 6단계 파이프라인으로 구성. 최종 트레이드 실행은 인간 승인(Human Review Required)이 필수.</p>
+  <ul class="claims"><li>Fable 5 모델로 가격·뉴스·거래량·온체인 데이터를 24/7 스캔하는 트레이딩 파이프라인 구축 가능</li><li>브레이크아웃·풀백·모멘텀·트렌드 컨티뉴에이션·리버설 5가지 셋업을 자동 탐지하고 확률 스코어링</li><li>포지션 사이징·익스포저 한도·드로다운·변동성·최대손실 5중 리스크 체크 게이트 적용</li><li>최종 결정 단계에서 APPROVED/WATCHLIST/REJECTED 분기 후 인간 승인 필요</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#Fable 5</span> <span class="tag">#AI trader</span> <span class="tag">#trading bot</span> <span class="tag">#signal engine</span> <span class="tag">#risk management</span> <span class="tag">#24/7 monitoring</span> <span class="tag">#human-in-the-loop</span></div>
+  <div class="apply-plan">승인 시 ~/agent_hub/refs/projects.md 또는 alphabot 설계문서에 6단계 모듈식 파이프라인(스캔→시그널→플랜→리스크→모니터→최종결정+인간승인) 아키텍처를 참조 패턴으로 메모; alphabot에 유사한 리스크 게이트 다중화 및 human-in-the-loop 최종 결정 모듈 도입 검토</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="decide('feed_ba9992cccc2141c691a189257921f6c5','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_ba9992cccc2141c691a189257921f6c5','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_ba9992cccc2141c691a189257921f6c5','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_ba9992cccc2141c691a189257921f6c5')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_ba9992cccc2141c691a189257921f6c5')">📤 위임</button>
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_ba9992cccc2141c691a189257921f6c5&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_ba9992cccc2141c691a189257921f6c5" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_ba9992cccc2141c691a189257921f6c5" style="display:none">
+    <select id="delegate-project-feed_ba9992cccc2141c691a189257921f6c5" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="regime-signals">regime-signals</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_ba9992cccc2141c691a189257921f6c5" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">seb.ai가 Fable 5 모델로 24/7 AI 트레이더를 구축한 사례 소개. 마켓 스캐너 → 시그널 엔진 → 트레이드 플래너 → 리스크 모듈 → 모니터 루프 → 최종 결정의 6단계 파이프라인으로 구성. 최종 트레이드 실행은 인간 승인(Human Review Required)이 필수.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_ba9992cccc2141c691a189257921f6c5')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_ba9992cccc2141c691a189257921f6c5')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_ba9992cccc2141c691a189257921f6c5" style="display:none">
+    <textarea id="comment-text-feed_ba9992cccc2141c691a189257921f6c5" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_ba9992cccc2141c691a189257921f6c5')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ba9992cccc2141c691a189257921f6c5')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_82ddd2cb4568446aa5764d9a2ff0f180" data-id="feed_82ddd2cb4568446aa5764d9a2ff0f180">
+  <div class="card-header">
+    <span class="item-tag" title="feed_82ddd2cb4568446aa5764d9a2ff0f180">#82ddd2cb</span>
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-19</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">seb.ai가 제시하는 'AI Operating System' 개념으로, CEO 1인이 AI 에이전트 팀(7개 부서, 33개 스킬)을 운영해 SEO·CRO·콘텐츠·광고·성장·세일즈·전략을 자동화하는 구조다. 각 부서는 독립된 AI 역할(skill)로 구성되며, 전통적인 마케팅 팀을 AI 에이전트로 대체하는 비즈니스 모델을 제시한다. 총 7개 부서(SEO&Content, CRO, Content&Copy, Paid Ads, Growth, Sales&GTM, Strategy)에 33개의 세부 AI 스킬이 정의되어 있다.</p>
+  <ul class="claims"><li>CEO 1인 + AI 에이전트 구조로 전통 마케팅 팀(SEO·CRO·카피·광고·성장·세일즈·전략) 전체를 대체할 수 있다</li><li>33개의 세분화된 AI 스킬(seo-audit, page-cro, copywriting, paid-ads 등)로 마케팅 전 과정을 모듈화할 수 있다</li><li>AI 에이전트를 부서 단위로 구조화하면 반복 가능한 성장 시스템(referral-program, churn-prevention 등)을 구축할 수 있다</li></ul>
+  <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#AI-OS</span> <span class="tag">#AI-에이전트팀</span> <span class="tag">#마케팅자동화</span> <span class="tag">#SEO</span> <span class="tag">#CRO</span> <span class="tag">#성장전략</span> <span class="tag">#1인CEO</span> <span class="tag">#seb.ai</span></div>
+  <div class="apply-plan">승인 시 agent_hub의 AI 에이전트 역할 설계 시 이 7부서 33스킬 분류 체계를 참조 템플릿으로 활용 가능 — ~/agent_hub/refs/ai-business-patterns.md(신규 또는 기존)에 'AI-OS 부서 구조' 섹션으로 추가하거나, polypoly 프로젝트의 에이전트 역할 설계에 마케팅 자동화 모듈 분류 기준으로 참조</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="decide('feed_82ddd2cb4568446aa5764d9a2ff0f180','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_82ddd2cb4568446aa5764d9a2ff0f180','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_82ddd2cb4568446aa5764d9a2ff0f180','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_82ddd2cb4568446aa5764d9a2ff0f180')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_82ddd2cb4568446aa5764d9a2ff0f180')">📤 위임</button>
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_82ddd2cb4568446aa5764d9a2ff0f180&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_82ddd2cb4568446aa5764d9a2ff0f180" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_82ddd2cb4568446aa5764d9a2ff0f180" style="display:none">
+    <select id="delegate-project-feed_82ddd2cb4568446aa5764d9a2ff0f180" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="regime-signals">regime-signals</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_82ddd2cb4568446aa5764d9a2ff0f180" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">seb.ai가 제시하는 &#x27;AI Operating System&#x27; 개념으로, CEO 1인이 AI 에이전트 팀(7개 부서, 33개 스킬)을 운영해 SEO·CRO·콘텐츠·광고·성장·세일즈·전략을 자동화하는 구조다. 각 부서는 독립된 AI 역할(skill)로 구성되며, 전통적인 마케팅 팀을 AI 에이전트로 대체하는 비즈니스 모델을 제시한다. 총 7개 부서(SEO&amp;Content, CRO, Content&amp;Copy, Paid Ads, Growth, Sales&amp;GTM, Strategy)에 33개의 세부 AI 스킬이 정의되어 있다.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_82ddd2cb4568446aa5764d9a2ff0f180')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_82ddd2cb4568446aa5764d9a2ff0f180')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_82ddd2cb4568446aa5764d9a2ff0f180" style="display:none">
+    <textarea id="comment-text-feed_82ddd2cb4568446aa5764d9a2ff0f180" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_82ddd2cb4568446aa5764d9a2ff0f180')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_82ddd2cb4568446aa5764d9a2ff0f180')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_7ecb2f253b9749c487fe16a805769bb0" data-id="feed_7ecb2f253b9749c487fe16a805769bb0">
+  <div class="card-header">
+    <span class="item-tag" title="feed_7ecb2f253b9749c487fe16a805769bb0">#7ecb2f25</span>
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-07-19</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">Claude의 세션 간 기억 손실 문제를 Google NotebookLM 연동으로 해결하는 워크플로우. 대화 종료 시 요점을 NotebookLM에 저장하고, 새 세션 시작 시 필요한 부분만 검색해 로드함으로써 컨텍스트를 유지하면서 토큰 사용량도 절감한다는 주장. 세팅은 4단계 16분 소요라고 설명.</p>
+  <ul class="claims"><li>NotebookLM을 Claude와 연동하면 세션 간 기억 손실 문제를 해결할 수 있다</li><li>필요한 부분만 선택적으로 로드하므로 컨텍스트 전체를 붙여넣는 것보다 토큰 사용량이 줄어든다</li><li>세팅은 4단계, 약 16분이면 완료된다</li></ul>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#claude</span> <span class="tag">#notebooklm</span> <span class="tag">#memory</span> <span class="tag">#context-management</span> <span class="tag">#token-optimization</span> <span class="tag">#cross-session</span> <span class="tag">#ai-workflow</span></div>
+  <div class="apply-plan">승인 시 현재 ~/agent_hub/docs/handoffs/ 핸드오프 + CLAUDE.md 세션 마무리 규정으로 이미 유사 문제를 해결 중이므로 즉시 적용보다는 실제 가이드 문서(tinyurl 링크) 확인 후 자동화 수준 검증. 가치 있으면 ~/agent_hub/refs/engineering.md 세션 관리 섹션에 NotebookLM 연동 옵션으로 추가.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="decide('feed_7ecb2f253b9749c487fe16a805769bb0','approve')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_7ecb2f253b9749c487fe16a805769bb0','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_7ecb2f253b9749c487fe16a805769bb0','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_7ecb2f253b9749c487fe16a805769bb0')">💬 의견</button>
+    <button class="btn-delegate" onclick="toggleDelegateBox('feed_7ecb2f253b9749c487fe16a805769bb0')">📤 위임</button>
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_7ecb2f253b9749c487fe16a805769bb0&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_7ecb2f253b9749c487fe16a805769bb0" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/Da9tQxxkiRp/?img_index=9" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_7ecb2f253b9749c487fe16a805769bb0" style="display:none">
+    <select id="delegate-project-feed_7ecb2f253b9749c487fe16a805769bb0" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      <option value="agent_hub">agent_hub</option><option value="ai-broker">ai-broker</option><option value="ai-feed">ai-feed</option><option value="alphabot">alphabot</option><option value="frankencrawler">frankencrawler</option><option value="openscience">openscience</option><option value="polypoly">polypoly</option><option value="regime-signals">regime-signals</option><option value="trader">trader</option>
+    </select>
+    <textarea id="delegate-text-feed_7ecb2f253b9749c487fe16a805769bb0" class="comment-textarea"
+              placeholder="위임할 지시문을 입력하세요..." rows="3">Claude의 세션 간 기억 손실 문제를 Google NotebookLM 연동으로 해결하는 워크플로우. 대화 종료 시 요점을 NotebookLM에 저장하고, 새 세션 시작 시 필요한 부분만 검색해 로드함으로써 컨텍스트를 유지하면서 토큰 사용량도 절감한다는 주장. 세팅은 4단계 16분 소요라고 설명.</textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_7ecb2f253b9749c487fe16a805769bb0')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_7ecb2f253b9749c487fe16a805769bb0')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_7ecb2f253b9749c487fe16a805769bb0" style="display:none">
+    <textarea id="comment-text-feed_7ecb2f253b9749c487fe16a805769bb0" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_7ecb2f253b9749c487fe16a805769bb0')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7ecb2f253b9749c487fe16a805769bb0')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_5587876345e4473e8995d9c865fbb96d" data-id="feed_5587876345e4473e8995d9c865fbb96d">
   <div class="card-header">
