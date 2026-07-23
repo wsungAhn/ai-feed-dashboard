@@ -173,15 +173,15 @@
         <div class="summary">
             <div class="summary-card">
                 <div class="summary-card-label">Active Projects</div>
-                <div class="summary-card-value">3</div>
+                <div class="summary-card-value">5</div>
             </div>
             <div class="summary-card">
                 <div class="summary-card-label">Today Commits</div>
-                <div class="summary-card-value">29</div>
+                <div class="summary-card-value">51</div>
             </div>
             <div class="summary-card">
                 <div class="summary-card-label">Pending Handoffs</div>
-                <div class="summary-card-value">12</div>
+                <div class="summary-card-value">24</div>
             </div>
         </div>
 
@@ -190,30 +190,102 @@
                 <details open>
                     <summary>
                         <span class="status-dot" style="background-color: #15803d;"></span>
-                        <span class="project-name">ai-feed</span>
-                        <span class="project-last">3 minutes ago</span>
+                        <span class="project-name">agent_hub</span>
+                        <span class="project-last">20 minutes ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">2756fef</span> <span class="commit-msg">feat: allow comments on pending-apply (승인됨・적용보류) dashboard cards</span></div>
-                                <div class="commit-when">3 minutes ago</div>
+                                <div><span class="commit-hash">fba4f1a</span> <span class="commit-msg">fix(registry): correct agent_hub.backlog null field to real backlog path</span></div>
+                                <div class="commit-when">20 minutes ago</div>
                             </div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">d30209e</span> <span class="commit-msg">chore: PM status update 2026-07-23 12:11</span></div>
-                                <div class="commit-when">60 minutes ago</div>
+                                <div><span class="commit-hash">b2da37b</span> <span class="commit-msg">Merge branch &#x27;phase0-pm-registry-coverage&#x27;</span></div>
+                                <div class="commit-when">21 minutes ago</div>
                             </div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">f8d7a9d</span> <span class="commit-msg">chore: dashboard data 2026-07-23</span></div>
-                                <div class="commit-when">63 minutes ago</div>
+                                <div><span class="commit-hash">b464e3d</span> <span class="commit-msg">refactor: load PM project coverage from project_registry.json instead of hardcoded dicts</span></div>
+                                <div class="commit-when">21 minutes ago</div>
                             </div>
                         </div>
                         <div class="handoffs-section">
                             <div class="section-label">Handoffs</div>
                             <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-07-23-syspath-fix-handoff</div>
+                            <div class="item">2026-07-23-pm-registry-coverage-handoff</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
+                        <span class="project-name">ai-broker</span>
+                        <span class="project-last">9 hours ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">d766ee3</span> <span class="commit-msg">docs: B-group (MSTR/COIN/HOOD) backtest results in regime classifier design doc</span></div>
+                                <div class="commit-when">9 hours ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">e7b9fc2</span> <span class="commit-msg">docs: refresh cowork test baseline (62 passed)</span></div>
+                                <div class="commit-when">3 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">52c7510</span> <span class="commit-msg">docs: quick-slot A/B pilot verdict — coder-leniency hypothesis rejected, 47% decision flip rate found</span></div>
+                                <div class="commit-when">3 days ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-07-12-regime-classifier-handoff</div>
+                            <div class="item">2026-07-12-bull-momentum-handoff</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
+                        <span class="project-name">ai-feed</span>
+                        <span class="project-last">14 minutes ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">3fd58d1</span> <span class="commit-msg">fix: p0_tasks entries are dicts, not strings — html.escape() crashed on real data</span></div>
+                                <div class="commit-when">14 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">6151661</span> <span class="commit-msg">fix: escape user-derived text in generate_pm_html.py to prevent HTML/XSS breakage</span></div>
+                                <div class="commit-when">21 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">27444ef</span> <span class="commit-msg">chore: PM status update 2026-07-23 13:11</span></div>
+                                <div class="commit-when">60 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-07-23-pm-html-escaping-handoff</div>
                             <div class="item">2026-07-19-search-embed-remote-offload-handoff</div>
-                            <div class="item">2026-07-19-platform-detection-screenshot-type-handoff</div>
                         </div>
                         <div class="p0-section">
                             <div class="section-label">P0 Tasks</div>
@@ -227,22 +299,22 @@
                     <summary>
                         <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">alphabot</span>
-                        <span class="project-last">3 hours ago</span>
+                        <span class="project-last">4 hours ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">1657223</span> <span class="commit-msg">chore: update cowork baseline + finalize R2 handoff review log</span></div>
-                                <div class="commit-when">3 hours ago</div>
+                                <div class="commit-when">4 hours ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">444600b</span> <span class="commit-msg">fix: 30m timeframe fetch bug + feat: R2 live-poll reproducibility gate (dry-run)</span></div>
-                                <div class="commit-when">3 hours ago</div>
+                                <div class="commit-when">4 hours ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">3439c00</span> <span class="commit-msg">chore: AlphaBot 6h 스냅샷 — cycle #5859 @ 2026-07-23 14:40 UTC</span></div>
-                                <div class="commit-when">6 hours ago</div>
+                                <div class="commit-when">7 hours ago</div>
                             </div>
                         </div>
                         <div class="handoffs-section">
@@ -269,7 +341,7 @@
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">c1f1a97</span> <span class="commit-msg">Merge branch 'refs/heads/hermes/hermes-f27202be' into dev</span></div>
+                                <div><span class="commit-hash">c1f1a97</span> <span class="commit-msg">Merge branch &#x27;refs/heads/hermes/hermes-f27202be&#x27; into dev</span></div>
                                 <div class="commit-when">3 days ago</div>
                             </div>
                             <div class="commit-item">
@@ -297,24 +369,126 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #15803d;"></span>
-                        <span class="project-name">trader</span>
-                        <span class="project-last">18 hours ago</span>
+                        <span class="status-dot" style="background-color: #d97706;"></span>
+                        <span class="project-name">openscience</span>
+                        <span class="project-last">3 days ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
+                                <div><span class="commit-hash">61cd3c6</span> <span class="commit-msg">chore: gitignore .pm_review_worktrees/ (hermes worktree-collision fix)</span></div>
+                                <div class="commit-when">3 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">e9844a4</span> <span class="commit-msg">Merge pull request #178 from synthetic-sciences/fix/open-issues</span></div>
+                                <div class="commit-when">13 days ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="empty">No handoffs</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #d97706;"></span>
+                        <span class="project-name">polypoly</span>
+                        <span class="project-last">7 days ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">07ac5aa</span> <span class="commit-msg">docs: dedupe frankencrawler block into agent_hub/refs</span></div>
+                                <div class="commit-when">7 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">4e2cb2f</span> <span class="commit-msg">docs: Task Contract 초안 — capital $100 / 2주 / allowlist 3개 / 전체취소 허용</span></div>
+                                <div class="commit-when">13 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">e93cfa3</span> <span class="commit-msg">feat: 최종 조립 — main.py phase 5 CLI 배선, live 실행 경로 완성</span></div>
+                                <div class="commit-when">2 weeks ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-07-08-ws-integration</div>
+                            <div class="item">2026-07-08-stage0b-account-api-spike</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #d97706;"></span>
+                        <span class="project-name">regime-signals</span>
+                        <span class="project-last">4 days ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">b341ddf</span> <span class="commit-msg">feat: SQLite backup script for social_signals.db</span></div>
+                                <div class="commit-when">4 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">a23d151</span> <span class="commit-msg">feat: fetch_inputs() orchestrator — Stage A complete</span></div>
+                                <div class="commit-when">4 days ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">4fd106a</span> <span class="commit-msg">docs: cowork handoff for fetch_inputs orchestrator (round 8)</span></div>
+                                <div class="commit-when">4 days ago</div>
+                            </div>
+                        </div>
+                        <div class="handoffs-section">
+                            <div class="section-label">Handoffs</div>
+                            <div class="item">CONVENTIONS</div>
+                            <div class="item">2026-07-19-yfinance-fetchers-handoff</div>
+                            <div class="item">2026-07-19-social-store-handoff</div>
+                        </div>
+                        <div class="p0-section">
+                            <div class="section-label">P0 Tasks</div>
+                            <div class="empty">No P0 tasks</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="project-card">
+                <details open>
+                    <summary>
+                        <span class="status-dot" style="background-color: #15803d;"></span>
+                        <span class="project-name">trader</span>
+                        <span class="project-last">37 minutes ago</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="commits-section">
+                            <div class="section-label">Recent Commits</div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">096d546</span> <span class="commit-msg">docs: record real Codex adversarial audit of VER1M/Casper fix plan</span></div>
+                                <div class="commit-when">37 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">1bb86de</span> <span class="commit-msg">docs: record VER1M/Casper zero-signal diagnosis and fix plan (no implementation)</span></div>
+                                <div class="commit-when">41 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
                                 <div><span class="commit-hash">bdfc919</span> <span class="commit-msg">fix: Daily Activity email Top Strategies ranked by raw pnl_net, hiding real traders</span></div>
-                                <div class="commit-when">18 hours ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">de89a42</span> <span class="commit-msg">docs: record final commit hash in today's context file</span></div>
-                                <div class="commit-when">2 days ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">c0f89ad</span> <span class="commit-msg">fix: log unknown-cost-basis sells to realized_ledger instead of dropping them</span></div>
-                                <div class="commit-when">2 days ago</div>
+                                <div class="commit-when">19 hours ago</div>
                             </div>
                         </div>
                         <div class="handoffs-section">
@@ -325,7 +499,8 @@
                         </div>
                         <div class="p0-section">
                             <div class="section-label">P0 Tasks</div>
-                            <div class="empty">No P0 tasks</div>
+                            <div class="item">TR-003a: **VER1M 신호 0건 — 원인+수정안 Codex 적대감사 통과, 승인 대기** — `strategies_ (승인 대기)</div>
+                            <div class="item">TR-003b: **Casper 신호 0건 — 원안 불완전, 재설계 필요(구현 금지)** — enum 진단(`bar_stre (원안 반려·재설계 대기)</div>
                         </div>
                     </div>
                 </details>
@@ -333,7 +508,7 @@
         </div>
 
         <footer>
-            Updated: 2026-07-23 20:11 UTC
+            Updated: 2026-07-23 21:11 UTC
         </footer>
     </div>
 </body>
