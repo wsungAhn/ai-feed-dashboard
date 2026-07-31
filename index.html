@@ -184,7 +184,17 @@
   <div class="actions">
     <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_e59f9eb0dbe8417ba8138f75867df362')">승인</button>
     <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_e59f9eb0dbe8417ba8138f75867df362')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_bc5262b3c71f419ba572e9c3cfca7fa4')">💬 의견</button>
     
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_bc5262b3c71f419ba572e9c3cfca7fa4" style="display:none">
+    <textarea id="comment-text-feed_bc5262b3c71f419ba572e9c3cfca7fa4" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_bc5262b3c71f419ba572e9c3cfca7fa4')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bc5262b3c71f419ba572e9c3cfca7fa4')">취소</button>
+    </div>
   </div>
   <div class="apply-action-box" id="apply-action-box-apply_action_task_e59f9eb0dbe8417ba8138f75867df362" style="display:none">
     <div class="apply-action-field">
