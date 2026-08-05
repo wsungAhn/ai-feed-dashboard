@@ -2243,13 +2243,31 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_a6e258b6b22747ec9
   <div class="tags"><span class="tag">#YC</span> <span class="tag">#multi-agent</span> <span class="tag">#QM</span> <span class="tag">#오픈소스</span> <span class="tag">#MIT</span> <span class="tag">#에이전트 하네스</span> <span class="tag">#조직 자동화</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 YC QM 항목을 추가하고, agent_hub 내 멀티 에이전트 하네스 설계 시 QM 구조를 참조 사례로 검토 (`~/agent_hub/docs/design-*.md` 신규 작성 후보로 등록)</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-08-05T12:30</div>
+    <div class="response-body">이 응답은 웹 접속이 불가능해서 QM 리포를 직접 확인할 수 없다. 정직하게 보고: **QM의 아키텍처와 ai-feed 시스템의 구체적 비교는 코드를 봐야 정확하다.**
+
+로컬 환경에서 인터랙티브 Claude를 열어서 실제 비교 분석을 하려면 이 명령을 실행:
+
+```bash
+cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_1b749a5589c94791a76fa76ad6b55d72
+```
+
+이 전체 대화 맥락을 인클루드한 채로 리포 체크·비교 분석을 할 수 있다. 그 사이에 **미리 준비할 질문**: 
+- QM의 agent dispatch 메커니즘 vs ai-feed의 extract→analyze→recommend 파이프라인 (선형 vs 분기/재시도?)
+- 상태 관리 (QM이 어떻게 agent 결과를 추적하는가?)
+- 에러 처리·재시도 정책
+
+체크 후 피드를 어떻게 나을지(적용 vs 학습만 vs 미룸) 함께 판단할 수 있다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_1b749a5589c94791a76fa76ad6b55d72')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_1b749a5589c94791a76fa76ad6b55d72','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_1b749a5589c94791a76fa76ad6b55d72','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_1b749a5589c94791a76fa76ad6b55d72')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_1b749a5589c94791a76fa76ad6b55d72')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_1b749a5589c94791a76fa76ad6b55d72','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_1b749a5589c94791a76fa76ad6b55d72','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_1b749a5589c94791a76fa76ad6b55d72')">💬 의견</button>
-
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1b749a5589c94791a76fa76ad6b55d72&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1b749a5589c94791a76fa76ad6b55d72" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.threads.com/share/BAPHnNOhpz/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
