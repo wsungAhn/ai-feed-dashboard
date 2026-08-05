@@ -168,7 +168,7 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-08-04</span>
+  <span class="meta">업데이트: 2026-08-05</span>
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
@@ -1877,13 +1877,24 @@
   <div class="tags"><span class="tag">#DIY</span> <span class="tag">#hovercraft</span> <span class="tag">#social-media</span> <span class="tag">#summer</span> <span class="tag">#viral-content</span></div>
   <div class="apply-plan">승인 시 적용 가능한 인사이트 없음. 텍스트 내용이 너무 단편적이어서 어느 파일에도 반영할 수준의 정보가 추출되지 않는다.</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-08-05T12:22</div>
+    <div class="response-body">현재 이 모드에선 피드 시스템 접근이 불가능해서 원본 URL을 가져올 수 없습니다. 인터랙티브 Claude로 전환하려면:
+
+```bash
+cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_c4032c81ed4f47b18e04729156b60737
+```
+
+이 명령을 실행하면 대시보드가 열려 해당 아이템의 원본 링크, 이미지, 상세 분석을 볼 수 있습니다. 거기서 링크 확인 후 필요하면 추가 작업(OCR, 컨텍스트 확보 등)을 할 수 있습니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_c4032c81ed4f47b18e04729156b60737')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_c4032c81ed4f47b18e04729156b60737','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_c4032c81ed4f47b18e04729156b60737','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_c4032c81ed4f47b18e04729156b60737')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_c4032c81ed4f47b18e04729156b60737')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_c4032c81ed4f47b18e04729156b60737','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_c4032c81ed4f47b18e04729156b60737','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c4032c81ed4f47b18e04729156b60737')">💬 의견</button>
-
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c4032c81ed4f47b18e04729156b60737&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c4032c81ed4f47b18e04729156b60737" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     
   </div>
@@ -4960,7 +4971,13 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
     
     
     
-    <span class="badge badge-pm-task">⏳ 실행 대기/중</span>
+    <span class="badge badge-pm-task">⚠️ 실행 실패</span><div class="pm-task-error">[32m✓ Worktree created:[0m /Users/Mung/agent_hub/.worktrees/hermes-3840e0ee
+  Branch: hermes/hermes-3840e0ee
+  Base:   HEAD (local — worktree_sync disabled)
+API call failed after 3 retries: HTTP 429: The usage limit has been reached
+
+[33m⚠ Worktree has unpushed commits, keeping: /Users/Mung/agent_hub/.worktrees/hermes-3840e0ee[0m
+  To clean up manually: git worktree remove --force /Users/Mung/agent_hub/.worktrees/hermes-3840e0ee</div>
     <span class="platform">Manual</span>
     <span class="date">2026-07-07</span>
     <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
