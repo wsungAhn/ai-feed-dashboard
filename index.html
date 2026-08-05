@@ -1943,13 +1943,33 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_c4032c81ed4f47b18
   <div class="tags"><span class="tag">#AI</span> <span class="tag">#학술글쓰기</span> <span class="tag">#연구생산성</span> <span class="tag">#포스트그라주에이션</span> <span class="tag">#academic-writing</span></div>
   <div class="apply-plan">승인 시 현재 작업 흐름에 직접 적용할 만한 구체적 인사이트가 캡션에 없음. 관심 있으면 링크(pii/S2666990024000120) 원문을 읽고 실제 권장 AI 도구·워크플로우를 확인 후 ~/agent_hub/hub/ai-trends.md에 요약 추가.</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-08-05T12:22</div>
+    <div class="response-body">태스크 1b7e68fd로 이미 등록됐군요. 간단히 정리하면:
+
+**문제점**: 캡션에 인용된 ScienceDirect 논문을 직접 가져올 수 없습니다. ScienceDirect는 paywall이 있어서 로봇 접근을 차단하고, URL도 캡션에 없으니 먼저 논문을 특정해야 합니다.
+
+**다음 단계**:
+1. **캡션에서 논문 정보 추출** — 포스트의 실제 텍스트/이미지에 DOI, 저자, 제목이 있는지 확인
+2. **논문 접근** — DOI가 있으면 `sci-hub.se` 같은 미러나 대학 라이센스 활용
+3. **정리** — 받은 논문의 핵심(AI 쓰기 활용 연구 결과)을 요약
+
+지금 이 세션은 텍스트 전용이라 이미지를 못 보고 있습니다. 실제 작업하려면:
+
+```bash
+cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_a6e258b6b22747ec928f1017abab7a22
+```
+
+이 명령으로 로컬 Claude 세션을 열면 포스트 전문을 보고 논문 검색을 진행할 수 있습니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_a6e258b6b22747ec928f1017abab7a22')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_a6e258b6b22747ec928f1017abab7a22','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_a6e258b6b22747ec928f1017abab7a22','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_a6e258b6b22747ec928f1017abab7a22')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_a6e258b6b22747ec928f1017abab7a22')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_a6e258b6b22747ec928f1017abab7a22','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_a6e258b6b22747ec928f1017abab7a22','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_a6e258b6b22747ec928f1017abab7a22')">💬 의견</button>
-
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_a6e258b6b22747ec928f1017abab7a22&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_a6e258b6b22747ec928f1017abab7a22" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/Daxq2PWBKw9/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
@@ -1986,7 +2006,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_c4032c81ed4f47b18
     
     
     
-    
+    <span class="badge badge-pm-task">⏳ 실행 대기/중</span>
     <span class="platform">Instagram</span>
     <span class="date">2026-08-04</span>
     <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
@@ -1998,13 +2018,18 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_c4032c81ed4f47b18
   <div class="tags"><span class="tag">#continual-learning</span> <span class="tag">#memory-consolidation</span> <span class="tag">#self-modification</span> <span class="tag">#LLM-training</span> <span class="tag">#neuromorphic-AI</span> <span class="tag">#sleep-phase</span> <span class="tag">#Google-Research</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md의 LLM 학습 방법론 섹션에 이 논문(arXiv:2406.03979)을 추가하고, 로컬 모델 파인튜닝 전략 검토 시 continual learning sleep-phase 접근법 참고 항목으로 기록한다</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-08-05T12:24</div>
+    <div class="response-body">agent_hub PM 태스크로 위임했습니다 (task_id: d8cc1b57).</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_bcab50a55ce84847b3c8afc2397e1aad')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_bcab50a55ce84847b3c8afc2397e1aad','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_bcab50a55ce84847b3c8afc2397e1aad','debunk')">❌ 터무니없음</button>
+      <button class="btn-comment" onclick="toggleCommentBox('feed_bcab50a55ce84847b3c8afc2397e1aad')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_bcab50a55ce84847b3c8afc2397e1aad')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_bcab50a55ce84847b3c8afc2397e1aad','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_bcab50a55ce84847b3c8afc2397e1aad','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_bcab50a55ce84847b3c8afc2397e1aad')">💬 의견</button>
-
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_bcab50a55ce84847b3c8afc2397e1aad&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_bcab50a55ce84847b3c8afc2397e1aad" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DbKy4zVgB2J/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
