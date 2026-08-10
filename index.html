@@ -168,14 +168,1183 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-08-09</span>
+  <span class="meta">업데이트: 2026-08-10</span>
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">⏳ 실행계획 검토 대기 (0)</h2>
+<h2 class="section-title">⏳ 실행계획 검토 대기 (15)</h2>
 <section class="pending-section">
   <div class="grid">
-<p>검토 대기 항목이 없습니다.</p>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_e61c22c09d514d85a4868ce6396274d1" data-id="apply_action_task_e61c22c09d514d85a4868ce6396274d1">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_e61c22c09d514d85a4868ce6396274d1">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Claude Code 사용 시 자동 생성되는 hongik.man 폴더의 구성과 활용법을 정리했다는 홍보성 콘텐츠다. 폴더와 파일 29개의 역할을 공식문서 기반으로 정리했으며, 댓글을 통해 상세자료를 제공하겠다고 안내한다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/p/DaM7oVaPOdW/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_8403489077744407ab81bf97baee41aa: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-03T16:05:59.665891+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DaM7oVaPOdW/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_8403489077744407ab81bf97baee41aa')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DaM7oVaPOdW/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_8403489077744407ab81bf97baee41aa" style="display:none">
+    <textarea id="comment-text-feed_8403489077744407ab81bf97baee41aa" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_8403489077744407ab81bf97baee41aa')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_8403489077744407ab81bf97baee41aa')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_e61c22c09d514d85a4868ce6396274d1" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_e61c22c09d514d85a4868ce6396274d1">action_type</label>
+      <select id="action-type-apply_action_task_e61c22c09d514d85a4868ce6396274d1" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_e61c22c09d514d85a4868ce6396274d1">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_e61c22c09d514d85a4868ce6396274d1" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_e61c22c09d514d85a4868ce6396274d1" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_e61c22c09d514d85a4868ce6396274d1" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_e61c22c09d514d85a4868ce6396274d1">verification_path</label>
+      <input id="verification-path-apply_action_task_e61c22c09d514d85a4868ce6396274d1" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_e61c22c09d514d85a4868ce6396274d1">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_e61c22c09d514d85a4868ce6396274d1" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_8403489077744407ab81bf97baee41aa: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-03T16:05:59.665891+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DaM7oVaPOdW/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_e61c22c09d514d85a4868ce6396274d1">final_risk_level</label>
+      <select id="final-risk-apply_action_task_e61c22c09d514d85a4868ce6396274d1" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_e61c22c09d514d85a4868ce6396274d1')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_c429d76dfb6444e2a2500203e7286614" data-id="apply_action_task_c429d76dfb6444e2a2500203e7286614">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_c429d76dfb6444e2a2500203e7286614">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Loop Engineering은 Claude Code, Codex, Grok 같은 AI code agent를 위한 오픈소스 practice library로, 반복 prompt 작성 없이 자동화 loop를 구성하는 것을 목표로 한다. Scheduled Automation, Isolated Workspace, Skill Library, MCP Connector, Validation Twin Agents, Persistent State Storage 등 6개 핵심 구성요소와 여러 production-grade loop template 및 NPM 도구를 제공한다고 설명된다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/reel/DaDoy0cMQVt/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_9e9dd26d132944f7b7f4c7c1fba98ade: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-03T22:03:04.872617+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DaDoy0cMQVt/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_c429d76dfb6444e2a2500203e7286614')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_c429d76dfb6444e2a2500203e7286614')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">💬 의견</button>
+    <a href="https://www.instagram.com/reel/DaDoy0cMQVt/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_9e9dd26d132944f7b7f4c7c1fba98ade" style="display:none">
+    <textarea id="comment-text-feed_9e9dd26d132944f7b7f4c7c1fba98ade" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_9e9dd26d132944f7b7f4c7c1fba98ade')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_c429d76dfb6444e2a2500203e7286614" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_c429d76dfb6444e2a2500203e7286614">action_type</label>
+      <select id="action-type-apply_action_task_c429d76dfb6444e2a2500203e7286614" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_c429d76dfb6444e2a2500203e7286614')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_c429d76dfb6444e2a2500203e7286614">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_c429d76dfb6444e2a2500203e7286614" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_c429d76dfb6444e2a2500203e7286614')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_c429d76dfb6444e2a2500203e7286614" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_c429d76dfb6444e2a2500203e7286614')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_c429d76dfb6444e2a2500203e7286614" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_c429d76dfb6444e2a2500203e7286614">verification_path</label>
+      <input id="verification-path-apply_action_task_c429d76dfb6444e2a2500203e7286614" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_c429d76dfb6444e2a2500203e7286614">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_c429d76dfb6444e2a2500203e7286614" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_9e9dd26d132944f7b7f4c7c1fba98ade: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-03T22:03:04.872617+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DaDoy0cMQVt/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_c429d76dfb6444e2a2500203e7286614">final_risk_level</label>
+      <select id="final-risk-apply_action_task_c429d76dfb6444e2a2500203e7286614" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_c429d76dfb6444e2a2500203e7286614')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_c429d76dfb6444e2a2500203e7286614')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_7301b5a732384fc181b2a21bec369fe9" data-id="apply_action_task_7301b5a732384fc181b2a21bec369fe9">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_7301b5a732384fc181b2a21bec369fe9">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">앤트로픽이 제시한 AI 에이전트 협업법은 새로운 비법보다 명확한 역할, 좋은 문서, 공유된 목표 같은 전통적 팀워크 원칙에 가깝다. 핵심은 AI와 일하는 방식이 도구 사용이 아니라 팀 운영 방식으로 바뀌고 있다는 점이다.</p>
+  <div class="apply-action-source"><a href="https://www.threads.com/@unclejobs.ai/post/DaC2IkeCetJ?xmt=AQG0qYNOQj5jta8hEr2OzkK_JVs0xdjKMHi4vjUFdwfqQTdX6a7ZCYTka6tKL3eqHIjcyz4&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_b0114943c35845c584ab2c1275151353: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:23:48.588694+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@unclejobs.ai/post/DaC2IkeCetJ?xmt=AQG0qYNOQj5jta8hEr2OzkK_JVs0xdjKMHi4vjUFdwfqQTdX6a7ZCYTka6tKL3eqHIjcyz4&amp;slof=1</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_b0114943c35845c584ab2c1275151353')">💬 의견</button>
+    <a href="https://www.threads.com/@unclejobs.ai/post/DaC2IkeCetJ?xmt=AQG0qYNOQj5jta8hEr2OzkK_JVs0xdjKMHi4vjUFdwfqQTdX6a7ZCYTka6tKL3eqHIjcyz4&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_b0114943c35845c584ab2c1275151353" style="display:none">
+    <textarea id="comment-text-feed_b0114943c35845c584ab2c1275151353" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_b0114943c35845c584ab2c1275151353')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b0114943c35845c584ab2c1275151353')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_7301b5a732384fc181b2a21bec369fe9" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_7301b5a732384fc181b2a21bec369fe9">action_type</label>
+      <select id="action-type-apply_action_task_7301b5a732384fc181b2a21bec369fe9" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_7301b5a732384fc181b2a21bec369fe9">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_7301b5a732384fc181b2a21bec369fe9" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_7301b5a732384fc181b2a21bec369fe9" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_7301b5a732384fc181b2a21bec369fe9" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_7301b5a732384fc181b2a21bec369fe9">verification_path</label>
+      <input id="verification-path-apply_action_task_7301b5a732384fc181b2a21bec369fe9" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_7301b5a732384fc181b2a21bec369fe9">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_7301b5a732384fc181b2a21bec369fe9" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_b0114943c35845c584ab2c1275151353: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:23:48.588694+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@unclejobs.ai/post/DaC2IkeCetJ?xmt=AQG0qYNOQj5jta8hEr2OzkK_JVs0xdjKMHi4vjUFdwfqQTdX6a7ZCYTka6tKL3eqHIjcyz4&amp;slof=1</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_7301b5a732384fc181b2a21bec369fe9">final_risk_level</label>
+      <select id="final-risk-apply_action_task_7301b5a732384fc181b2a21bec369fe9" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_7301b5a732384fc181b2a21bec369fe9')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" data-id="apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Claude Code 사용 시 출력·컨텍스트 토큰 사용량을 줄이는 10개 GitHub 레포를 소개하는 게시물이다. 각 도구는 출력 압축, 터미널 로그 필터링, 코드 그래프 기반 탐색, MCP 캐싱, 벡터 검색 등으로 토큰 비용을 줄인다고 주장한다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/reel/DZJvyV4TyDX/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_f701829588334c74a076d65732b4ba70: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:32:44.523329+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DZJvyV4TyDX/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f701829588334c74a076d65732b4ba70')">💬 의견</button>
+    <a href="https://www.instagram.com/reel/DZJvyV4TyDX/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f701829588334c74a076d65732b4ba70" style="display:none">
+    <textarea id="comment-text-feed_f701829588334c74a076d65732b4ba70" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f701829588334c74a076d65732b4ba70')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f701829588334c74a076d65732b4ba70')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">action_type</label>
+      <select id="action-type-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">verification_path</label>
+      <input id="verification-path-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_f701829588334c74a076d65732b4ba70: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:32:44.523329+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DZJvyV4TyDX/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9">final_risk_level</label>
+      <select id="final-risk-apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_fde60c297cbe4d3ba0f460c8563aafb9')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_01aab3d4f2a745068b63df4e333767c3" data-id="apply_action_task_01aab3d4f2a745068b63df4e333767c3">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_01aab3d4f2a745068b63df4e333767c3">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Anthropic의 Dynamic Workflows 활용 패턴을 분류 라우팅, 팬아웃 종합, 적대적 검증, 생성 필터, 토너먼트, 종료 조건 반복의 6가지로 정리한 글이다. 핵심 메시지는 단일 LLM 호출의 누락, 자기검증 편향, 컨텍스트 표류를 워크플로우 분리로 줄일 수 있다는 것이다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/p/DZKJ4vHk9K3/?img_index=2" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_f3ffa620cafc40c6a44db066d12decd4: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:33:05.330939+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DZKJ4vHk9K3/?img_index=2</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f3ffa620cafc40c6a44db066d12decd4')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DZKJ4vHk9K3/?img_index=2" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f3ffa620cafc40c6a44db066d12decd4" style="display:none">
+    <textarea id="comment-text-feed_f3ffa620cafc40c6a44db066d12decd4" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f3ffa620cafc40c6a44db066d12decd4')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f3ffa620cafc40c6a44db066d12decd4')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_01aab3d4f2a745068b63df4e333767c3" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_01aab3d4f2a745068b63df4e333767c3">action_type</label>
+      <select id="action-type-apply_action_task_01aab3d4f2a745068b63df4e333767c3" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_01aab3d4f2a745068b63df4e333767c3">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_01aab3d4f2a745068b63df4e333767c3" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_01aab3d4f2a745068b63df4e333767c3" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_01aab3d4f2a745068b63df4e333767c3" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_01aab3d4f2a745068b63df4e333767c3">verification_path</label>
+      <input id="verification-path-apply_action_task_01aab3d4f2a745068b63df4e333767c3" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_01aab3d4f2a745068b63df4e333767c3">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_01aab3d4f2a745068b63df4e333767c3" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_f3ffa620cafc40c6a44db066d12decd4: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:33:05.330939+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DZKJ4vHk9K3/?img_index=2</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_01aab3d4f2a745068b63df4e333767c3">final_risk_level</label>
+      <select id="final-risk-apply_action_task_01aab3d4f2a745068b63df4e333767c3" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_01aab3d4f2a745068b63df4e333767c3')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" data-id="apply_action_task_9b5e675d954046e5b94c7969ba1b1991">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_9b5e675d954046e5b94c7969ba1b1991">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">새 모델로 바꾸는 것만으로 결과가 자동 개선되지는 않으며, 작업 난이도에 맞는 effort 설정과 구체적인 지시 방식이 중요하다는 내용이다. 특히 Claude Opus 4.8은 지시를 문자 그대로 따르는 경향이 있어 모호한 요청보다 출력 형식, 범위, 불확실성 처리 기준을 명시하는 프롬프트가 효과적이라고 주장한다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/p/DY9tQo3FJ5M/?img_index=2" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_f1f6898157ea48fca64a135cfb756bdd: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:33:55.697749+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DY9tQo3FJ5M/?img_index=2</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f1f6898157ea48fca64a135cfb756bdd')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DY9tQo3FJ5M/?img_index=2" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f1f6898157ea48fca64a135cfb756bdd" style="display:none">
+    <textarea id="comment-text-feed_f1f6898157ea48fca64a135cfb756bdd" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f1f6898157ea48fca64a135cfb756bdd')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f1f6898157ea48fca64a135cfb756bdd')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_9b5e675d954046e5b94c7969ba1b1991">action_type</label>
+      <select id="action-type-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_9b5e675d954046e5b94c7969ba1b1991">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_9b5e675d954046e5b94c7969ba1b1991">verification_path</label>
+      <input id="verification-path-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_9b5e675d954046e5b94c7969ba1b1991">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_f1f6898157ea48fca64a135cfb756bdd: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T09:33:55.697749+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DY9tQo3FJ5M/?img_index=2</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_9b5e675d954046e5b94c7969ba1b1991">final_risk_level</label>
+      <select id="final-risk-apply_action_task_9b5e675d954046e5b94c7969ba1b1991" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_9b5e675d954046e5b94c7969ba1b1991')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" data-id="apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">텍스트는 Claude/Fable 5류 에이전트를 효과적으로 쓰는 방법, Claude 플러그인 50선, production RAG 학습 경로, A2A Agent 구현 튜토리얼, API 유형, 콘텐츠 자동화 프롬프트 등을 모은 스크랩이다. 핵심 인사이트는 에이전트 작업에는 짧고 구조화된 프롬프트, 명확한 pause 조건, memory/lessons 파일, 검증 가능한 운영 기준이 중요하며, RAG와 agent orchestration은 실제 비즈니스 가치가 있는 영역이라는 점이다.</p>
+  <div class="apply-action-source"></div>
+  <div class="apply-action-text">[promotion] feed_f66553aaabb84f209099b1eaa2353f93: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T10:33:19.408314+00:00, 7d=survived, 30d=survived, source=</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f66553aaabb84f209099b1eaa2353f93')">💬 의견</button>
+    
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f66553aaabb84f209099b1eaa2353f93" style="display:none">
+    <textarea id="comment-text-feed_f66553aaabb84f209099b1eaa2353f93" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f66553aaabb84f209099b1eaa2353f93')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f66553aaabb84f209099b1eaa2353f93')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">action_type</label>
+      <select id="action-type-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">verification_path</label>
+      <input id="verification-path-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_f66553aaabb84f209099b1eaa2353f93: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T10:33:19.408314+00:00, 7d=survived, 30d=survived, source=</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0">final_risk_level</label>
+      <select id="final-risk-apply_action_task_2ab39690145d48a3a4499a17c48f1ae0" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_2ab39690145d48a3a4499a17c48f1ae0')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_4e451cf2dedc4733bf30585234594ce7" data-id="apply_action_task_4e451cf2dedc4733bf30585234594ce7">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_4e451cf2dedc4733bf30585234594ce7">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Claude Code 또는 브라우저 제어형 AI 도구가 Instagram 계정을 직접 검색하고 스크롤하며 콘텐츠를 분석한 뒤 보고서까지 생성할 수 있다는 내용이다. 사용자는 특정 Chrome 설치 요소와 지시 프롬프트를 통해 링크를 직접 주지 않아도 계정 분석 자동화를 수행할 수 있다고 주장한다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/reel/DWWMstkE7ak/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_ef671ee124c349d08fc6fe5c40bcb02d: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T14:16:52.665999+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DWWMstkE7ak/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_ef671ee124c349d08fc6fe5c40bcb02d')">💬 의견</button>
+    <a href="https://www.instagram.com/reel/DWWMstkE7ak/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_ef671ee124c349d08fc6fe5c40bcb02d" style="display:none">
+    <textarea id="comment-text-feed_ef671ee124c349d08fc6fe5c40bcb02d" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_ef671ee124c349d08fc6fe5c40bcb02d')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ef671ee124c349d08fc6fe5c40bcb02d')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_4e451cf2dedc4733bf30585234594ce7" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_4e451cf2dedc4733bf30585234594ce7">action_type</label>
+      <select id="action-type-apply_action_task_4e451cf2dedc4733bf30585234594ce7" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_4e451cf2dedc4733bf30585234594ce7">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_4e451cf2dedc4733bf30585234594ce7" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_4e451cf2dedc4733bf30585234594ce7" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_4e451cf2dedc4733bf30585234594ce7" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_4e451cf2dedc4733bf30585234594ce7">verification_path</label>
+      <input id="verification-path-apply_action_task_4e451cf2dedc4733bf30585234594ce7" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_4e451cf2dedc4733bf30585234594ce7">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_4e451cf2dedc4733bf30585234594ce7" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_ef671ee124c349d08fc6fe5c40bcb02d: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T14:16:52.665999+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DWWMstkE7ak/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_4e451cf2dedc4733bf30585234594ce7">final_risk_level</label>
+      <select id="final-risk-apply_action_task_4e451cf2dedc4733bf30585234594ce7" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_4e451cf2dedc4733bf30585234594ce7')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_991624186e314faab11209ac2530fcc6" data-id="apply_action_task_991624186e314faab11209ac2530fcc6">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_991624186e314faab11209ac2530fcc6">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Claude Desktop에 MCP 서버를 연결하면 검색, 크롤링, 브라우저 자동화, 업무 플랫폼 제어 등 다양한 작업을 Claude가 직접 수행할 수 있다는 주장이다. Context7, Firecrawl, Brave Search, Exa, Playwright, GitHub, Notion, Slack, MarkItDown, Memory, MCPHub 등을 조합해 리서치·개발·사업 자동화에 활용할 수 있다고 소개한다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/p/DXbbHcWE-9d/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_f6661e3c464846059ce68e1e301064ed: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T15:17:12.328905+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DXbbHcWE-9d/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_991624186e314faab11209ac2530fcc6')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_991624186e314faab11209ac2530fcc6')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f6661e3c464846059ce68e1e301064ed')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DXbbHcWE-9d/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f6661e3c464846059ce68e1e301064ed" style="display:none">
+    <textarea id="comment-text-feed_f6661e3c464846059ce68e1e301064ed" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f6661e3c464846059ce68e1e301064ed')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f6661e3c464846059ce68e1e301064ed')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_991624186e314faab11209ac2530fcc6" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_991624186e314faab11209ac2530fcc6">action_type</label>
+      <select id="action-type-apply_action_task_991624186e314faab11209ac2530fcc6" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_991624186e314faab11209ac2530fcc6')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_991624186e314faab11209ac2530fcc6">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_991624186e314faab11209ac2530fcc6" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_991624186e314faab11209ac2530fcc6')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_991624186e314faab11209ac2530fcc6" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_991624186e314faab11209ac2530fcc6')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_991624186e314faab11209ac2530fcc6" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_991624186e314faab11209ac2530fcc6">verification_path</label>
+      <input id="verification-path-apply_action_task_991624186e314faab11209ac2530fcc6" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_991624186e314faab11209ac2530fcc6">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_991624186e314faab11209ac2530fcc6" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_f6661e3c464846059ce68e1e301064ed: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T15:17:12.328905+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DXbbHcWE-9d/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_991624186e314faab11209ac2530fcc6">final_risk_level</label>
+      <select id="final-risk-apply_action_task_991624186e314faab11209ac2530fcc6" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_991624186e314faab11209ac2530fcc6')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_991624186e314faab11209ac2530fcc6')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_028ac703f7e14f7481a3794b82977dba" data-id="apply_action_task_028ac703f7e14f7481a3794b82977dba">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_028ac703f7e14f7481a3794b82977dba">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Claude를 효과적으로 쓰기 위해 about-me, voice-profile, anti-ai-writing-style, 프로젝트 폴더, global instructions, interview prompt, connectors, plugins 같은 설정 자산을 한 번 구축하라는 내용이다. 핵심은 반복 프롬프트보다 지속 컨텍스트와 명시적 규칙, 질문 유도 프롬프트를 통해 Claude의 추측을 줄이는 것이다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/reel/DYy89HqE4WI/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_fa7a6f0ac0ea49679070341ff40d86af: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T15:20:56.454921+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DYy89HqE4WI/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_028ac703f7e14f7481a3794b82977dba')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_028ac703f7e14f7481a3794b82977dba')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_fa7a6f0ac0ea49679070341ff40d86af')">💬 의견</button>
+    <a href="https://www.instagram.com/reel/DYy89HqE4WI/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_fa7a6f0ac0ea49679070341ff40d86af" style="display:none">
+    <textarea id="comment-text-feed_fa7a6f0ac0ea49679070341ff40d86af" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_fa7a6f0ac0ea49679070341ff40d86af')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fa7a6f0ac0ea49679070341ff40d86af')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_028ac703f7e14f7481a3794b82977dba" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_028ac703f7e14f7481a3794b82977dba">action_type</label>
+      <select id="action-type-apply_action_task_028ac703f7e14f7481a3794b82977dba" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_028ac703f7e14f7481a3794b82977dba')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_028ac703f7e14f7481a3794b82977dba">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_028ac703f7e14f7481a3794b82977dba" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_028ac703f7e14f7481a3794b82977dba')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_028ac703f7e14f7481a3794b82977dba" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_028ac703f7e14f7481a3794b82977dba')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_028ac703f7e14f7481a3794b82977dba" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_028ac703f7e14f7481a3794b82977dba">verification_path</label>
+      <input id="verification-path-apply_action_task_028ac703f7e14f7481a3794b82977dba" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_028ac703f7e14f7481a3794b82977dba">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_028ac703f7e14f7481a3794b82977dba" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_fa7a6f0ac0ea49679070341ff40d86af: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T15:20:56.454921+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/reel/DYy89HqE4WI/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_028ac703f7e14f7481a3794b82977dba">final_risk_level</label>
+      <select id="final-risk-apply_action_task_028ac703f7e14f7481a3794b82977dba" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_028ac703f7e14f7481a3794b82977dba')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_028ac703f7e14f7481a3794b82977dba')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" data-id="apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">Claude를 단순 질의응답 도구가 아니라 개인 튜터처럼 쓰려면 프롬프트 구조가 핵심이라는 내용이다. guided prompts, testing, correction, active recall, 약점 진단, 실전 적용을 통해 학습을 더 빠르고 깊게 만들 수 있다고 주장한다.</p>
+  <div class="apply-action-source"><a href="https://www.instagram.com/p/DZ0F_VSgF04/" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_fefbc302f66e408baff49dcf44bd7933: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T15:44:38.299010+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DZ0F_VSgF04/</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_fefbc302f66e408baff49dcf44bd7933')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DZ0F_VSgF04/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_fefbc302f66e408baff49dcf44bd7933" style="display:none">
+    <textarea id="comment-text-feed_fefbc302f66e408baff49dcf44bd7933" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_fefbc302f66e408baff49dcf44bd7933')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fefbc302f66e408baff49dcf44bd7933')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">action_type</label>
+      <select id="action-type-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">verification_path</label>
+      <input id="verification-path-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_fefbc302f66e408baff49dcf44bd7933: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T15:44:38.299010+00:00, 7d=survived, 30d=survived, source=https://www.instagram.com/p/DZ0F_VSgF04/</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950">final_risk_level</label>
+      <select id="final-risk-apply_action_task_2b440ca86c884fe0ad14c3f2956bf950" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_2b440ca86c884fe0ad14c3f2956bf950')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_a70590f3d8214331b29a44f3c57652cc" data-id="apply_action_task_a70590f3d8214331b29a44f3c57652cc">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_a70590f3d8214331b29a44f3c57652cc">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">omnigent-ai/omnigent는 여러 코딩 에이전트를 교체해 쓰면서 정책, 샌드박스, 협업 레이어를 통합하려는 오픈소스 AI agent meta-harness로 소개된다. 글은 개별 AI 에이전트를 추가하기보다 하네스 표준화가 팀의 자동화 설계와 개발 속도에 더 중요하다고 주장한다.</p>
+  <div class="apply-action-source"><a href="https://www.threads.com/@verbio_labs/post/DZ3c-wrEmQs?xmt=AQG0zmPCS0PKs9J1N5kbSK_QmP2SQVN69oJOYVl_UsoFkmNGXiPjKvYPhdAL6-mJI5qnpMrF&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_4185d638f27f49b9ae407f37afbcd007: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T21:54:57.263282+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@verbio_labs/post/DZ3c-wrEmQs?xmt=AQG0zmPCS0PKs9J1N5kbSK_QmP2SQVN69oJOYVl_UsoFkmNGXiPjKvYPhdAL6-mJI5qnpMrF&amp;slof=1</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_4185d638f27f49b9ae407f37afbcd007')">💬 의견</button>
+    <a href="https://www.threads.com/@verbio_labs/post/DZ3c-wrEmQs?xmt=AQG0zmPCS0PKs9J1N5kbSK_QmP2SQVN69oJOYVl_UsoFkmNGXiPjKvYPhdAL6-mJI5qnpMrF&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_4185d638f27f49b9ae407f37afbcd007" style="display:none">
+    <textarea id="comment-text-feed_4185d638f27f49b9ae407f37afbcd007" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_4185d638f27f49b9ae407f37afbcd007')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_4185d638f27f49b9ae407f37afbcd007')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_a70590f3d8214331b29a44f3c57652cc" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_a70590f3d8214331b29a44f3c57652cc">action_type</label>
+      <select id="action-type-apply_action_task_a70590f3d8214331b29a44f3c57652cc" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_a70590f3d8214331b29a44f3c57652cc">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_a70590f3d8214331b29a44f3c57652cc" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_a70590f3d8214331b29a44f3c57652cc" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_a70590f3d8214331b29a44f3c57652cc" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_a70590f3d8214331b29a44f3c57652cc">verification_path</label>
+      <input id="verification-path-apply_action_task_a70590f3d8214331b29a44f3c57652cc" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_a70590f3d8214331b29a44f3c57652cc">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_a70590f3d8214331b29a44f3c57652cc" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_4185d638f27f49b9ae407f37afbcd007: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-05T21:54:57.263282+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@verbio_labs/post/DZ3c-wrEmQs?xmt=AQG0zmPCS0PKs9J1N5kbSK_QmP2SQVN69oJOYVl_UsoFkmNGXiPjKvYPhdAL6-mJI5qnpMrF&amp;slof=1</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_a70590f3d8214331b29a44f3c57652cc">final_risk_level</label>
+      <select id="final-risk-apply_action_task_a70590f3d8214331b29a44f3c57652cc" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_a70590f3d8214331b29a44f3c57652cc')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" data-id="apply_action_task_fb1a1b38c9e0403c86a3027659990e04">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_fb1a1b38c9e0403c86a3027659990e04">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">AI가 생성한 코드는 겉으로는 잘 동작해도 보안상 신뢰할 수 없을 수 있다는 점을 지적한다. 특히 한 조사에서 AI 작성 코드의 절반 가까이에 알려진 보안 약점이 포함됐다는 사례를 들어, 작동 여부와 안전성 사이의 간극을 메워야 한다고 주장한다.</p>
+  <div class="apply-action-source"><a href="https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG0Leb72z-OJN6K1seXeVlUhzawGy7pT2_YSheswOHv8n7ttvUqaW7TVADFHieO0lhRtrE6&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_ed2befd878c5416192840c97e8379ad8: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-06T05:50:29.498681+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG0Leb72z-OJN6K1seXeVlUhzawGy7pT2_YSheswOHv8n7ttvUqaW7TVADFHieO0lhRtrE6&amp;slof=1</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_ed2befd878c5416192840c97e8379ad8')">💬 의견</button>
+    <a href="https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG0Leb72z-OJN6K1seXeVlUhzawGy7pT2_YSheswOHv8n7ttvUqaW7TVADFHieO0lhRtrE6&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_ed2befd878c5416192840c97e8379ad8" style="display:none">
+    <textarea id="comment-text-feed_ed2befd878c5416192840c97e8379ad8" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_ed2befd878c5416192840c97e8379ad8')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ed2befd878c5416192840c97e8379ad8')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_fb1a1b38c9e0403c86a3027659990e04">action_type</label>
+      <select id="action-type-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_fb1a1b38c9e0403c86a3027659990e04">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_fb1a1b38c9e0403c86a3027659990e04">verification_path</label>
+      <input id="verification-path-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_fb1a1b38c9e0403c86a3027659990e04">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_ed2befd878c5416192840c97e8379ad8: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-06T05:50:29.498681+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@unclejobs.ai/post/DZz-AwkiScZ?xmt=AQG0Leb72z-OJN6K1seXeVlUhzawGy7pT2_YSheswOHv8n7ttvUqaW7TVADFHieO0lhRtrE6&amp;slof=1</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_fb1a1b38c9e0403c86a3027659990e04">final_risk_level</label>
+      <select id="final-risk-apply_action_task_fb1a1b38c9e0403c86a3027659990e04" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_fb1a1b38c9e0403c86a3027659990e04')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_094765865f7b44ab90c72f5d3878b5db" data-id="apply_action_task_094765865f7b44ab90c72f5d3878b5db">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_094765865f7b44ab90c72f5d3878b5db">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">문제 해결 과정을 실험 일지로 기록하는 것이 결과 중심 기록보다 깊이를 확보한다. 실패한 시도도 설명 가능한 자가 더 신뢰받는다는 사례를 제시한다.</p>
+  <div class="apply-action-source"><a href="https://www.threads.com/@jinsimcode/post/Dab9cXzk_jW?xmt=AQG0tR7psaw2SK-IdrtU1c9H6Qak8Qsu8b9gcj9g7I275JlN1PAIxE9sYI5Mktlv_dnuc7M&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[promotion] feed_2b7352bdb9ac4e75b5097925b9456b63: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-06T11:50:18.918591+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@jinsimcode/post/Dab9cXzk_jW?xmt=AQG0tR7psaw2SK-IdrtU1c9H6Qak8Qsu8b9gcj9g7I275JlN1PAIxE9sYI5Mktlv_dnuc7M&amp;slof=1</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_2b7352bdb9ac4e75b5097925b9456b63')">💬 의견</button>
+    <a href="https://www.threads.com/@jinsimcode/post/Dab9cXzk_jW?xmt=AQG0tR7psaw2SK-IdrtU1c9H6Qak8Qsu8b9gcj9g7I275JlN1PAIxE9sYI5Mktlv_dnuc7M&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_2b7352bdb9ac4e75b5097925b9456b63" style="display:none">
+    <textarea id="comment-text-feed_2b7352bdb9ac4e75b5097925b9456b63" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_2b7352bdb9ac4e75b5097925b9456b63')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2b7352bdb9ac4e75b5097925b9456b63')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_094765865f7b44ab90c72f5d3878b5db" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_094765865f7b44ab90c72f5d3878b5db">action_type</label>
+      <select id="action-type-apply_action_task_094765865f7b44ab90c72f5d3878b5db" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_094765865f7b44ab90c72f5d3878b5db">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_094765865f7b44ab90c72f5d3878b5db" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_094765865f7b44ab90c72f5d3878b5db" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_094765865f7b44ab90c72f5d3878b5db" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_094765865f7b44ab90c72f5d3878b5db">verification_path</label>
+      <input id="verification-path-apply_action_task_094765865f7b44ab90c72f5d3878b5db" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_094765865f7b44ab90c72f5d3878b5db">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_094765865f7b44ab90c72f5d3878b5db" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_2b7352bdb9ac4e75b5097925b9456b63: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-06T11:50:18.918591+00:00, 7d=survived, 30d=survived, source=https://www.threads.com/@jinsimcode/post/Dab9cXzk_jW?xmt=AQG0tR7psaw2SK-IdrtU1c9H6Qak8Qsu8b9gcj9g7I275JlN1PAIxE9sYI5Mktlv_dnuc7M&amp;slof=1</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_094765865f7b44ab90c72f5d3878b5db">final_risk_level</label>
+      <select id="final-risk-apply_action_task_094765865f7b44ab90c72f5d3878b5db" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_094765865f7b44ab90c72f5d3878b5db')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" data-id="apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-08-09</span>
+    
+  </div>
+  <p class="summary">AI 모델 Fable이 작업 품질이 &#x27;Unknowns(미지)를 명확히 하는 사용자 능력&#x27;에 의존한다는 점을 발견. 4가지 유형의 문제를 구분하고, Claude를 활용한 3단계 전략으로 미지를 탐색해야 한다는 주장.</p>
+  <div class="apply-action-source"></div>
+  <div class="apply-action-text">[promotion] feed_d17481dc91d142fdbd2c55ce76115087: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-06T16:19:09.548117+00:00, 7d=survived, 30d=survived, source=</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_d17481dc91d142fdbd2c55ce76115087')">💬 의견</button>
+    
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_d17481dc91d142fdbd2c55ce76115087" style="display:none">
+    <textarea id="comment-text-feed_d17481dc91d142fdbd2c55ce76115087" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_d17481dc91d142fdbd2c55ce76115087')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_d17481dc91d142fdbd2c55ce76115087')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">action_type</label>
+      <select id="action-type-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">
+          파일에 마커 남기기
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" value="manual_only" checked
+                 onchange="toggleVerificationPathInput('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">
+          수동으로 확인
+        </label>
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">verification_path</label>
+      <input id="verification-path-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" class="comment-textarea normalized-plan-textarea"
+                rows="4">[promotion] feed_d17481dc91d142fdbd2c55ce76115087: learned-practices 블록을 engineering.md로 승격 제안 — applied 2026-07-06T16:19:09.548117+00:00, 7d=survived, 30d=survived, source=</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb">final_risk_level</label>
+      <select id="final-risk-apply_action_task_bda4f17462e14b569d41e2d7e238d9bb" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_bda4f17462e14b569d41e2d7e238d9bb')">취소</button>
+    </div>
+  </div>
+</div>
   </div>
 </section>
 <h2 class="section-title">승인됨 · 적용 보류 (31)</h2>
@@ -1703,8 +2872,344 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 122건</p>
+<p class="count">승인 대기 128건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_a2b45a141def4d528578f967286d3156" data-id="feed_a2b45a141def4d528578f967286d3156">
+  <div class="card-header">
+    <span class="item-tag" title="feed_a2b45a141def4d528578f967286d3156">#a2b45a14</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">상하이 AI Lab의 MemHarness 연구: 에이전트에 단순 시맨틱 유사도 기반 메모리를 붙이면 오히려 성능이 저하된다(76.4% → 70.1%). 1970년대 심리학의 재구성적 기억 이론을 적용해 검색된 메모리를 현재 상태와 대조·재구성하는 단계를 RL로 학습시키자 7B 모델이 Gemini-2.5-Pro를 23~40포인트 차이로 앞섰다. 메모리를 끄고 테스트해도 83.0%가 유지되어, 핵심 기술은 '기억'이 아니라 '적용 가능성 판단'임을 시사한다.</p>
+  <ul class="claims"><li>시맨틱 유사도 기반 메모리 검색은 에이전트 성능을 낮출 수 있다 (76.4% → 70.1%)</li><li>MemHarness는 가정부 에이전트 85.2%, 웹 쇼핑 75.6%로 Gemini-2.5-Pro 대비 23~40포인트 우위</li><li>메모리 없이 테스트해도 83.0% 유지 — 메모리 비판 훈련이 범용 상황 판단력을 향상시킴</li><li>RL 보상 신호만으로 레이블 없이 메모리 비판 능력이 창발</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">🤖 claude-code</span></div>
+  <div class="tags"><span class="tag">#agent-memory</span> <span class="tag">#MemHarness</span> <span class="tag">#RL</span> <span class="tag">#retrieval-augmented-agents</span> <span class="tag">#7B-model</span> <span class="tag">#Shanghai-AI-Lab</span> <span class="tag">#reconstructive-memory</span></div>
+  <div class="apply-plan">승인 시 alphabot 또는 ai-feed 에이전트에 메모리를 붙일 때 ~/agent_hub/refs/engineering.md 또는 관련 설계문서에 '단순 유사도 검색 대신 현재 상태 대비 적용가능성 비판 단계(critique-before-apply) 패턴'을 설계 원칙으로 추가하고, 메모리 검색 후 LLM이 해당 메모리를 현재 컨텍스트에 적합한지 판단·재구성하는 중간 스텝을 의무화한다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_a2b45a141def4d528578f967286d3156')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_a2b45a141def4d528578f967286d3156','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_a2b45a141def4d528578f967286d3156','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_a2b45a141def4d528578f967286d3156')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_a2b45a141def4d528578f967286d3156&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_a2b45a141def4d528578f967286d3156" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DbrwTRugcZ8/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_a2b45a141def4d528578f967286d3156" style="display:none">
+    <div class="delegate-reference">적용 안내: alphabot 또는 ai-feed 에이전트에 메모리를 붙일 때 ~/agent_hub/refs/engineering.md 또는 관련 설계문서에 &#x27;단순 유사도 검색 대신 현재 상태 대비 적용가능성 비판 단계(critique-before-apply) 패턴&#x27;을 설계 원칙으로 추가하고, 메모리 검색 후 LLM이 해당 메모리를 현재 컨텍스트에 적합한지 판단·재구성하는 중간 스텝을 의무화한다.
+
+원문 요약: 상하이 AI Lab의 MemHarness 연구: 에이전트에 단순 시맨틱 유사도 기반 메모리를 붙이면 오히려 성능이 저하된다(76.4% → 70.1%). 1970년대 심리학의 재구성적 기억 이론을 적용해 검색된 메모리를 현재 상태와 대조·재구성하는 단계를 RL로 학습시키자 7B 모델이 Gemini-2.5-Pro를 23~40포인트 차이로 앞섰다. 메모리를 끄고 테스트해도 83.0%가 유지되어, 핵심 기술은 &#x27;기억&#x27;이 아니라 &#x27;적용 가능성 판단&#x27;임을 시사한다.</div>
+    <select id="delegate-project-feed_a2b45a141def4d528578f967286d3156" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_a2b45a141def4d528578f967286d3156" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_a2b45a141def4d528578f967286d3156')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_a2b45a141def4d528578f967286d3156')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_a2b45a141def4d528578f967286d3156" style="display:none">
+    <textarea id="comment-text-feed_a2b45a141def4d528578f967286d3156" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_a2b45a141def4d528578f967286d3156')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a2b45a141def4d528578f967286d3156')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_2d1fc5256d084ca08a36b522d7e0f867" data-id="feed_2d1fc5256d084ca08a36b522d7e0f867">
+  <div class="card-header">
+    <span class="item-tag" title="feed_2d1fc5256d084ca08a36b522d7e0f867">#2d1fc525</span>
+    
+    
+    
+    
+    <span class="platform">Web</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    
+  </div>
+  <p class="summary">XunZi는 Nature Biomedical Engineering(2026)에 발표된 AI 생물학자 시스템으로, 2440만 건의 생물의학 논문과 613.6TB의 다중 소스 생물학 데이터를 학습해 질병 관련 치료 타겟을 발굴한다. 멀티오믹스 학습 모듈(XunZi-M)과 Mistral-7B 기반 기계론적 추론 모델(XunZi-R)로 구성되며, 파킨슨병·비소세포폐암에서 실험적으로 검증됐다. 오픈소스(MIT)로 공개되어 HuggingFace에서 모델 체크포인트를 내려받아 로컬 실행이 가능하다.</p>
+  <ul class="claims"><li>24.4백만 건 생물의학 논문 + 613.6TB 다중 소스 생물학 데이터로 학습, 21,008개 인간 유전자·5,850개 질환 커버</li><li>Mistral-7B 기반 LoRA 어댑터(XunZi-R)로 유전자-질환 기계론적 가설을 자연어로 생성</li><li>파킨슨병 및 비소세포폐암 모델에서 예측 결과가 실험적으로 검증됨</li><li>MIT 라이선스로 오픈소스 공개, HuggingFace에 모델·데이터셋 배포</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#AI biologist</span> <span class="tag">#therapeutic target discovery</span> <span class="tag">#multi-omics</span> <span class="tag">#Mistral-7B</span> <span class="tag">#LoRA</span> <span class="tag">#biomedical reasoning</span> <span class="tag">#drug discovery</span> <span class="tag">#graph neural network</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_2d1fc5256d084ca08a36b522d7e0f867','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_2d1fc5256d084ca08a36b522d7e0f867','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_2d1fc5256d084ca08a36b522d7e0f867&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_2d1fc5256d084ca08a36b522d7e0f867" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://github.com/biocuckooHXH/XunZi" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_2d1fc5256d084ca08a36b522d7e0f867" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.
+
+원문 요약: XunZi는 Nature Biomedical Engineering(2026)에 발표된 AI 생물학자 시스템으로, 2440만 건의 생물의학 논문과 613.6TB의 다중 소스 생물학 데이터를 학습해 질병 관련 치료 타겟을 발굴한다. 멀티오믹스 학습 모듈(XunZi-M)과 Mistral-7B 기반 기계론적 추론 모델(XunZi-R)로 구성되며, 파킨슨병·비소세포폐암에서 실험적으로 검증됐다. 오픈소스(MIT)로 공개되어 HuggingFace에서 모델 체크포인트를 내려받아 로컬 실행이 가능하다.</div>
+    <select id="delegate-project-feed_2d1fc5256d084ca08a36b522d7e0f867" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_2d1fc5256d084ca08a36b522d7e0f867" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_2d1fc5256d084ca08a36b522d7e0f867')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_2d1fc5256d084ca08a36b522d7e0f867" style="display:none">
+    <textarea id="comment-text-feed_2d1fc5256d084ca08a36b522d7e0f867" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_2d1fc5256d084ca08a36b522d7e0f867')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_edec91b8501c4bdbbf112ea6bb4484f2" data-id="feed_edec91b8501c4bdbbf112ea6bb4484f2">
+  <div class="card-header">
+    <span class="item-tag" title="feed_edec91b8501c4bdbbf112ea6bb4484f2">#edec91b8</span>
+    
+    
+    
+    
+    <span class="platform">Web</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">웹사이트 클라이언트 측 오류 메시지로, 페이지 일부가 로드되지 않았음을 알리는 기술적 에러 텍스트다. 브라우저 확장 프로그램, 네트워크 문제, 또는 브라우저 설정이 원인으로 제시된다.</p>
+  <ul class="claims"><li>브라우저 확장 프로그램(예: 광고 차단기)이 페이지 로드를 방해할 수 있다</li><li>네트워크 문제 또는 브라우저 설정이 사이트 일부 로드 실패의 원인이 될 수 있다</li></ul>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#browser-error</span> <span class="tag">#client-side</span> <span class="tag">#network</span> <span class="tag">#troubleshooting</span></div>
+  <div class="apply-plan">승인 시 적용 불가. 이 텍스트는 실질적 인사이트가 없는 웹 오류 메시지이므로 어떤 파일이나 시스템에도 반영할 내용이 없다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_edec91b8501c4bdbbf112ea6bb4484f2','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_edec91b8501c4bdbbf112ea6bb4484f2','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_edec91b8501c4bdbbf112ea6bb4484f2&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_edec91b8501c4bdbbf112ea6bb4484f2" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.nature.com/articles/s41551-026-01769-6" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_edec91b8501c4bdbbf112ea6bb4484f2" style="display:none">
+    <div class="delegate-reference">적용 안내: 적용 불가. 이 텍스트는 실질적 인사이트가 없는 웹 오류 메시지이므로 어떤 파일이나 시스템에도 반영할 내용이 없다.
+
+원문 요약: 웹사이트 클라이언트 측 오류 메시지로, 페이지 일부가 로드되지 않았음을 알리는 기술적 에러 텍스트다. 브라우저 확장 프로그램, 네트워크 문제, 또는 브라우저 설정이 원인으로 제시된다.</div>
+    <select id="delegate-project-feed_edec91b8501c4bdbbf112ea6bb4484f2" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_edec91b8501c4bdbbf112ea6bb4484f2" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_edec91b8501c4bdbbf112ea6bb4484f2')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_edec91b8501c4bdbbf112ea6bb4484f2" style="display:none">
+    <textarea id="comment-text-feed_edec91b8501c4bdbbf112ea6bb4484f2" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_edec91b8501c4bdbbf112ea6bb4484f2')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_2ebc8b93d43e4c018c3f0fca82bfdbea" data-id="feed_2ebc8b93d43e4c018c3f0fca82bfdbea">
+  <div class="card-header">
+    <span class="item-tag" title="feed_2ebc8b93d43e4c018c3f0fca82bfdbea">#2ebc8b93</span>
+    
+    
+    
+    
+    <span class="platform">Threads</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">하버드·MIT와 주요 AI 연구소 출신 200여 명이 83억 명 규모의 가상 인간 시뮬레이션 플랫폼 MatrAIx를 공개했다. 인물당 1,290개 속성을 설정해 설문·채팅·웹 브라우징·앱 사용 4가지 환경을 시뮬레이션할 수 있으며, 성격 일관성 91.5%를 기록했다. Persona-8B 모델과 코드가 오픈소스로 전면 공개돼 있다.</p>
+  <ul class="claims"><li>가상 인간 83억 명, 인물당 1,290개 속성(나이·직업·소득·성격·식습관·기술 수준·언어 능력 등) 설정</li><li>설정된 성격을 그대로 유지하며 행동한 비율 91.5%</li><li>설문·채팅·웹 브라우징·앱 사용 4가지 환경에서 테스트 가능, 모든 클릭·대화·페이지 이동 기록</li><li>Persona-8B 모델과 전체 코드 오픈소스 공개</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#MatrAIx</span> <span class="tag">#합성 인구 시뮬레이션</span> <span class="tag">#Persona-8B</span> <span class="tag">#오픈소스</span> <span class="tag">#하버드</span> <span class="tag">#MIT</span> <span class="tag">#사용자 연구</span> <span class="tag">#A/B 테스트 대체</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_2ebc8b93d43e4c018c3f0fca82bfdbea')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_2ebc8b93d43e4c018c3f0fca82bfdbea','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_2ebc8b93d43e4c018c3f0fca82bfdbea','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_2ebc8b93d43e4c018c3f0fca82bfdbea')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_2ebc8b93d43e4c018c3f0fca82bfdbea&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_2ebc8b93d43e4c018c3f0fca82bfdbea" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.threads.com/share/BAZtLoVxSZ/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_2ebc8b93d43e4c018c3f0fca82bfdbea" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.
+
+원문 요약: 하버드·MIT와 주요 AI 연구소 출신 200여 명이 83억 명 규모의 가상 인간 시뮬레이션 플랫폼 MatrAIx를 공개했다. 인물당 1,290개 속성을 설정해 설문·채팅·웹 브라우징·앱 사용 4가지 환경을 시뮬레이션할 수 있으며, 성격 일관성 91.5%를 기록했다. Persona-8B 모델과 코드가 오픈소스로 전면 공개돼 있다.</div>
+    <select id="delegate-project-feed_2ebc8b93d43e4c018c3f0fca82bfdbea" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_2ebc8b93d43e4c018c3f0fca82bfdbea" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_2ebc8b93d43e4c018c3f0fca82bfdbea')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_2ebc8b93d43e4c018c3f0fca82bfdbea')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_2ebc8b93d43e4c018c3f0fca82bfdbea" style="display:none">
+    <textarea id="comment-text-feed_2ebc8b93d43e4c018c3f0fca82bfdbea" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_2ebc8b93d43e4c018c3f0fca82bfdbea')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2ebc8b93d43e4c018c3f0fca82bfdbea')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_4961abc244774528bd6e8b250155b386" data-id="feed_4961abc244774528bd6e8b250155b386">
+  <div class="card-header">
+    <span class="item-tag" title="feed_4961abc244774528bd6e8b250155b386">#4961abc2</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">Claude Code를 활용한 4가지 개인 프로젝트 시연 영상. 개인 어드바이저 보드 구축(/ask-the-board 스킬), 재무 대시보드 생성(500+ 라인, 2분), AI 최적화 퍼블릭 프로필(llms.txt/robots.txt), /improve-system으로 세션 패턴을 자동 메모리에 저장하는 내부 OS 구축을 보여준다.</p>
+  <ul class="claims"><li>Claude Code가 자연어 한 문장으로 500+ 라인 재무 대시보드 HTML을 2분 21초 안에 생성한다</li><li>Hostinger MCP 연동으로 빌드→zip→업로드→HTTPS 검증까지 완전 자동 배포가 가능하다</li><li>llms.txt를 루트에 두면 AI 크롤러가 사이트 오너 정보를 더 잘 인식한다</li><li>/improve-system 명령으로 세션 내 사용자 피드백 패턴을 자동 메모리로 저장할 수 있다</li></ul>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#personal-os</span> <span class="tag">#llms.txt</span> <span class="tag">#ai-profile</span> <span class="tag">#hostinger-mcp</span> <span class="tag">#skill-building</span> <span class="tag">#auto-memory</span> <span class="tag">#finance-dashboard</span></div>
+  <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /improve-system(세션 패턴→자동 메모리 저장) 및 /ask-the-board(어드바이저 패널 조회) 스킬 참조를 추가하고, ~/agent_hub/refs/engineering.md에 llms.txt AI 가독성 패턴을 선행조사 항목으로 기록</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_4961abc244774528bd6e8b250155b386')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_4961abc244774528bd6e8b250155b386','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_4961abc244774528bd6e8b250155b386','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_4961abc244774528bd6e8b250155b386')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_4961abc244774528bd6e8b250155b386&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_4961abc244774528bd6e8b250155b386" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_4961abc244774528bd6e8b250155b386" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /improve-system(세션 패턴→자동 메모리 저장) 및 /ask-the-board(어드바이저 패널 조회) 스킬 참조를 추가하고, ~/agent_hub/refs/engineering.md에 llms.txt AI 가독성 패턴을 선행조사 항목으로 기록
+
+원문 요약: Claude Code를 활용한 4가지 개인 프로젝트 시연 영상. 개인 어드바이저 보드 구축(/ask-the-board 스킬), 재무 대시보드 생성(500+ 라인, 2분), AI 최적화 퍼블릭 프로필(llms.txt/robots.txt), /improve-system으로 세션 패턴을 자동 메모리에 저장하는 내부 OS 구축을 보여준다.</div>
+    <select id="delegate-project-feed_4961abc244774528bd6e8b250155b386" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_4961abc244774528bd6e8b250155b386" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_4961abc244774528bd6e8b250155b386')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_4961abc244774528bd6e8b250155b386')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_4961abc244774528bd6e8b250155b386" style="display:none">
+    <textarea id="comment-text-feed_4961abc244774528bd6e8b250155b386" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_4961abc244774528bd6e8b250155b386')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_4961abc244774528bd6e8b250155b386')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_cea7743570e84b6789e7519b6957db8a" data-id="feed_cea7743570e84b6789e7519b6957db8a">
+  <div class="card-header">
+    <span class="item-tag" title="feed_cea7743570e84b6789e7519b6957db8a">#cea77435</span>
+    <span class="badge-ocr-needed">📷 이미지 OCR 필요</span>
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">Instagram 캡션으로 추정되는 단편 텍스트로, 'os'라는 키워드에 대해 링크를 보내겠다는 내용이 전부다. OCR이 필요한 이미지 기반 콘텐츠로 실제 본문 내용은 파악 불가.</p>
+  
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#ai-agents</span> <span class="tag">#claude</span> <span class="tag">#openclaw</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_cea7743570e84b6789e7519b6957db8a')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_cea7743570e84b6789e7519b6957db8a','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_cea7743570e84b6789e7519b6957db8a','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_cea7743570e84b6789e7519b6957db8a')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_cea7743570e84b6789e7519b6957db8a&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_cea7743570e84b6789e7519b6957db8a" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DbV3U2eknyF/?img_index=8" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_cea7743570e84b6789e7519b6957db8a" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.
+
+원문 요약: Instagram 캡션으로 추정되는 단편 텍스트로, &#x27;os&#x27;라는 키워드에 대해 링크를 보내겠다는 내용이 전부다. OCR이 필요한 이미지 기반 콘텐츠로 실제 본문 내용은 파악 불가.</div>
+    <select id="delegate-project-feed_cea7743570e84b6789e7519b6957db8a" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_cea7743570e84b6789e7519b6957db8a" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_cea7743570e84b6789e7519b6957db8a')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_cea7743570e84b6789e7519b6957db8a')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_cea7743570e84b6789e7519b6957db8a" style="display:none">
+    <textarea id="comment-text-feed_cea7743570e84b6789e7519b6957db8a" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_cea7743570e84b6789e7519b6957db8a')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_cea7743570e84b6789e7519b6957db8a')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_c3a5741f9e90486498103c2d3f54b5f0" data-id="feed_c3a5741f9e90486498103c2d3f54b5f0">
   <div class="card-header">
