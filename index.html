@@ -178,9 +178,58 @@
 <p>검토 대기 항목이 없습니다.</p>
   </div>
 </section>
-<h2 class="section-title">승인됨 · 적용 보류 (35)</h2>
+<h2 class="section-title">승인됨 · 적용 보류 (36)</h2>
 <section class="pending-section">
   <div class="grid">
+
+<div class="card pending-apply" id="card-feed_6ba0cacd81ff444fb35bab9b7732e6b1" data-id="feed_6ba0cacd81ff444fb35bab9b7732e6b1">
+  <div class="card-header">
+    <span class="item-tag" title="feed_6ba0cacd81ff444fb35bab9b7732e6b1">#6ba0cacd</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-13</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">Mac Studio에서 알파봇+ai-feed 동시 로컬 추론으로 인한 GPU 데드락 크래시 대응으로, ollama LaunchAgent plist에 OLLAMA_NUM_PARALLEL=1을 추가해 서버 레벨에서 GPU 동시 제출을 차단했다. Trading Safety 규칙 준수를 위해 알파봇 코드는 수정하지 않고 공유 인프라인 ollama 서버 자체를 직렬화하는 방식으로 해결했다. 알파봇 내부 동시성 설계(프로덕션+연구+앙상블 티어 병렬 실행)는 Task Contract 확보 후 별도 처리 예정.</p>
+  <div class="apply-plan">적용하면: ~/.claude/projects/-Users-Mung-dev-ai-feed/memory/project_macstudio_ollama_gpu_deadlock_2026-08-13.md에 OLLAMA_NUM_PARALLEL=1 해결책과 알파봇 내부 동시성 미수정 상태를 반영하고, ~/Library/LaunchAgents/homebrew.mxcl.ollama.plist 변경 사항을 기록해 재부팅 후에도 설정이 유지됨을 명시</div>
+  <div class="pending-reason">보류 사유: 기존 design 문서에서 관련 결정/중복 후보를 발견해 승인필요 — 중복 후보: /Users/Mung/dev/Auto_bot/docs/design-pre-backtest-research-rubric.md</div>
+  <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#ollama</span> <span class="tag">#GPU데드락</span> <span class="tag">#OLLAMA_NUM_PARALLEL</span> <span class="tag">#LaunchAgent</span> <span class="tag">#로컬추론</span> <span class="tag">#Mac Studio</span> <span class="tag">#Trading Safety</span> <span class="tag">#직렬화</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">💬 의견</button>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_6ba0cacd81ff444fb35bab9b7732e6b1" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/.claude/projects/-Users-Mung-dev-ai-feed/memory/project_macstudio_ollama_gpu_deadlock_2026-08-13.md에 OLLAMA_NUM_PARALLEL=1 해결책과 알파봇 내부 동시성 미수정 상태를 반영하고, ~/Library/LaunchAgents/homebrew.mxcl.ollama.plist 변경 사항을 기록해 재부팅 후에도 설정이 유지됨을 명시
+
+원문 요약: Mac Studio에서 알파봇+ai-feed 동시 로컬 추론으로 인한 GPU 데드락 크래시 대응으로, ollama LaunchAgent plist에 OLLAMA_NUM_PARALLEL=1을 추가해 서버 레벨에서 GPU 동시 제출을 차단했다. Trading Safety 규칙 준수를 위해 알파봇 코드는 수정하지 않고 공유 인프라인 ollama 서버 자체를 직렬화하는 방식으로 해결했다. 알파봇 내부 동시성 설계(프로덕션+연구+앙상블 티어 병렬 실행)는 Task Contract 확보 후 별도 처리 예정.</div>
+    <select id="delegate-project-feed_6ba0cacd81ff444fb35bab9b7732e6b1" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_6ba0cacd81ff444fb35bab9b7732e6b1" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_6ba0cacd81ff444fb35bab9b7732e6b1" style="display:none">
+    <textarea id="comment-text-feed_6ba0cacd81ff444fb35bab9b7732e6b1" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card pending-apply" id="card-feed_e529176dea8c46a08d563884a5d2c99c" data-id="feed_e529176dea8c46a08d563884a5d2c99c">
   <div class="card-header">
@@ -1893,7 +1942,7 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 109건</p>
+<p class="count">승인 대기 107건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_cf3e35ba242740218066eff7107f2356" data-id="feed_cf3e35ba242740218066eff7107f2356">
@@ -1947,116 +1996,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_cf3e35ba242740218066eff7107f2356')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_cf3e35ba242740218066eff7107f2356')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_6ba0cacd81ff444fb35bab9b7732e6b1" data-id="feed_6ba0cacd81ff444fb35bab9b7732e6b1">
-  <div class="card-header">
-    <span class="item-tag" title="feed_6ba0cacd81ff444fb35bab9b7732e6b1">#6ba0cacd</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-08-13</span>
-    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
-    
-  </div>
-  <p class="summary">Mac Studio에서 알파봇+ai-feed 동시 로컬 추론으로 인한 GPU 데드락 크래시 대응으로, ollama LaunchAgent plist에 OLLAMA_NUM_PARALLEL=1을 추가해 서버 레벨에서 GPU 동시 제출을 차단했다. Trading Safety 규칙 준수를 위해 알파봇 코드는 수정하지 않고 공유 인프라인 ollama 서버 자체를 직렬화하는 방식으로 해결했다. 알파봇 내부 동시성 설계(프로덕션+연구+앙상블 티어 병렬 실행)는 Task Contract 확보 후 별도 처리 예정.</p>
-  <ul class="claims"><li>OLLAMA_NUM_PARALLEL=1 설정으로 Metal GPU 동시 command buffer 제출을 서버 레벨에서 차단 가능하다</li><li>호출자(알파봇/ai-feed) 구분 없이 ollama 서버를 직렬화하면 GPU 데드락 근본 원인을 차단할 수 있다</li><li>Trading Safety 규칙 상 Task Contract 없이 알파봇 진입점 코드 수정은 불가하다</li></ul>
-  <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">📈 alphabot-strategy</span></div>
-  <div class="tags"><span class="tag">#ollama</span> <span class="tag">#GPU데드락</span> <span class="tag">#OLLAMA_NUM_PARALLEL</span> <span class="tag">#LaunchAgent</span> <span class="tag">#로컬추론</span> <span class="tag">#Mac Studio</span> <span class="tag">#Trading Safety</span> <span class="tag">#직렬화</span></div>
-  <div class="apply-plan">승인 시 ~/.claude/projects/-Users-Mung-dev-ai-feed/memory/project_macstudio_ollama_gpu_deadlock_2026-08-13.md에 OLLAMA_NUM_PARALLEL=1 해결책과 알파봇 내부 동시성 미수정 상태를 반영하고, ~/Library/LaunchAgents/homebrew.mxcl.ollama.plist 변경 사항을 기록해 재부팅 후에도 설정이 유지됨을 명시</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_6ba0cacd81ff444fb35bab9b7732e6b1','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_6ba0cacd81ff444fb35bab9b7732e6b1','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_6ba0cacd81ff444fb35bab9b7732e6b1&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_6ba0cacd81ff444fb35bab9b7732e6b1" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_6ba0cacd81ff444fb35bab9b7732e6b1" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/.claude/projects/-Users-Mung-dev-ai-feed/memory/project_macstudio_ollama_gpu_deadlock_2026-08-13.md에 OLLAMA_NUM_PARALLEL=1 해결책과 알파봇 내부 동시성 미수정 상태를 반영하고, ~/Library/LaunchAgents/homebrew.mxcl.ollama.plist 변경 사항을 기록해 재부팅 후에도 설정이 유지됨을 명시
-
-원문 요약: Mac Studio에서 알파봇+ai-feed 동시 로컬 추론으로 인한 GPU 데드락 크래시 대응으로, ollama LaunchAgent plist에 OLLAMA_NUM_PARALLEL=1을 추가해 서버 레벨에서 GPU 동시 제출을 차단했다. Trading Safety 규칙 준수를 위해 알파봇 코드는 수정하지 않고 공유 인프라인 ollama 서버 자체를 직렬화하는 방식으로 해결했다. 알파봇 내부 동시성 설계(프로덕션+연구+앙상블 티어 병렬 실행)는 Task Contract 확보 후 별도 처리 예정.</div>
-    <select id="delegate-project-feed_6ba0cacd81ff444fb35bab9b7732e6b1" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_6ba0cacd81ff444fb35bab9b7732e6b1" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_6ba0cacd81ff444fb35bab9b7732e6b1" style="display:none">
-    <textarea id="comment-text-feed_6ba0cacd81ff444fb35bab9b7732e6b1" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_edec91b8501c4bdbbf112ea6bb4484f2" data-id="feed_edec91b8501c4bdbbf112ea6bb4484f2">
-  <div class="card-header">
-    <span class="item-tag" title="feed_edec91b8501c4bdbbf112ea6bb4484f2">#edec91b8</span>
-    
-    
-    
-    
-    <span class="platform">Web</span>
-    <span class="date">2026-08-10</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    
-  </div>
-  <p class="summary">웹사이트 클라이언트 측 오류 메시지로, 페이지 일부가 로드되지 않았음을 알리는 기술적 에러 텍스트다. 브라우저 확장 프로그램, 네트워크 문제, 또는 브라우저 설정이 원인으로 제시된다.</p>
-  <ul class="claims"><li>브라우저 확장 프로그램(예: 광고 차단기)이 페이지 로드를 방해할 수 있다</li><li>네트워크 문제 또는 브라우저 설정이 사이트 일부 로드 실패의 원인이 될 수 있다</li></ul>
-  <div class="surfaces"></div>
-  <div class="tags"><span class="tag">#browser-error</span> <span class="tag">#client-side</span> <span class="tag">#network</span> <span class="tag">#troubleshooting</span></div>
-  <div class="apply-plan">승인 시 적용 불가. 이 텍스트는 실질적 인사이트가 없는 웹 오류 메시지이므로 어떤 파일이나 시스템에도 반영할 내용이 없다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_edec91b8501c4bdbbf112ea6bb4484f2','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_edec91b8501c4bdbbf112ea6bb4484f2','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_edec91b8501c4bdbbf112ea6bb4484f2&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_edec91b8501c4bdbbf112ea6bb4484f2" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.nature.com/articles/s41551-026-01769-6" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_edec91b8501c4bdbbf112ea6bb4484f2" style="display:none">
-    <div class="delegate-reference">적용 안내: 적용 불가. 이 텍스트는 실질적 인사이트가 없는 웹 오류 메시지이므로 어떤 파일이나 시스템에도 반영할 내용이 없다.
-
-원문 요약: 웹사이트 클라이언트 측 오류 메시지로, 페이지 일부가 로드되지 않았음을 알리는 기술적 에러 텍스트다. 브라우저 확장 프로그램, 네트워크 문제, 또는 브라우저 설정이 원인으로 제시된다.</div>
-    <select id="delegate-project-feed_edec91b8501c4bdbbf112ea6bb4484f2" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_edec91b8501c4bdbbf112ea6bb4484f2" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_edec91b8501c4bdbbf112ea6bb4484f2')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_edec91b8501c4bdbbf112ea6bb4484f2" style="display:none">
-    <textarea id="comment-text-feed_edec91b8501c4bdbbf112ea6bb4484f2" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_edec91b8501c4bdbbf112ea6bb4484f2')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_edec91b8501c4bdbbf112ea6bb4484f2')">취소</button>
     </div>
   </div>
 </div>
