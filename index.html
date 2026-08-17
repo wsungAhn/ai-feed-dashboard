@@ -178,9 +178,58 @@
 <p>검토 대기 항목이 없습니다.</p>
   </div>
 </section>
-<h2 class="section-title">승인됨 · 적용 보류 (34)</h2>
+<h2 class="section-title">승인됨 · 적용 보류 (35)</h2>
 <section class="pending-section">
   <div class="grid">
+
+<div class="card pending-apply" id="card-feed_e529176dea8c46a08d563884a5d2c99c" data-id="feed_e529176dea8c46a08d563884a5d2c99c">
+  <div class="card-header">
+    <span class="item-tag" title="feed_e529176dea8c46a08d563884a5d2c99c">#e529176d</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-12</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">AI 코딩 워크플로우를 개선하는 8가지 프롬프트 패턴 소개. PRD 작성 → 디자인 브리프 → 보안 감사 → 디버깅 → E2E 테스트 → 리팩토링 → 커밋 → 스킬화 순서로 구조화된 개발 프로세스를 제안한다. '이거 만들어줘' 대신 단계별 전문가 페르소나 프롬프트를 사용해 결과물 품질을 높이는 방법론이다.</p>
+  <div class="apply-plan">적용하면: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /prd(PRD작성), /design-brief(디자인브리프), /debug-first(진단우선디버깅) 접두어를 추가하거나, ~/.claude/skills/ 디렉토리에 각 패턴을 개별 스킬 파일로 저장해 재사용 가능하게 구성</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#AI코딩</span> <span class="tag">#프롬프트엔지니어링</span> <span class="tag">#바이브코딩</span> <span class="tag">#PRD</span> <span class="tag">#보안감사</span> <span class="tag">#E2E테스트</span> <span class="tag">#리팩토링</span> <span class="tag">#ClaudeCode</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_e529176dea8c46a08d563884a5d2c99c')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_e529176dea8c46a08d563884a5d2c99c')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_e529176dea8c46a08d563884a5d2c99c')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_e529176dea8c46a08d563884a5d2c99c')">💬 의견</button>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_e529176dea8c46a08d563884a5d2c99c" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /prd(PRD작성), /design-brief(디자인브리프), /debug-first(진단우선디버깅) 접두어를 추가하거나, ~/.claude/skills/ 디렉토리에 각 패턴을 개별 스킬 파일로 저장해 재사용 가능하게 구성
+
+원문 요약: AI 코딩 워크플로우를 개선하는 8가지 프롬프트 패턴 소개. PRD 작성 → 디자인 브리프 → 보안 감사 → 디버깅 → E2E 테스트 → 리팩토링 → 커밋 → 스킬화 순서로 구조화된 개발 프로세스를 제안한다. &#x27;이거 만들어줘&#x27; 대신 단계별 전문가 페르소나 프롬프트를 사용해 결과물 품질을 높이는 방법론이다.</div>
+    <select id="delegate-project-feed_e529176dea8c46a08d563884a5d2c99c" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_e529176dea8c46a08d563884a5d2c99c" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e529176dea8c46a08d563884a5d2c99c')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e529176dea8c46a08d563884a5d2c99c')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_e529176dea8c46a08d563884a5d2c99c" style="display:none">
+    <textarea id="comment-text-feed_e529176dea8c46a08d563884a5d2c99c" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_e529176dea8c46a08d563884a5d2c99c')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e529176dea8c46a08d563884a5d2c99c')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card pending-apply" id="card-feed_9680de23525c4d269ef3a38581171e84" data-id="feed_9680de23525c4d269ef3a38581171e84">
   <div class="card-header">
@@ -1844,7 +1893,7 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 110건</p>
+<p class="count">승인 대기 109건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_cf3e35ba242740218066eff7107f2356" data-id="feed_cf3e35ba242740218066eff7107f2356">
@@ -1953,61 +2002,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6ba0cacd81ff444fb35bab9b7732e6b1')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_e529176dea8c46a08d563884a5d2c99c" data-id="feed_e529176dea8c46a08d563884a5d2c99c">
-  <div class="card-header">
-    <span class="item-tag" title="feed_e529176dea8c46a08d563884a5d2c99c">#e529176d</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-08-12</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">AI 코딩 워크플로우를 개선하는 8가지 프롬프트 패턴 소개. PRD 작성 → 디자인 브리프 → 보안 감사 → 디버깅 → E2E 테스트 → 리팩토링 → 커밋 → 스킬화 순서로 구조화된 개발 프로세스를 제안한다. '이거 만들어줘' 대신 단계별 전문가 페르소나 프롬프트를 사용해 결과물 품질을 높이는 방법론이다.</p>
-  <ul class="claims"><li>시니어 PM 페르소나 + 5가지 사전 질문 구조로 단 한 번의 프롬프트에 완전한 PRD 생성 가능</li><li>코딩 전 디자인 브리프(user flows, screen inventory, design tokens) 작성이 개성 없는 결과물을 방지</li><li>보안 감사 프롬프트로 인증 결함·노출된 secrets·인젝션 위험을 배포 전 탐지 가능</li><li>에러 디버깅 시 즉시 수정하지 않고 근본 원인 3가지를 먼저 나열하게 하면 무한 시행착오를 줄임</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
-  <div class="tags"><span class="tag">#AI코딩</span> <span class="tag">#프롬프트엔지니어링</span> <span class="tag">#바이브코딩</span> <span class="tag">#PRD</span> <span class="tag">#보안감사</span> <span class="tag">#E2E테스트</span> <span class="tag">#리팩토링</span> <span class="tag">#ClaudeCode</span></div>
-  <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /prd(PRD작성), /design-brief(디자인브리프), /debug-first(진단우선디버깅) 접두어를 추가하거나, ~/.claude/skills/ 디렉토리에 각 패턴을 개별 스킬 파일로 저장해 재사용 가능하게 구성</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_e529176dea8c46a08d563884a5d2c99c')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_e529176dea8c46a08d563884a5d2c99c','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_e529176dea8c46a08d563884a5d2c99c','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_e529176dea8c46a08d563884a5d2c99c')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e529176dea8c46a08d563884a5d2c99c&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e529176dea8c46a08d563884a5d2c99c" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_e529176dea8c46a08d563884a5d2c99c" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 /prd(PRD작성), /design-brief(디자인브리프), /debug-first(진단우선디버깅) 접두어를 추가하거나, ~/.claude/skills/ 디렉토리에 각 패턴을 개별 스킬 파일로 저장해 재사용 가능하게 구성
-
-원문 요약: AI 코딩 워크플로우를 개선하는 8가지 프롬프트 패턴 소개. PRD 작성 → 디자인 브리프 → 보안 감사 → 디버깅 → E2E 테스트 → 리팩토링 → 커밋 → 스킬화 순서로 구조화된 개발 프로세스를 제안한다. &#x27;이거 만들어줘&#x27; 대신 단계별 전문가 페르소나 프롬프트를 사용해 결과물 품질을 높이는 방법론이다.</div>
-    <select id="delegate-project-feed_e529176dea8c46a08d563884a5d2c99c" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_e529176dea8c46a08d563884a5d2c99c" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e529176dea8c46a08d563884a5d2c99c')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e529176dea8c46a08d563884a5d2c99c')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_e529176dea8c46a08d563884a5d2c99c" style="display:none">
-    <textarea id="comment-text-feed_e529176dea8c46a08d563884a5d2c99c" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_e529176dea8c46a08d563884a5d2c99c')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e529176dea8c46a08d563884a5d2c99c')">취소</button>
     </div>
   </div>
 </div>
