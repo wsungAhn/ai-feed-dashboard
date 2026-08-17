@@ -255,9 +255,58 @@
 </div>
   </div>
 </section>
-<h2 class="section-title">승인됨 · 적용 보류 (86)</h2>
+<h2 class="section-title">승인됨 · 적용 보류 (100)</h2>
 <section class="pending-section">
   <div class="grid">
+
+<div class="card pending-apply" id="card-feed_cf3e35ba242740218066eff7107f2356" data-id="feed_cf3e35ba242740218066eff7107f2356">
+  <div class="card-header">
+    <span class="item-tag" title="feed_cf3e35ba242740218066eff7107f2356">#cf3e35ba</span>
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-14</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">RAG 시스템에서 의미 기억(semantic)·일화 기억(episodic)·절차 기억(procedural)은 각각 upsert, append-only, 버전 관리 방식의 완전히 다른 쓰기 정책이 필요하다. '더 나아진 것 같다'는 주관적 평가 대신, 티어별로 하나씩 꺼가며 해당 테스트만 깨지는지 확인하는 격리 하네스로 검증해야 한다.</p>
+  <div class="apply-plan">적용하면: agent_hub 또는 ai-feed의 메모리 관련 설계문서(docs/design-*.md)가 있다면 해당 문서의 메모리 쓰기 정책 섹션에 세 타입별 write policy(semantic→upsert, episodic→append-only, procedural→versioned replace)를 명시하고, 메모리 효과 검증을 위한 tier-isolation 테스트 하네스 설계를 TODO로 추가</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#memory-architecture</span> <span class="tag">#RAG</span> <span class="tag">#agentic-ai</span> <span class="tag">#evaluation-harness</span> <span class="tag">#write-policy</span> <span class="tag">#episodic</span> <span class="tag">#semantic</span> <span class="tag">#procedural</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_cf3e35ba242740218066eff7107f2356')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_cf3e35ba242740218066eff7107f2356')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_cf3e35ba242740218066eff7107f2356')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_cf3e35ba242740218066eff7107f2356')">💬 의견</button>
+    <a href="https://www.instagram.com/p/Db9xNeMmJ5g/?img_index=3" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_cf3e35ba242740218066eff7107f2356" style="display:none">
+    <div class="delegate-reference">적용 안내: agent_hub 또는 ai-feed의 메모리 관련 설계문서(docs/design-*.md)가 있다면 해당 문서의 메모리 쓰기 정책 섹션에 세 타입별 write policy(semantic→upsert, episodic→append-only, procedural→versioned replace)를 명시하고, 메모리 효과 검증을 위한 tier-isolation 테스트 하네스 설계를 TODO로 추가
+
+원문 요약: RAG 시스템에서 의미 기억(semantic)·일화 기억(episodic)·절차 기억(procedural)은 각각 upsert, append-only, 버전 관리 방식의 완전히 다른 쓰기 정책이 필요하다. &#x27;더 나아진 것 같다&#x27;는 주관적 평가 대신, 티어별로 하나씩 꺼가며 해당 테스트만 깨지는지 확인하는 격리 하네스로 검증해야 한다.</div>
+    <select id="delegate-project-feed_cf3e35ba242740218066eff7107f2356" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_cf3e35ba242740218066eff7107f2356" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_cf3e35ba242740218066eff7107f2356')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_cf3e35ba242740218066eff7107f2356')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_cf3e35ba242740218066eff7107f2356" style="display:none">
+    <textarea id="comment-text-feed_cf3e35ba242740218066eff7107f2356" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_cf3e35ba242740218066eff7107f2356')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_cf3e35ba242740218066eff7107f2356')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card pending-apply" id="card-feed_6ba0cacd81ff444fb35bab9b7732e6b1" data-id="feed_6ba0cacd81ff444fb35bab9b7732e6b1">
   <div class="card-header">
@@ -998,6 +1047,153 @@ AI 툴 기반 수익화·자동화 아이디어 컬렉션에 누적.
   </div>
 </div>
 
+<div class="card pending-apply" id="card-feed_08be6a490aa34d0a994d0e2ff5c9f370" data-id="feed_08be6a490aa34d0a994d0e2ff5c9f370">
+  <div class="card-header">
+    <span class="item-tag" title="feed_08be6a490aa34d0a994d0e2ff5c9f370">#08be6a49</span>
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-04</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">1인 개발자를 위한 풀스택 무료 툴체인 소개. ralph로 PRD 자동 작성, Claude로 UI 디자인, Next.js+Vercel로 개발·배포, Supabase로 DB를 커버하는 스택이다. 유료 구간 없이 사이드프로젝트 초반을 시작할 수 있다고 주장한다.</p>
+  <div class="apply-plan">적용하면: ralph PRD 스킬을 새 사이드프로젝트 착수 시 첫 번째 단계로 실험; ~/agent_hub/refs/engineering.md 또는 프롬프트 명령어 목록(~/agent_hub/refs/prompt-commands.md)에 '/prd — ralph 스킬로 PRD 초안 생성' 항목을 추가해 재사용 패턴으로 고정</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#1인개발</span> <span class="tag">#바이브코딩</span> <span class="tag">#사이드프로젝트</span> <span class="tag">#PRD자동화</span> <span class="tag">#Next.js</span> <span class="tag">#Vercel</span> <span class="tag">#Supabase</span> <span class="tag">#Claude디자인</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_08be6a490aa34d0a994d0e2ff5c9f370')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_08be6a490aa34d0a994d0e2ff5c9f370')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">💬 의견</button>
+    <a href="https://www.instagram.com/reel/DblTGWZzvnq/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_08be6a490aa34d0a994d0e2ff5c9f370" style="display:none">
+    <div class="delegate-reference">적용 안내: ralph PRD 스킬을 새 사이드프로젝트 착수 시 첫 번째 단계로 실험; ~/agent_hub/refs/engineering.md 또는 프롬프트 명령어 목록(~/agent_hub/refs/prompt-commands.md)에 &#x27;/prd — ralph 스킬로 PRD 초안 생성&#x27; 항목을 추가해 재사용 패턴으로 고정
+
+원문 요약: 1인 개발자를 위한 풀스택 무료 툴체인 소개. ralph로 PRD 자동 작성, Claude로 UI 디자인, Next.js+Vercel로 개발·배포, Supabase로 DB를 커버하는 스택이다. 유료 구간 없이 사이드프로젝트 초반을 시작할 수 있다고 주장한다.</div>
+    <select id="delegate-project-feed_08be6a490aa34d0a994d0e2ff5c9f370" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_08be6a490aa34d0a994d0e2ff5c9f370" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_08be6a490aa34d0a994d0e2ff5c9f370')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_08be6a490aa34d0a994d0e2ff5c9f370" style="display:none">
+    <textarea id="comment-text-feed_08be6a490aa34d0a994d0e2ff5c9f370" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_08be6a490aa34d0a994d0e2ff5c9f370')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_530188e481584e948a3fb268ed53bde2" data-id="feed_530188e481584e948a3fb268ed53bde2">
+  <div class="card-header">
+    <span class="item-tag" title="feed_530188e481584e948a3fb268ed53bde2">#530188e4</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-03</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">Claude의 한계를 보완하는 5개 GitHub 레포 소개: 영상 분석, NotebookLM 연동으로 컨텍스트 절감, 웹사이트 디자인 참조 클론, 불필요한 코드 생성 억제(Ponytail), 사용량 한도 초과 시 자동 모델 전환(9Router). Instagram/Threads 마케팅 게시물 형식으로 공유됨.</p>
+  <div class="apply-plan">적용하면: 9Router는 Claude Code 사용량 한도 초과 시 대안이 될 수 있으므로 `~/agent_hub/refs/projects.md` 또는 `ai-tools` 섹션에 후보 레포로 등록; Ponytail은 이미 스킬로 활성화되어 있으므로 추가 조치 불필요.</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">📄 project-docs</span></div>
+  <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#claude-extensions</span> <span class="tag">#github-repos</span> <span class="tag">#ponytail</span> <span class="tag">#9router</span> <span class="tag">#notebooklm</span> <span class="tag">#context-optimization</span> <span class="tag">#multi-provider</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_530188e481584e948a3fb268ed53bde2')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_530188e481584e948a3fb268ed53bde2')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_530188e481584e948a3fb268ed53bde2')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_530188e481584e948a3fb268ed53bde2')">💬 의견</button>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_530188e481584e948a3fb268ed53bde2" style="display:none">
+    <div class="delegate-reference">적용 안내: 9Router는 Claude Code 사용량 한도 초과 시 대안이 될 수 있으므로 `~/agent_hub/refs/projects.md` 또는 `ai-tools` 섹션에 후보 레포로 등록; Ponytail은 이미 스킬로 활성화되어 있으므로 추가 조치 불필요.
+
+원문 요약: Claude의 한계를 보완하는 5개 GitHub 레포 소개: 영상 분석, NotebookLM 연동으로 컨텍스트 절감, 웹사이트 디자인 참조 클론, 불필요한 코드 생성 억제(Ponytail), 사용량 한도 초과 시 자동 모델 전환(9Router). Instagram/Threads 마케팅 게시물 형식으로 공유됨.</div>
+    <select id="delegate-project-feed_530188e481584e948a3fb268ed53bde2" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_530188e481584e948a3fb268ed53bde2" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_530188e481584e948a3fb268ed53bde2')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_530188e481584e948a3fb268ed53bde2')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_530188e481584e948a3fb268ed53bde2" style="display:none">
+    <textarea id="comment-text-feed_530188e481584e948a3fb268ed53bde2" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_530188e481584e948a3fb268ed53bde2')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_530188e481584e948a3fb268ed53bde2')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_1b749a5589c94791a76fa76ad6b55d72" data-id="feed_1b749a5589c94791a76fa76ad6b55d72">
+  <div class="card-header">
+    <span class="item-tag" title="feed_1b749a5589c94791a76fa76ad6b55d72">#1b749a55</span>
+    <span class="platform">Threads</span>
+    <span class="date">2026-08-02</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">YC가 내부용 멀티 에이전트 하네스 'QM'을 MIT 라이선스로 오픈소스 공개했다. 공개 15시간 만에 조회수 100만을 기록했으며, 코딩 에이전트에게 직접 배포를 지시하는 방식의 설치 UX가 특징이다. 에이전트 활용 단위가 개인 비서에서 조직 전체 업무 자동화로 전환되는 흐름을 상징한다.</p>
+  <div class="apply-plan">적용하면: ~/agent_hub/hub/ai-trends.md에 YC QM 항목을 추가하고, agent_hub 내 멀티 에이전트 하네스 설계 시 QM 구조를 참조 사례로 검토 (`~/agent_hub/docs/design-*.md` 신규 작성 후보로 등록)</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#YC</span> <span class="tag">#multi-agent</span> <span class="tag">#QM</span> <span class="tag">#오픈소스</span> <span class="tag">#MIT</span> <span class="tag">#에이전트 하네스</span> <span class="tag">#조직 자동화</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_1b749a5589c94791a76fa76ad6b55d72')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_1b749a5589c94791a76fa76ad6b55d72')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_1b749a5589c94791a76fa76ad6b55d72')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_1b749a5589c94791a76fa76ad6b55d72')">💬 의견</button>
+    <a href="https://www.threads.com/share/BAPHnNOhpz/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_1b749a5589c94791a76fa76ad6b55d72" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 YC QM 항목을 추가하고, agent_hub 내 멀티 에이전트 하네스 설계 시 QM 구조를 참조 사례로 검토 (`~/agent_hub/docs/design-*.md` 신규 작성 후보로 등록)
+
+원문 요약: YC가 내부용 멀티 에이전트 하네스 &#x27;QM&#x27;을 MIT 라이선스로 오픈소스 공개했다. 공개 15시간 만에 조회수 100만을 기록했으며, 코딩 에이전트에게 직접 배포를 지시하는 방식의 설치 UX가 특징이다. 에이전트 활용 단위가 개인 비서에서 조직 전체 업무 자동화로 전환되는 흐름을 상징한다.</div>
+    <select id="delegate-project-feed_1b749a5589c94791a76fa76ad6b55d72" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_1b749a5589c94791a76fa76ad6b55d72" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_1b749a5589c94791a76fa76ad6b55d72')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_1b749a5589c94791a76fa76ad6b55d72')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_1b749a5589c94791a76fa76ad6b55d72" style="display:none">
+    <textarea id="comment-text-feed_1b749a5589c94791a76fa76ad6b55d72" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_1b749a5589c94791a76fa76ad6b55d72')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1b749a5589c94791a76fa76ad6b55d72')">취소</button>
+    </div>
+  </div>
+</div>
+
 <div class="card pending-apply" id="card-feed_792c806fb2bf4b8d8945f782ba5d0593" data-id="feed_792c806fb2bf4b8d8945f782ba5d0593">
   <div class="card-header">
     <span class="item-tag" title="feed_792c806fb2bf4b8d8945f782ba5d0593">#792c806f</span>
@@ -1145,6 +1341,55 @@ AI 툴 기반 수익화·자동화 아이디어 컬렉션에 누적.
   </div>
 </div>
 
+<div class="card pending-apply" id="card-feed_e8d9bd8bd2e1489c885b691c3976bd2c" data-id="feed_e8d9bd8bd2e1489c885b691c3976bd2c">
+  <div class="card-header">
+    <span class="item-tag" title="feed_e8d9bd8bd2e1489c885b691c3976bd2c">#e8d9bd8b</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-01</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">PC에서 무제한 AI 영상 생성하는 방법: Pinokio(원클릭 AI 앱 설치러)와 Wan2GP(오픈소스 영상 생성 엔진)를 조합하면 코딩 없이 로컬에서 무제한 AI 영상을 생성할 수 있다. LTX-2, Wan, Hunyuan 등 오픈소스 모델을 지원하며 6GB+ VRAM GPU가 필요하다. Runway, Sora 등 유료 서비스 연간 $672 상당을 대체한다고 주장한다.</p>
+  <div class="apply-plan">적용하면: ~/agent_hub/hub/ai-trends.md에 'Pinokio + Wan2GP 로컬 영상 생성 스택' 항목 추가; Mac Studio는 NVIDIA GPU 미탑재라 직접 실행 불가하지만 Windows/Linux 환경용 로컬 AI 비디오 도구로 참조 등록</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#local-ai-video</span> <span class="tag">#Pinokio</span> <span class="tag">#Wan2GP</span> <span class="tag">#LTX-2</span> <span class="tag">#오픈소스</span> <span class="tag">#영상생성</span> <span class="tag">#GPU</span> <span class="tag">#오프라인AI</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">💬 의견</button>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_e8d9bd8bd2e1489c885b691c3976bd2c" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 &#x27;Pinokio + Wan2GP 로컬 영상 생성 스택&#x27; 항목 추가; Mac Studio는 NVIDIA GPU 미탑재라 직접 실행 불가하지만 Windows/Linux 환경용 로컬 AI 비디오 도구로 참조 등록
+
+원문 요약: PC에서 무제한 AI 영상 생성하는 방법: Pinokio(원클릭 AI 앱 설치러)와 Wan2GP(오픈소스 영상 생성 엔진)를 조합하면 코딩 없이 로컬에서 무제한 AI 영상을 생성할 수 있다. LTX-2, Wan, Hunyuan 등 오픈소스 모델을 지원하며 6GB+ VRAM GPU가 필요하다. Runway, Sora 등 유료 서비스 연간 $672 상당을 대체한다고 주장한다.</div>
+    <select id="delegate-project-feed_e8d9bd8bd2e1489c885b691c3976bd2c" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_e8d9bd8bd2e1489c885b691c3976bd2c" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_e8d9bd8bd2e1489c885b691c3976bd2c" style="display:none">
+    <textarea id="comment-text-feed_e8d9bd8bd2e1489c885b691c3976bd2c" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">취소</button>
+    </div>
+  </div>
+</div>
+
 <div class="card pending-apply" id="card-feed_00f0087df9244861b12144cf86c04ff5" data-id="feed_00f0087df9244861b12144cf86c04ff5">
   <div class="card-header">
     <span class="item-tag" title="feed_00f0087df9244861b12144cf86c04ff5">#00f0087d</span>
@@ -1243,6 +1488,55 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
   </div>
 </div>
 
+<div class="card pending-apply" id="card-feed_166ea9c502064ee180991ae798730ae5" data-id="feed_166ea9c502064ee180991ae798730ae5">
+  <div class="card-header">
+    <span class="item-tag" title="feed_166ea9c502064ee180991ae798730ae5">#166ea9c5</span>
+    <span class="platform">Instagram</span>
+    <span class="date">2026-07-30</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">GitHub에 조용히 올라온 유용한 스킬 5개 소개: 손글씨→폰트 변환(draw-your-font), Claude Code 픽셀 RPG화(claude-quest), 이미지 프롬프트 데이터셋(open-image-prompts), 기획-개발-검수 자동화 파이프라인(Finn-loop), 멀티 에이전트 정보 구조 설계법(graph-engineering). 각각 독립적인 use-case를 커버하며 실용성이 높다.</p>
+  <div class="apply-plan">적용하면: graph-engineering 스킬을 agent_hub 멀티에이전트 설계 시 참고 자료로 추가 검토하고, ~/agent_hub/refs/mcp-tools.md 또는 workflow.md에 '멀티 에이전트 정보 구조 설계' 섹션 링크로 기록. open-image-prompts는 ai-feed 이미지 프롬프트 품질 개선 실험 후보로 ~/agent_hub/experiments/ 에 메모.</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">🤖 claude-code</span></div>
+  <div class="tags"><span class="tag">#GitHub</span> <span class="tag">#AI-tools</span> <span class="tag">#Claude-Code</span> <span class="tag">#multi-agent</span> <span class="tag">#font-generation</span> <span class="tag">#image-prompts</span> <span class="tag">#automation</span> <span class="tag">#graph-engineering</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_166ea9c502064ee180991ae798730ae5')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_166ea9c502064ee180991ae798730ae5')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_166ea9c502064ee180991ae798730ae5')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_166ea9c502064ee180991ae798730ae5')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DbXBHB_FAjz/?img_index=4" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_166ea9c502064ee180991ae798730ae5" style="display:none">
+    <div class="delegate-reference">적용 안내: graph-engineering 스킬을 agent_hub 멀티에이전트 설계 시 참고 자료로 추가 검토하고, ~/agent_hub/refs/mcp-tools.md 또는 workflow.md에 &#x27;멀티 에이전트 정보 구조 설계&#x27; 섹션 링크로 기록. open-image-prompts는 ai-feed 이미지 프롬프트 품질 개선 실험 후보로 ~/agent_hub/experiments/ 에 메모.
+
+원문 요약: GitHub에 조용히 올라온 유용한 스킬 5개 소개: 손글씨→폰트 변환(draw-your-font), Claude Code 픽셀 RPG화(claude-quest), 이미지 프롬프트 데이터셋(open-image-prompts), 기획-개발-검수 자동화 파이프라인(Finn-loop), 멀티 에이전트 정보 구조 설계법(graph-engineering). 각각 독립적인 use-case를 커버하며 실용성이 높다.</div>
+    <select id="delegate-project-feed_166ea9c502064ee180991ae798730ae5" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_166ea9c502064ee180991ae798730ae5" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_166ea9c502064ee180991ae798730ae5')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_166ea9c502064ee180991ae798730ae5')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_166ea9c502064ee180991ae798730ae5" style="display:none">
+    <textarea id="comment-text-feed_166ea9c502064ee180991ae798730ae5" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_166ea9c502064ee180991ae798730ae5')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_166ea9c502064ee180991ae798730ae5')">취소</button>
+    </div>
+  </div>
+</div>
+
 <div class="card pending-apply" id="card-feed_7e83efb3fca7434994d4c620630d153f" data-id="feed_7e83efb3fca7434994d4c620630d153f">
   <div class="card-header">
     <span class="item-tag" title="feed_7e83efb3fca7434994d4c620630d153f">#7e83efb3</span>
@@ -1288,6 +1582,55 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_7e83efb3fca7434994d4c620630d153f')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7e83efb3fca7434994d4c620630d153f')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_e6ff1981da1f401087a1c53b8a15f75c" data-id="feed_e6ff1981da1f401087a1c53b8a15f75c">
+  <div class="card-header">
+    <span class="item-tag" title="feed_e6ff1981da1f401087a1c53b8a15f75c">#e6ff1981</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-30</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">wong2kim의 GitHub 트렌딩 Top 10 스레드 분석. 10개 중 6개가 AI 에이전트 도구이며, Claude Code 생태계(ECC·book-to-skill)와 보이스봇 인프라(airi·speech-to-speech)가 두 축으로 부상했다. affaan-m/ECC가 234.8k 스타로 압도적 1위, moeru-ai/airi가 하루 +797로 최대 증가폭을 기록했다.</p>
+  <div class="apply-plan">적용하면: affaan-m/ECC와 virgiliojr94/book-to-skill을 ~/agent_hub/hub/ai-trends.md에 추가하고, ECC를 Claude Code 에이전트 워크플로 최적화 후보로 ~/agent_hub/refs/mcp-tools.md 또는 review-tiers.md 인근에 기록</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span> <span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#github-trending</span> <span class="tag">#ai-agents</span> <span class="tag">#claude-code</span> <span class="tag">#voice-ai</span> <span class="tag">#quant-trading</span> <span class="tag">#agent-security</span> <span class="tag">#local-ai</span> <span class="tag">#multi-llm</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_e6ff1981da1f401087a1c53b8a15f75c')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_e6ff1981da1f401087a1c53b8a15f75c')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">💬 의견</button>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_e6ff1981da1f401087a1c53b8a15f75c" style="display:none">
+    <div class="delegate-reference">적용 안내: affaan-m/ECC와 virgiliojr94/book-to-skill을 ~/agent_hub/hub/ai-trends.md에 추가하고, ECC를 Claude Code 에이전트 워크플로 최적화 후보로 ~/agent_hub/refs/mcp-tools.md 또는 review-tiers.md 인근에 기록
+
+원문 요약: wong2kim의 GitHub 트렌딩 Top 10 스레드 분석. 10개 중 6개가 AI 에이전트 도구이며, Claude Code 생태계(ECC·book-to-skill)와 보이스봇 인프라(airi·speech-to-speech)가 두 축으로 부상했다. affaan-m/ECC가 234.8k 스타로 압도적 1위, moeru-ai/airi가 하루 +797로 최대 증가폭을 기록했다.</div>
+    <select id="delegate-project-feed_e6ff1981da1f401087a1c53b8a15f75c" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_e6ff1981da1f401087a1c53b8a15f75c" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e6ff1981da1f401087a1c53b8a15f75c')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_e6ff1981da1f401087a1c53b8a15f75c" style="display:none">
+    <textarea id="comment-text-feed_e6ff1981da1f401087a1c53b8a15f75c" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_e6ff1981da1f401087a1c53b8a15f75c')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">취소</button>
     </div>
   </div>
 </div>
@@ -1386,6 +1729,55 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_8c1566b26e1d43b6afcffc479587fbd9')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_8c1566b26e1d43b6afcffc479587fbd9')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_7aa5e43ac9b0498481072fa5426e0736" data-id="feed_7aa5e43ac9b0498481072fa5426e0736">
+  <div class="card-header">
+    <span class="item-tag" title="feed_7aa5e43ac9b0498481072fa5426e0736">#7aa5e43a</span>
+    <span class="platform">Instagram</span>
+    <span class="date">2026-07-26</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">퀀트 파이낸스 학습에 유용한 4개의 무료 오픈소스 GitHub 레포지토리(QuantLib, Microsoft Qlib, FinRL, OpenBB)를 소개한다. 유료 강의 없이도 파생상품 가격 산정, ML 기반 알파 팩터, 강화학습 트레이딩, 금융 리서치 플랫폼을 실습할 수 있다. 튜토리얼 시청보다 프로젝트 빌드를 권장한다.</p>
+  <div class="apply-plan">적용하면: alphabot 전략 리서치 참고용으로 ~/dev/Auto_bot/docs/ 또는 ~/agent_hub/refs/quant-resources.md에 QuantLib·Qlib·FinRL·OpenBB 레포 링크와 용도 한 줄 요약을 추가한다.</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#quant-finance</span> <span class="tag">#open-source</span> <span class="tag">#github</span> <span class="tag">#algorithmic-trading</span> <span class="tag">#machine-learning</span> <span class="tag">#reinforcement-learning</span> <span class="tag">#backtesting</span> <span class="tag">#portfolio-optimization</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_7aa5e43ac9b0498481072fa5426e0736')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_7aa5e43ac9b0498481072fa5426e0736')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_7aa5e43ac9b0498481072fa5426e0736')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_7aa5e43ac9b0498481072fa5426e0736')">💬 의견</button>
+    <a href="https://www.instagram.com/p/DbNJdFYnTUU/?img_index=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_7aa5e43ac9b0498481072fa5426e0736" style="display:none">
+    <div class="delegate-reference">적용 안내: alphabot 전략 리서치 참고용으로 ~/dev/Auto_bot/docs/ 또는 ~/agent_hub/refs/quant-resources.md에 QuantLib·Qlib·FinRL·OpenBB 레포 링크와 용도 한 줄 요약을 추가한다.
+
+원문 요약: 퀀트 파이낸스 학습에 유용한 4개의 무료 오픈소스 GitHub 레포지토리(QuantLib, Microsoft Qlib, FinRL, OpenBB)를 소개한다. 유료 강의 없이도 파생상품 가격 산정, ML 기반 알파 팩터, 강화학습 트레이딩, 금융 리서치 플랫폼을 실습할 수 있다. 튜토리얼 시청보다 프로젝트 빌드를 권장한다.</div>
+    <select id="delegate-project-feed_7aa5e43ac9b0498481072fa5426e0736" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_7aa5e43ac9b0498481072fa5426e0736" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_7aa5e43ac9b0498481072fa5426e0736')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_7aa5e43ac9b0498481072fa5426e0736')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_7aa5e43ac9b0498481072fa5426e0736" style="display:none">
+    <textarea id="comment-text-feed_7aa5e43ac9b0498481072fa5426e0736" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_7aa5e43ac9b0498481072fa5426e0736')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7aa5e43ac9b0498481072fa5426e0736')">취소</button>
     </div>
   </div>
 </div>
@@ -1680,6 +2072,153 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_2f5ecb6ff65b44ae8f6029674d34cb48')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2f5ecb6ff65b44ae8f6029674d34cb48')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_130286eafff3498ea592ce6ebbe44f09" data-id="feed_130286eafff3498ea592ce6ebbe44f09">
+  <div class="card-header">
+    <span class="item-tag" title="feed_130286eafff3498ea592ce6ebbe44f09">#130286ea</span>
+    <span class="platform">Threads</span>
+    <span class="date">2026-07-19</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">NVIDIA가 40개 언어를 실시간 80ms 지연으로 전사하는 600M 파라미터 오픈소스 ASR 모델을 공개했다. 단일 체크포인트로 영어·중국어·아랍어·힌디어·포르투갈어 등을 지원하며, 동일 H100 기준 버퍼드 ASR 대비 17배 많은 동시 스트림을 처리한다. 구두점·대소문자가 내장되어 별도 후처리 없이 자체 GPU에서 무료로 실행 가능하다.</p>
+  <div class="apply-plan">적용하면: 로컬 AI 파이프라인(ai-feed 또는 alphabot 음성 입력)에 활용을 검토한다면, ~/agent_hub/hub/ai-trends.md에 'NVIDIA 오픈소스 ASR 600M (80ms, 40언어, H100 17x 동시처리)' 항목을 추가하고, ~/dev/ai-feed/docs/ 에 로컬 STT 통합 설계 메모를 남긴다.</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#ASR</span> <span class="tag">#speech-to-text</span> <span class="tag">#NVIDIA</span> <span class="tag">#open-source</span> <span class="tag">#multilingual</span> <span class="tag">#real-time</span> <span class="tag">#local-inference</span> <span class="tag">#600M</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_130286eafff3498ea592ce6ebbe44f09')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_130286eafff3498ea592ce6ebbe44f09')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_130286eafff3498ea592ce6ebbe44f09')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_130286eafff3498ea592ce6ebbe44f09')">💬 의견</button>
+    <a href="https://www.threads.com/@drcintas/post/Da8PQX-gFV0?xmt=AQG0u8Kv90T6jzKIR-1JSoSXYttEZYaAlkF4fHOGqdxSp_VYAao71k_WbEMalNHwAIWjXABK&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_130286eafff3498ea592ce6ebbe44f09" style="display:none">
+    <div class="delegate-reference">적용 안내: 로컬 AI 파이프라인(ai-feed 또는 alphabot 음성 입력)에 활용을 검토한다면, ~/agent_hub/hub/ai-trends.md에 &#x27;NVIDIA 오픈소스 ASR 600M (80ms, 40언어, H100 17x 동시처리)&#x27; 항목을 추가하고, ~/dev/ai-feed/docs/ 에 로컬 STT 통합 설계 메모를 남긴다.
+
+원문 요약: NVIDIA가 40개 언어를 실시간 80ms 지연으로 전사하는 600M 파라미터 오픈소스 ASR 모델을 공개했다. 단일 체크포인트로 영어·중국어·아랍어·힌디어·포르투갈어 등을 지원하며, 동일 H100 기준 버퍼드 ASR 대비 17배 많은 동시 스트림을 처리한다. 구두점·대소문자가 내장되어 별도 후처리 없이 자체 GPU에서 무료로 실행 가능하다.</div>
+    <select id="delegate-project-feed_130286eafff3498ea592ce6ebbe44f09" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_130286eafff3498ea592ce6ebbe44f09" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_130286eafff3498ea592ce6ebbe44f09')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_130286eafff3498ea592ce6ebbe44f09')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_130286eafff3498ea592ce6ebbe44f09" style="display:none">
+    <textarea id="comment-text-feed_130286eafff3498ea592ce6ebbe44f09" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_130286eafff3498ea592ce6ebbe44f09')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_130286eafff3498ea592ce6ebbe44f09')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_0fc0738710ac475f89a75d35452d3c52" data-id="feed_0fc0738710ac475f89a75d35452d3c52">
+  <div class="card-header">
+    <span class="item-tag" title="feed_0fc0738710ac475f89a75d35452d3c52">#0fc07387</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-07-19</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">AI 응답 품질을 높이는 두 가지 후속 질문 기법: (1) 'AI가 스스로 자신 없는 것을 물어라', (2) 'Sam Altman식 - 내가 놓치고 있는 가장 큰 것이 무엇인가'. 중요한 작업에서는 새 채팅에 결과물을 붙여넣어 fresh 인스턴스로 재평가하는 것이 self-critique보다 신뢰도가 높다.</p>
+  <div class="apply-plan">적용하면: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 `/gaps`(누락탐지)와 `/critic`(약점공격) 접두어를 AI 응답 후 후속 질문 패턴으로 명시하거나, ~/agent_hub/refs/prompt-commands.md에 'AI 자신 없는 점 질문' 및 'Sam Altman 질문' 템플릿을 추가한다.</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#프롬프트 기법</span> <span class="tag">#AI 품질</span> <span class="tag">#후속 질문</span> <span class="tag">#self-critique</span> <span class="tag">#Claude</span> <span class="tag">#ChatGPT</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_0fc0738710ac475f89a75d35452d3c52')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_0fc0738710ac475f89a75d35452d3c52')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_0fc0738710ac475f89a75d35452d3c52')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_0fc0738710ac475f89a75d35452d3c52')">💬 의견</button>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_0fc0738710ac475f89a75d35452d3c52" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 `/gaps`(누락탐지)와 `/critic`(약점공격) 접두어를 AI 응답 후 후속 질문 패턴으로 명시하거나, ~/agent_hub/refs/prompt-commands.md에 &#x27;AI 자신 없는 점 질문&#x27; 및 &#x27;Sam Altman 질문&#x27; 템플릿을 추가한다.
+
+원문 요약: AI 응답 품질을 높이는 두 가지 후속 질문 기법: (1) &#x27;AI가 스스로 자신 없는 것을 물어라&#x27;, (2) &#x27;Sam Altman식 - 내가 놓치고 있는 가장 큰 것이 무엇인가&#x27;. 중요한 작업에서는 새 채팅에 결과물을 붙여넣어 fresh 인스턴스로 재평가하는 것이 self-critique보다 신뢰도가 높다.</div>
+    <select id="delegate-project-feed_0fc0738710ac475f89a75d35452d3c52" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_0fc0738710ac475f89a75d35452d3c52" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_0fc0738710ac475f89a75d35452d3c52')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_0fc0738710ac475f89a75d35452d3c52')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_0fc0738710ac475f89a75d35452d3c52" style="display:none">
+    <textarea id="comment-text-feed_0fc0738710ac475f89a75d35452d3c52" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_0fc0738710ac475f89a75d35452d3c52')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0fc0738710ac475f89a75d35452d3c52')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_c9e3fa3c59984a639e36d3d517b90b07" data-id="feed_c9e3fa3c59984a639e36d3d517b90b07">
+  <div class="card-header">
+    <span class="item-tag" title="feed_c9e3fa3c59984a639e36d3d517b90b07">#c9e3fa3c</span>
+    <span class="platform">Threads</span>
+    <span class="date">2026-07-19</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">LLM의 장편 소설 작성 시 발생하는 컨텍스트 손실(환각, 인물관계 망각, 복선 추적 실패) 문제를 해결하기 위한 Claude Code 플러그인 'Webnovel Writer'가 GitHub에 공개됐다. 초기 설정부터 챕터 작성·검토·정보 저장·진행 확인까지 전체 파이프라인을 연결하며, 수백 챕터에 걸쳐 배경·복선·개요를 유지하는 것을 핵심 목표로 한다.</p>
+  <div class="apply-plan">적용하면: ai-feed 인사이트로 등록 후 관심 태그 지정; Claude Code 플러그인 생태계 추적 관점에서 ~/agent_hub/hub/ai-trends.md에 'Claude Code 플러그인: 장편소설 컨텍스트 관리' 항목으로 URL과 함께 추가</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#long-context</span> <span class="tag">#webnovel</span> <span class="tag">#plugin</span> <span class="tag">#memory</span> <span class="tag">#creative-writing</span> <span class="tag">#LLM-limitation</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_c9e3fa3c59984a639e36d3d517b90b07')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_c9e3fa3c59984a639e36d3d517b90b07')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">💬 의견</button>
+    <a href="https://www.threads.com/@orenge_doob/post/Da8MpLMgZzM?xmt=AQG0csdroo4oe1vL6-gLxl254Xq3jDE3LLD_yGxH2oeh7qfM9n-aDlJfmqzmYhI14mK3Rthd&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_c9e3fa3c59984a639e36d3d517b90b07" style="display:none">
+    <div class="delegate-reference">적용 안내: ai-feed 인사이트로 등록 후 관심 태그 지정; Claude Code 플러그인 생태계 추적 관점에서 ~/agent_hub/hub/ai-trends.md에 &#x27;Claude Code 플러그인: 장편소설 컨텍스트 관리&#x27; 항목으로 URL과 함께 추가
+
+원문 요약: LLM의 장편 소설 작성 시 발생하는 컨텍스트 손실(환각, 인물관계 망각, 복선 추적 실패) 문제를 해결하기 위한 Claude Code 플러그인 &#x27;Webnovel Writer&#x27;가 GitHub에 공개됐다. 초기 설정부터 챕터 작성·검토·정보 저장·진행 확인까지 전체 파이프라인을 연결하며, 수백 챕터에 걸쳐 배경·복선·개요를 유지하는 것을 핵심 목표로 한다.</div>
+    <select id="delegate-project-feed_c9e3fa3c59984a639e36d3d517b90b07" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_c9e3fa3c59984a639e36d3d517b90b07" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_c9e3fa3c59984a639e36d3d517b90b07')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_c9e3fa3c59984a639e36d3d517b90b07" style="display:none">
+    <textarea id="comment-text-feed_c9e3fa3c59984a639e36d3d517b90b07" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_c9e3fa3c59984a639e36d3d517b90b07')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">취소</button>
     </div>
   </div>
 </div>
@@ -3791,6 +4330,55 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
   </div>
 </div>
 
+<div class="card pending-apply" id="card-feed_d24cc00bce01448fa6dbe69ff5dae8f6" data-id="feed_d24cc00bce01448fa6dbe69ff5dae8f6">
+  <div class="card-header">
+    <span class="item-tag" title="feed_d24cc00bce01448fa6dbe69ff5dae8f6">#d24cc00b</span>
+    <span class="platform">Instagram</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">Fable 모델 서비스 중단 후 Claude Opus를 Fable처럼 간결하고 직접적으로 동작하게 만드는 오픈소스 툴킷(poorna-repos/opus-fable-mode). 불필요한 자기 검열 억제, 설정 유지 훅, 결과 측정 도구를 포함한다.</p>
+  <div class="apply-plan">적용하면: ~/.claude/CLAUDE.md 또는 프로젝트 CLAUDE.md의 통신 규칙 섹션에 opus-fable-mode의 behavioral governor 프롬프트 패턴(자기 검열 억제, 결과 우선 지시)을 참조해 헤드리스 세션 시스템 프롬프트에 적용 검토</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=medium</div>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
+  <div class="tags"><span class="tag">#claude</span> <span class="tag">#opus</span> <span class="tag">#fable</span> <span class="tag">#behavioral-steering</span> <span class="tag">#claude-code</span> <span class="tag">#prompt-engineering</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">💬 의견</button>
+    <a href="https://www.instagram.com/reel/DZm-_RXtr4q/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_d24cc00bce01448fa6dbe69ff5dae8f6" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/.claude/CLAUDE.md 또는 프로젝트 CLAUDE.md의 통신 규칙 섹션에 opus-fable-mode의 behavioral governor 프롬프트 패턴(자기 검열 억제, 결과 우선 지시)을 참조해 헤드리스 세션 시스템 프롬프트에 적용 검토
+
+원문 요약: Fable 모델 서비스 중단 후 Claude Opus를 Fable처럼 간결하고 직접적으로 동작하게 만드는 오픈소스 툴킷(poorna-repos/opus-fable-mode). 불필요한 자기 검열 억제, 설정 유지 훅, 결과 측정 도구를 포함한다.</div>
+    <select id="delegate-project-feed_d24cc00bce01448fa6dbe69ff5dae8f6" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_d24cc00bce01448fa6dbe69ff5dae8f6" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_d24cc00bce01448fa6dbe69ff5dae8f6" style="display:none">
+    <textarea id="comment-text-feed_d24cc00bce01448fa6dbe69ff5dae8f6" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_d24cc00bce01448fa6dbe69ff5dae8f6')">취소</button>
+    </div>
+  </div>
+</div>
+
 <div class="card pending-apply" id="card-feed_1ef056edf77145d583c5742e8d8e6c7e" data-id="feed_1ef056edf77145d583c5742e8d8e6c7e">
   <div class="card-header">
     <span class="item-tag" title="feed_1ef056edf77145d583c5742e8d8e6c7e">#1ef056ed</span>
@@ -4181,6 +4769,104 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
   </div>
 </div>
 
+<div class="card pending-apply" id="card-feed_9dda732b63474c9e95d8d3437d4a0981" data-id="feed_9dda732b63474c9e95d8d3437d4a0981">
+  <div class="card-header">
+    <span class="item-tag" title="feed_9dda732b63474c9e95d8d3437d4a0981">#9dda732b</span>
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">구글의 Gemma 4 로컬 모델과 에이전트 IDE Antigravity 조합으로 클라우드 AI 구독 없이 로컬 AI 개발 환경을 구축할 수 있다는 내용. 비용 절감형 로컬 AI 스택으로 개발자들 사이에서 주목받고 있다.</p>
+  <div class="apply-plan">적용하면: ~/agent_hub/hub/ai-trends.md에 Gemma 4 + Antigravity 로컬 스택 항목을 추가하고, ~/agent_hub/refs/projects.md 또는 메모리의 로컬 모델 비교 실험 문서에 Gemma 4를 다음 로컬 모델 벤치마크 후보로 등록한다.</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=low</div>
+  <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#Gemma4</span> <span class="tag">#Antigravity</span> <span class="tag">#로컬AI</span> <span class="tag">#에이전트IDE</span> <span class="tag">#비용절감</span> <span class="tag">#구글</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_9dda732b63474c9e95d8d3437d4a0981')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_9dda732b63474c9e95d8d3437d4a0981')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_9dda732b63474c9e95d8d3437d4a0981')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_9dda732b63474c9e95d8d3437d4a0981')">💬 의견</button>
+    <a href="https://www.threads.com/@work.less.better/post/DYHLiXegbdB?xmt=AQG0tFbhyFVCasRM2OvrdXWitN7Ye9kpsjuHUoSg-9tD3NOPVoYMTJvszHnilmvUXBVf8Ek&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_9dda732b63474c9e95d8d3437d4a0981" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 Gemma 4 + Antigravity 로컬 스택 항목을 추가하고, ~/agent_hub/refs/projects.md 또는 메모리의 로컬 모델 비교 실험 문서에 Gemma 4를 다음 로컬 모델 벤치마크 후보로 등록한다.
+
+원문 요약: 구글의 Gemma 4 로컬 모델과 에이전트 IDE Antigravity 조합으로 클라우드 AI 구독 없이 로컬 AI 개발 환경을 구축할 수 있다는 내용. 비용 절감형 로컬 AI 스택으로 개발자들 사이에서 주목받고 있다.</div>
+    <select id="delegate-project-feed_9dda732b63474c9e95d8d3437d4a0981" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_9dda732b63474c9e95d8d3437d4a0981" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_9dda732b63474c9e95d8d3437d4a0981')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_9dda732b63474c9e95d8d3437d4a0981')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_9dda732b63474c9e95d8d3437d4a0981" style="display:none">
+    <textarea id="comment-text-feed_9dda732b63474c9e95d8d3437d4a0981" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_9dda732b63474c9e95d8d3437d4a0981')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_9dda732b63474c9e95d8d3437d4a0981')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply" id="card-feed_c7687d44558645b599b3af3b99e9f1b4" data-id="feed_c7687d44558645b599b3af3b99e9f1b4">
+  <div class="card-header">
+    <span class="item-tag" title="feed_c7687d44558645b599b3af3b99e9f1b4">#c7687d44</span>
+    <span class="platform">Threads</span>
+    <span class="date">2026-06-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">GitHub에서 별 11,900개를 받은 Open-Generative-AI 저장소가 이미지, 비디오, 립싱크, LLM 등 200개 이상의 생성형 AI 도구를 MIT 라이선스로 무료 통합 제공한다. ChatGPT, Midjourney, Sora의 오픈소스 대체제를 단일 허브에서 접근할 수 있다는 점이 핵심이다.</p>
+  <div class="apply-plan">적용하면: ~/agent_hub/hub/ai-trends.md에 Open-Generative-AI 저장소를 신규 항목으로 추가하고, local-ai 카테고리 후보 목록에 등재해 실제 GitHub URL 및 모델별 라이선스 검증 후 로컬 추론 실험 대상으로 검토</div>
+  <div class="pending-reason">보류 사유: 자동적용 기준 미달: confidence=low</div>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#open-source</span> <span class="tag">#generative-ai</span> <span class="tag">#LLM</span> <span class="tag">#image-generation</span> <span class="tag">#video-generation</span> <span class="tag">#lip-sync</span> <span class="tag">#MIT</span> <span class="tag">#GitHub</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_c7687d44558645b599b3af3b99e9f1b4')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_c7687d44558645b599b3af3b99e9f1b4')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_c7687d44558645b599b3af3b99e9f1b4')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_c7687d44558645b599b3af3b99e9f1b4')">💬 의견</button>
+    <a href="https://www.threads.com/@qjc.ai/post/DYGsAL_k0YQ?xmt=AQG01de5kxOEg0Cg9CtEi1dc9IXO6is79FTUfG-svEyN60VeGI9c8oti07eucbtJQSH_ICG4&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_c7687d44558645b599b3af3b99e9f1b4" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 Open-Generative-AI 저장소를 신규 항목으로 추가하고, local-ai 카테고리 후보 목록에 등재해 실제 GitHub URL 및 모델별 라이선스 검증 후 로컬 추론 실험 대상으로 검토
+
+원문 요약: GitHub에서 별 11,900개를 받은 Open-Generative-AI 저장소가 이미지, 비디오, 립싱크, LLM 등 200개 이상의 생성형 AI 도구를 MIT 라이선스로 무료 통합 제공한다. ChatGPT, Midjourney, Sora의 오픈소스 대체제를 단일 허브에서 접근할 수 있다는 점이 핵심이다.</div>
+    <select id="delegate-project-feed_c7687d44558645b599b3af3b99e9f1b4" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_c7687d44558645b599b3af3b99e9f1b4" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_c7687d44558645b599b3af3b99e9f1b4')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_c7687d44558645b599b3af3b99e9f1b4')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_c7687d44558645b599b3af3b99e9f1b4" style="display:none">
+    <textarea id="comment-text-feed_c7687d44558645b599b3af3b99e9f1b4" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_c7687d44558645b599b3af3b99e9f1b4')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c7687d44558645b599b3af3b99e9f1b4')">취소</button>
+    </div>
+  </div>
+</div>
+
 <div class="card pending-apply" id="card-feed_839514ed97604d3f865c941b4efc97ed" data-id="feed_839514ed97604d3f865c941b4efc97ed">
   <div class="card-header">
     <span class="item-tag" title="feed_839514ed97604d3f865c941b4efc97ed">#839514ed</span>
@@ -4473,7 +5159,7 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 41건</p>
+<p class="count">승인 대기 27건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_2b605231d81f4c6cb862a6476a9d3307" data-id="feed_2b605231d81f4c6cb862a6476a9d3307">
@@ -4529,61 +5215,6 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_2b605231d81f4c6cb862a6476a9d3307')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2b605231d81f4c6cb862a6476a9d3307')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_cf3e35ba242740218066eff7107f2356" data-id="feed_cf3e35ba242740218066eff7107f2356">
-  <div class="card-header">
-    <span class="item-tag" title="feed_cf3e35ba242740218066eff7107f2356">#cf3e35ba</span>
-    
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-08-14</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">RAG 시스템에서 의미 기억(semantic)·일화 기억(episodic)·절차 기억(procedural)은 각각 upsert, append-only, 버전 관리 방식의 완전히 다른 쓰기 정책이 필요하다. '더 나아진 것 같다'는 주관적 평가 대신, 티어별로 하나씩 꺼가며 해당 테스트만 깨지는지 확인하는 격리 하네스로 검증해야 한다.</p>
-  <ul class="claims"><li>Semantic memory는 upsert 정책 — 모순되는 사실은 덮어쓴다</li><li>Episodic memory는 append-only 정책 — 과거 이벤트는 절대 수정하지 않는다</li><li>Procedural memory는 버전 bump + 롤백 가능한 교체 정책이다</li><li>메모리 시스템 검증은 티어별 제거 후 해당 테스트만 실패하는 깨끗한 대각선(clean diagonal)으로 증명해야 한다</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#memory-architecture</span> <span class="tag">#RAG</span> <span class="tag">#agentic-ai</span> <span class="tag">#evaluation-harness</span> <span class="tag">#write-policy</span> <span class="tag">#episodic</span> <span class="tag">#semantic</span> <span class="tag">#procedural</span></div>
-  <div class="apply-plan">승인 시 agent_hub 또는 ai-feed의 메모리 관련 설계문서(docs/design-*.md)가 있다면 해당 문서의 메모리 쓰기 정책 섹션에 세 타입별 write policy(semantic→upsert, episodic→append-only, procedural→versioned replace)를 명시하고, 메모리 효과 검증을 위한 tier-isolation 테스트 하네스 설계를 TODO로 추가</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_cf3e35ba242740218066eff7107f2356')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_cf3e35ba242740218066eff7107f2356','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_cf3e35ba242740218066eff7107f2356','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_cf3e35ba242740218066eff7107f2356')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_cf3e35ba242740218066eff7107f2356&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_cf3e35ba242740218066eff7107f2356" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/Db9xNeMmJ5g/?img_index=3" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_cf3e35ba242740218066eff7107f2356" style="display:none">
-    <div class="delegate-reference">적용 안내: agent_hub 또는 ai-feed의 메모리 관련 설계문서(docs/design-*.md)가 있다면 해당 문서의 메모리 쓰기 정책 섹션에 세 타입별 write policy(semantic→upsert, episodic→append-only, procedural→versioned replace)를 명시하고, 메모리 효과 검증을 위한 tier-isolation 테스트 하네스 설계를 TODO로 추가
-
-원문 요약: RAG 시스템에서 의미 기억(semantic)·일화 기억(episodic)·절차 기억(procedural)은 각각 upsert, append-only, 버전 관리 방식의 완전히 다른 쓰기 정책이 필요하다. &#x27;더 나아진 것 같다&#x27;는 주관적 평가 대신, 티어별로 하나씩 꺼가며 해당 테스트만 깨지는지 확인하는 격리 하네스로 검증해야 한다.</div>
-    <select id="delegate-project-feed_cf3e35ba242740218066eff7107f2356" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_cf3e35ba242740218066eff7107f2356" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_cf3e35ba242740218066eff7107f2356')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_cf3e35ba242740218066eff7107f2356')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_cf3e35ba242740218066eff7107f2356" style="display:none">
-    <textarea id="comment-text-feed_cf3e35ba242740218066eff7107f2356" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_cf3e35ba242740218066eff7107f2356')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_cf3e35ba242740218066eff7107f2356')">취소</button>
     </div>
   </div>
 </div>
@@ -4648,249 +5279,6 @@ ai.asap.kr 두 달 만에 깃허브 스타 8.4만을 받은 오픈소스, Odysse
   </div>
 </div>
 
-<div class="card" id="card-feed_08be6a490aa34d0a994d0e2ff5c9f370" data-id="feed_08be6a490aa34d0a994d0e2ff5c9f370">
-  <div class="card-header">
-    <span class="item-tag" title="feed_08be6a490aa34d0a994d0e2ff5c9f370">#08be6a49</span>
-    
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-08-04</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">1인 개발자를 위한 풀스택 무료 툴체인 소개. ralph로 PRD 자동 작성, Claude로 UI 디자인, Next.js+Vercel로 개발·배포, Supabase로 DB를 커버하는 스택이다. 유료 구간 없이 사이드프로젝트 초반을 시작할 수 있다고 주장한다.</p>
-  <ul class="claims"><li>ralph PRD 스킬(github.com/snarktank/ralph)이 애매한 요구사항을 3~5개 되물어 목표·유저스토리·기능요구사항·비목표까지 문서로 생성한다</li><li>Claude에 PRD를 통째로 입력하면 화면 톤 수준의 디자인까지 산출한다</li><li>Next.js + Vercel 조합으로 API와 프론트를 단일 프로젝트에서 운영하고 git push만으로 무료 배포가 된다</li><li>Supabase 무료 구간이 사이드프로젝트 초반 DB 수요를 충족한다</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#1인개발</span> <span class="tag">#바이브코딩</span> <span class="tag">#사이드프로젝트</span> <span class="tag">#PRD자동화</span> <span class="tag">#Next.js</span> <span class="tag">#Vercel</span> <span class="tag">#Supabase</span> <span class="tag">#Claude디자인</span></div>
-  <div class="apply-plan">승인 시 ralph PRD 스킬을 새 사이드프로젝트 착수 시 첫 번째 단계로 실험; ~/agent_hub/refs/engineering.md 또는 프롬프트 명령어 목록(~/agent_hub/refs/prompt-commands.md)에 '/prd — ralph 스킬로 PRD 초안 생성' 항목을 추가해 재사용 패턴으로 고정</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_08be6a490aa34d0a994d0e2ff5c9f370','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_08be6a490aa34d0a994d0e2ff5c9f370','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_08be6a490aa34d0a994d0e2ff5c9f370&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_08be6a490aa34d0a994d0e2ff5c9f370" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/reel/DblTGWZzvnq/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_08be6a490aa34d0a994d0e2ff5c9f370" style="display:none">
-    <div class="delegate-reference">적용 안내: ralph PRD 스킬을 새 사이드프로젝트 착수 시 첫 번째 단계로 실험; ~/agent_hub/refs/engineering.md 또는 프롬프트 명령어 목록(~/agent_hub/refs/prompt-commands.md)에 &#x27;/prd — ralph 스킬로 PRD 초안 생성&#x27; 항목을 추가해 재사용 패턴으로 고정
-
-원문 요약: 1인 개발자를 위한 풀스택 무료 툴체인 소개. ralph로 PRD 자동 작성, Claude로 UI 디자인, Next.js+Vercel로 개발·배포, Supabase로 DB를 커버하는 스택이다. 유료 구간 없이 사이드프로젝트 초반을 시작할 수 있다고 주장한다.</div>
-    <select id="delegate-project-feed_08be6a490aa34d0a994d0e2ff5c9f370" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_08be6a490aa34d0a994d0e2ff5c9f370" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_08be6a490aa34d0a994d0e2ff5c9f370')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_08be6a490aa34d0a994d0e2ff5c9f370" style="display:none">
-    <textarea id="comment-text-feed_08be6a490aa34d0a994d0e2ff5c9f370" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_08be6a490aa34d0a994d0e2ff5c9f370')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_08be6a490aa34d0a994d0e2ff5c9f370')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_530188e481584e948a3fb268ed53bde2" data-id="feed_530188e481584e948a3fb268ed53bde2">
-  <div class="card-header">
-    <span class="item-tag" title="feed_530188e481584e948a3fb268ed53bde2">#530188e4</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-08-03</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">Claude의 한계를 보완하는 5개 GitHub 레포 소개: 영상 분석, NotebookLM 연동으로 컨텍스트 절감, 웹사이트 디자인 참조 클론, 불필요한 코드 생성 억제(Ponytail), 사용량 한도 초과 시 자동 모델 전환(9Router). Instagram/Threads 마케팅 게시물 형식으로 공유됨.</p>
-  <ul class="claims"><li>Ponytail은 Claude가 생성하는 코드량을 약 54% 줄인다고 주장</li><li>9Router는 Claude Code를 40개 이상의 AI 프로바이더, 100개 이상의 모델에 연결하며 한도 초과 시 자동 전환</li><li>NotebookLM-Py는 Claude 컨텍스트를 소비하지 않고 NotebookLM에 리서치를 위임해 grounded 답변 반환</li><li>AI website cloner는 URL에서 폰트·색상·레이아웃·에셋·인터랙션을 추출해 Claude에게 제공</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">📄 project-docs</span></div>
-  <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#claude-extensions</span> <span class="tag">#github-repos</span> <span class="tag">#ponytail</span> <span class="tag">#9router</span> <span class="tag">#notebooklm</span> <span class="tag">#context-optimization</span> <span class="tag">#multi-provider</span></div>
-  <div class="apply-plan">승인 시 9Router는 Claude Code 사용량 한도 초과 시 대안이 될 수 있으므로 `~/agent_hub/refs/projects.md` 또는 `ai-tools` 섹션에 후보 레포로 등록; Ponytail은 이미 스킬로 활성화되어 있으므로 추가 조치 불필요.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_530188e481584e948a3fb268ed53bde2')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_530188e481584e948a3fb268ed53bde2','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_530188e481584e948a3fb268ed53bde2','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_530188e481584e948a3fb268ed53bde2')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_530188e481584e948a3fb268ed53bde2&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_530188e481584e948a3fb268ed53bde2" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_530188e481584e948a3fb268ed53bde2" style="display:none">
-    <div class="delegate-reference">적용 안내: 9Router는 Claude Code 사용량 한도 초과 시 대안이 될 수 있으므로 `~/agent_hub/refs/projects.md` 또는 `ai-tools` 섹션에 후보 레포로 등록; Ponytail은 이미 스킬로 활성화되어 있으므로 추가 조치 불필요.
-
-원문 요약: Claude의 한계를 보완하는 5개 GitHub 레포 소개: 영상 분석, NotebookLM 연동으로 컨텍스트 절감, 웹사이트 디자인 참조 클론, 불필요한 코드 생성 억제(Ponytail), 사용량 한도 초과 시 자동 모델 전환(9Router). Instagram/Threads 마케팅 게시물 형식으로 공유됨.</div>
-    <select id="delegate-project-feed_530188e481584e948a3fb268ed53bde2" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_530188e481584e948a3fb268ed53bde2" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_530188e481584e948a3fb268ed53bde2')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_530188e481584e948a3fb268ed53bde2')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_530188e481584e948a3fb268ed53bde2" style="display:none">
-    <textarea id="comment-text-feed_530188e481584e948a3fb268ed53bde2" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_530188e481584e948a3fb268ed53bde2')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_530188e481584e948a3fb268ed53bde2')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_1b749a5589c94791a76fa76ad6b55d72" data-id="feed_1b749a5589c94791a76fa76ad6b55d72">
-  <div class="card-header">
-    <span class="item-tag" title="feed_1b749a5589c94791a76fa76ad6b55d72">#1b749a55</span>
-    
-    
-    
-    
-    <span class="platform">Threads</span>
-    <span class="date">2026-08-02</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">YC가 내부용 멀티 에이전트 하네스 'QM'을 MIT 라이선스로 오픈소스 공개했다. 공개 15시간 만에 조회수 100만을 기록했으며, 코딩 에이전트에게 직접 배포를 지시하는 방식의 설치 UX가 특징이다. 에이전트 활용 단위가 개인 비서에서 조직 전체 업무 자동화로 전환되는 흐름을 상징한다.</p>
-  <ul class="claims"><li>YC가 내부 멀티 에이전트 하네스 QM을 MIT 라이선스로 공개했다</li><li>공개 15시간 만에 조회수 100만(1M)을 달성했다</li><li>설치 방법을 '코딩 에이전트에게 이 레포를 배포하라고 시켜라' 한 줄로 안내했다</li><li>에이전트 활용 단위가 개인에서 조직 수준으로 이동하고 있다</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
-  <div class="tags"><span class="tag">#YC</span> <span class="tag">#multi-agent</span> <span class="tag">#QM</span> <span class="tag">#오픈소스</span> <span class="tag">#MIT</span> <span class="tag">#에이전트 하네스</span> <span class="tag">#조직 자동화</span></div>
-  <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 YC QM 항목을 추가하고, agent_hub 내 멀티 에이전트 하네스 설계 시 QM 구조를 참조 사례로 검토 (`~/agent_hub/docs/design-*.md` 신규 작성 후보로 등록)</div>
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-08-05T12:30</div>
-    <div class="response-body">이 응답은 웹 접속이 불가능해서 QM 리포를 직접 확인할 수 없다. 정직하게 보고: **QM의 아키텍처와 ai-feed 시스템의 구체적 비교는 코드를 봐야 정확하다.**
-
-로컬 환경에서 인터랙티브 Claude를 열어서 실제 비교 분석을 하려면 이 명령을 실행:
-
-```bash
-cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_1b749a5589c94791a76fa76ad6b55d72
-```
-
-이 전체 대화 맥락을 인클루드한 채로 리포 체크·비교 분석을 할 수 있다. 그 사이에 **미리 준비할 질문**: 
-- QM의 agent dispatch 메커니즘 vs ai-feed의 extract→analyze→recommend 파이프라인 (선형 vs 분기/재시도?)
-- 상태 관리 (QM이 어떻게 agent 결과를 추적하는가?)
-- 에러 처리·재시도 정책
-
-체크 후 피드를 어떻게 나을지(적용 vs 학습만 vs 미룸) 함께 판단할 수 있다.</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="toggleDelegateBox('feed_1b749a5589c94791a76fa76ad6b55d72')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_1b749a5589c94791a76fa76ad6b55d72','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_1b749a5589c94791a76fa76ad6b55d72','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_1b749a5589c94791a76fa76ad6b55d72')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1b749a5589c94791a76fa76ad6b55d72&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1b749a5589c94791a76fa76ad6b55d72" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.threads.com/share/BAPHnNOhpz/" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_1b749a5589c94791a76fa76ad6b55d72" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 YC QM 항목을 추가하고, agent_hub 내 멀티 에이전트 하네스 설계 시 QM 구조를 참조 사례로 검토 (`~/agent_hub/docs/design-*.md` 신규 작성 후보로 등록)
-
-원문 요약: YC가 내부용 멀티 에이전트 하네스 &#x27;QM&#x27;을 MIT 라이선스로 오픈소스 공개했다. 공개 15시간 만에 조회수 100만을 기록했으며, 코딩 에이전트에게 직접 배포를 지시하는 방식의 설치 UX가 특징이다. 에이전트 활용 단위가 개인 비서에서 조직 전체 업무 자동화로 전환되는 흐름을 상징한다.</div>
-    <select id="delegate-project-feed_1b749a5589c94791a76fa76ad6b55d72" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_1b749a5589c94791a76fa76ad6b55d72" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_1b749a5589c94791a76fa76ad6b55d72')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_1b749a5589c94791a76fa76ad6b55d72')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_1b749a5589c94791a76fa76ad6b55d72" style="display:none">
-    <textarea id="comment-text-feed_1b749a5589c94791a76fa76ad6b55d72" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_1b749a5589c94791a76fa76ad6b55d72')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1b749a5589c94791a76fa76ad6b55d72')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_e8d9bd8bd2e1489c885b691c3976bd2c" data-id="feed_e8d9bd8bd2e1489c885b691c3976bd2c">
-  <div class="card-header">
-    <span class="item-tag" title="feed_e8d9bd8bd2e1489c885b691c3976bd2c">#e8d9bd8b</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-08-01</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">PC에서 무제한 AI 영상 생성하는 방법: Pinokio(원클릭 AI 앱 설치러)와 Wan2GP(오픈소스 영상 생성 엔진)를 조합하면 코딩 없이 로컬에서 무제한 AI 영상을 생성할 수 있다. LTX-2, Wan, Hunyuan 등 오픈소스 모델을 지원하며 6GB+ VRAM GPU가 필요하다. Runway, Sora 등 유료 서비스 연간 $672 상당을 대체한다고 주장한다.</p>
-  <ul class="claims"><li>Pinokio + Wan2GP 조합으로 코딩·터미널 없이 로컬 AI 영상 생성 가능</li><li>LTX-2 모델은 영상과 함께 사운드도 생성 (Sora 2 / Veo 3 무료 대안으로 포지셔닝)</li><li>Runway($144), Sora($240), Kling Pro($192), Pika($96) 등 연간 $672 유료 서비스 대체 가능</li><li>첫 설치 후 완전 오프라인 동작, 워터마크 없음, 데이터 로컬 보관</li></ul>
-  <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#local-ai-video</span> <span class="tag">#Pinokio</span> <span class="tag">#Wan2GP</span> <span class="tag">#LTX-2</span> <span class="tag">#오픈소스</span> <span class="tag">#영상생성</span> <span class="tag">#GPU</span> <span class="tag">#오프라인AI</span></div>
-  <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 'Pinokio + Wan2GP 로컬 영상 생성 스택' 항목 추가; Mac Studio는 NVIDIA GPU 미탑재라 직접 실행 불가하지만 Windows/Linux 환경용 로컬 AI 비디오 도구로 참조 등록</div>
-  
-  <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-08-01T23:25</div>
-    <div class="response-body">regime-signals PM 태스크로 위임했습니다 (task_id: e61e2936).</div>
-    <div class="response-actions">
-      <button class="btn-approve" onclick="toggleDelegateBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">✅ 승인</button>
-      <button class="btn-reject" onclick="decide('feed_e8d9bd8bd2e1489c885b691c3976bd2c','skip')">⏭ 스킵</button>
-      <button class="btn-debunk" onclick="decide('feed_e8d9bd8bd2e1489c885b691c3976bd2c','debunk')">❌ 터무니없음</button>
-      <button class="btn-comment" onclick="toggleCommentBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">💬 재피드백</button>
-    </div>
-  </div>
-  <div class="actions">
-    
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e8d9bd8bd2e1489c885b691c3976bd2c&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e8d9bd8bd2e1489c885b691c3976bd2c" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_e8d9bd8bd2e1489c885b691c3976bd2c" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 &#x27;Pinokio + Wan2GP 로컬 영상 생성 스택&#x27; 항목 추가; Mac Studio는 NVIDIA GPU 미탑재라 직접 실행 불가하지만 Windows/Linux 환경용 로컬 AI 비디오 도구로 참조 등록
-
-원문 요약: PC에서 무제한 AI 영상 생성하는 방법: Pinokio(원클릭 AI 앱 설치러)와 Wan2GP(오픈소스 영상 생성 엔진)를 조합하면 코딩 없이 로컬에서 무제한 AI 영상을 생성할 수 있다. LTX-2, Wan, Hunyuan 등 오픈소스 모델을 지원하며 6GB+ VRAM GPU가 필요하다. Runway, Sora 등 유료 서비스 연간 $672 상당을 대체한다고 주장한다.</div>
-    <select id="delegate-project-feed_e8d9bd8bd2e1489c885b691c3976bd2c" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_e8d9bd8bd2e1489c885b691c3976bd2c" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_e8d9bd8bd2e1489c885b691c3976bd2c" style="display:none">
-    <textarea id="comment-text-feed_e8d9bd8bd2e1489c885b691c3976bd2c" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e8d9bd8bd2e1489c885b691c3976bd2c')">취소</button>
-    </div>
-  </div>
-</div>
-
 <div class="card" id="card-feed_e451ae6c4fb34e989920a0a88aafedf5" data-id="feed_e451ae6c4fb34e989920a0a88aafedf5">
   <div class="card-header">
     <span class="item-tag" title="feed_e451ae6c4fb34e989920a0a88aafedf5">#e451ae6c</span>
@@ -4947,171 +5335,6 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_e451ae6c4fb34e989920a0a88aafedf5')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e451ae6c4fb34e989920a0a88aafedf5')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_166ea9c502064ee180991ae798730ae5" data-id="feed_166ea9c502064ee180991ae798730ae5">
-  <div class="card-header">
-    <span class="item-tag" title="feed_166ea9c502064ee180991ae798730ae5">#166ea9c5</span>
-    
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-07-30</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">GitHub에 조용히 올라온 유용한 스킬 5개 소개: 손글씨→폰트 변환(draw-your-font), Claude Code 픽셀 RPG화(claude-quest), 이미지 프롬프트 데이터셋(open-image-prompts), 기획-개발-검수 자동화 파이프라인(Finn-loop), 멀티 에이전트 정보 구조 설계법(graph-engineering). 각각 독립적인 use-case를 커버하며 실용성이 높다.</p>
-  <ul class="claims"><li>draw-your-font는 손글씨 사진 한 장으로 설치 가능한 폰트 파일을 생성하나 한글은 미지원</li><li>open-image-prompts는 프롬프트 14,000개·이미지 24,000장·185개 카테고리를 포함한 오픈소스 데이터셋</li><li>Finn-loop는 개발팀 없이 기획→개발→검수를 자동으로 연결하는 파이프라인 스킬</li><li>graph-engineering은 멀티 에이전트 운용 시 프롬프트보다 하위 레이어인 정보 구조 설계를 다룬다</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">🤖 claude-code</span></div>
-  <div class="tags"><span class="tag">#GitHub</span> <span class="tag">#AI-tools</span> <span class="tag">#Claude-Code</span> <span class="tag">#multi-agent</span> <span class="tag">#font-generation</span> <span class="tag">#image-prompts</span> <span class="tag">#automation</span> <span class="tag">#graph-engineering</span></div>
-  <div class="apply-plan">승인 시 graph-engineering 스킬을 agent_hub 멀티에이전트 설계 시 참고 자료로 추가 검토하고, ~/agent_hub/refs/mcp-tools.md 또는 workflow.md에 '멀티 에이전트 정보 구조 설계' 섹션 링크로 기록. open-image-prompts는 ai-feed 이미지 프롬프트 품질 개선 실험 후보로 ~/agent_hub/experiments/ 에 메모.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_166ea9c502064ee180991ae798730ae5')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_166ea9c502064ee180991ae798730ae5','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_166ea9c502064ee180991ae798730ae5','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_166ea9c502064ee180991ae798730ae5')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_166ea9c502064ee180991ae798730ae5&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_166ea9c502064ee180991ae798730ae5" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/DbXBHB_FAjz/?img_index=4" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_166ea9c502064ee180991ae798730ae5" style="display:none">
-    <div class="delegate-reference">적용 안내: graph-engineering 스킬을 agent_hub 멀티에이전트 설계 시 참고 자료로 추가 검토하고, ~/agent_hub/refs/mcp-tools.md 또는 workflow.md에 &#x27;멀티 에이전트 정보 구조 설계&#x27; 섹션 링크로 기록. open-image-prompts는 ai-feed 이미지 프롬프트 품질 개선 실험 후보로 ~/agent_hub/experiments/ 에 메모.
-
-원문 요약: GitHub에 조용히 올라온 유용한 스킬 5개 소개: 손글씨→폰트 변환(draw-your-font), Claude Code 픽셀 RPG화(claude-quest), 이미지 프롬프트 데이터셋(open-image-prompts), 기획-개발-검수 자동화 파이프라인(Finn-loop), 멀티 에이전트 정보 구조 설계법(graph-engineering). 각각 독립적인 use-case를 커버하며 실용성이 높다.</div>
-    <select id="delegate-project-feed_166ea9c502064ee180991ae798730ae5" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_166ea9c502064ee180991ae798730ae5" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_166ea9c502064ee180991ae798730ae5')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_166ea9c502064ee180991ae798730ae5')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_166ea9c502064ee180991ae798730ae5" style="display:none">
-    <textarea id="comment-text-feed_166ea9c502064ee180991ae798730ae5" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_166ea9c502064ee180991ae798730ae5')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_166ea9c502064ee180991ae798730ae5')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_e6ff1981da1f401087a1c53b8a15f75c" data-id="feed_e6ff1981da1f401087a1c53b8a15f75c">
-  <div class="card-header">
-    <span class="item-tag" title="feed_e6ff1981da1f401087a1c53b8a15f75c">#e6ff1981</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-07-30</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">wong2kim의 GitHub 트렌딩 Top 10 스레드 분석. 10개 중 6개가 AI 에이전트 도구이며, Claude Code 생태계(ECC·book-to-skill)와 보이스봇 인프라(airi·speech-to-speech)가 두 축으로 부상했다. affaan-m/ECC가 234.8k 스타로 압도적 1위, moeru-ai/airi가 하루 +797로 최대 증가폭을 기록했다.</p>
-  <ul class="claims"><li>affaan-m/ECC는 234.8k 스타로 10위권 압도적 1위이며 Claude Code/Codex/Cursor용 에이전트 성능 최적화(스킬·메모리·보안) 도구</li><li>moeru-ai/airi는 하루 +797 증가로 10위권 최대 증가폭을 기록한 셀프호스팅 AI 컴패니언(실시간 음성 채팅·게임 플레이)</li><li>virgiliojr94/book-to-skill은 기술 서적 PDF를 Claude Code 스킬로 변환하는 새 카테고리 형성</li><li>microsoft/agent-governance-toolkit은 OWASP Agentic Top 10 전 항목 대응 에이전트 보안·거버넌스 툴킷</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span> <span class="badge">📈 alphabot-strategy</span></div>
-  <div class="tags"><span class="tag">#github-trending</span> <span class="tag">#ai-agents</span> <span class="tag">#claude-code</span> <span class="tag">#voice-ai</span> <span class="tag">#quant-trading</span> <span class="tag">#agent-security</span> <span class="tag">#local-ai</span> <span class="tag">#multi-llm</span></div>
-  <div class="apply-plan">승인 시 affaan-m/ECC와 virgiliojr94/book-to-skill을 ~/agent_hub/hub/ai-trends.md에 추가하고, ECC를 Claude Code 에이전트 워크플로 최적화 후보로 ~/agent_hub/refs/mcp-tools.md 또는 review-tiers.md 인근에 기록</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_e6ff1981da1f401087a1c53b8a15f75c','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_e6ff1981da1f401087a1c53b8a15f75c','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e6ff1981da1f401087a1c53b8a15f75c&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e6ff1981da1f401087a1c53b8a15f75c" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_e6ff1981da1f401087a1c53b8a15f75c" style="display:none">
-    <div class="delegate-reference">적용 안내: affaan-m/ECC와 virgiliojr94/book-to-skill을 ~/agent_hub/hub/ai-trends.md에 추가하고, ECC를 Claude Code 에이전트 워크플로 최적화 후보로 ~/agent_hub/refs/mcp-tools.md 또는 review-tiers.md 인근에 기록
-
-원문 요약: wong2kim의 GitHub 트렌딩 Top 10 스레드 분석. 10개 중 6개가 AI 에이전트 도구이며, Claude Code 생태계(ECC·book-to-skill)와 보이스봇 인프라(airi·speech-to-speech)가 두 축으로 부상했다. affaan-m/ECC가 234.8k 스타로 압도적 1위, moeru-ai/airi가 하루 +797로 최대 증가폭을 기록했다.</div>
-    <select id="delegate-project-feed_e6ff1981da1f401087a1c53b8a15f75c" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_e6ff1981da1f401087a1c53b8a15f75c" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e6ff1981da1f401087a1c53b8a15f75c')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_e6ff1981da1f401087a1c53b8a15f75c" style="display:none">
-    <textarea id="comment-text-feed_e6ff1981da1f401087a1c53b8a15f75c" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_e6ff1981da1f401087a1c53b8a15f75c')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e6ff1981da1f401087a1c53b8a15f75c')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_7aa5e43ac9b0498481072fa5426e0736" data-id="feed_7aa5e43ac9b0498481072fa5426e0736">
-  <div class="card-header">
-    <span class="item-tag" title="feed_7aa5e43ac9b0498481072fa5426e0736">#7aa5e43a</span>
-    
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-07-26</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">퀀트 파이낸스 학습에 유용한 4개의 무료 오픈소스 GitHub 레포지토리(QuantLib, Microsoft Qlib, FinRL, OpenBB)를 소개한다. 유료 강의 없이도 파생상품 가격 산정, ML 기반 알파 팩터, 강화학습 트레이딩, 금융 리서치 플랫폼을 실습할 수 있다. 튜토리얼 시청보다 프로젝트 빌드를 권장한다.</p>
-  <ul class="claims"><li>QuantLib은 파생상품 가격 산정, 고정수익, 수익률 곡선, 리스크 모델링을 학습할 수 있는 오픈소스 라이브러리다</li><li>Microsoft Qlib은 알파 팩터, ML 파이프라인, 포트폴리오 구성, 백테스트를 지원한다</li><li>FinRL은 강화학습 기반 알고리즘 트레이딩과 포트폴리오 최적화를 다룬다</li><li>OpenBB는 주식, 옵션, 매크로이코노믹스, 펀더멘털, 기술적 분석을 위한 전문급 금융 리서치 플랫폼이다</li></ul>
-  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#quant-finance</span> <span class="tag">#open-source</span> <span class="tag">#github</span> <span class="tag">#algorithmic-trading</span> <span class="tag">#machine-learning</span> <span class="tag">#reinforcement-learning</span> <span class="tag">#backtesting</span> <span class="tag">#portfolio-optimization</span></div>
-  <div class="apply-plan">승인 시 alphabot 전략 리서치 참고용으로 ~/dev/Auto_bot/docs/ 또는 ~/agent_hub/refs/quant-resources.md에 QuantLib·Qlib·FinRL·OpenBB 레포 링크와 용도 한 줄 요약을 추가한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_7aa5e43ac9b0498481072fa5426e0736')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_7aa5e43ac9b0498481072fa5426e0736','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_7aa5e43ac9b0498481072fa5426e0736','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_7aa5e43ac9b0498481072fa5426e0736')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_7aa5e43ac9b0498481072fa5426e0736&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_7aa5e43ac9b0498481072fa5426e0736" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/DbNJdFYnTUU/?img_index=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_7aa5e43ac9b0498481072fa5426e0736" style="display:none">
-    <div class="delegate-reference">적용 안내: alphabot 전략 리서치 참고용으로 ~/dev/Auto_bot/docs/ 또는 ~/agent_hub/refs/quant-resources.md에 QuantLib·Qlib·FinRL·OpenBB 레포 링크와 용도 한 줄 요약을 추가한다.
-
-원문 요약: 퀀트 파이낸스 학습에 유용한 4개의 무료 오픈소스 GitHub 레포지토리(QuantLib, Microsoft Qlib, FinRL, OpenBB)를 소개한다. 유료 강의 없이도 파생상품 가격 산정, ML 기반 알파 팩터, 강화학습 트레이딩, 금융 리서치 플랫폼을 실습할 수 있다. 튜토리얼 시청보다 프로젝트 빌드를 권장한다.</div>
-    <select id="delegate-project-feed_7aa5e43ac9b0498481072fa5426e0736" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_7aa5e43ac9b0498481072fa5426e0736" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_7aa5e43ac9b0498481072fa5426e0736')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_7aa5e43ac9b0498481072fa5426e0736')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_7aa5e43ac9b0498481072fa5426e0736" style="display:none">
-    <textarea id="comment-text-feed_7aa5e43ac9b0498481072fa5426e0736" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_7aa5e43ac9b0498481072fa5426e0736')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7aa5e43ac9b0498481072fa5426e0736')">취소</button>
     </div>
   </div>
 </div>
@@ -5412,171 +5635,6 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_5b3d133f5e8a4899bc1459235d0678f7')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5b3d133f5e8a4899bc1459235d0678f7')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_130286eafff3498ea592ce6ebbe44f09" data-id="feed_130286eafff3498ea592ce6ebbe44f09">
-  <div class="card-header">
-    <span class="item-tag" title="feed_130286eafff3498ea592ce6ebbe44f09">#130286ea</span>
-    
-    
-    
-    
-    <span class="platform">Threads</span>
-    <span class="date">2026-07-19</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">NVIDIA가 40개 언어를 실시간 80ms 지연으로 전사하는 600M 파라미터 오픈소스 ASR 모델을 공개했다. 단일 체크포인트로 영어·중국어·아랍어·힌디어·포르투갈어 등을 지원하며, 동일 H100 기준 버퍼드 ASR 대비 17배 많은 동시 스트림을 처리한다. 구두점·대소문자가 내장되어 별도 후처리 없이 자체 GPU에서 무료로 실행 가능하다.</p>
-  <ul class="claims"><li>40개 언어를 단일 체크포인트로 지원하며 80ms 레이턴시 실시간 전사 달성</li><li>H100 기준 버퍼드 ASR 대비 동시 스트림 처리량 17배 향상</li><li>구두점 및 대소문자 처리가 모델에 내장되어 후처리 불필요</li><li>완전 오픈소스로 API 비용 없이 자체 GPU에서 실행 가능</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
-  <div class="tags"><span class="tag">#ASR</span> <span class="tag">#speech-to-text</span> <span class="tag">#NVIDIA</span> <span class="tag">#open-source</span> <span class="tag">#multilingual</span> <span class="tag">#real-time</span> <span class="tag">#local-inference</span> <span class="tag">#600M</span></div>
-  <div class="apply-plan">승인 시 로컬 AI 파이프라인(ai-feed 또는 alphabot 음성 입력)에 활용을 검토한다면, ~/agent_hub/hub/ai-trends.md에 'NVIDIA 오픈소스 ASR 600M (80ms, 40언어, H100 17x 동시처리)' 항목을 추가하고, ~/dev/ai-feed/docs/ 에 로컬 STT 통합 설계 메모를 남긴다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_130286eafff3498ea592ce6ebbe44f09')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_130286eafff3498ea592ce6ebbe44f09','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_130286eafff3498ea592ce6ebbe44f09','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_130286eafff3498ea592ce6ebbe44f09')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_130286eafff3498ea592ce6ebbe44f09&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_130286eafff3498ea592ce6ebbe44f09" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.threads.com/@drcintas/post/Da8PQX-gFV0?xmt=AQG0u8Kv90T6jzKIR-1JSoSXYttEZYaAlkF4fHOGqdxSp_VYAao71k_WbEMalNHwAIWjXABK&slof=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_130286eafff3498ea592ce6ebbe44f09" style="display:none">
-    <div class="delegate-reference">적용 안내: 로컬 AI 파이프라인(ai-feed 또는 alphabot 음성 입력)에 활용을 검토한다면, ~/agent_hub/hub/ai-trends.md에 &#x27;NVIDIA 오픈소스 ASR 600M (80ms, 40언어, H100 17x 동시처리)&#x27; 항목을 추가하고, ~/dev/ai-feed/docs/ 에 로컬 STT 통합 설계 메모를 남긴다.
-
-원문 요약: NVIDIA가 40개 언어를 실시간 80ms 지연으로 전사하는 600M 파라미터 오픈소스 ASR 모델을 공개했다. 단일 체크포인트로 영어·중국어·아랍어·힌디어·포르투갈어 등을 지원하며, 동일 H100 기준 버퍼드 ASR 대비 17배 많은 동시 스트림을 처리한다. 구두점·대소문자가 내장되어 별도 후처리 없이 자체 GPU에서 무료로 실행 가능하다.</div>
-    <select id="delegate-project-feed_130286eafff3498ea592ce6ebbe44f09" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_130286eafff3498ea592ce6ebbe44f09" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_130286eafff3498ea592ce6ebbe44f09')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_130286eafff3498ea592ce6ebbe44f09')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_130286eafff3498ea592ce6ebbe44f09" style="display:none">
-    <textarea id="comment-text-feed_130286eafff3498ea592ce6ebbe44f09" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_130286eafff3498ea592ce6ebbe44f09')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_130286eafff3498ea592ce6ebbe44f09')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_0fc0738710ac475f89a75d35452d3c52" data-id="feed_0fc0738710ac475f89a75d35452d3c52">
-  <div class="card-header">
-    <span class="item-tag" title="feed_0fc0738710ac475f89a75d35452d3c52">#0fc07387</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-07-19</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">AI 응답 품질을 높이는 두 가지 후속 질문 기법: (1) 'AI가 스스로 자신 없는 것을 물어라', (2) 'Sam Altman식 - 내가 놓치고 있는 가장 큰 것이 무엇인가'. 중요한 작업에서는 새 채팅에 결과물을 붙여넣어 fresh 인스턴스로 재평가하는 것이 self-critique보다 신뢰도가 높다.</p>
-  <ul class="claims"><li>AI에게 '지금 가장 자신 없는 게 뭔지' 물으면 4번 중 1번꼴로 치명적인 누락이 발견된다</li><li>같은 모델 인스턴스에서의 self-critique보다 새 채팅에 결과를 붙여넣어 평가하는 것이 자기방어 편향을 우회한다</li><li>후속 질문(3개월 후 고장 이유, 숨겨진 가정, 미진술 전제 등)으로 AI 출력 품질을 일관되게 개선할 수 있다</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
-  <div class="tags"><span class="tag">#프롬프트 기법</span> <span class="tag">#AI 품질</span> <span class="tag">#후속 질문</span> <span class="tag">#self-critique</span> <span class="tag">#Claude</span> <span class="tag">#ChatGPT</span></div>
-  <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 `/gaps`(누락탐지)와 `/critic`(약점공격) 접두어를 AI 응답 후 후속 질문 패턴으로 명시하거나, ~/agent_hub/refs/prompt-commands.md에 'AI 자신 없는 점 질문' 및 'Sam Altman 질문' 템플릿을 추가한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_0fc0738710ac475f89a75d35452d3c52')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_0fc0738710ac475f89a75d35452d3c52','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_0fc0738710ac475f89a75d35452d3c52','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_0fc0738710ac475f89a75d35452d3c52')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_0fc0738710ac475f89a75d35452d3c52&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_0fc0738710ac475f89a75d35452d3c52" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_0fc0738710ac475f89a75d35452d3c52" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/.claude/CLAUDE.md 프롬프트 명령어 섹션에 `/gaps`(누락탐지)와 `/critic`(약점공격) 접두어를 AI 응답 후 후속 질문 패턴으로 명시하거나, ~/agent_hub/refs/prompt-commands.md에 &#x27;AI 자신 없는 점 질문&#x27; 및 &#x27;Sam Altman 질문&#x27; 템플릿을 추가한다.
-
-원문 요약: AI 응답 품질을 높이는 두 가지 후속 질문 기법: (1) &#x27;AI가 스스로 자신 없는 것을 물어라&#x27;, (2) &#x27;Sam Altman식 - 내가 놓치고 있는 가장 큰 것이 무엇인가&#x27;. 중요한 작업에서는 새 채팅에 결과물을 붙여넣어 fresh 인스턴스로 재평가하는 것이 self-critique보다 신뢰도가 높다.</div>
-    <select id="delegate-project-feed_0fc0738710ac475f89a75d35452d3c52" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_0fc0738710ac475f89a75d35452d3c52" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_0fc0738710ac475f89a75d35452d3c52')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_0fc0738710ac475f89a75d35452d3c52')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_0fc0738710ac475f89a75d35452d3c52" style="display:none">
-    <textarea id="comment-text-feed_0fc0738710ac475f89a75d35452d3c52" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_0fc0738710ac475f89a75d35452d3c52')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0fc0738710ac475f89a75d35452d3c52')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_c9e3fa3c59984a639e36d3d517b90b07" data-id="feed_c9e3fa3c59984a639e36d3d517b90b07">
-  <div class="card-header">
-    <span class="item-tag" title="feed_c9e3fa3c59984a639e36d3d517b90b07">#c9e3fa3c</span>
-    
-    
-    
-    
-    <span class="platform">Threads</span>
-    <span class="date">2026-07-19</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">LLM의 장편 소설 작성 시 발생하는 컨텍스트 손실(환각, 인물관계 망각, 복선 추적 실패) 문제를 해결하기 위한 Claude Code 플러그인 'Webnovel Writer'가 GitHub에 공개됐다. 초기 설정부터 챕터 작성·검토·정보 저장·진행 확인까지 전체 파이프라인을 연결하며, 수백 챕터에 걸쳐 배경·복선·개요를 유지하는 것을 핵심 목표로 한다.</p>
-  <ul class="claims"><li>LLM은 대화가 길어질수록 이전 내용, 인물 관계, 복선을 제대로 추적하지 못한다</li><li>Webnovel Writer는 Claude Code에서 실행되며 장편 소설의 전체 제작 과정을 연결하는 플러그인이다</li><li>해당 프로젝트는 수백 챕터에 걸쳐 배경·복선·개요를 AI가 기억하며 작성할 수 있도록 설계됐다</li></ul>
-  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#long-context</span> <span class="tag">#webnovel</span> <span class="tag">#plugin</span> <span class="tag">#memory</span> <span class="tag">#creative-writing</span> <span class="tag">#LLM-limitation</span></div>
-  <div class="apply-plan">승인 시 ai-feed 인사이트로 등록 후 관심 태그 지정; Claude Code 플러그인 생태계 추적 관점에서 ~/agent_hub/hub/ai-trends.md에 'Claude Code 플러그인: 장편소설 컨텍스트 관리' 항목으로 URL과 함께 추가</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_c9e3fa3c59984a639e36d3d517b90b07','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_c9e3fa3c59984a639e36d3d517b90b07','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c9e3fa3c59984a639e36d3d517b90b07&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c9e3fa3c59984a639e36d3d517b90b07" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.threads.com/@orenge_doob/post/Da8MpLMgZzM?xmt=AQG0csdroo4oe1vL6-gLxl254Xq3jDE3LLD_yGxH2oeh7qfM9n-aDlJfmqzmYhI14mK3Rthd&slof=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_c9e3fa3c59984a639e36d3d517b90b07" style="display:none">
-    <div class="delegate-reference">적용 안내: ai-feed 인사이트로 등록 후 관심 태그 지정; Claude Code 플러그인 생태계 추적 관점에서 ~/agent_hub/hub/ai-trends.md에 &#x27;Claude Code 플러그인: 장편소설 컨텍스트 관리&#x27; 항목으로 URL과 함께 추가
-
-원문 요약: LLM의 장편 소설 작성 시 발생하는 컨텍스트 손실(환각, 인물관계 망각, 복선 추적 실패) 문제를 해결하기 위한 Claude Code 플러그인 &#x27;Webnovel Writer&#x27;가 GitHub에 공개됐다. 초기 설정부터 챕터 작성·검토·정보 저장·진행 확인까지 전체 파이프라인을 연결하며, 수백 챕터에 걸쳐 배경·복선·개요를 유지하는 것을 핵심 목표로 한다.</div>
-    <select id="delegate-project-feed_c9e3fa3c59984a639e36d3d517b90b07" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_c9e3fa3c59984a639e36d3d517b90b07" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_c9e3fa3c59984a639e36d3d517b90b07')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_c9e3fa3c59984a639e36d3d517b90b07" style="display:none">
-    <textarea id="comment-text-feed_c9e3fa3c59984a639e36d3d517b90b07" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_c9e3fa3c59984a639e36d3d517b90b07')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c9e3fa3c59984a639e36d3d517b90b07')">취소</button>
     </div>
   </div>
 </div>
@@ -6328,23 +6386,6 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
 </div>
 
-<div class="card locked" id="card-feed_216534a695524038aba6dc0fc608b2d4" data-id="feed_216534a695524038aba6dc0fc608b2d4">
-  <div class="card-header">
-    <span class="item-tag" title="feed_216534a695524038aba6dc0fc608b2d4">#216534a6</span>
-    
-    <span class="badge badge-extraction">Client error &#x27;404 Not Found&#x27; for url &#x27;https://api.supadata.ai/v1/transcript?url=https%3A%2F%2Fwww.instagram.com%2Freel%2FDZ_thYlxfBY%2F&#x27;
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404</span>
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-06-25</span>
-    <span class="badge-lock">🔄 재처리 중 (더 나은 OCR로 다시 읽는 중)</span>
-  </div>
-  <p class="summary">AI 비즈니스로 수익을 단계별로 키우는 3단계 사업 로드맵을 홍보하는 내용이다. 구체적 실행 방법은 공개하지 않고 댓글 키워드 유도를 통해 추가 자료 제공을 안내한다.</p>
-  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
-  <div class="locked-note">완료되면 자동으로 갱신됩니다. 지금은 승인/스킵 불가.</div>
-</div>
-
 <div class="card" id="card-feed_6028001b5c44415ab8d4292796f5e2f6" data-id="feed_6028001b5c44415ab8d4292796f5e2f6">
   <div class="card-header">
     <span class="item-tag" title="feed_6028001b5c44415ab8d4292796f5e2f6">#6028001b</span>
@@ -6461,116 +6502,6 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_abc33c12724946db94b7af6d91a99c40')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_abc33c12724946db94b7af6d91a99c40')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_9dda732b63474c9e95d8d3437d4a0981" data-id="feed_9dda732b63474c9e95d8d3437d4a0981">
-  <div class="card-header">
-    <span class="item-tag" title="feed_9dda732b63474c9e95d8d3437d4a0981">#9dda732b</span>
-    
-    
-    
-    
-    <span class="platform">Threads</span>
-    <span class="date">2026-06-22</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    <a class="issue-num" href="https://github.com/wsungAhn/ai-feed/issues/162" target="_blank" rel="noopener">#162</a>
-  </div>
-  <p class="summary">구글의 Gemma 4 로컬 모델과 에이전트 IDE Antigravity 조합으로 클라우드 AI 구독 없이 로컬 AI 개발 환경을 구축할 수 있다는 내용. 비용 절감형 로컬 AI 스택으로 개발자들 사이에서 주목받고 있다.</p>
-  <ul class="claims"><li>구글이 Gemma 4를 최근 발표했다</li><li>Antigravity는 에이전트 기능을 갖춘 IDE다</li><li>Gemma 4 + Antigravity 조합으로 로컬에서 AI 개발 환경 구축이 가능하다</li></ul>
-  <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
-  <div class="tags"><span class="tag">#Gemma4</span> <span class="tag">#Antigravity</span> <span class="tag">#로컬AI</span> <span class="tag">#에이전트IDE</span> <span class="tag">#비용절감</span> <span class="tag">#구글</span></div>
-  <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 Gemma 4 + Antigravity 로컬 스택 항목을 추가하고, ~/agent_hub/refs/projects.md 또는 메모리의 로컬 모델 비교 실험 문서에 Gemma 4를 다음 로컬 모델 벤치마크 후보로 등록한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_9dda732b63474c9e95d8d3437d4a0981')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_9dda732b63474c9e95d8d3437d4a0981','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_9dda732b63474c9e95d8d3437d4a0981','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_9dda732b63474c9e95d8d3437d4a0981')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_9dda732b63474c9e95d8d3437d4a0981&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_9dda732b63474c9e95d8d3437d4a0981" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.threads.com/@work.less.better/post/DYHLiXegbdB?xmt=AQG0tFbhyFVCasRM2OvrdXWitN7Ye9kpsjuHUoSg-9tD3NOPVoYMTJvszHnilmvUXBVf8Ek&slof=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_9dda732b63474c9e95d8d3437d4a0981" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 Gemma 4 + Antigravity 로컬 스택 항목을 추가하고, ~/agent_hub/refs/projects.md 또는 메모리의 로컬 모델 비교 실험 문서에 Gemma 4를 다음 로컬 모델 벤치마크 후보로 등록한다.
-
-원문 요약: 구글의 Gemma 4 로컬 모델과 에이전트 IDE Antigravity 조합으로 클라우드 AI 구독 없이 로컬 AI 개발 환경을 구축할 수 있다는 내용. 비용 절감형 로컬 AI 스택으로 개발자들 사이에서 주목받고 있다.</div>
-    <select id="delegate-project-feed_9dda732b63474c9e95d8d3437d4a0981" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_9dda732b63474c9e95d8d3437d4a0981" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_9dda732b63474c9e95d8d3437d4a0981')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_9dda732b63474c9e95d8d3437d4a0981')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_9dda732b63474c9e95d8d3437d4a0981" style="display:none">
-    <textarea id="comment-text-feed_9dda732b63474c9e95d8d3437d4a0981" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_9dda732b63474c9e95d8d3437d4a0981')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_9dda732b63474c9e95d8d3437d4a0981')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_c7687d44558645b599b3af3b99e9f1b4" data-id="feed_c7687d44558645b599b3af3b99e9f1b4">
-  <div class="card-header">
-    <span class="item-tag" title="feed_c7687d44558645b599b3af3b99e9f1b4">#c7687d44</span>
-    
-    
-    
-    
-    <span class="platform">Threads</span>
-    <span class="date">2026-06-22</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    <a class="issue-num" href="https://github.com/wsungAhn/ai-feed/issues/163" target="_blank" rel="noopener">#163</a>
-  </div>
-  <p class="summary">GitHub에서 별 11,900개를 받은 Open-Generative-AI 저장소가 이미지, 비디오, 립싱크, LLM 등 200개 이상의 생성형 AI 도구를 MIT 라이선스로 무료 통합 제공한다. ChatGPT, Midjourney, Sora의 오픈소스 대체제를 단일 허브에서 접근할 수 있다는 점이 핵심이다.</p>
-  <ul class="claims"><li>Open-Generative-AI 저장소는 GitHub에서 별 11,900개를 보유하고 있다</li><li>이미지, 비디오, 립싱크, LLM을 포함한 200개 이상의 AI 도구가 통합되어 있다</li><li>MIT 라이선스로 무료 사용 가능하며 ChatGPT/Midjourney/Sora의 오픈소스 대체제를 표방한다</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
-  <div class="tags"><span class="tag">#open-source</span> <span class="tag">#generative-ai</span> <span class="tag">#LLM</span> <span class="tag">#image-generation</span> <span class="tag">#video-generation</span> <span class="tag">#lip-sync</span> <span class="tag">#MIT</span> <span class="tag">#GitHub</span></div>
-  <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 Open-Generative-AI 저장소를 신규 항목으로 추가하고, local-ai 카테고리 후보 목록에 등재해 실제 GitHub URL 및 모델별 라이선스 검증 후 로컬 추론 실험 대상으로 검토</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_c7687d44558645b599b3af3b99e9f1b4')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_c7687d44558645b599b3af3b99e9f1b4','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_c7687d44558645b599b3af3b99e9f1b4','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c7687d44558645b599b3af3b99e9f1b4')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c7687d44558645b599b3af3b99e9f1b4&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c7687d44558645b599b3af3b99e9f1b4" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.threads.com/@qjc.ai/post/DYGsAL_k0YQ?xmt=AQG01de5kxOEg0Cg9CtEi1dc9IXO6is79FTUfG-svEyN60VeGI9c8oti07eucbtJQSH_ICG4&slof=1" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_c7687d44558645b599b3af3b99e9f1b4" style="display:none">
-    <div class="delegate-reference">적용 안내: ~/agent_hub/hub/ai-trends.md에 Open-Generative-AI 저장소를 신규 항목으로 추가하고, local-ai 카테고리 후보 목록에 등재해 실제 GitHub URL 및 모델별 라이선스 검증 후 로컬 추론 실험 대상으로 검토
-
-원문 요약: GitHub에서 별 11,900개를 받은 Open-Generative-AI 저장소가 이미지, 비디오, 립싱크, LLM 등 200개 이상의 생성형 AI 도구를 MIT 라이선스로 무료 통합 제공한다. ChatGPT, Midjourney, Sora의 오픈소스 대체제를 단일 허브에서 접근할 수 있다는 점이 핵심이다.</div>
-    <select id="delegate-project-feed_c7687d44558645b599b3af3b99e9f1b4" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_c7687d44558645b599b3af3b99e9f1b4" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_c7687d44558645b599b3af3b99e9f1b4')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_c7687d44558645b599b3af3b99e9f1b4')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_c7687d44558645b599b3af3b99e9f1b4" style="display:none">
-    <textarea id="comment-text-feed_c7687d44558645b599b3af3b99e9f1b4" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_c7687d44558645b599b3af3b99e9f1b4')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c7687d44558645b599b3af3b99e9f1b4')">취소</button>
     </div>
   </div>
 </div>
