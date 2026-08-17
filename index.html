@@ -178,9 +178,60 @@
 <p>검토 대기 항목이 없습니다.</p>
   </div>
 </section>
-<h2 class="section-title">승인됨 · 적용 보류 (31)</h2>
+<h2 class="section-title">승인됨 · 적용 보류 (32)</h2>
 <section class="pending-section">
   <div class="grid">
+
+<div class="card pending-apply" id="card-feed_2d1fc5256d084ca08a36b522d7e0f867" data-id="feed_2d1fc5256d084ca08a36b522d7e0f867">
+  <div class="card-header">
+    <span class="item-tag" title="feed_2d1fc5256d084ca08a36b522d7e0f867">#2d1fc525</span>
+    <span class="platform">Web</span>
+    <span class="date">2026-08-10</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    
+    
+    <span class="badge-pending">승인됨 · 적용 보류</span>
+  </div>
+  <p class="summary">XunZi는 Nature Biomedical Engineering(2026)에 발표된 AI 생물학자 시스템으로, 2440만 건의 생물의학 논문과 613.6TB의 다중 소스 생물학 데이터를 학습해 질병 관련 치료 타겟을 발굴한다. 멀티오믹스 학습 모듈(XunZi-M)과 Mistral-7B 기반 기계론적 추론 모델(XunZi-R)로 구성되며, 파킨슨병·비소세포폐암에서 실험적으로 검증됐다. 오픈소스(MIT)로 공개되어 HuggingFace에서 모델 체크포인트를 내려받아 로컬 실행이 가능하다.</p>
+  <div class="apply-plan">적용하면: 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.</div>
+  <div class="pending-reason">보류 사유: 자동적용 대상 surface 아님: ai-tools, local-ai</div>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#AI biologist</span> <span class="tag">#therapeutic target discovery</span> <span class="tag">#multi-omics</span> <span class="tag">#Mistral-7B</span> <span class="tag">#LoRA</span> <span class="tag">#biomedical reasoning</span> <span class="tag">#drug discovery</span> <span class="tag">#graph neural network</span></div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">지금 적용</button>
+    <button class="btn-secondary" onclick="applyNow('feed_2d1fc5256d084ca08a36b522d7e0f867')">자동적용 실행</button>
+    <button class="btn-reject" onclick="dismissPending('feed_2d1fc5256d084ca08a36b522d7e0f867')">적용 안 함</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">💬 의견</button>
+    <a href="https://github.com/biocuckooHXH/XunZi" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_2d1fc5256d084ca08a36b522d7e0f867" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
+새 AI 툴·모델·프레임워크 동향 추적에 활용.
+
+원문 요약: XunZi는 Nature Biomedical Engineering(2026)에 발표된 AI 생물학자 시스템으로, 2440만 건의 생물의학 논문과 613.6TB의 다중 소스 생물학 데이터를 학습해 질병 관련 치료 타겟을 발굴한다. 멀티오믹스 학습 모듈(XunZi-M)과 Mistral-7B 기반 기계론적 추론 모델(XunZi-R)로 구성되며, 파킨슨병·비소세포폐암에서 실험적으로 검증됐다. 오픈소스(MIT)로 공개되어 HuggingFace에서 모델 체크포인트를 내려받아 로컬 실행이 가능하다.</div>
+    <select id="delegate-project-feed_2d1fc5256d084ca08a36b522d7e0f867" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_2d1fc5256d084ca08a36b522d7e0f867" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_2d1fc5256d084ca08a36b522d7e0f867')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_2d1fc5256d084ca08a36b522d7e0f867" style="display:none">
+    <textarea id="comment-text-feed_2d1fc5256d084ca08a36b522d7e0f867" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_2d1fc5256d084ca08a36b522d7e0f867')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card pending-apply" id="card-feed_ca1a8a364bae40eab771e843f65a4ba1" data-id="feed_ca1a8a364bae40eab771e843f65a4ba1">
   <div class="card-header">
@@ -1695,7 +1746,7 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 113건</p>
+<p class="count">승인 대기 112건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_cf3e35ba242740218066eff7107f2356" data-id="feed_cf3e35ba242740218066eff7107f2356">
@@ -1969,63 +2020,6 @@
     <div class="comment-actions">
       <button class="btn-comment-submit" onclick="submitComment('feed_a2b45a141def4d528578f967286d3156')">제출</button>
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a2b45a141def4d528578f967286d3156')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_2d1fc5256d084ca08a36b522d7e0f867" data-id="feed_2d1fc5256d084ca08a36b522d7e0f867">
-  <div class="card-header">
-    <span class="item-tag" title="feed_2d1fc5256d084ca08a36b522d7e0f867">#2d1fc525</span>
-    
-    
-    
-    
-    <span class="platform">Web</span>
-    <span class="date">2026-08-10</span>
-    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
-    
-  </div>
-  <p class="summary">XunZi는 Nature Biomedical Engineering(2026)에 발표된 AI 생물학자 시스템으로, 2440만 건의 생물의학 논문과 613.6TB의 다중 소스 생물학 데이터를 학습해 질병 관련 치료 타겟을 발굴한다. 멀티오믹스 학습 모듈(XunZi-M)과 Mistral-7B 기반 기계론적 추론 모델(XunZi-R)로 구성되며, 파킨슨병·비소세포폐암에서 실험적으로 검증됐다. 오픈소스(MIT)로 공개되어 HuggingFace에서 모델 체크포인트를 내려받아 로컬 실행이 가능하다.</p>
-  <ul class="claims"><li>24.4백만 건 생물의학 논문 + 613.6TB 다중 소스 생물학 데이터로 학습, 21,008개 인간 유전자·5,850개 질환 커버</li><li>Mistral-7B 기반 LoRA 어댑터(XunZi-R)로 유전자-질환 기계론적 가설을 자연어로 생성</li><li>파킨슨병 및 비소세포폐암 모델에서 예측 결과가 실험적으로 검증됨</li><li>MIT 라이선스로 오픈소스 공개, HuggingFace에 모델·데이터셋 배포</li></ul>
-  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
-  <div class="tags"><span class="tag">#AI biologist</span> <span class="tag">#therapeutic target discovery</span> <span class="tag">#multi-omics</span> <span class="tag">#Mistral-7B</span> <span class="tag">#LoRA</span> <span class="tag">#biomedical reasoning</span> <span class="tag">#drug discovery</span> <span class="tag">#graph neural network</span></div>
-  <div class="apply-plan">승인 시 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
-새 AI 툴·모델·프레임워크 동향 추적에 활용.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_2d1fc5256d084ca08a36b522d7e0f867','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_2d1fc5256d084ca08a36b522d7e0f867','debunk')">🚫 알고보니 별로</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_2d1fc5256d084ca08a36b522d7e0f867&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_2d1fc5256d084ca08a36b522d7e0f867" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://github.com/biocuckooHXH/XunZi" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_2d1fc5256d084ca08a36b522d7e0f867" style="display:none">
-    <div class="delegate-reference">적용 안내: 승인 시 → `outputs/ai-tools-insights/` 도구 인사이트 컬렉션에 추가.
-새 AI 툴·모델·프레임워크 동향 추적에 활용.
-
-원문 요약: XunZi는 Nature Biomedical Engineering(2026)에 발표된 AI 생물학자 시스템으로, 2440만 건의 생물의학 논문과 613.6TB의 다중 소스 생물학 데이터를 학습해 질병 관련 치료 타겟을 발굴한다. 멀티오믹스 학습 모듈(XunZi-M)과 Mistral-7B 기반 기계론적 추론 모델(XunZi-R)로 구성되며, 파킨슨병·비소세포폐암에서 실험적으로 검증됐다. 오픈소스(MIT)로 공개되어 HuggingFace에서 모델 체크포인트를 내려받아 로컬 실행이 가능하다.</div>
-    <select id="delegate-project-feed_2d1fc5256d084ca08a36b522d7e0f867" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_2d1fc5256d084ca08a36b522d7e0f867" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_2d1fc5256d084ca08a36b522d7e0f867')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_2d1fc5256d084ca08a36b522d7e0f867" style="display:none">
-    <textarea id="comment-text-feed_2d1fc5256d084ca08a36b522d7e0f867" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_2d1fc5256d084ca08a36b522d7e0f867')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2d1fc5256d084ca08a36b522d7e0f867')">취소</button>
     </div>
   </div>
 </div>
