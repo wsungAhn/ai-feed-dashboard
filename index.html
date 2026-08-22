@@ -168,7 +168,7 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-08-21</span>
+  <span class="meta">업데이트: 2026-08-22</span>
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
@@ -4714,8 +4714,623 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 34건</p>
+<p class="count">승인 대기 45건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" data-id="feed_32fa2f887cd74ab8bcbf6654a1cfdae7">
+  <div class="card-header">
+    <span class="item-tag" title="feed_32fa2f887cd74ab8bcbf6654a1cfdae7">#32fa2f88</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">멀티에이전트 시스템을 API 키 없이 구독($240/월)으로 운영해 API 대비 약 95% 비용 절감. 고비용 모델(Claude)은 기획·명세만, 저비용 모델(GLM/Codex)은 실제 구현 담당하는 티어 분리 전략. 토큰 폭발 방지를 위해 spawn 2단계 제한, 런당 토큰 상한, 2K 초과 시 요약 강제 적용.</p>
+  <ul class="claims"><li>Anthropic 측정: 멀티에이전트 실행은 일반 채팅 대비 15x 토큰 소모</li><li>API 기준 $15,000 작업이 구독 기반에서 $800 수준 ($240/월 × 3 구독)</li><li>워커가 600 토큰 브리프를 받아 40K+ 토큰 작업 후 1~2K 요약 반환</li><li>두 단계 spawn 제한 + 런당 토큰 상한 + 2K 초과 자동 요약으로 런어웨이 방지</li></ul>
+  <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#멀티에이전트</span> <span class="tag">#토큰최적화</span> <span class="tag">#비용절감</span> <span class="tag">#티어분리</span> <span class="tag">#구독기반AI</span> <span class="tag">#가드레일</span></div>
+  <div class="apply-plan">승인 시 ~/agent_hub/docs/design-task-routing-cascade.md의 모델 라우팅 섹션에 '구독 기반 런당 토큰 상한 + 2단계 spawn 제한 + 2K 초과 자동 요약' 가드레일 패턴을 참조 설계로 추가하고, 현행 Sonnet 오케스트레이터 + Codex 구현 분리 구조와 비용 비교 수치를 병기.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_32fa2f887cd74ab8bcbf6654a1cfdae7','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_32fa2f887cd74ab8bcbf6654a1cfdae7','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_32fa2f887cd74ab8bcbf6654a1cfdae7&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_32fa2f887cd74ab8bcbf6654a1cfdae7" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DcR-CYckYW9/?img_index=6&igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/agent_hub/docs/design-task-routing-cascade.md의 모델 라우팅 섹션에 &#x27;구독 기반 런당 토큰 상한 + 2단계 spawn 제한 + 2K 초과 자동 요약&#x27; 가드레일 패턴을 참조 설계로 추가하고, 현행 Sonnet 오케스트레이터 + Codex 구현 분리 구조와 비용 비교 수치를 병기.
+
+원문 요약: 멀티에이전트 시스템을 API 키 없이 구독($240/월)으로 운영해 API 대비 약 95% 비용 절감. 고비용 모델(Claude)은 기획·명세만, 저비용 모델(GLM/Codex)은 실제 구현 담당하는 티어 분리 전략. 토큰 폭발 방지를 위해 spawn 2단계 제한, 런당 토큰 상한, 2K 초과 시 요약 강제 적용.</div>
+    <select id="delegate-project-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" style="display:none">
+    <textarea id="comment-text-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_54f13fc595cc4032a2d519522d60bb9d" data-id="feed_54f13fc595cc4032a2d519522d60bb9d">
+  <div class="card-header">
+    <span class="item-tag" title="feed_54f13fc595cc4032a2d519522d60bb9d">#54f13fc5</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">AI 도구(Claude/Codex)를 활용해 영상 편집 워크플로우를 자동화하는 방법을 소개하는 짧은 영상 캡션. 폴더 생성 → Claude/Codex로 열기 → 관련 레포 클론 → 편집 소프트웨어 연결 순서로 구성됨. 구체적 레포나 기술 세부사항은 없고 '다음 릴'을 예고하는 티저 형식.</p>
+  <ul class="claims"><li>Claude 또는 Codex를 사용해 영상 편집을 자동화할 수 있다</li><li>GitHub 레포들을 클론해 편집 소프트웨어와 연결하는 워크플로우가 존재한다</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#video-editing</span> <span class="tag">#ai-automation</span> <span class="tag">#claude</span> <span class="tag">#codex</span> <span class="tag">#workflow</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_54f13fc595cc4032a2d519522d60bb9d')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_54f13fc595cc4032a2d519522d60bb9d','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_54f13fc595cc4032a2d519522d60bb9d','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_54f13fc595cc4032a2d519522d60bb9d')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_54f13fc595cc4032a2d519522d60bb9d&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_54f13fc595cc4032a2d519522d60bb9d" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/Db7PQ8nkiZB/?img_index=5&igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_54f13fc595cc4032a2d519522d60bb9d" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;🛠 AI 도구·모델 동향&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: AI 도구(Claude/Codex)를 활용해 영상 편집 워크플로우를 자동화하는 방법을 소개하는 짧은 영상 캡션. 폴더 생성 → Claude/Codex로 열기 → 관련 레포 클론 → 편집 소프트웨어 연결 순서로 구성됨. 구체적 레포나 기술 세부사항은 없고 &#x27;다음 릴&#x27;을 예고하는 티저 형식.</div>
+    <select id="delegate-project-feed_54f13fc595cc4032a2d519522d60bb9d" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_54f13fc595cc4032a2d519522d60bb9d" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_54f13fc595cc4032a2d519522d60bb9d')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_54f13fc595cc4032a2d519522d60bb9d')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_54f13fc595cc4032a2d519522d60bb9d" style="display:none">
+    <textarea id="comment-text-feed_54f13fc595cc4032a2d519522d60bb9d" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_54f13fc595cc4032a2d519522d60bb9d')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_54f13fc595cc4032a2d519522d60bb9d')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_654b660d54f34b2d8f9ace9a582b962a" data-id="feed_654b660d54f34b2d8f9ace9a582b962a">
+  <div class="card-header">
+    <span class="item-tag" title="feed_654b660d54f34b2d8f9ace9a582b962a">#654b660d</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">데이트레이딩 전략을 비공식적으로 공유하는 짧은 영상 클립. ICT(Inner Circle Trader) 개념인 밸류갭, 리퀴디티(equal lows/highs)를 활용하는 진입 방식으로 보인다. 음성 인식 품질이 낮아 정확한 전략 파악이 어렵다.</p>
+  <ul class="claims"><li>I-30(30분봉 또는 특정 지수) 오픈 시점을 대기한 후 진입</li><li>1시간봉 기준 밸류갭(Value Gap) 확인 후 B-shape 패턴 대기</li><li>Equal lows / equal highs 형태의 리퀴디티 구간을 진입 트리거로 활용</li></ul>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#daytrading</span> <span class="tag">#ICT</span> <span class="tag">#value-gap</span> <span class="tag">#liquidity</span> <span class="tag">#equal-highs-lows</span> <span class="tag">#price-action</span></div>
+  <div class="apply-plan">승인 시 검증 가치 낮음 — 적용 보류. 단, ICT 밸류갭+리퀴디티 개념이 alphabot 리서치 모듈에 아직 없다면 ~/dev/Auto_bot 리서치 노트에 'ICT value gap entry' 키워드로 메모 추가 후 정식 소스(ICT 원본 강의)로 재검증 선행.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_654b660d54f34b2d8f9ace9a582b962a')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_654b660d54f34b2d8f9ace9a582b962a','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_654b660d54f34b2d8f9ace9a582b962a','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_654b660d54f34b2d8f9ace9a582b962a')">💬 의견</button>
+
+    
+    <a href="https://www.instagram.com/reel/DYX1KQkhqN6/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_654b660d54f34b2d8f9ace9a582b962a" style="display:none">
+    <div class="delegate-reference">적용 안내: 검증 가치 낮음 — 적용 보류. 단, ICT 밸류갭+리퀴디티 개념이 alphabot 리서치 모듈에 아직 없다면 ~/dev/Auto_bot 리서치 노트에 &#x27;ICT value gap entry&#x27; 키워드로 메모 추가 후 정식 소스(ICT 원본 강의)로 재검증 선행.
+
+원문 요약: 데이트레이딩 전략을 비공식적으로 공유하는 짧은 영상 클립. ICT(Inner Circle Trader) 개념인 밸류갭, 리퀴디티(equal lows/highs)를 활용하는 진입 방식으로 보인다. 음성 인식 품질이 낮아 정확한 전략 파악이 어렵다.</div>
+    <select id="delegate-project-feed_654b660d54f34b2d8f9ace9a582b962a" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_654b660d54f34b2d8f9ace9a582b962a" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_654b660d54f34b2d8f9ace9a582b962a')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_654b660d54f34b2d8f9ace9a582b962a')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_654b660d54f34b2d8f9ace9a582b962a" style="display:none">
+    <textarea id="comment-text-feed_654b660d54f34b2d8f9ace9a582b962a" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_654b660d54f34b2d8f9ace9a582b962a')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_654b660d54f34b2d8f9ace9a582b962a')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_6725e1dec889489398444778a7743298" data-id="feed_6725e1dec889489398444778a7743298">
+  <div class="card-header">
+    <span class="item-tag" title="feed_6725e1dec889489398444778a7743298">#6725e1de</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#d1fae5;color:#14532d;padding:2px 8px;border-radius:999px;font-size:12px">HIGH</span>
+    
+  </div>
+  <p class="summary">Kalman 필터는 관측 불가능한 값의 추정치와 그 분산을 함께 유지하며, 가우시안 노이즈 조건에서 최소 분산 해를 제공한다. 각 스텝에서 모델로 추정치를 전진시키고, 프로세스 노이즈만큼 분산을 높인 뒤, Kalman gain × (측정값 - 예측값)으로 추정치를 갱신한다. 퀀트 파이낸스와 시계열 통계 모델링에서 핵심 기법으로 활용된다.</p>
+  <ul class="claims"><li>Kalman 필터는 가우시안 프로세스 및 측정 노이즈 조건 하에서 최소 분산 추정치를 제공한다</li><li>각 스텝은 모델 전진 → 분산 증가(프로세스 노이즈) → Kalman gain 기반 보정의 3단계로 구성된다</li><li>갱신 공식: 새 추정치 = 이전 추정치 + Kalman gain × (측정값 - 예측값)</li></ul>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#kalman-filter</span> <span class="tag">#quantfinance</span> <span class="tag">#time-series</span> <span class="tag">#statistical-modeling</span> <span class="tag">#signal-processing</span></div>
+  <div class="apply-plan">승인 시 alphabot의 regime-signals 또는 리서치 모듈에서 숨겨진 상태(예: 진짜 추세, 변동성 레짐)를 추적하는 용도로 Kalman 필터를 도입 검토 — ~/dev/Auto_bot 또는 ~/dev/trader의 시그널 생성 모듈에 kalman_filter.py를 추가하고 가격/수익률 시계열의 노이즈 제거 또는 동적 베타 추정에 적용</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_6725e1dec889489398444778a7743298')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_6725e1dec889489398444778a7743298','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_6725e1dec889489398444778a7743298','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_6725e1dec889489398444778a7743298')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_6725e1dec889489398444778a7743298&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_6725e1dec889489398444778a7743298" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/reel/DZLvSg_IknL/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_6725e1dec889489398444778a7743298" style="display:none">
+    <div class="delegate-reference">적용 안내: alphabot의 regime-signals 또는 리서치 모듈에서 숨겨진 상태(예: 진짜 추세, 변동성 레짐)를 추적하는 용도로 Kalman 필터를 도입 검토 — ~/dev/Auto_bot 또는 ~/dev/trader의 시그널 생성 모듈에 kalman_filter.py를 추가하고 가격/수익률 시계열의 노이즈 제거 또는 동적 베타 추정에 적용
+
+원문 요약: Kalman 필터는 관측 불가능한 값의 추정치와 그 분산을 함께 유지하며, 가우시안 노이즈 조건에서 최소 분산 해를 제공한다. 각 스텝에서 모델로 추정치를 전진시키고, 프로세스 노이즈만큼 분산을 높인 뒤, Kalman gain × (측정값 - 예측값)으로 추정치를 갱신한다. 퀀트 파이낸스와 시계열 통계 모델링에서 핵심 기법으로 활용된다.</div>
+    <select id="delegate-project-feed_6725e1dec889489398444778a7743298" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_6725e1dec889489398444778a7743298" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_6725e1dec889489398444778a7743298')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_6725e1dec889489398444778a7743298')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_6725e1dec889489398444778a7743298" style="display:none">
+    <textarea id="comment-text-feed_6725e1dec889489398444778a7743298" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_6725e1dec889489398444778a7743298')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6725e1dec889489398444778a7743298')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_e401b371e7594855b440f0d34988df74" data-id="feed_e401b371e7594855b440f0d34988df74">
+  <div class="card-header">
+    <span class="item-tag" title="feed_e401b371e7594855b440f0d34988df74">#e401b371</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">2026년 주목할 RAG 아키텍처 5가지(Hybrid, GraphRAG, Agentic, Corrective, Multimodal)와 각각의 실제 비용/트레이드오프를 실무 관점에서 정리. 이들은 단독보다 조합해서 쓰이며, 추가 컴포넌트마다 레이턴시와 장애 포인트가 늘어남. Corrective RAG의 핵심은 관련 없는 문서를 모델이 보기 전에 차단하는 것.</p>
+  <ul class="claims"><li>Hybrid RAG(벡터+BM25 융합)는 반나절 작업으로 구현 가능하며 정확 문자열 조회 실패 유형을 제거한다</li><li>GraphRAG의 엔티티 해소(entity resolution)는 팀 전체 쿼터를 소모할 수 있다</li><li>Agentic RAG는 예측 가능한 레이턴시를 희생하며 반복 횟수 상한과 플래너 결정 로깅이 필수다</li><li>Corrective RAG에서 관련 없는 문서를 검색하는 것은 아무것도 검색하지 않는 것보다 나쁘다</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#RAG</span> <span class="tag">#Hybrid RAG</span> <span class="tag">#GraphRAG</span> <span class="tag">#Agentic RAG</span> <span class="tag">#Corrective RAG</span> <span class="tag">#Multimodal RAG</span> <span class="tag">#AI 아키텍처</span> <span class="tag">#검색 증강 생성</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_e401b371e7594855b440f0d34988df74')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_e401b371e7594855b440f0d34988df74','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_e401b371e7594855b440f0d34988df74','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_e401b371e7594855b440f0d34988df74')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e401b371e7594855b440f0d34988df74&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e401b371e7594855b440f0d34988df74" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DcPqlheDk_b/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_e401b371e7594855b440f0d34988df74" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;🛠 AI 도구·모델 동향&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: 2026년 주목할 RAG 아키텍처 5가지(Hybrid, GraphRAG, Agentic, Corrective, Multimodal)와 각각의 실제 비용/트레이드오프를 실무 관점에서 정리. 이들은 단독보다 조합해서 쓰이며, 추가 컴포넌트마다 레이턴시와 장애 포인트가 늘어남. Corrective RAG의 핵심은 관련 없는 문서를 모델이 보기 전에 차단하는 것.</div>
+    <select id="delegate-project-feed_e401b371e7594855b440f0d34988df74" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_e401b371e7594855b440f0d34988df74" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e401b371e7594855b440f0d34988df74')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e401b371e7594855b440f0d34988df74')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_e401b371e7594855b440f0d34988df74" style="display:none">
+    <textarea id="comment-text-feed_e401b371e7594855b440f0d34988df74" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_e401b371e7594855b440f0d34988df74')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e401b371e7594855b440f0d34988df74')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_bebcec4bcf29422593a55b8fe550bdbd" data-id="feed_bebcec4bcf29422593a55b8fe550bdbd">
+  <div class="card-header">
+    <span class="item-tag" title="feed_bebcec4bcf29422593a55b8fe550bdbd">#bebcec4b</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">Claude AI를 TradingView에 연결해 주식, 지수, 암호화폐를 자동 거래하는 설정을 소개하는 소셜 미디어 캡션. 구체적인 기술 구현 내용 없이 'TRADING VIEW' 댓글로 가이드 제공을 유도하는 마케팅성 게시물이다.</p>
+  <ul class="claims"><li>Claude AI를 TradingView에 연결해 주식·지수·암호화폐 자동 거래가 가능하다</li><li>댓글로 설정 가이드를 제공한다</li></ul>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#claude</span> <span class="tag">#tradingview</span> <span class="tag">#자동매매</span> <span class="tag">#AI트레이딩</span> <span class="tag">#암호화폐</span></div>
+  <div class="apply-plan">승인 시 ~/agent_hub/refs/workflow.md 또는 alphabot 관련 설계문서에 'TradingView webhook → Claude 판단 → 자동 주문' 파이프라인 아키텍처 검토 항목으로 추가 검토 후, 실제 구현 방식 확인 시 ~/dev/Auto_bot 또는 ~/dev/trader에 TradingView 인테그레이션 실험 브랜치 생성 고려</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_bebcec4bcf29422593a55b8fe550bdbd')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_bebcec4bcf29422593a55b8fe550bdbd','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_bebcec4bcf29422593a55b8fe550bdbd','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_bebcec4bcf29422593a55b8fe550bdbd')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_bebcec4bcf29422593a55b8fe550bdbd&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_bebcec4bcf29422593a55b8fe550bdbd" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/Db_clOglfhT/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_bebcec4bcf29422593a55b8fe550bdbd" style="display:none">
+    <div class="delegate-reference">적용 안내: ~/agent_hub/refs/workflow.md 또는 alphabot 관련 설계문서에 &#x27;TradingView webhook → Claude 판단 → 자동 주문&#x27; 파이프라인 아키텍처 검토 항목으로 추가 검토 후, 실제 구현 방식 확인 시 ~/dev/Auto_bot 또는 ~/dev/trader에 TradingView 인테그레이션 실험 브랜치 생성 고려
+
+원문 요약: Claude AI를 TradingView에 연결해 주식, 지수, 암호화폐를 자동 거래하는 설정을 소개하는 소셜 미디어 캡션. 구체적인 기술 구현 내용 없이 &#x27;TRADING VIEW&#x27; 댓글로 가이드 제공을 유도하는 마케팅성 게시물이다.</div>
+    <select id="delegate-project-feed_bebcec4bcf29422593a55b8fe550bdbd" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_bebcec4bcf29422593a55b8fe550bdbd" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_bebcec4bcf29422593a55b8fe550bdbd')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_bebcec4bcf29422593a55b8fe550bdbd')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_bebcec4bcf29422593a55b8fe550bdbd" style="display:none">
+    <textarea id="comment-text-feed_bebcec4bcf29422593a55b8fe550bdbd" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_bebcec4bcf29422593a55b8fe550bdbd')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bebcec4bcf29422593a55b8fe550bdbd')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_45699b05b1d84516b15767789a23d9db" data-id="feed_45699b05b1d84516b15767789a23d9db">
+  <div class="card-header">
+    <span class="item-tag" title="feed_45699b05b1d84516b15767789a23d9db">#45699b05</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">영보스매거진이 소개하는 초기 자본 없이 사업을 시작할 때 쓸 수 있는 무료 도구 모음. 시장조사(네이버 데이터랩, Google Trends), 기획(ChatGPT, Perplexity), 브랜드 디자인(미리캔버스, Canva), 신청 페이지(Tally, 카카오 비즈니스폼) 등 창업 단계별로 무료 SaaS를 제시한다. 핵심 철학은 '제품 먼저 만들지 말고 수요 먼저 확인'이다.</p>
+  <ul class="claims"><li>네이버 데이터랩으로 검색어 추이와 쇼핑 분야별 관심도를 무료로 확인할 수 있다</li><li>Tally는 신청 폼과 응답을 제한 없이 무료로 받을 수 있다</li><li>영보스매거진은 초기 자본 없이 순수 콘텐츠 체급으로 성장해 전자책·컨설팅을 판매하고 있다</li><li>AI 도구는 사업을 대신 기획하게 하는 것이 아니라 내 생각에서 빠진 질문을 찾는 용도로 써야 한다</li></ul>
+  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#무자본창업</span> <span class="tag">#무료툴</span> <span class="tag">#소자본사업</span> <span class="tag">#린스타트업</span> <span class="tag">#시장조사</span> <span class="tag">#AI활용창업</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_45699b05b1d84516b15767789a23d9db')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_45699b05b1d84516b15767789a23d9db','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_45699b05b1d84516b15767789a23d9db','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_45699b05b1d84516b15767789a23d9db')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_45699b05b1d84516b15767789a23d9db&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_45699b05b1d84516b15767789a23d9db" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_45699b05b1d84516b15767789a23d9db" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💼 AI 비즈니스·수익화&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: 영보스매거진이 소개하는 초기 자본 없이 사업을 시작할 때 쓸 수 있는 무료 도구 모음. 시장조사(네이버 데이터랩, Google Trends), 기획(ChatGPT, Perplexity), 브랜드 디자인(미리캔버스, Canva), 신청 페이지(Tally, 카카오 비즈니스폼) 등 창업 단계별로 무료 SaaS를 제시한다. 핵심 철학은 &#x27;제품 먼저 만들지 말고 수요 먼저 확인&#x27;이다.</div>
+    <select id="delegate-project-feed_45699b05b1d84516b15767789a23d9db" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_45699b05b1d84516b15767789a23d9db" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_45699b05b1d84516b15767789a23d9db')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_45699b05b1d84516b15767789a23d9db')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_45699b05b1d84516b15767789a23d9db" style="display:none">
+    <textarea id="comment-text-feed_45699b05b1d84516b15767789a23d9db" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_45699b05b1d84516b15767789a23d9db')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_45699b05b1d84516b15767789a23d9db')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_f1f39439516946cdba467f7c0e96ff07" data-id="feed_f1f39439516946cdba467f7c0e96ff07">
+  <div class="card-header">
+    <span class="item-tag" title="feed_f1f39439516946cdba467f7c0e96ff07">#f1f39439</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">AI 에이전트를 처음부터 구축하는 방법을 다루는 치트시트 소개 게시물이다. 실질적인 기술 내용 없이 팔로워 유도와 해시태그 중심의 마케팅 콘텐츠다.</p>
+  <ul class="claims"><li>이 치트시트로 AI 에이전트를 처음부터 만들 수 있다</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
+  <div class="tags"><span class="tag">#ai-agents</span> <span class="tag">#cheatsheet</span> <span class="tag">#developer</span> <span class="tag">#marketing</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_f1f39439516946cdba467f7c0e96ff07')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f1f39439516946cdba467f7c0e96ff07','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f1f39439516946cdba467f7c0e96ff07','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f1f39439516946cdba467f7c0e96ff07')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f1f39439516946cdba467f7c0e96ff07&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f1f39439516946cdba467f7c0e96ff07" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DbqVGITT-XR/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_f1f39439516946cdba467f7c0e96ff07" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;🛠 AI 도구·모델 동향&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: AI 에이전트를 처음부터 구축하는 방법을 다루는 치트시트 소개 게시물이다. 실질적인 기술 내용 없이 팔로워 유도와 해시태그 중심의 마케팅 콘텐츠다.</div>
+    <select id="delegate-project-feed_f1f39439516946cdba467f7c0e96ff07" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_f1f39439516946cdba467f7c0e96ff07" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_f1f39439516946cdba467f7c0e96ff07')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_f1f39439516946cdba467f7c0e96ff07')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f1f39439516946cdba467f7c0e96ff07" style="display:none">
+    <textarea id="comment-text-feed_f1f39439516946cdba467f7c0e96ff07" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f1f39439516946cdba467f7c0e96ff07')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f1f39439516946cdba467f7c0e96ff07')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_e80d787a319949bdb88982d6479c0eac" data-id="feed_e80d787a319949bdb88982d6479c0eac">
+  <div class="card-header">
+    <span class="item-tag" title="feed_e80d787a319949bdb88982d6479c0eac">#e80d787a</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">현금담보풋(CSP)으로 프리미엄을 수집해 LEAP 옵션 매수 자금을 자체 조달하는 '플라이휠' 전략. 주당 30-50%의 프리미엄을 별도 펀드에 적립해 신규 자본 없이 딥인더머니 LEAP를 확보하고, 이후 PMCC(Poor Man's Covered Call)로 추가 프리미엄 생성. 복리 구조로 외부 자본 투입 없이 포지션이 자기 증식하도록 설계.</p>
+  <ul class="claims"><li>CSP를 현재가 5% 아래에서 판매하면 배정 위험 없이 타임디케이 수익 가능</li><li>50-75% 수익 시점에 조기 청산하면 자본 회전율이 올라간다</li><li>LEAP는 델타가 높은 딥인더머니 계약(18-24개월)을 써야 주식과 유사하게 움직인다</li><li>단일 LEAP 비중을 계좌의 15% 이하로 제한해야 플라이휠이 붕괴되지 않는다</li></ul>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#options</span> <span class="tag">#LEAP</span> <span class="tag">#cash-secured-put</span> <span class="tag">#PMCC</span> <span class="tag">#theta</span> <span class="tag">#flywheel</span> <span class="tag">#premium-selling</span> <span class="tag">#position-sizing</span></div>
+  <div class="apply-plan">승인 시 AlphaBot의 옵션 전략 모듈에 CSP→LEAP 플라이휠 로직 추가 검토: ~/dev/Auto_bot/strategies/ 하위에 csp_leap_flywheel.py 설계 착수 전 ~/agent_hub/refs/review-tiers.md로 Tier 판정 후 설계문서 작성.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_e80d787a319949bdb88982d6479c0eac')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_e80d787a319949bdb88982d6479c0eac','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_e80d787a319949bdb88982d6479c0eac','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_e80d787a319949bdb88982d6479c0eac')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e80d787a319949bdb88982d6479c0eac&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e80d787a319949bdb88982d6479c0eac" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/reel/DbbZvamuNFO/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_e80d787a319949bdb88982d6479c0eac" style="display:none">
+    <div class="delegate-reference">적용 안내: AlphaBot의 옵션 전략 모듈에 CSP→LEAP 플라이휠 로직 추가 검토: ~/dev/Auto_bot/strategies/ 하위에 csp_leap_flywheel.py 설계 착수 전 ~/agent_hub/refs/review-tiers.md로 Tier 판정 후 설계문서 작성.
+
+원문 요약: 현금담보풋(CSP)으로 프리미엄을 수집해 LEAP 옵션 매수 자금을 자체 조달하는 &#x27;플라이휠&#x27; 전략. 주당 30-50%의 프리미엄을 별도 펀드에 적립해 신규 자본 없이 딥인더머니 LEAP를 확보하고, 이후 PMCC(Poor Man&#x27;s Covered Call)로 추가 프리미엄 생성. 복리 구조로 외부 자본 투입 없이 포지션이 자기 증식하도록 설계.</div>
+    <select id="delegate-project-feed_e80d787a319949bdb88982d6479c0eac" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_e80d787a319949bdb88982d6479c0eac" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_e80d787a319949bdb88982d6479c0eac')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_e80d787a319949bdb88982d6479c0eac')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_e80d787a319949bdb88982d6479c0eac" style="display:none">
+    <textarea id="comment-text-feed_e80d787a319949bdb88982d6479c0eac" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_e80d787a319949bdb88982d6479c0eac')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e80d787a319949bdb88982d6479c0eac')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_d8e13e07e1ec453cabddff510c7ce6ff" data-id="feed_d8e13e07e1ec453cabddff510c7ce6ff">
+  <div class="card-header">
+    <span class="item-tag" title="feed_d8e13e07e1ec453cabddff510c7ce6ff">#d8e13e07</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-22</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">옵션 셀링(풋 매도) 전략 소개 게시물. 시장이 하락할 때만 진입하고, 높은 IV(내재변동성)를 가진 종목의 풋을 매도해 프리미엄을 수집한 뒤 50% 이익 시 자동 청산하는 규칙 기반 접근법을 설명한다. 월 3회 거래로 각 5% 수익을 목표로 한다.</p>
+  <ul class="claims"><li>시장 하락일에 옵션 프리미엄(IV)이 상승하므로 진입 조건으로 활용 가능</li><li>50% 프리미엄 회수 시 청산하면 동일 자본으로 재투자 사이클을 빠르게 돌릴 수 있다</li><li>월 3회 거래 × 5% 수익으로 복리 효과를 낼 수 있다</li></ul>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#options-selling</span> <span class="tag">#cash-secured-put</span> <span class="tag">#IV</span> <span class="tag">#implied-volatility</span> <span class="tag">#put-selling</span> <span class="tag">#premium-collection</span> <span class="tag">#systematic-trading</span></div>
+  <div class="apply-plan">승인 시 alphabot의 옵션 셀링 모듈(있다면 ~/dev/Auto_bot 내 options 관련 모듈) 또는 리서치 문서에 'VIX 상승일(시장 하락일) IV spike 필터'와 '50% max-profit 자동 청산' 조건을 진입/청산 규칙 후보로 추가 검토 항목으로 기록</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_d8e13e07e1ec453cabddff510c7ce6ff')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_d8e13e07e1ec453cabddff510c7ce6ff','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_d8e13e07e1ec453cabddff510c7ce6ff','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_d8e13e07e1ec453cabddff510c7ce6ff')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_d8e13e07e1ec453cabddff510c7ce6ff&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_d8e13e07e1ec453cabddff510c7ce6ff" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/reel/DcTyv4Du2yB/?igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_d8e13e07e1ec453cabddff510c7ce6ff" style="display:none">
+    <div class="delegate-reference">적용 안내: alphabot의 옵션 셀링 모듈(있다면 ~/dev/Auto_bot 내 options 관련 모듈) 또는 리서치 문서에 &#x27;VIX 상승일(시장 하락일) IV spike 필터&#x27;와 &#x27;50% max-profit 자동 청산&#x27; 조건을 진입/청산 규칙 후보로 추가 검토 항목으로 기록
+
+원문 요약: 옵션 셀링(풋 매도) 전략 소개 게시물. 시장이 하락할 때만 진입하고, 높은 IV(내재변동성)를 가진 종목의 풋을 매도해 프리미엄을 수집한 뒤 50% 이익 시 자동 청산하는 규칙 기반 접근법을 설명한다. 월 3회 거래로 각 5% 수익을 목표로 한다.</div>
+    <select id="delegate-project-feed_d8e13e07e1ec453cabddff510c7ce6ff" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_d8e13e07e1ec453cabddff510c7ce6ff" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_d8e13e07e1ec453cabddff510c7ce6ff')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_d8e13e07e1ec453cabddff510c7ce6ff')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_d8e13e07e1ec453cabddff510c7ce6ff" style="display:none">
+    <textarea id="comment-text-feed_d8e13e07e1ec453cabddff510c7ce6ff" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_d8e13e07e1ec453cabddff510c7ce6ff')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_d8e13e07e1ec453cabddff510c7ce6ff')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_a116fc16be0c40609706f1e1d0f8488a" data-id="feed_a116fc16be0c40609706f1e1d0f8488a">
+  <div class="card-header">
+    <span class="item-tag" title="feed_a116fc16be0c40609706f1e1d0f8488a">#a116fc16</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-21</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">딥러닝의 수학적 기초를 다루는 무료 eBook 소개. 근사 이론, 최적화 이론, 통계적 학습 이론, 고차원 수학, DNN/RNN을 포괄하는 엄밀한 수학적 접근. 딥러닝이 왜 작동하는지를 수학적 프레임워크로 이해하려는 학생과 연구자 대상.</p>
+  <ul class="claims"><li>딥러닝의 수학적 기초를 근사 이론, 최적화 이론, 통계적 학습 이론, 고차원 수학 네 축으로 설명할 수 있다</li><li>해당 eBook은 무료로 제공된다</li></ul>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
+  <div class="tags"><span class="tag">#딥러닝</span> <span class="tag">#수학</span> <span class="tag">#무료eBook</span> <span class="tag">#기초이론</span> <span class="tag">#최적화</span> <span class="tag">#통계학습이론</span> <span class="tag">#고차원수학</span> <span class="tag">#RNN</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_a116fc16be0c40609706f1e1d0f8488a')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_a116fc16be0c40609706f1e1d0f8488a','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_a116fc16be0c40609706f1e1d0f8488a','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_a116fc16be0c40609706f1e1d0f8488a')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_a116fc16be0c40609706f1e1d0f8488a&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_a116fc16be0c40609706f1e1d0f8488a" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DcK_pItlmol/?img_index=1&igsi=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_a116fc16be0c40609706f1e1d0f8488a" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;🛠 AI 도구·모델 동향&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: 딥러닝의 수학적 기초를 다루는 무료 eBook 소개. 근사 이론, 최적화 이론, 통계적 학습 이론, 고차원 수학, DNN/RNN을 포괄하는 엄밀한 수학적 접근. 딥러닝이 왜 작동하는지를 수학적 프레임워크로 이해하려는 학생과 연구자 대상.</div>
+    <select id="delegate-project-feed_a116fc16be0c40609706f1e1d0f8488a" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_a116fc16be0c40609706f1e1d0f8488a" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_a116fc16be0c40609706f1e1d0f8488a')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_a116fc16be0c40609706f1e1d0f8488a')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_a116fc16be0c40609706f1e1d0f8488a" style="display:none">
+    <textarea id="comment-text-feed_a116fc16be0c40609706f1e1d0f8488a" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_a116fc16be0c40609706f1e1d0f8488a')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a116fc16be0c40609706f1e1d0f8488a')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_ee9d28196a7c472f9f1c6f7ea6067213" data-id="feed_ee9d28196a7c472f9f1c6f7ea6067213">
   <div class="card-header">
