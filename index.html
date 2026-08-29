@@ -172,87 +172,9 @@
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">⏳ 실행계획 검토 대기 (19)</h2>
+<h2 class="section-title">⏳ 실행계획 검토 대기 (18)</h2>
 <section class="pending-section">
   <div class="grid">
-
-<div class="card pending-apply apply-action-review" id="card-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" data-id="apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">
-  <div class="card-header">
-    <span class="item-tag" title="apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">#apply_ac</span>
-    <span class="platform">apply action</span>
-    <span class="date">2026-08-17</span>
-    
-  </div>
-  <p class="summary">일목균형표(Ichimoku Cloud)의 구조와 실전 활용법을 설명한 콘텐츠. 전환선(9일), 기준선(26일), 선행스팬1·2로 구성된 구름대를 26일 앞에 미리 그려 미래 지지/저항 구간을 시각화한다. 구름 위치·두께로 추세 방향과 강도를 동시에 판단하며, RSI와 병용 시 진입 타이밍이 선명해진다.</p>
-  <div class="apply-action-source"></div>
-  <div class="apply-action-text">alphabot의 기술적 지표 모듈(~/dev/Auto_bot 또는 ~/dev/trader 내 indicator 관련 파일)에 Ichimoku 구름대 필터를 추가하고, 진입 조건에 &#x27;주가가 구름 위 + 양운(선행스팬1 &gt; 2) + RSI 과매도 탈출&#x27; 복합 조건을 중장기 추세 확인 레이어로 삽입한다.</div>
-  <div class="actions">
-    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">승인</button>
-    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">거절</button>
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c3a5741f9e90486498103c2d3f54b5f0')">💬 의견</button>
-    
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_c3a5741f9e90486498103c2d3f54b5f0" style="display:none">
-    <textarea id="comment-text-feed_c3a5741f9e90486498103c2d3f54b5f0" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_c3a5741f9e90486498103c2d3f54b5f0')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c3a5741f9e90486498103c2d3f54b5f0')">취소</button>
-    </div>
-  </div>
-  <div class="apply-action-box" id="apply-action-box-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" style="display:none">
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="action-type-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">action_type</label>
-      <select id="action-type-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" class="apply-action-select">
-        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
-      </select>
-    </div>
-    <div class="apply-action-field">
-      <div class="apply-action-path-header">
-        <label class="apply-action-label">target_paths</label>
-        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">경로 추가</button>
-      </div>
-      <div class="apply-action-paths" id="target-paths-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">
-        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
-      </div>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
-      <div class="apply-action-radio-group">
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" value="file_marker_created"
-                 onchange="toggleVerificationPathInput('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">
-          파일에 마커 남기기
-        </label>
-        <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" value="manual_only" checked
-                 onchange="toggleVerificationPathInput('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">
-          수동으로 확인
-        </label>
-      </div>
-    </div>
-    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" style="display:none">
-      <label class="apply-action-label" for="verification-path-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">verification_path</label>
-      <input id="verification-path-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" class="apply-action-input" type="text" placeholder="검증 경로">
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="normalized-plan-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">normalized_plan</label>
-      <textarea id="normalized-plan-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" class="comment-textarea normalized-plan-textarea"
-                rows="4">alphabot의 기술적 지표 모듈(~/dev/Auto_bot 또는 ~/dev/trader 내 indicator 관련 파일)에 Ichimoku 구름대 필터를 추가하고, 진입 조건에 &#x27;주가가 구름 위 + 양운(선행스팬1 &gt; 2) + RSI 과매도 탈출&#x27; 복합 조건을 중장기 추세 확인 레이어로 삽입한다.</textarea>
-    </div>
-    <div class="apply-action-field">
-      <label class="apply-action-label" for="final-risk-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc">final_risk_level</label>
-      <select id="final-risk-apply_action_task_5e0928d289ff427782dac1e3ff86f0dc" class="apply-action-select">
-        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
-      </select>
-    </div>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">승인</button>
-      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_5e0928d289ff427782dac1e3ff86f0dc')">취소</button>
-    </div>
-  </div>
-</div>
 
 <div class="card pending-apply apply-action-review" id="card-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" data-id="apply_action_task_03890899b54a4a61a33044bbdf5acb8d">
   <div class="card-header">
@@ -6118,8 +6040,120 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 77건</p>
+<p class="count">승인 대기 79건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" data-id="feed_81fafcbffaaf4177bdeed8b2f06c9a6a">
+  <div class="card-header">
+    <span class="item-tag" title="feed_81fafcbffaaf4177bdeed8b2f06c9a6a">#81fafcbf</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-08-29</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">Cell Press 저널에 2026년 8월 28일 온라인 게재된 오픈액세스 논문. 약 2,200만 개의 1차 인간 CD4+ T세포에서 게놈 규모 Perturb-seq를 수행해 T세포 프로그램의 맥락 특이적 조절인자를 매핑했다. 휴식 및 자극 시점별 유전자 조절 효과, 인간 코호트 아틀라스 유전자 서명의 조절인자 후보, 인간 형질 및 질환 감수성과의 연계를 규명했다.</p>
+  <ul class="claims"><li>게놈 규모 Perturb-seq로 약 2,200만 개의 1차 인간 CD4+ T세포에서 유전자 조절 효과를 매핑했다</li><li>많은 유전자 조절 효과는 휴식 상태와 자극 시점에 따라 맥락 특이적으로 나타난다</li><li>Perturb-seq 결과가 인간 코호트 아틀라스에서 관찰된 유전자 서명의 조절인자 후보를 지명한다</li><li>조절 경로를 인간 형질 및 질환 감수성과 연결짓는다</li></ul>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#perturb-seq</span> <span class="tag">#CD4+ T cells</span> <span class="tag">#gene regulation</span> <span class="tag">#CRISPR screening</span> <span class="tag">#immunology</span> <span class="tag">#single-cell genomics</span> <span class="tag">#human genetics</span></div>
+  <div class="apply-plan">승인 시 해당 없음 — 기초 면역유전체학 연구 논문으로 현재 운영 중인 시스템(claude-code, alphabot, ai-tools 등)에 직접 적용할 실행 지점 없음. ~/agent_hub/refs/learned-practices.md에 관심 연구 영역(생물정보학/면역학)으로 기록하려면 user_woosung_dual_domain_bio_research.md 참조.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_81fafcbffaaf4177bdeed8b2f06c9a6a','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_81fafcbffaaf4177bdeed8b2f06c9a6a','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_81fafcbffaaf4177bdeed8b2f06c9a6a&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_81fafcbffaaf4177bdeed8b2f06c9a6a" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" style="display:none">
+    <div class="delegate-reference">적용 안내: 해당 없음 — 기초 면역유전체학 연구 논문으로 현재 운영 중인 시스템(claude-code, alphabot, ai-tools 등)에 직접 적용할 실행 지점 없음. ~/agent_hub/refs/learned-practices.md에 관심 연구 영역(생물정보학/면역학)으로 기록하려면 user_woosung_dual_domain_bio_research.md 참조.
+
+원문 요약: Cell Press 저널에 2026년 8월 28일 온라인 게재된 오픈액세스 논문. 약 2,200만 개의 1차 인간 CD4+ T세포에서 게놈 규모 Perturb-seq를 수행해 T세포 프로그램의 맥락 특이적 조절인자를 매핑했다. 휴식 및 자극 시점별 유전자 조절 효과, 인간 코호트 아틀라스 유전자 서명의 조절인자 후보, 인간 형질 및 질환 감수성과의 연계를 규명했다.</div>
+    <select id="delegate-project-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" style="display:none">
+    <textarea id="comment-text-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_182921b81894471eb93d82ed43164687" data-id="feed_182921b81894471eb93d82ed43164687">
+  <div class="card-header">
+    <span class="item-tag" title="feed_182921b81894471eb93d82ed43164687">#182921b8</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-08-29</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">Nature Reviews Neuroscience에 게재된 개념적 프레임워크로, 뇌 미토콘드리아가 단순한 에너지 공장 이상의 역할을 하며 불안과 동기부여와 연결된다는 연구 소개. 스페인어 의학 교육 콘텐츠 크리에이터가 Telegram/WhatsApp/BuyMeACoffee를 활용한 유료 콘텐츠 모델로 운영 중.</p>
+  <ul class="claims"><li>미토콘드리아가 불안 및 동기부여와 연결된다는 신경과학적 근거가 Nature Reviews Neuroscience에 발표됨</li><li>뇌 미토콘드리아에 대한 새로운 개념적 프레임워크가 제시됨</li></ul>
+  <div class="surfaces"><span class="badge">💼 ai-business</span></div>
+  <div class="tags"><span class="tag">#신경과학</span> <span class="tag">#미토콘드리아</span> <span class="tag">#뇌기능</span> <span class="tag">#불안</span> <span class="tag">#동기부여</span> <span class="tag">#의학콘텐츠</span> <span class="tag">#뉴로사이언스</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_182921b81894471eb93d82ed43164687')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_182921b81894471eb93d82ed43164687','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_182921b81894471eb93d82ed43164687','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_182921b81894471eb93d82ed43164687')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_182921b81894471eb93d82ed43164687&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_182921b81894471eb93d82ed43164687" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DcgloYOxmsJ/" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_182921b81894471eb93d82ed43164687" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💼 AI 비즈니스·수익화&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: Nature Reviews Neuroscience에 게재된 개념적 프레임워크로, 뇌 미토콘드리아가 단순한 에너지 공장 이상의 역할을 하며 불안과 동기부여와 연결된다는 연구 소개. 스페인어 의학 교육 콘텐츠 크리에이터가 Telegram/WhatsApp/BuyMeACoffee를 활용한 유료 콘텐츠 모델로 운영 중.</div>
+    <select id="delegate-project-feed_182921b81894471eb93d82ed43164687" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_182921b81894471eb93d82ed43164687" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_182921b81894471eb93d82ed43164687')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_182921b81894471eb93d82ed43164687')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_182921b81894471eb93d82ed43164687" style="display:none">
+    <textarea id="comment-text-feed_182921b81894471eb93d82ed43164687" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_182921b81894471eb93d82ed43164687')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_182921b81894471eb93d82ed43164687')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_042949e6084241c6ba471f9b99c4362a" data-id="feed_042949e6084241c6ba471f9b99c4362a">
   <div class="card-header">
