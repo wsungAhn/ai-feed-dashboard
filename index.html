@@ -83,7 +83,8 @@
   .apply-action-path-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
   .apply-action-paths { display: flex; flex-direction: column; gap: 6px; }
   .apply-action-radio-group { display: flex; flex-wrap: wrap; gap: 12px; }
-  .apply-action-radio { font-size: 13px; color: #44403c; display: inline-flex; align-items: center; gap: 6px; }
+  .apply-action-radio { font-size: 13px; color: #44403c; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; max-width: 320px; }
+  .apply-action-hint { display: block; width: 100%; margin-left: 22px; font-size: 11px; color: #78716c; }
   .apply-action-input { background: #fff; border: 1px solid #e8e2d5; border-radius: 4px;
                          color: #1c1917; font-size: 13px; padding: 8px; width: 100%;
                          font-family: inherit; box-sizing: border-box; }
@@ -218,17 +219,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_03890899b54a4a61a33044bbdf5acb8d')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_03890899b54a4a61a33044bbdf5acb8d')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -296,17 +299,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_f78490027cde4e90aab508fb02c82e05" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_f78490027cde4e90aab508fb02c82e05')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_f78490027cde4e90aab508fb02c82e05" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_f78490027cde4e90aab508fb02c82e05')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -374,17 +379,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -452,17 +459,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -530,17 +539,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_e44950e9ed7d470b848b963e67809be5" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_e44950e9ed7d470b848b963e67809be5')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_e44950e9ed7d470b848b963e67809be5" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_e44950e9ed7d470b848b963e67809be5')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -608,17 +619,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_7d87f84829b74fc6b039f5dfe301cf54" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_7d87f84829b74fc6b039f5dfe301cf54')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_7d87f84829b74fc6b039f5dfe301cf54" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_7d87f84829b74fc6b039f5dfe301cf54')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -686,17 +699,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_ce59c5287e8c43ab87639defb25beebb" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_ce59c5287e8c43ab87639defb25beebb')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_ce59c5287e8c43ab87639defb25beebb" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_ce59c5287e8c43ab87639defb25beebb')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -764,17 +779,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_405630ca77f44951b88686619b720b6a" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_405630ca77f44951b88686619b720b6a')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_405630ca77f44951b88686619b720b6a" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_405630ca77f44951b88686619b720b6a')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -842,17 +859,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_d12d9c8c7be245c69afcaaee4191a814" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_d12d9c8c7be245c69afcaaee4191a814')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_d12d9c8c7be245c69afcaaee4191a814" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_d12d9c8c7be245c69afcaaee4191a814')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -920,17 +939,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_3d4dea448e634b3aa6746b3e9959831b" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_3d4dea448e634b3aa6746b3e9959831b')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_3d4dea448e634b3aa6746b3e9959831b" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_3d4dea448e634b3aa6746b3e9959831b')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -998,17 +1019,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_ae1efe8769d2488c99b5d13d64eb558e" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_ae1efe8769d2488c99b5d13d64eb558e')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_ae1efe8769d2488c99b5d13d64eb558e" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_ae1efe8769d2488c99b5d13d64eb558e')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -1076,17 +1099,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -1154,17 +1179,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_b5ca26f3561948ada85d53f29f0f2d51" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_b5ca26f3561948ada85d53f29f0f2d51')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_b5ca26f3561948ada85d53f29f0f2d51" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_b5ca26f3561948ada85d53f29f0f2d51')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -1232,17 +1259,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_05d0941b4df4458191c169ede366d9ab" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_05d0941b4df4458191c169ede366d9ab')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_05d0941b4df4458191c169ede366d9ab" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_05d0941b4df4458191c169ede366d9ab')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -1310,17 +1339,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_581f478207464227acc1ef74e893d3e7" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_581f478207464227acc1ef74e893d3e7')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_581f478207464227acc1ef74e893d3e7" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_581f478207464227acc1ef74e893d3e7')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -1388,17 +1419,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_651ad691be8f4fed83426865bdaf2d57" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_651ad691be8f4fed83426865bdaf2d57')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_651ad691be8f4fed83426865bdaf2d57" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_651ad691be8f4fed83426865bdaf2d57')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
@@ -1466,17 +1499,19 @@
       </div>
     </div>
     <div class="apply-action-field">
-      <label class="apply-action-label">verification_type</label>
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
       <div class="apply-action-radio-group">
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9" value="file_marker_created"
                  onchange="toggleVerificationPathInput('apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9')">
           파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
           <input type="radio" name="verification-type-apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9" value="manual_only" checked
                  onchange="toggleVerificationPathInput('apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9')">
           수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
       </div>
     </div>
