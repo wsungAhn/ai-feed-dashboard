@@ -85,6 +85,7 @@
   .apply-action-radio-group { display: flex; flex-wrap: wrap; gap: 12px; }
   .apply-action-radio { font-size: 13px; color: #44403c; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; max-width: 320px; }
   .apply-action-hint { display: block; width: 100%; margin-left: 22px; font-size: 11px; color: #78716c; }
+  .apply-action-draft-warning { margin-top: 6px; font-size: 12px; color: #b45309; }
   .apply-action-input { background: #fff; border: 1px solid #e8e2d5; border-radius: 4px;
                          color: #1c1917; font-size: 13px; padding: 8px; width: 100%;
                          font-family: inherit; box-sizing: border-box; }
@@ -228,11 +229,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_03890899b54a4a61a33044bbdf5acb8d')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_03890899b54a4a61a33044bbdf5acb8d" style="display:none">
@@ -308,11 +312,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_f78490027cde4e90aab508fb02c82e05" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_f78490027cde4e90aab508fb02c82e05" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_f78490027cde4e90aab508fb02c82e05')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_f78490027cde4e90aab508fb02c82e05" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_f78490027cde4e90aab508fb02c82e05" style="display:none">
@@ -388,11 +395,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_72cb709ecf1a4b10adfdf8fef78765ee" style="display:none">
@@ -468,11 +478,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_8ce6ad370d76463d9fccbcdcad027ec0" style="display:none">
@@ -548,11 +561,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_e44950e9ed7d470b848b963e67809be5" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_e44950e9ed7d470b848b963e67809be5" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_e44950e9ed7d470b848b963e67809be5')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_e44950e9ed7d470b848b963e67809be5" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_e44950e9ed7d470b848b963e67809be5" style="display:none">
@@ -628,11 +644,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_7d87f84829b74fc6b039f5dfe301cf54" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_7d87f84829b74fc6b039f5dfe301cf54" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_7d87f84829b74fc6b039f5dfe301cf54')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_7d87f84829b74fc6b039f5dfe301cf54" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_7d87f84829b74fc6b039f5dfe301cf54" style="display:none">
@@ -708,11 +727,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_ce59c5287e8c43ab87639defb25beebb" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_ce59c5287e8c43ab87639defb25beebb" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_ce59c5287e8c43ab87639defb25beebb')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_ce59c5287e8c43ab87639defb25beebb" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_ce59c5287e8c43ab87639defb25beebb" style="display:none">
@@ -788,11 +810,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_405630ca77f44951b88686619b720b6a" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_405630ca77f44951b88686619b720b6a" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_405630ca77f44951b88686619b720b6a')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_405630ca77f44951b88686619b720b6a" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_405630ca77f44951b88686619b720b6a" style="display:none">
@@ -868,11 +893,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_d12d9c8c7be245c69afcaaee4191a814" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_d12d9c8c7be245c69afcaaee4191a814" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_d12d9c8c7be245c69afcaaee4191a814')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_d12d9c8c7be245c69afcaaee4191a814" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_d12d9c8c7be245c69afcaaee4191a814" style="display:none">
@@ -948,11 +976,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_3d4dea448e634b3aa6746b3e9959831b" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_3d4dea448e634b3aa6746b3e9959831b" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_3d4dea448e634b3aa6746b3e9959831b')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_3d4dea448e634b3aa6746b3e9959831b" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_3d4dea448e634b3aa6746b3e9959831b" style="display:none">
@@ -1028,11 +1059,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_ae1efe8769d2488c99b5d13d64eb558e" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_ae1efe8769d2488c99b5d13d64eb558e" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_ae1efe8769d2488c99b5d13d64eb558e')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_ae1efe8769d2488c99b5d13d64eb558e" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_ae1efe8769d2488c99b5d13d64eb558e" style="display:none">
@@ -1108,11 +1142,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_409f2500bc0d4d8ab31dc08eb57035ab" style="display:none">
@@ -1188,11 +1225,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_b5ca26f3561948ada85d53f29f0f2d51" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_b5ca26f3561948ada85d53f29f0f2d51" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_b5ca26f3561948ada85d53f29f0f2d51')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_b5ca26f3561948ada85d53f29f0f2d51" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_b5ca26f3561948ada85d53f29f0f2d51" style="display:none">
@@ -1268,11 +1308,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_05d0941b4df4458191c169ede366d9ab" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_05d0941b4df4458191c169ede366d9ab" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_05d0941b4df4458191c169ede366d9ab')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_05d0941b4df4458191c169ede366d9ab" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_05d0941b4df4458191c169ede366d9ab" style="display:none">
@@ -1348,11 +1391,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_581f478207464227acc1ef74e893d3e7" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_581f478207464227acc1ef74e893d3e7" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_581f478207464227acc1ef74e893d3e7')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_581f478207464227acc1ef74e893d3e7" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_581f478207464227acc1ef74e893d3e7" style="display:none">
@@ -1428,11 +1474,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_651ad691be8f4fed83426865bdaf2d57" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_651ad691be8f4fed83426865bdaf2d57" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_651ad691be8f4fed83426865bdaf2d57')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_651ad691be8f4fed83426865bdaf2d57" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_651ad691be8f4fed83426865bdaf2d57" style="display:none">
@@ -1508,11 +1557,14 @@
           <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
         </label>
         <label class="apply-action-radio">
-          <input type="radio" name="verification-type-apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9" value="manual_only" checked
+          <input type="radio" name="verification-type-apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9" value="manual_only"
                  onchange="toggleVerificationPathInput('apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9')">
           수동으로 확인
           <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
         </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
       </div>
     </div>
     <div class="apply-action-field" id="verification-path-wrap-apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9" style="display:none">
@@ -10871,6 +10923,8 @@ async function loadApplyActionDraft(taskId, box) {
   try {
     const draftResult = await apiGet(`/feed/apply-action/${taskId}/draft`);
     const draft = draftResult.draft || {};
+    const warning = document.getElementById(`draft-warning-${taskId}`);
+    if (warning) warning.style.display = draft.draft_ok === false ? 'block' : 'none';
     if (draft.action_type) {
       const actionType = document.getElementById(`action-type-${taskId}`);
       if (actionType) actionType.value = draft.action_type;
@@ -10889,7 +10943,7 @@ async function loadApplyActionDraft(taskId, box) {
         });
       }
     }
-    if (draft.verification_type) {
+    if (draft.verification_type && draft.draft_ok !== false) {
       const radio = box.querySelector(
         `input[name="verification-type-${taskId}"][value="${draft.verification_type}"]`
       );
@@ -10946,6 +11000,10 @@ async function submitApplyActionApproval(taskId) {
   }
   if (!normalizedPlan) {
     showToast('normalized_plan을 입력하세요');
+    return;
+  }
+  if (!verificationType) {
+    showToast('완료를 누가 확인할지 선택하세요');
     return;
   }
   if (verificationType === 'file_marker_created' && !verificationPath) {
