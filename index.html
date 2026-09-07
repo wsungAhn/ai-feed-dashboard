@@ -170,11 +170,11 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-09-06</span>
+  <span class="meta">업데이트: 2026-09-07</span>
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">⏳ 실행계획 검토 대기 (1)</h2>
+<h2 class="section-title">⏳ 실행계획 검토 대기 (2)</h2>
 <section class="pending-section">
   <div class="grid">
 
@@ -257,6 +257,89 @@
     <div class="comment-actions">
       <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9')">승인</button>
       <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_3f61b84580b34ab696ad5ce26ea04fe9')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" data-id="apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-09-06</span>
+    
+  </div>
+  <p class="summary">AI 결정 편향을 줄이기 위해 &#x27;Decision&#x27; 스킬을 만들어 결정 시점에 판단 기준을 컨텍스트로 자동 주입. 단순 컨텍스트 주입만으로는 편향 완전 회피 불가이며, 격리된 서브에이전트나 다른 모델에 검토받는 방식이 더 효과적. 사람이 방향을 주는 것이 베스트이나 현실적으로 어려운 경우 다중 모델 검증이 차선책.</p>
+  <div class="apply-action-source"><a href="https://www.threads.com/@doorand.dev/post/Dab36QGgVwC?xmt=AQG0c7m-YUIeFUyZsGmAxRPhAiArMdR64NGcwgTGFbz6KZBjAqjC_2SP4lleZgesE6mfjG7o&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[gc] 2026-W36: learned-practices 블록 삭제 제안 — item_ids=feed_7f68e9976de24e94a8f330802e1cfc01, feed_8ef81ff6c6db4e5ba6257851cd254d0f, feed_ac10b829b6014f50b58a05defd7d2f06, feed_e5a434bbb51d4642955b79ce227ba146, feed_e8013334aacc4c3f89768abc666d5f57</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_7f68e9976de24e94a8f330802e1cfc01')">💬 의견</button>
+    <a href="https://www.threads.com/@doorand.dev/post/Dab36QGgVwC?xmt=AQG0c7m-YUIeFUyZsGmAxRPhAiArMdR64NGcwgTGFbz6KZBjAqjC_2SP4lleZgesE6mfjG7o&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_7f68e9976de24e94a8f330802e1cfc01" style="display:none">
+    <textarea id="comment-text-feed_7f68e9976de24e94a8f330802e1cfc01" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_7f68e9976de24e94a8f330802e1cfc01')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7f68e9976de24e94a8f330802e1cfc01')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">action_type</label>
+      <select id="action-type-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">
+          파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" value="manual_only"
+                 onchange="toggleVerificationPathInput('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">
+          수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
+        </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">verification_path</label>
+      <input id="verification-path-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" class="comment-textarea normalized-plan-textarea"
+                rows="4">[gc] 2026-W36: learned-practices 블록 삭제 제안 — item_ids=feed_7f68e9976de24e94a8f330802e1cfc01, feed_8ef81ff6c6db4e5ba6257851cd254d0f, feed_ac10b829b6014f50b58a05defd7d2f06, feed_e5a434bbb51d4642955b79ce227ba146, feed_e8013334aacc4c3f89768abc666d5f57</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29">final_risk_level</label>
+      <select id="final-risk-apply_action_task_3b816a6ae6714f7ca40a900e34d61d29" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_3b816a6ae6714f7ca40a900e34d61d29')">취소</button>
     </div>
   </div>
 </div>
