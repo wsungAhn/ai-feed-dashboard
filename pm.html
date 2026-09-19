@@ -173,11 +173,11 @@
         <div class="summary">
             <div class="summary-card">
                 <div class="summary-card-label">Active Projects</div>
-                <div class="summary-card-value">6</div>
+                <div class="summary-card-value">4</div>
             </div>
             <div class="summary-card">
                 <div class="summary-card-label">Today Commits</div>
-                <div class="summary-card-value">1</div>
+                <div class="summary-card-value">4</div>
             </div>
             <div class="summary-card">
                 <div class="summary-card-label">Pending Handoffs</div>
@@ -191,21 +191,21 @@
                     <summary>
                         <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">agent_hub</span>
-                        <span class="project-last">2 days ago</span>
+                        <span class="project-last">6 minutes ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
+                                <div><span class="commit-hash">2a22aaa</span> <span class="commit-msg">backlog(alphabot): AB-MODELID-400 — production/reflection tiers still call router with old Ollama model id (747x 400 since 09-17)</span></div>
+                                <div class="commit-when">6 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
+                                <div><span class="commit-hash">e924a24</span> <span class="commit-msg">feat(embedder): retire Ollama backend, switch default to llama.cpp</span></div>
+                                <div class="commit-when">7 minutes ago</div>
+                            </div>
+                            <div class="commit-item">
                                 <div><span class="commit-hash">dd5e836</span> <span class="commit-msg">backlog(AH-064): universe-hub adj_close 컬럼 정규화 결손 신규 등재</span></div>
-                                <div class="commit-when">2 days ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">1f6a72f</span> <span class="commit-msg">Merge branch &#x27;design/kg-crossfile-calls&#x27; — 지식그래프 5단계: import 기반 크로스파일 호출·상속 엣지 (schema v3)</span></div>
-                                <div class="commit-when">2 days ago</div>
-                            </div>
-                            <div class="commit-item">
-                                <div><span class="commit-hash">88bf025</span> <span class="commit-msg">backlog(ai-feed): AI-059 implemented and review-approved on branch; merge/deploy awaiting user confirmation</span></div>
                                 <div class="commit-when">2 days ago</div>
                             </div>
                         </div>
@@ -226,16 +226,16 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #15803d;"></span>
+                        <span class="status-dot" style="background-color: #d97706;"></span>
                         <span class="project-name">ai-broker</span>
-                        <span class="project-last">2 days ago</span>
+                        <span class="project-last">3 days ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">031f99c</span> <span class="commit-msg">feat(llm): quick-think slot uses hermes-managed llama.cpp router (18434) with bearer key</span></div>
-                                <div class="commit-when">2 days ago</div>
+                                <div class="commit-when">3 days ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">d4830b9</span> <span class="commit-msg">docs(pm): add STATUS.md — purpose/milestone interview 2026-09-11</span></div>
@@ -270,15 +270,15 @@
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">b3d030d</span> <span class="commit-msg">chore: PM status update 2026-09-19 00:37</span></div>
+                                <div><span class="commit-hash">7b31b47</span> <span class="commit-msg">chore: PM status update 2026-09-19 01:37</span></div>
                                 <div class="commit-when">60 minutes ago</div>
                             </div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">cc3b859</span> <span class="commit-msg">chore: PM status update 2026-09-18 23:37</span></div>
+                                <div><span class="commit-hash">b3d030d</span> <span class="commit-msg">chore: PM status update 2026-09-19 00:37</span></div>
                                 <div class="commit-when">2 hours ago</div>
                             </div>
                             <div class="commit-item">
-                                <div><span class="commit-hash">55e3472</span> <span class="commit-msg">chore: PM status update 2026-09-18 22:37</span></div>
+                                <div><span class="commit-hash">cc3b859</span> <span class="commit-msg">chore: PM status update 2026-09-18 23:37</span></div>
                                 <div class="commit-when">3 hours ago</div>
                             </div>
                         </div>
@@ -326,6 +326,7 @@
                         </div>
                         <div class="p0-section">
                             <div class="section-label">P0 Tasks</div>
+                            <div class="item">AB-MODELID-400: **production·reflection 티어가 옛 Ollama 모델 id로 라우터 호출 → 400 전건  (⏳ 미착수 — Trading Safety 대상 설정이라 발견 세션(NeuroRAG, c9e10a45)은 수정 안 함; `알파봇 메모리 로드` 세션 메시지는 승인 만료로 미전달)</div>
                             <div class="item">AB-RESEARCH-DEAD: **리서치 루프 사망 — 2026-09-12 01:15(사이클 7661)부터 제안 0건, 09-14 06:0 (🟢 **원인 확정 2건 + 수정(2026-09-16 10:50~11:00)** — ① 09-12 01:08~01:10부터 8088(qwen, 2.8만 자)·8087(muse, 5.2만 자) 프롬프트에 HTTP 500: KV f16 + hermes Qwen 35B 동시 상주로 GPU OOM(작은 프로브는 통과) → brief가 &quot;0 proposals&quot;로 빔. 재현: KV q8_0로 띄우면 hermes 로드 상태에서도 5.2만 자 200 OK(69s, free 8%). 조치: 8087/8088 plist에 `--cache-type-k/v q8_0 --batch-size 4096 --ubatch-size 2048 --direct-io`(hermes 59367 자식 서버와 동일). ② 09-14 06:03 이후·09-16 새벽: `preflight.py` CHECK 13-C warm-up이 `max_tokens 32`인데 muse가 `enable_thinking=False`를 무시해 32토큰이 전부 추론 → `content` 빈 문자열 → 300초 &quot;응답 없음&quot; → 워치독이 10분마다 재기동만 반복(8087은 정상 응답 중이었음). 조치: max_tokens 256(실측 `x=1`), Auto_bot 커밋. **낮 동시 상주는 여전히 위험(free 8%)** → AH-061 라우터 필요. 다음 관측: 09-17 00:00 창)</div>
                             <div class="item">AB-PAPER0: **페이퍼 계좌가 09-03 이후 진입 0건 — 롱 신호를 내던 전략이 09-04 로스터 교체로 전부 빠졌을 (🆕 신규 등재, 원인 미확정 (관측 근거만 확보))</div>
                             <div class="item">새 모듈+새 데이터흐름이라 착수 전 design-*.md 선행): M (2026-08-07 세션 (PM 보고서 &quot;알파봇 며칠째 꺼짐&quot; 관찰에서 출발), 2026-08-08 새벽 실측 추가, 2026-08-08 대체후보+num_ctx 단서 추가, 2026-08-08 원문대조로 ① 성격 확정+정규화단계 제안, 2026-08-08 오전 계측 위치 정정(QwenClient가 실제 경로)+①근본원인 실측 확정, **2026-08-08 오후 ①수정 랜딩(`ebc342b`)**, **2026-08-09 Mac Studio 세션 라이브 DB+로그 재검증(②미해결·잔여39%·pytest DB오염 신규발견 확인)**)</div>
@@ -370,16 +371,16 @@
             <div class="project-card">
                 <details open>
                     <summary>
-                        <span class="status-dot" style="background-color: #15803d;"></span>
+                        <span class="status-dot" style="background-color: #d97706;"></span>
                         <span class="project-name">compa</span>
-                        <span class="project-last">2 days ago</span>
+                        <span class="project-last">3 days ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">3b84d48</span> <span class="commit-msg">feat(ai): use hermes-managed llama.cpp router (18434) with bearer key</span></div>
-                                <div class="commit-when">2 days ago</div>
+                                <div class="commit-when">3 days ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">406fb1d</span> <span class="commit-msg">docs(pm): add STATUS.md — purpose/milestone interview 2026-09-11</span></div>
@@ -584,14 +585,14 @@
                     <summary>
                         <span class="status-dot" style="background-color: #15803d;"></span>
                         <span class="project-name">trader</span>
-                        <span class="project-last">12 hours ago</span>
+                        <span class="project-last">13 hours ago</span>
                     </summary>
                     <div class="project-content">
                         <div class="commits-section">
                             <div class="section-label">Recent Commits</div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">4ed4132</span> <span class="commit-msg">weekly institutional handoff: 2026-09-12~2026-09-18</span></div>
-                                <div class="commit-when">12 hours ago</div>
+                                <div class="commit-when">13 hours ago</div>
                             </div>
                             <div class="commit-item">
                                 <div><span class="commit-hash">04b79f0</span> <span class="commit-msg">docs(pm): clarify alphabot vs trader purpose distinction (strategy origin)</span></div>
@@ -652,7 +653,7 @@
         </div>
 
         <footer>
-            Updated: 2026-09-19 08:37 UTC
+            Updated: 2026-09-19 09:37 UTC
         </footer>
     </div>
 </body>
