@@ -170,11 +170,11 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-09-20</span>
+  <span class="meta">업데이트: 2026-09-21</span>
 </header>
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
 
-<h2 class="section-title">⏳ 실행계획 검토 대기 (3)</h2>
+<h2 class="section-title">⏳ 실행계획 검토 대기 (4)</h2>
 <section class="pending-section">
   <div class="grid">
 
@@ -423,6 +423,89 @@
     <div class="comment-actions">
       <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_301b95c3dee84239ab6e8596a4d42bde')">승인</button>
       <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_301b95c3dee84239ab6e8596a4d42bde')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card pending-apply apply-action-review" id="card-apply_action_task_ccfc091f4b134452b5da8593a3eca018" data-id="apply_action_task_ccfc091f4b134452b5da8593a3eca018">
+  <div class="card-header">
+    <span class="item-tag" title="apply_action_task_ccfc091f4b134452b5da8593a3eca018">#apply_ac</span>
+    <span class="platform">apply action</span>
+    <span class="date">2026-09-20</span>
+    
+  </div>
+  <p class="summary">AI 결정 편향을 줄이기 위해 &#x27;Decision&#x27; 스킬을 만들어 결정 시점에 판단 기준을 컨텍스트로 자동 주입. 단순 컨텍스트 주입만으로는 편향 완전 회피 불가이며, 격리된 서브에이전트나 다른 모델에 검토받는 방식이 더 효과적. 사람이 방향을 주는 것이 베스트이나 현실적으로 어려운 경우 다중 모델 검증이 차선책.</p>
+  <div class="apply-action-source"><a href="https://www.threads.com/@doorand.dev/post/Dab36QGgVwC?xmt=AQG0c7m-YUIeFUyZsGmAxRPhAiArMdR64NGcwgTGFbz6KZBjAqjC_2SP4lleZgesE6mfjG7o&slof=1" target="_blank" rel="noopener">🔗 원문</a></div>
+  <div class="apply-action-text">[gc] 2026-W38: learned-practices 블록 삭제 제안 — item_ids=feed_7f68e9976de24e94a8f330802e1cfc01, feed_8ef81ff6c6db4e5ba6257851cd254d0f, feed_ac10b829b6014f50b58a05defd7d2f06, feed_e5a434bbb51d4642955b79ce227ba146, feed_e8013334aacc4c3f89768abc666d5f57</div>
+  <div class="actions">
+    <button class="btn-approve" onclick="toggleApplyActionForm('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">승인</button>
+    <button class="btn-reject" onclick="rejectApplyAction('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">거절</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_7f68e9976de24e94a8f330802e1cfc01')">💬 의견</button>
+    <a href="https://www.threads.com/@doorand.dev/post/Dab36QGgVwC?xmt=AQG0c7m-YUIeFUyZsGmAxRPhAiArMdR64NGcwgTGFbz6KZBjAqjC_2SP4lleZgesE6mfjG7o&slof=1" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_7f68e9976de24e94a8f330802e1cfc01" style="display:none">
+    <textarea id="comment-text-feed_7f68e9976de24e94a8f330802e1cfc01" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_7f68e9976de24e94a8f330802e1cfc01')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7f68e9976de24e94a8f330802e1cfc01')">취소</button>
+    </div>
+  </div>
+  <div class="apply-action-box" id="apply-action-box-apply_action_task_ccfc091f4b134452b5da8593a3eca018" style="display:none">
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="action-type-apply_action_task_ccfc091f4b134452b5da8593a3eca018">action_type</label>
+      <select id="action-type-apply_action_task_ccfc091f4b134452b5da8593a3eca018" class="apply-action-select">
+        <option value="append_doc">append_doc</option><option value="create_file">create_file</option><option value="modify_file">modify_file</option><option value="register_command">register_command</option><option value="install_package">install_package</option><option value="create_directory">create_directory</option><option value="manual_only" selected>manual_only</option>
+      </select>
+    </div>
+    <div class="apply-action-field">
+      <div class="apply-action-path-header">
+        <label class="apply-action-label">target_paths</label>
+        <button class="btn-comment-cancel" type="button" onclick="addTargetPathInput('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">경로 추가</button>
+      </div>
+      <div class="apply-action-paths" id="target-paths-apply_action_task_ccfc091f4b134452b5da8593a3eca018">
+        <input class="apply-action-input target-path-input" type="text" placeholder="대상 경로 1">
+      </div>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label">verification_type — 완료를 누가 확인하나</label>
+      <div class="apply-action-radio-group">
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_ccfc091f4b134452b5da8593a3eca018" value="file_marker_created"
+                 onchange="toggleVerificationPathInput('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">
+          파일에 마커 남기기
+          <span class="apply-action-hint">— PM이 자동으로 처리하고, 마커가 생기면 완료로 자동 확인됨</span>
+        </label>
+        <label class="apply-action-radio">
+          <input type="radio" name="verification-type-apply_action_task_ccfc091f4b134452b5da8593a3eca018" value="manual_only"
+                 onchange="toggleVerificationPathInput('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">
+          수동으로 확인
+          <span class="apply-action-hint">— 자동 실행 안 됨. 당신이 직접 처리하고 완료도 직접 표시해야 함</span>
+        </label>
+      </div>
+      <div class="apply-action-draft-warning" id="draft-warning-apply_action_task_ccfc091f4b134452b5da8593a3eca018" style="display:none">
+        ⚠️ AI 초안 생성 실패 — 직접 선택 필요
+      </div>
+    </div>
+    <div class="apply-action-field" id="verification-path-wrap-apply_action_task_ccfc091f4b134452b5da8593a3eca018" style="display:none">
+      <label class="apply-action-label" for="verification-path-apply_action_task_ccfc091f4b134452b5da8593a3eca018">verification_path</label>
+      <input id="verification-path-apply_action_task_ccfc091f4b134452b5da8593a3eca018" class="apply-action-input" type="text" placeholder="검증 경로">
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="normalized-plan-apply_action_task_ccfc091f4b134452b5da8593a3eca018">normalized_plan</label>
+      <textarea id="normalized-plan-apply_action_task_ccfc091f4b134452b5da8593a3eca018" class="comment-textarea normalized-plan-textarea"
+                rows="4">[gc] 2026-W38: learned-practices 블록 삭제 제안 — item_ids=feed_7f68e9976de24e94a8f330802e1cfc01, feed_8ef81ff6c6db4e5ba6257851cd254d0f, feed_ac10b829b6014f50b58a05defd7d2f06, feed_e5a434bbb51d4642955b79ce227ba146, feed_e8013334aacc4c3f89768abc666d5f57</textarea>
+    </div>
+    <div class="apply-action-field">
+      <label class="apply-action-label" for="final-risk-apply_action_task_ccfc091f4b134452b5da8593a3eca018">final_risk_level</label>
+      <select id="final-risk-apply_action_task_ccfc091f4b134452b5da8593a3eca018" class="apply-action-select">
+        <option value="low">low</option><option value="medium" selected>medium</option><option value="high">high</option>
+      </select>
+    </div>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" type="button" onclick="submitApplyActionApproval('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">승인</button>
+      <button class="btn-comment-cancel" type="button" onclick="toggleApplyActionForm('apply_action_task_ccfc091f4b134452b5da8593a3eca018')">취소</button>
     </div>
   </div>
 </div>
@@ -4838,8 +4921,266 @@ trenddalkak.ai AI 잘 쓰는 디자이너라면? 개발자분들도? 잘 쓰고 
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 105건</p>
+<p class="count">승인 대기 107건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_f3cba7e72b134041bf03c8eff57af3fa" data-id="feed_f3cba7e72b134041bf03c8eff57af3fa">
+  <div class="card-header">
+    <span class="item-tag" title="feed_f3cba7e72b134041bf03c8eff57af3fa">#f3cba7e7</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-09-21</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">03:52
+oo
+64
+Thread
+이미지
+글씨 따기
+이미지 글씨-이어서
+링크따기
+3등급-링크따기
+2등급-링크따기
+4등급-링크따기
+• 159
+Top v
+Q17
+G30
+→ 61
+View activity >
+a
+candle_king_korea 1d
+미너비니가 만든 패턴이 VCP임 가격 조정폭이 점점 줄어드는 구간을 찾는 건데 예를 들면
+-18% 조정 10% 조정 5% 조정
+Reply to candle_king_korea...
+
+03:528
+<
+:
+64
+Thread
+31.4K views
+candle_king_korea 1d
+미너비니가 만든 패턴이 VCP임 가격 조정폭이 점점 줄어드는 구간을 찾는 건데 예를 들면
+-18% 조정 10% 조정 5% 조정
+이렇게 흔들림이 계단식으로 줄어드는 자리임
+217
+The Voltiity Contraction Pattern
+New Risk Level
+Entry
+Higher Lows
+• 25
+I GI
+→ 5
+candle_king_korea 1d
+근데 핵심은 가</p>
+  
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_f3cba7e72b134041bf03c8eff57af3fa')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f3cba7e72b134041bf03c8eff57af3fa','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f3cba7e72b134041bf03c8eff57af3fa','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f3cba7e72b134041bf03c8eff57af3fa')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f3cba7e72b134041bf03c8eff57af3fa&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f3cba7e72b134041bf03c8eff57af3fa" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_f3cba7e72b134041bf03c8eff57af3fa" style="display:none">
+    <div class="delegate-reference">원문 요약: 03:52
+oo
+64
+Thread
+이미지
+글씨 따기
+이미지 글씨-이어서
+링크따기
+3등급-링크따기
+2등급-링크따기
+4등급-링크따기
+• 159
+Top v
+Q17
+G30
+→ 61
+View activity &gt;
+a
+candle_king_korea 1d
+미너비니가 만든 패턴이 VCP임 가격 조정폭이 점점 줄어드는 구간을 찾는 건데 예를 들면
+-18% 조정 10% 조정 5% 조정
+Reply to candle_king_korea...
+
+03:528
+&lt;
+:
+64
+Thread
+31.4K views
+candle_king_korea 1d
+미너비니가 만든 패턴이 VCP임 가격 조정폭이 점점 줄어드는 구간을 찾는 건데 예를 들면
+-18% 조정 10% 조정 5% 조정
+이렇게 흔들림이 계단식으로 줄어드는 자리임
+217
+The Voltiity Contraction Pattern
+New Risk Level
+Entry
+Higher Lows
+• 25
+I GI
+→ 5
+candle_king_korea 1d
+근데 핵심은 가</div>
+    <select id="delegate-project-feed_f3cba7e72b134041bf03c8eff57af3fa" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_f3cba7e72b134041bf03c8eff57af3fa" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_f3cba7e72b134041bf03c8eff57af3fa')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_f3cba7e72b134041bf03c8eff57af3fa')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_f3cba7e72b134041bf03c8eff57af3fa" style="display:none">
+    <textarea id="comment-text-feed_f3cba7e72b134041bf03c8eff57af3fa" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_f3cba7e72b134041bf03c8eff57af3fa')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f3cba7e72b134041bf03c8eff57af3fa')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_0a84c9a631b1466a8f7324d3206cafb7" data-id="feed_0a84c9a631b1466a8f7324d3206cafb7">
+  <div class="card-header">
+    <span class="item-tag" title="feed_0a84c9a631b1466a8f7324d3206cafb7">#0a84c9a6</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-09-20</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">09:58 1
+oo
+51
+이미지
+글씨 따기
+이미지 글씨-이어서
+링크따기
+3등급-링크따기
+2등급-링크따기
+4등급-링크따기
+매출•영업이익률•연금으금
+변화를 분석해줘.
+3
+업종 비교
+소프트웨어 기업 5곳의 최근 8개 분기 매출과
+EBITDA 마진을 비교해줘.
+분기 사사 배출과 매출총이익률을 비교해줘.
+4
+적정 가치 분석
+넷플릭스의 DCF 가치평가에 필요한 자료와 가정을 정리해줘.
+5
+성장률 비교
+최근 8개 분기 AWS와 애저의 성장률을 비교해줘.
+6
+종목 찾기
+PER 15배 미만•잉여현금흐름 플러스•매출 성장률 5% 초과 기업을 찾아줘.
+핵심 : 기업명 + 지표 + 기간을 구체적으로!
+출처: Claude 공식 금융 분석 가이드
+81
+498
+ps4_justdoit &
+~ 김세환.목장 길 따라
+알아두시면 좋습니다 ㅎ흥
+Follow
+Add comment...</p>
+  
+  <div class="surfaces"></div>
+  <div class="tags"></div>
+  
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_0a84c9a631b1466a8f7324d3206cafb7')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_0a84c9a631b1466a8f7324d3206cafb7','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_0a84c9a631b1466a8f7324d3206cafb7','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_0a84c9a631b1466a8f7324d3206cafb7')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_0a84c9a631b1466a8f7324d3206cafb7&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_0a84c9a631b1466a8f7324d3206cafb7" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_0a84c9a631b1466a8f7324d3206cafb7" style="display:none">
+    <div class="delegate-reference">원문 요약: 09:58 1
+oo
+51
+이미지
+글씨 따기
+이미지 글씨-이어서
+링크따기
+3등급-링크따기
+2등급-링크따기
+4등급-링크따기
+매출•영업이익률•연금으금
+변화를 분석해줘.
+3
+업종 비교
+소프트웨어 기업 5곳의 최근 8개 분기 매출과
+EBITDA 마진을 비교해줘.
+분기 사사 배출과 매출총이익률을 비교해줘.
+4
+적정 가치 분석
+넷플릭스의 DCF 가치평가에 필요한 자료와 가정을 정리해줘.
+5
+성장률 비교
+최근 8개 분기 AWS와 애저의 성장률을 비교해줘.
+6
+종목 찾기
+PER 15배 미만•잉여현금흐름 플러스•매출 성장률 5% 초과 기업을 찾아줘.
+핵심 : 기업명 + 지표 + 기간을 구체적으로!
+출처: Claude 공식 금융 분석 가이드
+81
+498
+ps4_justdoit &amp;
+~ 김세환.목장 길 따라
+알아두시면 좋습니다 ㅎ흥
+Follow
+Add comment...</div>
+    <select id="delegate-project-feed_0a84c9a631b1466a8f7324d3206cafb7" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_0a84c9a631b1466a8f7324d3206cafb7" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_0a84c9a631b1466a8f7324d3206cafb7')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_0a84c9a631b1466a8f7324d3206cafb7')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_0a84c9a631b1466a8f7324d3206cafb7" style="display:none">
+    <textarea id="comment-text-feed_0a84c9a631b1466a8f7324d3206cafb7" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_0a84c9a631b1466a8f7324d3206cafb7')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0a84c9a631b1466a8f7324d3206cafb7')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_2efc0804164b4a218293bf263814b37a" data-id="feed_2efc0804164b4a218293bf263814b37a">
   <div class="card-header">
