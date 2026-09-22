@@ -54,6 +54,8 @@
                background: #f5f0e8; padding: 2px 8px; border-radius: 4px; }
   .date { font-size: 12px; color: #a8a29e; }
   .summary { font-size: 14px; line-height: 1.65; color: #292524; }
+  .research { font-size: 12px; line-height: 1.55; background: #f8fafc; border-left: 3px solid #38bdf8; padding: 8px 10px; border-radius: 4px; }
+  .badge-research { font-size: 11px; font-weight: 700; color: #0369a1; } .badge-research.failed { color: #991b1b; }
   .surfaces { display: flex; flex-wrap: wrap; gap: 6px; }
   .badge { font-size: 12px; background: #dbeafe; color: #1d4ed8;
             padding: 2px 8px; border-radius: 4px; }
@@ -4979,6 +4981,7 @@ hyeoksin.j •
 & Giulio Cercato • Power On
 Fo</p>
   
+  
   <div class="surfaces"></div>
   <div class="tags"></div>
   
@@ -5106,6 +5109,7 @@ Follow
 1
 D
 g</p>
+  
   
   <div class="surfaces"></div>
   <div class="tags"></div>
@@ -5236,6 +5240,7 @@ I GI
 candle_king_korea 1d
 근데 핵심은 가</p>
   
+  
   <div class="surfaces"></div>
   <div class="tags"></div>
   
@@ -5365,6 +5370,7 @@ ps4_justdoit &
 Follow
 Add comment...</p>
   
+  
   <div class="surfaces"></div>
   <div class="tags"></div>
   
@@ -5452,6 +5458,7 @@ Add comment...</div>
   </div>
   <p class="summary">AI 에이전트 개발 시 반복 구현되는 공통 컴포넌트(메모리, 컨텍스트 DB, 브라우저 자동화, 하네스 설계 등)를 7개 오픈소스 저장소로 모듈화한 소개 게시물. 스킬 기반 저장소는 npx 한 줄로 설치 가능하며, Claude Code 내 다이어그램 생성(SVG/HTML, Mermaid 불필요) 등 실용적 도구 포함.</p>
   <ul class="claims"><li>agentmemory는 코딩 에이전트에 세션을 넘어가는 기억 기능을 제공한다</li><li>browser-use는 에이전트가 직접 브라우저를 열어 사이트 탐색 및 폼 입력을 수행한다</li><li>Anthropic-Cybersecurity-Skills는 앤트로픽이 아닌 개인(mukul975)의 커뮤니티 프로젝트이다</li><li>diagram-design은 Claude Code 내에서 Mermaid 없이 HTML+SVG로 39종 다이어그램을 생성한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#AI 에이전트</span> <span class="tag">#오픈소스</span> <span class="tag">#에이전트 메모리</span> <span class="tag">#browser-use</span> <span class="tag">#Claude Code</span> <span class="tag">#스킬</span> <span class="tag">#하네스</span></div>
   <div class="apply-plan">승인 시 diagram-design과 scientific-agent-skills를 ~/agent_hub/refs/mcp-tools.md 또는 CLAUDE.md 검증 대기 목록에 추가하고, browser-use를 ai-feed 파이프라인의 자동 수집 에이전트 후보로 ~/agent_hub/refs/projects.md에 메모한다.</div>
@@ -5507,6 +5514,7 @@ Add comment...</div>
   </div>
   <p class="summary">알파봇 production이 04:12 재시작 후 모델 ID 문제가 해결되어 전략 코드 생성이 재개됐다. Cycle 8272에서 후보 2개가 리스크 게이트까지 진입(밤새 0/0 대비 개선)했으나 통과는 0건으로, 실패 원인은 인프라가 아닌 정상적인 품질 게이트 작동이다. 04:50:20에 발생한 llama.cpp empty content 오류는 Muse가 추론 토큰으로 출력 한도를 소진했을 가능성이 있어 추가 모니터링이 필요하다.</p>
   <ul class="claims"><li>재시작 후 400 에러 0건, 라우터 요청 10건 전부 성공 — 이전 678건 집계는 오류였음</li><li>Cycle 8272: 후보 2개 리스크 게이트 도달, 통과 0개 (밤새 0/0 대비 파이프라인 재가동 확인)</li><li>코드화 실패 원인은 스모크 테스트(왕복 거래 1건, 신호 전부 0, 매수 진입 없음) — 인프라 아닌 전략 품질 게이트 정상 동작</li><li>04:50:20 llama.cpp empty/invalid content 오류는 Muse 추론 토큰 출력 한도 초과 가능성 (AB-RESEARCH-DEAD 패턴과 유사)</li></ul>
+  
   <div class="surfaces"><span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#alphabot</span> <span class="tag">#production</span> <span class="tag">#llama.cpp</span> <span class="tag">#muse</span> <span class="tag">#risk-gate</span> <span class="tag">#pipeline</span> <span class="tag">#output-token-limit</span> <span class="tag">#smoke-test</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💻 로컬 AI·최적화' 섹션에 반영.
@@ -5564,6 +5572,7 @@ Add comment...</div>
   </div>
   <p class="summary">대학원생을 위한 AI·학술 연구 도구를 3단계(입문자/실무자/프로)로 분류한 인포그래픽. Claude, Perplexity, NotebookLM 등 AI 기반 도구부터 Zotero, MAXQDA, Semantic Scholar 등 전통 학술 도구까지 포괄한다. caramellab_ai 계정의 SNS 게시물로 추정.</p>
   <ul class="claims"><li>학술 연구 AI 도구는 숙련도에 따라 입문자(Claude·Perplexity·NotebookLM·SciSpace·Elicit·Consensus·Zotero), 실무자(Scite·Paperpal·ResearchRabbit·Connected Papers·Litmaps·VOSviewer), 프로(Obsidian·MAXQDA·Semantic Scholar)로 나눌 수 있다</li><li>입문자 단계에서도 Claude·Perplexity 같은 범용 AI가 학술 연구 워크플로우에 포함된다</li><li>논문 연결망 시각화 도구(Connected Papers·Litmaps·VOSviewer)는 실무자 단계로 분류된다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#학술연구</span> <span class="tag">#AI연구도구</span> <span class="tag">#대학원</span> <span class="tag">#연구방법론</span> <span class="tag">#문헌관리</span> <span class="tag">#논문검색</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -5621,6 +5630,7 @@ Add comment...</div>
   </div>
   <p class="summary">스탠퍼드 연구진이 Nature에 발표한 Paper2Agent는 MCP를 활용해 논문을 대화형 AI 에이전트로 변환하는 시스템이다. 논문 속 알고리즘·코드·데이터를 실행 가능한 도구로 패키징하고 자체 검증으로 환각을 억제한다. 서로 다른 논문 에이전트 간 자율 협업으로 건선 원인 유전자(GPR137)를 규명하는 성과를 보였다.</p>
   <ul class="claims"><li>Paper2Agent는 MCP(Model Context Protocol)를 이용해 논문을 대화형 AI 에이전트로 변환한다</li><li>논문 에이전트가 스스로 테스트·수치 검증을 수행해 환각을 억제한다</li><li>유전체 분석 논문 에이전트와 면역세포 스크리닝 논문 에이전트의 협업으로 건선 원인 유전자 GPR137이 규명됐다</li><li>해당 연구는 국제학술지 Nature에 게재됐다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#Paper2Agent</span> <span class="tag">#MCP</span> <span class="tag">#research-agent</span> <span class="tag">#multi-agent</span> <span class="tag">#hallucination-reduction</span> <span class="tag">#Stanford</span> <span class="tag">#Nature</span> <span class="tag">#scientific-discovery</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -5678,6 +5688,7 @@ Add comment...</div>
   </div>
   <p class="summary">2026년 2월 Nature에 발표된 리뷰 논문으로, 알츠하이머병 및 기타 신경퇴행성 치매에서 혈액·뇌척수액 등 생체액 바이오마커를 체계적으로 정리한다. 타우(p-Tau, MTBR-tau, BD-tau), 아밀로이드(Aβ42/40), 신경섬유(NfL), 시냅스(SNAP-25, SV2A, NPTX2), 신경교(GFAP, YKL-40), TDP-43, α-시누클레인 등 다양한 구획별 바이오마커를 도식화한다. Henrik Zetterberg와 Barbara B. Bendlin이 저술했으며, 조기 진단·병리 추적·치료 반응 모니터링을 위한 바이오마커 활용 현황을 종합한다.</p>
   <ul class="claims"><li>혈액 및 CSF에서 p-Tau, NfL, GFAP, Aβ42/40 등 다수의 바이오마커가 알츠하이머병 및 관련 신경퇴행성 질환의 병리를 반영할 수 있다</li><li>TDP-43, α-시누클레인, 타우 등 단백질 병리별로 특이적인 바이오마커(p-TDP-43, MTBR-tau, α-synuclein seeds 등)가 구분되어 연구되고 있다</li><li>시냅스 손상 마커(SNAP-25, SV2A, NPTX2, Neurogranin)와 혈관 마커(CSF/serum albumin ratio, sPDGFRβ)도 바이오마커 패널에 포함된다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#알츠하이머</span> <span class="tag">#바이오마커</span> <span class="tag">#신경퇴행성질환</span> <span class="tag">#CSF</span> <span class="tag">#혈액검사</span> <span class="tag">#타우</span> <span class="tag">#아밀로이드</span> <span class="tag">#NfL</span></div>
   <div class="apply-plan">승인 시 적용 대상 없음. 이 인사이트는 신경과학 연구 논문으로, 현재 운영 중인 프로젝트(ai-feed, alphabot, trader 등)에 직접 적용할 액션이 없다. ai-feed의 research 카드로 수집·보관하는 것이 적절하다.</div>
@@ -5733,6 +5744,7 @@ Add comment...</div>
   </div>
   <p class="summary">ChatGPT Astra + Google Flow(Gemini Omni) + Claude Code/Codex를 조합해 AI 영상을 제작하는 6단계 워크플로우 소개. GPT Astra로 기획·시나리오 작성, Google Flow의 Gemini Omni 모델로 영상 생성(Higgsfield보다 저렴), Claude Code/Codex로 영상 편집·합치기·자막·BGM 추가까지 자동화.</p>
   <ul class="claims"><li>ChatGPT Astra 모델을 추론 수준 PRO로 설정하면 낮은 모델 대비 기획 품질이 크게 다르다</li><li>Google Flow의 Gemini Omni Flash 모델이 Veo보다 개인 취향 기준 퀄리티가 더 좋고 토큰 소모가 적다</li><li>Claude Code/Codex에 영상 파일을 첨부하고 단문 프롬프트만으로 영상 합치기·자막·BGM 추가가 가능하다</li><li>Higgsfield는 퀄리티가 좋지만 비용이 높아 Google Flow가 대안이 될 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#AI영상제작</span> <span class="tag">#Google Flow</span> <span class="tag">#Gemini Omni</span> <span class="tag">#ChatGPT Astra</span> <span class="tag">#Claude Code</span> <span class="tag">#Codex</span> <span class="tag">#바이브코딩</span> <span class="tag">#AI워크플로우</span></div>
   <div class="apply-plan">승인 시 Higgsfield 대신 Google Flow(Gemini Omni) 영상 생성 파이프라인을 테스트할 경우, ~/agent_hub/refs/ai-trends.md 또는 ~/agent_hub/hub/ai-trends.md에 'Google Flow Gemini Omni - Higgsfield 저비용 대안 후보' 항목을 추가하고 실제 비용·품질 검증 후 판단</div>
@@ -5788,6 +5800,7 @@ Add comment...</div>
   </div>
   <p class="summary">2za.now 계정이 '주식 투자자 치트키 프롬프트'라는 제목으로 AI 프롬프트 관련 콘텐츠를 공유했으나, 실제 프롬프트 내용은 이미지 내에 있어 텍스트로 추출되지 않았다. 주식 투자에 AI 프롬프트를 활용하는 방법론을 소개하는 SNS 콘텐츠로 보이나, 구체적인 내용 파악 불가능하다.</p>
   <ul class="claims"><li>주식 투자에 활용할 수 있는 AI 프롬프트가 존재한다는 주장</li><li>해당 프롬프트가 '치트키' 수준의 유용성을 가진다는 주장</li></ul>
+  
   <div class="surfaces"><span class="badge">✍️ prompt</span></div>
   <div class="tags"><span class="tag">#주식</span> <span class="tag">#투자</span> <span class="tag">#AI프롬프트</span> <span class="tag">#치트키</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '✍️ 프롬프트 패턴' 섹션에 반영.
@@ -5845,6 +5858,7 @@ Add comment...</div>
   </div>
   <p class="summary">YouTube 채널 성장은 단순한 영상 제작이 아닌 시스템 구축의 문제다. 니치 포지셔닝, 콘텐츠 필러, 훅, 썸네일, 스크립트, 수익화 전략을 Claude 같은 AI로 전략가/프로듀서/성장 운영자 역할을 동시에 수행해 미디어 비즈니스처럼 운영해야 한다. 콘텐츠 시스템 없이 무작위 업로드는 실패하는 주요 원인이다.</p>
   <ul class="claims"><li>YouTube 채널 실패의 주요 원인은 나쁜 운이 아니라 약한 포지셔닝, 약한 패키징, 시스템 부재다</li><li>Claude를 활용해 전략가·프로듀서·성장 운영자·수익화 컨설턴트 역할을 동시에 수행할 수 있다</li><li>성공하는 크리에이터는 채널을 미디어 비즈니스처럼 구축한다</li><li>수익화는 초기부터 설계해야 한다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#YouTube</span> <span class="tag">#콘텐츠 전략</span> <span class="tag">#AI 활용</span> <span class="tag">#Claude</span> <span class="tag">#크리에이터 이코노미</span> <span class="tag">#수익화</span> <span class="tag">#콘텐츠 시스템</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -5902,6 +5916,7 @@ Add comment...</div>
   </div>
   <p class="summary">Lightricks가 2026년 8월 22B 파라미터 영상 생성 모델 LTX-2.5의 가중치를 공개했다. 텍스트·이미지·클립 입력으로 오디오 포함 영상을 생성하며, LoRA 학습 도구와 ComfyUI 워크플로도 제공된다. 연매출 1000만 달러 미만은 상업용 무료이나 OSI 오픈소스 라이선스는 아니다.</p>
   <ul class="claims"><li>LTX-2.5는 22B 파라미터 영상 생성 모델이며 Lightricks가 2026년 8월 가중치를 공개했다</li><li>공간 업스케일러 적용 시 4K 해상도까지 출력 가능하다</li><li>Hugging Face 월간 다운로드 154만 건을 기록했다</li><li>최소 사양: NVIDIA VRAM 32GB 이상, RAM 32GB, 저장공간 100GB</li></ul>
+  
   <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#LTX-2.5</span> <span class="tag">#Lightricks</span> <span class="tag">#video-generation</span> <span class="tag">#local-model</span> <span class="tag">#22B</span> <span class="tag">#LoRA</span> <span class="tag">#ComfyUI</span> <span class="tag">#4K-upscale</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💻 로컬 AI·최적화' 섹션에 반영.
@@ -5959,6 +5974,7 @@ Add comment...</div>
   </div>
   <p class="summary">Claude에 디자인 판단 기준(Design Skill, Taste Skill)과 Figma MCP + Playwright를 결합해 AI가 만들기→보기→수정 루프를 자율 반복하도록 세팅하면 'AI 티'가 나는 기본값 디자인을 탈피할 수 있다. 핵심은 긴 프롬프트가 아니라 좋은 디자인의 기준과 자기 결과물을 볼 수 있는 '눈'을 AI에게 부여하는 것이다.</p>
   <ul class="claims"><li>Claude가 생성하는 웹사이트가 비슷해 보이는 원인은 AI 성능이 아니라 기본값(default) 디자인 패턴에 있다</li><li>Emil Kowalski Design Skill + Impeccable을 시스템 프롬프트에 주입하면 여백·타이포그래피·애니메이션 판단 기준이 개선된다</li><li>Figma MCP + Playwright 조합으로 AI가 생성→확인→수정 루프를 자율 반복할 수 있다</li><li>Taste Skill을 추가하면 AI식 클리셰 디자인 패턴을 회피할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#claude</span> <span class="tag">#web-design</span> <span class="tag">#mcp</span> <span class="tag">#figma</span> <span class="tag">#playwright</span> <span class="tag">#design-skill</span> <span class="tag">#ai-coding</span> <span class="tag">#system-prompt</span></div>
   <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md 또는 프로젝트 CLAUDE.md의 코딩 에이전트 프롬프트 섹션에 웹 UI 생성 시 Design Skill(여백·타이포·레이아웃 기준)과 Taste Skill(AI 클리셰 회피 지침)을 스킬로 추가하고, Figma MCP와 Playwright를 연결해 생성→스크린샷 확인→수정 루프를 자동화하는 워크플로우를 설계한다</div>
@@ -6015,6 +6031,7 @@ Add comment...</div>
   <p class="summary">[Caption]
 thelazyceo Follow me for more - I’m here to help you grow your business! After starting multiple businesses, I’ve realised how all online businesses follow a similar path and it’s all just a set of levers that you pull. Now of course it’s up to you how well you pull those levers and the timing at which you do it. But for that set of levers... here it all is! Comment “Learn” and I’ll send you these steps!</p>
   
+  
   <div class="surfaces"></div>
   <div class="tags"></div>
   
@@ -6069,6 +6086,7 @@ thelazyceo Follow me for more - I’m here to help you grow your business! After
   </div>
   <p class="summary">AI 영상 제작에 활용 가능한 무료 프롬프트 자료실 3곳 소개. Cinematique(촬영기법 150개), Emotion Direction(감정별 연기 프롬프트), YouMind(한국어 프롬프트 3만개+).</p>
   <ul class="claims"><li>Cinematique는 카메라 워크 41개, 조명 30개 포함 총 150개의 영화 촬영 기법 프롬프트를 무료 제공</li><li>Emotion Direction은 감정 25개에 대한 연기 영상과 눈·입·턱 기반 감정 표현 프롬프트를 제공</li><li>YouMind는 3만 개 이상의 프롬프트를 한국어로 제공하며 매일 업데이트</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">✍️ prompt</span></div>
   <div class="tags"><span class="tag">#video-generation</span> <span class="tag">#prompt-library</span> <span class="tag">#AI영상</span> <span class="tag">#cinematography</span> <span class="tag">#emotion-prompts</span> <span class="tag">#한국어</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -6126,6 +6144,7 @@ thelazyceo Follow me for more - I’m here to help you grow your business! After
   </div>
   <p class="summary">[Caption]
 gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나옵니다. 그런데 열어 보면 어딘가 심심합니다. 색이나 폰트 탓이 아닙니다. 안 움직여서 그렇습니다. 스크롤하면 글자가 하나씩 올라오고, 첫 화면이 커튼처럼 걷히고, 마우스를 올리면 반응하는 것. 잘 만든 사이트와 그냥 사이트를 가르는 건 거의 이겁니다. 그리고 AI는 이 부분을 만들어 주지 않습니다. 다행히 직접 짜는 게 아닙니다. 만들어 둔 걸 복사해서 붙이면 됩니다. 그런 곳이 네 군데 있습니다. · reactbits.dev — 효과 171개. 눌러 보고 고르면 코드를 통째로 줍니다. 비용 없음 · vengenceui.com — 사람들이 가장 먼저 보는 첫 2초를 바꾸는 로딩 화면 효과. 붙이는 데 5분. 비용 없음 · animmasterlib.dev — 300개 중 60%가 기본 웹 코드라 리액트를 몰라도 붙습니다. 비용 4.99달러부터 · skiper-ui.com — 카드·요금표·프리로더</p>
+  
   
   <div class="surfaces"></div>
   <div class="tags"></div>
@@ -6189,6 +6208,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
 
 아프</p>
   
+  
   <div class="surfaces"></div>
   <div class="tags"></div>
   
@@ -6250,6 +6270,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">XAU/USD 인트라데이 스캘핑을 위한 7가지 AI 프롬프트 모음. 유동성 스윕, FVG, 브레이크아웃, 반전, 멀티타임프레임 분석 등 다양한 진입 전략을 ChatGPT/Claude에 입력할 수 있는 형태로 제공한다. 각 프롬프트는 진입가, SL, TP, 무효화 조건을 요청하도록 설계됐다.</p>
   <ul class="claims"><li>AI 프롬프트로 XAU/USD 스캘핑 진입 신호를 구조화할 수 있다</li><li>멀티타임프레임(15M/5M/1M) 분석을 AI에 위임하면 편향 정렬이 가능하다</li><li>Prompt 7처럼 NO TRADE 필터를 명시하면 과매매를 줄일 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#XAU/USD</span> <span class="tag">#골드 스캘핑</span> <span class="tag">#AI 트레이딩 프롬프트</span> <span class="tag">#FVG</span> <span class="tag">#유동성 스윕</span> <span class="tag">#멀티타임프레임</span> <span class="tag">#리스크 관리</span></div>
   <div class="apply-plan">승인 시 alphabot의 골드(XAU/USD) 신호 평가 로직에 'NO TRADE' 조건 명시 패턴을 참고해, 진입 조건 미충족 시 명시적 기권 출력을 추가하는 프롬프트 구조를 `~/dev/Auto_bot` 관련 프롬프트 템플릿 파일에 반영 검토.</div>
@@ -6305,6 +6326,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">DMA(일반 이동평균보다 2배 빠른 추세선)와 스토캐스틱 스무딩선의 50선 동시 돌파를 매수 진입 조건으로 삼는 이중 지표 전략. 캔들이 DMA 상향 돌파 + 스토캐스틱 스무딩선 50선 상향 돌파가 동시 성립할 때 진입하며, 손절은 DMA 직하단 또는 직전 단기 저점으로 설정한다.</p>
   <ul class="claims"><li>DMA는 일반 이동평균보다 2배 빠르게 반응하는 추세선이다</li><li>스토캐스틱 스무딩선 50선은 모멘텀의 중립 기준점 역할을 한다</li><li>두 지표의 동시 돌파 신호가 뇌동매매를 줄이고 진입 정확도를 높인다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#DMA</span> <span class="tag">#스토캐스틱</span> <span class="tag">#이중지표</span> <span class="tag">#추세돌파</span> <span class="tag">#모멘텀</span> <span class="tag">#손절기준</span> <span class="tag">#기술적분석</span></div>
   <div class="apply-plan">승인 시 alphabot의 진입 필터 로직(예: `Auto_bot/strategies/` 내 해당 전략 파일)에 DMA 상향 돌파 + 스토캐스틱 50선 돌파 이중 조건을 실험적 진입 게이트로 추가하고, DMA 파라미터를 기존 EMA 대비 절반 기간으로 설정해 백테스트 비교 실험을 수행한다.</div>
@@ -6360,6 +6382,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">감기 시 노란/초록 가래·콧물은 세균 감염의 증거가 아니며, 호중구의 myeloperoxidase 때문에 바이러스 감기에서도 정상적으로 나타난다. 항생제 필요 여부는 색이 아닌 경과로 판단해야 한다. Claude Desktop이 사용자 건강 메모리([redacted] 등)를 읽어 맥락화된 의료 정보를 제공하는 장면이 포착됨.</p>
   <ul class="claims"><li>가래·콧물 색깔(노랑/초록)은 세균 감염의 지표가 아니다 — 바이러스 감기 3~5일째부터 호중구 myeloperoxidase로 인해 정상 발생</li><li>항생제 처방 판단 기준은 분비물 색이 아니라 증상 경과다</li><li>Claude Desktop은 Memory 기능으로 사용자 처방 이력([redacted], [redacted], [redacted], [redacted])을 읽어 개인화 응답에 활용한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#의료상식</span> <span class="tag">#항생제오남용</span> <span class="tag">#감기</span> <span class="tag">#Claude Memory</span> <span class="tag">#개인화AI</span></div>
   <div class="apply-plan">승인 시 적용 불필요. 의료 상식 인사이트이며 코드·설정 변경 대상 없음. Claude Memory 개인화 기능 확인 참고 정도.</div>
@@ -6415,6 +6438,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">AI 강의에서 파생된 '천재적 사고 공식화 프롬프트'로, 여러 사고법 중 가장 적합한 두 가지를 혼합해 분석하고 천재적 아이디어 10개 이상을 도출하는 구조화된 프롬프트 템플릿이다. 수식 GI = (O × C × P × S) / (A + B)를 활용해 통찰의 깊이를 정량화하려는 시도를 포함한다. 핸드폰 접근성을 위한 캡처→GPT 재출력 팁도 포함되어 있다.</p>
   <ul class="claims"><li>사고법 두 가지를 혼합하면 단일 사고법보다 더 천재적인 아이디어를 도출할 수 있다</li><li>천재적 통찰은 GI = (O × C × P × S) / (A + B) 공식으로 수치화할 수 있다</li><li>1500자 이상 분석 후 3000자 이상 아이디어 출력이라는 분량 기준이 아이디어 품질을 높인다</li></ul>
+  
   <div class="surfaces"><span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#프롬프트엔지니어링</span> <span class="tag">#사고법</span> <span class="tag">#아이디어발산</span> <span class="tag">#GPT활용</span> <span class="tag">#창의적사고</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '✍️ 프롬프트 패턴' 섹션에 반영.
@@ -6472,6 +6496,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">GLM-5.3-Flash(321B MoE, MIT 라이선스)를 4×RTX 3090(96GB VRAM)에서 로컬 실행한 벤치마크. Q4+RAM 오프로드 시 1.3 tok/s로 실용 불가, IQ2_XXS 전량 VRAM 적재 시 41.2 tok/s로 실용 가능. 핵심 질문은 '실행 가능성'이 아니라 '2.18 bits/weight에서 품질 손실 얼마나 되나'로 이동.</p>
   <ul class="claims"><li>GLM-5.3-Flash는 321B MoE 아키텍처, MIT 라이선스</li><li>4×RTX 3090(96GB VRAM) 환경에서 Q4+RAM 오프로드 시 1.3 tok/s</li><li>IQ2_XXS 양자화로 전량 VRAM 적재 시 41.2 tok/s</li><li>IQ2_XXS는 약 2.18 bits/weight 수준</li></ul>
+  
   <div class="surfaces"><span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#GLM-5.3-Flash</span> <span class="tag">#321B</span> <span class="tag">#MoE</span> <span class="tag">#IQ2_XXS</span> <span class="tag">#Q4</span> <span class="tag">#RTX3090</span> <span class="tag">#로컬추론</span> <span class="tag">#양자화</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💻 로컬 AI·최적화' 섹션에 반영.
@@ -6529,6 +6554,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">찰스 다우는 매매 규칙을 직접 쓴 적 없으며, 현재 알려진 다우 이론 6원칙은 사후에 타인이 정리한 것이다. 다우 이론의 핵심은 예측이 아닌 추세 판정 기준(고점·저점 기반)이며, 두 지수의 상호 확인과 세 가지 파동 개념을 중심으로 한다. 130년간 유효한 이유는 빠른 신호가 아니라 자기 주도적 판정 프레임워크이기 때문이다.</p>
   <ul class="claims"><li>다우 이론 6원칙은 찰스 다우 사후에 타인이 신문 사설을 정리해 만든 것이다</li><li>다우 이론은 예측 도구가 아니라 추세 판정 기준이다</li><li>추세 전환은 두 가지 조건이 성립해야 인정된다</li><li>두 지수(다우 산업·운수)가 서로 확인해야 추세가 유효하다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#다우이론</span> <span class="tag">#추세판정</span> <span class="tag">#기술적분석</span> <span class="tag">#시장구조</span> <span class="tag">#고점저점</span></div>
   <div class="apply-plan">승인 시 alphabot 전략 문서(~/dev/Auto_bot 또는 ~/dev/trader)의 추세 판정 섹션에 다우 이론 기반 고점·저점 확인 로직(HH/HL 상승, LH/LL 하락)과 두 지수 확인 조건을 필터 레이어로 추가 검토</div>
@@ -6584,6 +6610,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">ALS(근위축성 측색 경화증)에서 취약한 알파 운동 뉴런이 '질병 연관 운동 뉴런(DM)'이라는 특이 세포 상태로 전환됨을 마우스 실험에서 수천 가지 분자 변화를 통해 확인했다. DM 전환을 조절하는 전사인자 네트워크를 규명했으며, 이를 인간 운동 뉴런에서 과발현하면 DM 특징이 유도됨을 입증했다. 인간 ALS 척수 단일핵 RNA 시퀀싱 데이터에서도 동일한 DM 시그니처가 보존됨을 확인해 마우스-인간 간 보존된 유전적 연관 운동 뉴런 시그니처를 수립했다.</p>
   <ul class="claims"><li>ALS에서 알파 운동 뉴런은 세포사 이전에 'disease-associated motor neurons(DM)'라는 별개의 세포 상태로 전환된다</li><li>DM 연관 전사인자를 인간 운동 뉴런에 과발현하면 DM 핵심 특징이 유도된다</li><li>SOD1-G93A 마우스 운동 뉴런의 접근성 차등 영역 인간 오르솔로그가 ALS 유전적 위험 변이와 농축 연관된다</li><li>인간 ALS 척수 snRNA-seq 데이터에서 DM 시그니처가 보존된다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#ALS</span> <span class="tag">#운동뉴런</span> <span class="tag">#신경퇴행</span> <span class="tag">#전사인자</span> <span class="tag">#단일핵RNA시퀀싱</span> <span class="tag">#SOD1</span> <span class="tag">#세포상태전환</span> <span class="tag">#유전적위험변이</span></div>
   <div class="apply-plan">승인 시 적용 대상 없음 — 순수 기초과학(신경퇴행 분자생물학) 연구로 ai-feed의 AI/트레이딩/코딩 도메인과 무관하다.</div>
@@ -6639,6 +6666,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">탄약과 링크의 온도 조건 불일치로 발생한 품질 문제를 분석하는 장면. 탄약은 항온 처리됐지만 링크는 상온 상태였고, 규격서 기준은 충족했으나 이번 사업의 특수 조건이 문제였음. 불량 데이터를 기반으로 원인 분석에 착수하는 내용.</p>
   <ul class="claims"><li>탄약은 항온 처리되었으나 링크는 상온 상태에서 결합되었다</li><li>해당 작업 방식은 규격서 기준에는 부합한다</li><li>이번 사업의 특수 조건이 기존 규격과 충돌하는 문제의 원인이다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#탄약</span> <span class="tag">#품질불량</span> <span class="tag">#온도조건</span> <span class="tag">#링크</span> <span class="tag">#규격서</span> <span class="tag">#불량분석</span></div>
   <div class="apply-plan">승인 시 적용 가능한 인사이트 없음. 픽션 텍스트로 판단되며 실무 적용 대상 없음.</div>
@@ -6694,6 +6722,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">TurboVec는 Google Research의 TurboQuant 기반 오픈소스 벡터 인덱스로, 2-4비트 양자화를 통해 메모리를 16배 절감(31GB→4GB)하면서도 FAISS 수준의 검색 속도를 유지한다. Pure Rust + Python 바인딩으로 제공되며 별도 학습 단계 없이 즉시 사용 가능하다.</p>
   <ul class="claims"><li>1000만 벡터 기준 메모리 사용량을 31GB에서 4GB로 16배 줄임</li><li>2-4비트 양자화로도 높은 recall 유지</li><li>FAISS와 동등하거나 우월한 검색 속도</li><li>학습 단계 없음(no training phase)</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#vector-index</span> <span class="tag">#quantization</span> <span class="tag">#rust</span> <span class="tag">#faiss-alternative</span> <span class="tag">#turboquant</span> <span class="tag">#open-source</span> <span class="tag">#rag</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -6751,6 +6780,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">NVIDIA가 공개한 LLM 라우터 Switchyard는 앱 코드 변경 없이 OpenAI/Anthropic API 형식을 유지하면서 실제 백엔드 모델(GPT, Claude, 로컬 Qwen 등)을 TOML 설정 하나로 교체할 수 있게 해주는 도구다. Rust로 작성되었고 Apache-2.0 라이선스이며 출시 4일 만에 GitHub 스타 1,453개를 기록했다. 다만 README에 '실험적 소프트웨어, 프로덕션 사용 금지'가 명시되어 있어 현재는 실험 단계다.</p>
   <ul class="claims"><li>앱 코드 한 줄 수정 없이 OpenAI/Anthropic API 형식을 유지하면서 백엔드 모델을 교체할 수 있다</li><li>TOML 설정 파일 하나로 모델 라우팅 규칙을 정의하며, API 키는 값이 아닌 환경변수 이름으로만 참조한다</li><li>2026년 8월 11일 공개 후 나흘 만에 GitHub 스타 1,453개를 획득했다</li><li>README에 '실험적 소프트웨어, 프로덕션 사용 금지'가 명시되어 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span> <span class="badge">🤖 claude-code</span></div>
   <div class="tags"><span class="tag">#LLM-router</span> <span class="tag">#NVIDIA</span> <span class="tag">#Switchyard</span> <span class="tag">#model-switching</span> <span class="tag">#OpenAI-compatible</span> <span class="tag">#Rust</span> <span class="tag">#Apache-2.0</span> <span class="tag">#local-model</span></div>
   <div class="apply-plan">승인 시 ai-feed 인사이트로 수집 후 `~/agent_hub/refs/mcp-tools.md` 또는 `~/agent_hub/hub/ai-trends.md`에 Switchyard 항목을 추가하고, alphabot/ai-feed 등 멀티모델 라우팅이 필요한 프로젝트에서 실험 가능한 후보로 태그해 둔다. 프로덕션 적용은 '실험적 소프트웨어' 경고가 해제된 이후로 보류.</div>
@@ -6806,6 +6836,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">BMW 차량의 원격 제어 앱 상태 스냅샷. 충전율 42%, 주행 가능 거리 162마일, 공조 장치 작동 중, 30분간 원격 접속 활성화 상태.</p>
   <ul class="claims"><li>차량 충전 상태 42%</li><li>예상 주행 가능 거리 162마일</li><li>공조(Climate) 시스템이 현재 켜져 있음</li><li>원격 접속이 30분간 활성화되어 있음</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#BMW</span> <span class="tag">#전기차</span> <span class="tag">#원격제어</span> <span class="tag">#차량앱</span> <span class="tag">#Back Tap</span></div>
   <div class="apply-plan">승인 시 적용 불가 — AI/코딩/트레이딩/비즈니스와 무관한 차량 상태 데이터임.</div>
@@ -6861,6 +6892,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Cell Press 저널에 2026년 8월 28일 온라인 게재된 오픈액세스 논문. 약 2,200만 개의 1차 인간 CD4+ T세포에서 게놈 규모 Perturb-seq를 수행해 T세포 프로그램의 맥락 특이적 조절인자를 매핑했다. 휴식 및 자극 시점별 유전자 조절 효과, 인간 코호트 아틀라스 유전자 서명의 조절인자 후보, 인간 형질 및 질환 감수성과의 연계를 규명했다.</p>
   <ul class="claims"><li>게놈 규모 Perturb-seq로 약 2,200만 개의 1차 인간 CD4+ T세포에서 유전자 조절 효과를 매핑했다</li><li>많은 유전자 조절 효과는 휴식 상태와 자극 시점에 따라 맥락 특이적으로 나타난다</li><li>Perturb-seq 결과가 인간 코호트 아틀라스에서 관찰된 유전자 서명의 조절인자 후보를 지명한다</li><li>조절 경로를 인간 형질 및 질환 감수성과 연결짓는다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#perturb-seq</span> <span class="tag">#CD4+ T cells</span> <span class="tag">#gene regulation</span> <span class="tag">#CRISPR screening</span> <span class="tag">#immunology</span> <span class="tag">#single-cell genomics</span> <span class="tag">#human genetics</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 기초 면역유전체학 연구 논문으로 현재 운영 중인 시스템(claude-code, alphabot, ai-tools 등)에 직접 적용할 실행 지점 없음. ~/agent_hub/refs/learned-practices.md에 관심 연구 영역(생물정보학/면역학)으로 기록하려면 user_woosung_dual_domain_bio_research.md 참조.</div>
@@ -6916,6 +6948,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Nature Reviews Neuroscience에 게재된 개념적 프레임워크로, 뇌 미토콘드리아가 단순한 에너지 공장 이상의 역할을 하며 불안과 동기부여와 연결된다는 연구 소개. 스페인어 의학 교육 콘텐츠 크리에이터가 Telegram/WhatsApp/BuyMeACoffee를 활용한 유료 콘텐츠 모델로 운영 중.</p>
   <ul class="claims"><li>미토콘드리아가 불안 및 동기부여와 연결된다는 신경과학적 근거가 Nature Reviews Neuroscience에 발표됨</li><li>뇌 미토콘드리아에 대한 새로운 개념적 프레임워크가 제시됨</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#신경과학</span> <span class="tag">#미토콘드리아</span> <span class="tag">#뇌기능</span> <span class="tag">#불안</span> <span class="tag">#동기부여</span> <span class="tag">#의학콘텐츠</span> <span class="tag">#뉴로사이언스</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -6973,6 +7006,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Agentic AI를 제대로 학습하려면 LLM 추론 → RAG → 에이전트 패턴 → 프로덕션/거버넌스 → 프론티어 시스템 순서로 의존성을 따라야 한다. 상위 개념부터 학습하는 하향식 접근은 효과가 낮고, 기초 레이어가 작동한 후에야 자기개선 에이전트나 멀티모달 추론을 다뤄야 한다.</p>
   <ul class="claims"><li>LLM 추론이 RAG를 지원하고, RAG가 에이전트 패턴을 지원하는 명확한 의존성 계층이 존재한다</li><li>프로덕션 시스템에는 정책 게이트, 신뢰도 점수, 감사 추적, 관측 가능성, 비용 제어가 필요하다</li><li>자기개선 에이전트와 대규모 에이전트 워크플로는 하위 레이어가 안정된 후에야 도입해야 한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#agentic-ai</span> <span class="tag">#learning-roadmap</span> <span class="tag">#RAG</span> <span class="tag">#agent-patterns</span> <span class="tag">#production-ai</span> <span class="tag">#LLM</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/engineering.md 또는 관련 설계문서의 에이전트 아키텍처 섹션에 'Foundations → Retrieval/Memory → Agent Patterns → Production/Governance → Frontier Systems' 계층 구조를 의존성 체크리스트로 추가하여 새 에이전트 설계 시 레이어 누락 여부를 점검하는 기준으로 활용</div>
@@ -7028,6 +7062,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Nature Cancer 2026년 8월 게재 논문으로, 체내(in vivo) CAR T세포 공학을 통한 면역 재설계 방법론을 다룬 Perspective 논문이다. mRNA-tLNP, mcDNA-tLNP, 표적 AAV, 표적 LvV 등 비바이러스성 및 바이러스성 전달 방식을 비교하며 일시적 발현(non-integrating)과 안정적 발현(integrating) 전략을 분류한다. Peter MacCallum Cancer Centre의 Slaney, Darcy 등 연구팀이 저술했다.</p>
   <ul class="claims"><li>mRNA-tLNP 전달은 일시적(transient) CAR 발현을 유도하는 비통합 방식이다</li><li>mcDNA-tLNP는 트랜스포사제를 통한 트랜스포존 매개 통합으로 안정적 CAR 발현을 가능하게 한다</li><li>표적 AAV 및 LvV 전달은 바이러스성 통합 방식으로 안정적 CAR 발현을 제공한다</li><li>논문은 Nature Cancer에 2026년 8월 21일 온라인 게재되었다 (DOI: 10.1038/s43018-026-01216-0)</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#in vivo CAR T cell</span> <span class="tag">#면역치료</span> <span class="tag">#mRNA-LNP</span> <span class="tag">#유전자 전달</span> <span class="tag">#암 면역학</span> <span class="tag">#Nature Cancer</span> <span class="tag">#세포 공학</span></div>
   <div class="apply-plan">승인 시 해당 인사이트는 트레이딩, AI 툴, Claude Code 워크플로우와 무관한 암 면역치료 기초과학 논문으로, 현재 프로젝트 스택에 적용할 파일이나 위치 없음. Woosung의 Zlokovic 랩 소속 바이오 연구 맥락과 관련 있을 경우 ~/agent_hub/hub/project_profiles/ 또는 연구 메모에 참고 문헌으로 기록 가능.</div>
@@ -7083,6 +7118,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">reborn.ax는 Remotion(React 기반 영상 제작 라이브러리)을 활용해 로컬 렌더링으로 크레딧 비용 없이 영상을 만드는 CLI 툴이다. motion-graphics, cinematic-camera, terminal-inserts, article-highlights 네 가지 MIT 오픈소스 스킬을 번들로 제공하며, 원저자 저장소를 직접 참조해 업데이트를 자동 반영한다. Windows 호환 및 설치 검증 기능을 추가한 것이 원저자 패키지 대비 차별점이다.</p>
   <ul class="claims"><li>Remotion은 React 코드로 영상을 로컬 렌더링하므로 생성 크레딧 비용이 0원이다</li><li>motion-graphics, cinematic-camera, terminal-inserts, article-highlights 스킬은 Liam Johnston의 MIT 오픈소스다</li><li>reborn-motion-skills는 원저자 저장소를 직접 참조해 원저자 업데이트 시 자동 반영된다</li><li>npx reborn-motion-skills 한 줄로 Remotion까지 포함 설치된다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#Remotion</span> <span class="tag">#영상자동화</span> <span class="tag">#코드기반영상</span> <span class="tag">#MIT오픈소스</span> <span class="tag">#로컬렌더링</span> <span class="tag">#모션그래픽</span> <span class="tag">#npx툴</span> <span class="tag">#reborn.ax</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -7140,6 +7176,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">VIX, RSI, MDD, 200일 이동평균선 등 5개 공포 지표를 복합적으로 활용해 저점 매수 타이밍을 포착하는 전략. 지표 2개 이상이 동시에 기준치를 하회할 때를 진입 신호로 삼으며, S&P500뿐 아니라 채권·금·나스닥·비트코인 등 자산별 평균 낙폭 기준을 별도로 적용한다. 개인 투자자 관점의 경험적 규칙으로, 백테스트 근거는 1993~2026 데이터라고 명시하나 방법론 세부는 공개되지 않았다.</p>
   <ul class="claims"><li>공포 지수(Fear Index) 25 이하는 공포 구간, 20 이하는 비중 확대 시점</li><li>VIX 30 초과는 극단적 공포 신호</li><li>RSI 일봉 30, 주봉 35 이하가 매수 기준</li><li>S&P500 MDD -14%, 나스닥 -20% 이하가 저점 기준</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#저점매수</span> <span class="tag">#공포지수</span> <span class="tag">#VIX</span> <span class="tag">#RSI</span> <span class="tag">#MDD</span> <span class="tag">#200일이평</span> <span class="tag">#타이밍전략</span> <span class="tag">#멀티시그널</span></div>
   <div class="apply-plan">승인 시 ~/dev/alphabot의 진입 신호 모듈에 VIX>30, RSI<30(일봉)/<35(주봉), 가격이 200일 이평 -5% 이하 조건을 복합 필터로 추가하고, 2개 이상 충족 시에만 포지션 사이징을 확대하는 멀티시그널 게이팅 로직을 검토할 것.</div>
@@ -7195,6 +7232,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">뉴욕시 정치계 인사들과의 파티 일정으로 추수감사절에 미리 귀가한 화자가 엄마와 시간을 보내고, 밤에 동생 조이스와 함께 자는 일상적인 가족 장면을 묘사한 소설/에세이 텍스트다.</p>
   <ul class="claims"><li>뉴욕 시청 관련 정치계 파티가 여러 곳에서 열린다</li><li>조이스는 내년에 중학생이 된다</li><li>조이스는 키가 늦게 자라는 편이다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#가족</span> <span class="tag">#뉴욕</span> <span class="tag">#정치</span> <span class="tag">#일상</span> <span class="tag">#소설</span> <span class="tag">#추수감사절</span></div>
   <div class="apply-plan">승인 시 적용 불가. 이 텍스트는 AI, 트레이딩, 비즈니스와 무관한 문학/일상 서사로 어떤 시스템 파일이나 설정에도 반영할 내용이 없다.</div>
@@ -7250,6 +7288,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">2026년 8월 19일 Nature에 발표된 논문으로, 인간 뇌 오가노이드가 최대 5년에 걸쳐 시간의 경과를 기록할 수 있음을 보여준다. 424,720개의 세포를 분석하여 15일부터 5년까지 발달 단계별 시간적 정보가 오가노이드에 인코딩됨을 확인했다. Paola Arlotta 연구팀의 성과로, 뇌 발달 및 시간 인식 메커니즘 연구에 중요한 함의를 가진다.</p>
   <ul class="claims"><li>인간 뇌 오가노이드는 15일부터 5년까지 시간의 경과를 세포 수준에서 기록한다</li><li>424,720개의 세포 분석을 통해 발달 시점별 시간 정보가 오가노이드에 인코딩됨을 확인했다</li><li>뇌 오가노이드가 다년간(최대 5년)에 걸쳐 시간적 정보를 보존할 수 있다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#뇌 오가노이드</span> <span class="tag">#발달신경과학</span> <span class="tag">#시간 인코딩</span> <span class="tag">#단세포 분석</span> <span class="tag">#Nature 2026</span> <span class="tag">#인간 뇌 모델</span></div>
   <div class="apply-plan">승인 시 해당 없음. 이 인사이트는 순수 기초과학 논문으로 현재 프로젝트(alphabot, ai-feed, trader 등)에 직접 적용할 액션 없음.</div>
@@ -7305,6 +7344,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Mount Sinai 연구팀이 Cell Stem Cell(2026)에 발표한 논문으로, APOE4 유전자형을 가진 성상세포(astrocyte)에서 콜레스테롤 조절 이상이 α-시누클레인(a-synuclein) 병리를 촉진함을 miBrain 모델로 규명했다. 인간 뇌 조직에서 유래한 isogenic iPSC를 APOE3/3 vs APOE4/4로 비교하여, APOE4 성상세포의 콜레스테롤 이상이 신경세포 내 α-시누클레인 응집을 유발함을 보였다. MBCD(methyl-β-cyclodextrin) 처리로 콜레스테롤을 제거하면 신경세포가 건강하게 유지되는 구제 효과도 확인했다.</p>
   <ul class="claims"><li>APOE4 성상세포의 콜레스테롤 조절 이상이 신경세포의 α-시누클레인 응집(파킨슨병 관련 병리)을 촉진한다</li><li>MBCD(메틸-베타-사이클로덱스트린)으로 콜레스테롤을 제거하면 APOE4 환경에서도 신경세포 α-시누클레인 병리가 완화된다</li><li>isogenic iPSC 기반 miBrain 모델로 APOE3/3 vs APOE4/4 성상세포의 차이를 인간 세포 수준에서 직접 비교 검증했다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#APOE4</span> <span class="tag">#파킨슨병</span> <span class="tag">#알츠하이머</span> <span class="tag">#α-시누클레인</span> <span class="tag">#콜레스테롤</span> <span class="tag">#성상세포</span> <span class="tag">#iPSC</span> <span class="tag">#miBrain</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 이 인사이트는 신경과학 기초연구 논문으로, 현재 프로젝트(ai-feed, trader, agent_hub 등)에 직접 적용할 코드·설정·전략 변경 대상이 없음</div>
@@ -7360,6 +7400,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude 프롬프트 5개로 무인(얼굴 없는) YouTube 채널을 자동화하는 방법론. 니치 선정부터 브랜딩, 30일 콘텐츠 캘린더, SEO, 스크립트 프레임워크, 수익화 로드맵까지 단계별 프롬프트 제공. 각 프롬프트는 특정 역할(채널 전략가, SEO 전문가, 스크립트 작가 등)을 부여하는 방식.</p>
   <ul class="claims"><li>Claude 프롬프트 5개로 얼굴 없는 YouTube 채널 운영 자동화 가능</li><li>30일 콘텐츠 캘린더를 60% 입문자용 + 40% 고급 콘텐츠로 구성하면 최적화됨</li><li>90초마다 패턴 인터럽트를 배치하면 중간 지점 시청 유지율 50% 이상 달성 가능</li><li>6개월 로드맵으로 YouTube 파트너 프로그램 자격 획득 가능</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#faceless-youtube</span> <span class="tag">#claude-prompts</span> <span class="tag">#content-automation</span> <span class="tag">#AI-content-creation</span> <span class="tag">#youtube-monetization</span> <span class="tag">#prompt-engineering</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -7417,6 +7458,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">단기 반등매매 전략: 25일 이동평균선 이격률 -20% 이하로 급락한 주도주를 반등 확인 후 진입, 단기 수익 후 즉시 청산. BNF 스타일의 손절 원칙(이유 불문 손실 즉시 컷)을 핵심으로 함. 코스피 7월 22% 급락 사례를 배경으로 소개.</p>
   <ul class="claims"><li>25일 이동평균선 이격률 -20% 이하는 과매도 반등 진입 기준으로 사용 가능하다</li><li>시장 전체 급락일에 거래량이 터진 주도주가 해당 조건을 충족할 때 반등 확률이 높다</li><li>BNF는 손실 포지션을 이유 불문 즉시 손절하는 원칙을 고수했다</li><li>코스피가 지난 7월 한 달간 22% 하락해 세계 주요 지수 중 최하위를 기록했다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#이격률</span> <span class="tag">#25일이동평균</span> <span class="tag">#주도주</span> <span class="tag">#반등매매</span> <span class="tag">#손절원칙</span> <span class="tag">#BNF</span> <span class="tag">#코스피급락</span> <span class="tag">#단기트레이딩</span></div>
   <div class="apply-plan">승인 시 alphabot 전략 문서(~/dev/Auto_bot 또는 ~/dev/trader 내 전략 설정 파일)에 '이격률 반등매매' 조건 항목으로 추가 검토 — 25일 MA 대비 이격률 -20% 이하 + 거래량 급증 + 낙폭 안정 확인을 진입 필터로 백테스트하는 실험 티켓 등록</div>
@@ -7472,6 +7514,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude를 펀드매니저로 활용하는 4가지 레포지토리 가이드를 소개하는 SNS 마케팅 게시물. 퀀트 트레이딩 자동화에 AI를 활용하는 콘텐츠로, 댓글 참여 유도형 바이럴 마케팅 구조. 실제 기술 내용보다는 관심 유도가 주목적.</p>
   <ul class="claims"><li>Claude를 펀드매니저처럼 활용하는 레포지토리 4개가 존재한다</li><li>AI 기반 퀀트 트레이딩 자동화가 가능하다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#claude</span> <span class="tag">#quant</span> <span class="tag">#ai-trading</span> <span class="tag">#repository</span> <span class="tag">#viral-marketing</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -7529,6 +7572,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">IIT Delhi 연구진이 논문 한계점 자동 검출 프레임워크 'Tree-of-Concerns(ToC)'를 공개했다. 5개 전문 회의론자 페르소나가 독립적으로 논문을 분석하고, 4단계 적대적 토론을 통해 환각을 제거하며, NeurIPS 2023 기준 피어리뷰어가 지적한 한계의 73%가 논문 자체에 누락된 문제를 해결하려는 시도다. 기존 LLM 대비 정밀도 +79%, 숨은 취약점 커버리지 +11% 향상을 보고했다.</p>
   <ul class="claims"><li>NeurIPS 2023 피어리뷰어 지적 사항의 73%가 논문 본문 한계점 섹션에 기재되지 않았다</li><li>ToC는 기존 최강 베이스라인 대비 정밀도 +79%, Coverage@10 +11% 향상을 달성했다 (ToC-Bench 414편 기준)</li><li>5개 독립 페르소나(Scope/Methodology/Theoretical/Reproducibility/Fairness)로 Groupthink를 차단한다</li><li>후속 인용 논문들이 지적할 아키텍처적 결함을 선제적으로 포착한다고 주장한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#Tree-of-Concerns</span> <span class="tag">#논문검토자동화</span> <span class="tag">#LLM멀티에이전트</span> <span class="tag">#적대적토론</span> <span class="tag">#피어리뷰</span> <span class="tag">#재현성위기</span> <span class="tag">#IIT Delhi</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -7586,6 +7630,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude Code의 토큰 한도 소진 문제를 해결한다는 5가지 플러그인/스킬(OmniRoute, Headroom, Claude Map, Claude Code Setup, 테스트 스킬)을 소개하는 한국어 인플루언서 마케팅 콘텐츠. OmniRoute는 200개 이상의 무료 모델로 자동 전환, Headroom은 토큰 압축, Claude Map은 세션 기억 유지를 주장한다. 실제 도구 존재 여부 및 효과는 검증되지 않은 홍보성 게시물이다.</p>
   <ul class="claims"><li>OmniRoute 설치 시 200개 이상의 무료 AI 모델 풀로 자동 전환되며 월 16억 개의 무료 토큰 사용 가능</li><li>Headroom은 Claude 응답의 불필요한 토큰을 압축·제거해 토큰 낭비를 획기적으로 줄임</li><li>Claude Map은 세션 간 코드/파일 위치 등 맥락을 기억해 매번 설명할 필요를 없앰</li><li>Claude Code Setup은 프로젝트에 맞는 최적 스킬·훅·MCP를 자동 추천하고 불필요한 도구를 걸러냄</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#토큰최적화</span> <span class="tag">#OmniRoute</span> <span class="tag">#무료모델</span> <span class="tag">#플러그인</span> <span class="tag">#인플루언서마케팅</span></div>
   <div class="apply-plan">승인 시 OmniRoute만 실제 존재 여부를 `.venv/bin/ai-feed search 'OmniRoute claude code'` 또는 웹 검색으로 먼저 확인한 뒤, 유효하다면 `~/agent_hub/refs/mcp-tools.md`에 후보 항목으로 추가하고 CLAUDE.md 토큰 최적화 후보 섹션에 병기한다.</div>
@@ -7640,6 +7685,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
     
   </div>
   <p class="summary">이미지에서 텍스트를 추출하거나 링크를 수집하는 작업 단계들을 나열한 메모 또는 워크플로우 초안으로 보인다. 등급별 링크 따기(2~4등급)와 브레인스토밍 단계가 포함되어 있다.</p>
+  
   
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#워크플로우</span> <span class="tag">#OCR</span> <span class="tag">#링크수집</span> <span class="tag">#브레인스토밍</span></div>
@@ -7696,6 +7742,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude를 펀드매니저처럼 활용하는 4가지 레포지토리 사용 가이드를 댓글 이벤트로 제공하는 SNS 홍보 콘텐츠. 퀀트 투자 자동화에 AI를 활용하는 방법을 소개하며, 모의투자 선행을 권장하는 면책 문구 포함. 실질적 기술 내용보다 마케팅 성격이 강하다.</p>
   <ul class="claims"><li>Claude를 활용해 펀드매니저 역할을 대체하는 퀀트 전략 구현이 가능하다</li><li>특정 4개 레포지토리로 Claude 기반 투자 자동화 시스템을 구축할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#Claude</span> <span class="tag">#퀀트</span> <span class="tag">#AI투자자동화</span> <span class="tag">#펀드매니저AI</span> <span class="tag">#레포지토리가이드</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -7753,6 +7800,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">트레이딩 봇 개발에 활용 가능한 오픈소스 깃허브 리포 10개를 소개. 백테스트(VectorBT·Backtrader), 거래소 연결(CCXT), 봇 프레임워크(Freqtrade) 순서의 입문 로드맵 제시. 강화학습(FinRL), AI 에이전트 리서치(TradingAgents), 마켓메이킹(Hummingbot) 등 다양한 접근 커버.</p>
   <ul class="claims"><li>Freqtrade(53.5k), CCXT(43.7k), TradingAgents(99.3k) 등 나열된 리포들은 실제 스타 수를 보유한 검증된 오픈소스 프로젝트다</li><li>백테스트 → 거래소 연결 → 봇 프레임워크 순서가 입문자에게 권장되는 실전 적용 경로다</li><li>CCXT 하나로 100개 이상의 거래소 API를 통합 접근할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#트레이딩봇</span> <span class="tag">#오픈소스</span> <span class="tag">#백테스트</span> <span class="tag">#알고리즘트레이딩</span> <span class="tag">#CCXT</span> <span class="tag">#Freqtrade</span> <span class="tag">#강화학습</span> <span class="tag">#AI에이전트</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/projects.md 또는 alphabot 관련 설계문서에 CCXT·Freqtrade·TradingAgents를 외부 레퍼런스 라이브러리 후보로 기록하고, AB-RES0 이후 신규 전략 모듈 설계 시 TradingAgents(AI 에이전트 리서치) 접근법과 기존 alphabot 리서치 모듈의 차별점을 비교 검토 항목으로 추가</div>
@@ -7808,6 +7856,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">자산을 신탁에 넣고, 그것을 담보로 대출받아 생활하며 절대 매각하지 않는 'Buy, Borrow, Die' 전략. 대출은 소득이 아니므로 과세되지 않고, 사망 시 자녀가 stepped-up basis로 자산을 상속받아 IRS에 양도소득세를 내지 않는다.</p>
   <ul class="claims"><li>자산을 신탁에 보유하고 담보 대출로 생활하면 소득세 없이 현금 흐름 확보 가능</li><li>대출금은 현금흐름(소득)이 아니므로 과세 대상 아님</li><li>사망 시 상속인은 stepped-up basis(약 $12M 면제한도 활용)로 자산을 물려받아 양도소득세 0</li><li>자산을 생전에 절대 팔지 않으면 실현 이익이 발생하지 않아 세금 발생 없음</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#buy-borrow-die</span> <span class="tag">#세금회피전략</span> <span class="tag">#stepped-up basis</span> <span class="tag">#신탁</span> <span class="tag">#자산담보대출</span> <span class="tag">#상속세</span> <span class="tag">#양도소득세</span></div>
   <div class="apply-plan">승인 시 alphabot 전략 문서(~/dev/Auto_bot 또는 ~/dev/trader 내 매크로/리스크 섹션)에 초부유층의 자산 보유 구조(Buy-Borrow-Die)를 레퍼런스로 추가, 시장 매도 압력 분석 시 '실제 매각 vs 담보대출' 비율을 변수로 고려하는 주석 삽입</div>
@@ -7863,6 +7912,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude Code로 구현한 4가지 실용 프로젝트 시연: ①개인 어드바이저 보드 스킬(/ask-the-board), ②2분 만에 완성하는 재무 대시보드(500줄 HTML), ③AI 검색에 최적화된 퍼스널 사이트(llms.txt·robots.txt 포함), ④세션 패턴을 스스로 학습하는 내부 운영체제(/improve-system). 코딩 지식 없이 자연어 한 문장으로 배포까지 완료하는 워크플로우를 보여준다.</p>
   <ul class="claims"><li>Claude Code는 자연어 질문만으로 500줄 이상의 재무 대시보드 HTML을 2분 21초 만에 생성한다</li><li>Claude Code는 MCP를 통해 Hostinger에 직접 배포·HTTPS 검증까지 자동화한다</li><li>/improve-system 스킬로 세션 내 사용자 행동 패턴을 auto-memory에 영구 저장해 세션 간 학습이 가능하다</li><li>llms.txt를 루트에 두면 AI 검색엔진(ChatGPT·Claude·Perplexity·Gemini)이 사이트 콘텐츠를 더 잘 인덱싱한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#ai-agent</span> <span class="tag">#personal-automation</span> <span class="tag">#llms.txt</span> <span class="tag">#ai-optimized-seo</span> <span class="tag">#finance-dashboard</span> <span class="tag">#skill-building</span> <span class="tag">#auto-memory</span></div>
   <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md의 프롬프트 명령어 섹션에 /ask-the-board 스킬 패턴(어드바이저 인터뷰→컨텐츠 피드→스킬 빌드)을 추가하고, ~/.claude/skills/ 아래에 /ask-the-board 스킬을 생성해 agent_hub의 의사결정 패널로 활용; 또한 ~/agent_hub 퍼스널 사이트가 있다면 llms.txt와 'Ask AI about me' 버튼 블록을 추가해 AI 검색 가시성 확보.</div>
@@ -7918,6 +7968,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude Code 안에 '개인 자문위원단(Board of Advisors)'을 구축하는 5단계 워크플로우 소개. Claude가 인터뷰 → 위원 선정 → 콘텐츠 주입 → 커스텀 스킬 빌드 → 질의응답 순서로 진행된다. 실제 인물의 사고방식을 Claude Code 스킬로 캡슐화하는 프롬프트 엔지니어링 패턴이다.</p>
   <ul class="claims"><li>Claude Code에 특정 인물의 콘텐츠를 주입해 해당 인물의 관점으로 조언을 받는 /ask-the-board 스킬 구축이 가능하다</li><li>Claude가 사용자 인터뷰 → 위원 선정까지 주도적으로 진행할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
   <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#custom-skill</span> <span class="tag">#board-of-advisors</span> <span class="tag">#prompt-engineering</span> <span class="tag">#persona</span></div>
   <div class="apply-plan">승인 시 ~/.claude/skills/ 아래에 ask-the-board/ 디렉터리를 만들고 SKILL.md에 위원 목록·콘텐츠 소스·질의 포맷을 정의한 뒤, CLAUDE.md 프롬프트 명령어 섹션에 /ask-the-board 항목을 추가한다</div>
@@ -7973,6 +8024,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">혈액-뇌 장벽(BBB)에서의 항원 제시가 CNS T세포 진입을 개시하기보다는 혈관 병리를 증폭시킨다는 새로운 패러다임을 제시한 리뷰 논문이다. 건강한 마우스와 인간 CNS 내피에서 MHC class I 발현은 낮고 MHC class II는 거의 없으며, 뇌 미세혈관 내피세포(BMEC)의 항원 제시 기능은 강하거나 지속적인 염증 상황에서만 나타난다. CD8 T세포와의 MHC class I 상호작용이 주를 이루며, 이는 혈관 손상과 장벽 붕괴를 촉진한다.</p>
   <ul class="claims"><li>건강한 마우스 및 인간 CNS 내피에서 MHC class I 발현은 낮고, MHC class II는 거의 없거나 전무하다</li><li>활성화된 T세포의 CNS 내 혈액-뇌 장벽 통과는 항원 비의존적이며 층류 조건 하에서 접착·신호 분자의 순차적 상호작용으로 유도된다</li><li>BBB에서의 항원 제시는 주로 MHC class I-CD8 T세포 상호작용으로 구성되며, MHC class II-CD4 상호작용은 드물거나 없다</li><li>BMEC의 항원 제시는 지속적 신경염증 맥락에서만 나타나며, CNS T세포 진입 개시보다 혈관 병리를 증폭시킨다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#혈액뇌장벽</span> <span class="tag">#BBB</span> <span class="tag">#항원제시</span> <span class="tag">#신경염증</span> <span class="tag">#MHC</span> <span class="tag">#T세포</span> <span class="tag">#BMEC</span> <span class="tag">#CNS면역</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 이 논문은 신경면역학 기초과학 리뷰로, 현재 프로젝트(alphabot, ai-feed, trader 등)와 직접 연관되는 적용 지점이 없다. 뇌졸중·신경염증 연구 컨텍스트라면 ~/agent_hub/refs/ 또는 관련 research-rag 인덱스에 참조 문헌으로 추가 검토.</div>
@@ -8028,6 +8080,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">트레이더 로스 카메론의 RSI 다이버전스 기법 소개. 주가 저점 갱신 + RSI 저점 상승(강세 다이버전스)은 매집 신호, 주가 고점 갱신 + RSI 고점 하락(약세 다이버전스)은 거품 경고 신호로 해석.</p>
   <ul class="claims"><li>강세 다이버전스(주가 저점↓ + RSI 저점↑)는 세력의 바닥 매집 신호다</li><li>약세 다이버전스(주가 고점↑ + RSI 고점↓)는 기대감 과잉 거품 신호다</li><li>로스 카메론이 80만원으로 150억을 만들었다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#RSI</span> <span class="tag">#다이버전스</span> <span class="tag">#기술적분석</span> <span class="tag">#모멘텀지표</span> <span class="tag">#매집신호</span></div>
   <div class="apply-plan">승인 시 alphabot의 기술적 지표 모듈에 RSI 다이버전스 감지 로직 추가 검토: `~/dev/Auto_bot` 또는 `~/dev/trader` 내 indicator 관련 파일에 bullish/bearish divergence 스크리닝 조건 구현 여부 확인 후 신규 신호로 등재.</div>
@@ -8083,6 +8136,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">멀티에이전트 시스템을 API 키 없이 구독($240/월)으로 운영해 API 대비 약 95% 비용 절감. 고비용 모델(Claude)은 기획·명세만, 저비용 모델(GLM/Codex)은 실제 구현 담당하는 티어 분리 전략. 토큰 폭발 방지를 위해 spawn 2단계 제한, 런당 토큰 상한, 2K 초과 시 요약 강제 적용.</p>
   <ul class="claims"><li>Anthropic 측정: 멀티에이전트 실행은 일반 채팅 대비 15x 토큰 소모</li><li>API 기준 $15,000 작업이 구독 기반에서 $800 수준 ($240/월 × 3 구독)</li><li>워커가 600 토큰 브리프를 받아 40K+ 토큰 작업 후 1~2K 요약 반환</li><li>두 단계 spawn 제한 + 런당 토큰 상한 + 2K 초과 자동 요약으로 런어웨이 방지</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#멀티에이전트</span> <span class="tag">#토큰최적화</span> <span class="tag">#비용절감</span> <span class="tag">#티어분리</span> <span class="tag">#구독기반AI</span> <span class="tag">#가드레일</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/docs/design-task-routing-cascade.md의 모델 라우팅 섹션에 '구독 기반 런당 토큰 상한 + 2단계 spawn 제한 + 2K 초과 자동 요약' 가드레일 패턴을 참조 설계로 추가하고, 현행 Sonnet 오케스트레이터 + Codex 구현 분리 구조와 비용 비교 수치를 병기.</div>
@@ -8138,6 +8192,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">AI 도구(Claude/Codex)를 활용해 영상 편집 워크플로우를 자동화하는 방법을 소개하는 짧은 영상 캡션. 폴더 생성 → Claude/Codex로 열기 → 관련 레포 클론 → 편집 소프트웨어 연결 순서로 구성됨. 구체적 레포나 기술 세부사항은 없고 '다음 릴'을 예고하는 티저 형식.</p>
   <ul class="claims"><li>Claude 또는 Codex를 사용해 영상 편집을 자동화할 수 있다</li><li>GitHub 레포들을 클론해 편집 소프트웨어와 연결하는 워크플로우가 존재한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#video-editing</span> <span class="tag">#ai-automation</span> <span class="tag">#claude</span> <span class="tag">#codex</span> <span class="tag">#workflow</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -8195,6 +8250,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">데이트레이딩 전략을 비공식적으로 공유하는 짧은 영상 클립. ICT(Inner Circle Trader) 개념인 밸류갭, 리퀴디티(equal lows/highs)를 활용하는 진입 방식으로 보인다. 음성 인식 품질이 낮아 정확한 전략 파악이 어렵다.</p>
   <ul class="claims"><li>I-30(30분봉 또는 특정 지수) 오픈 시점을 대기한 후 진입</li><li>1시간봉 기준 밸류갭(Value Gap) 확인 후 B-shape 패턴 대기</li><li>Equal lows / equal highs 형태의 리퀴디티 구간을 진입 트리거로 활용</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#daytrading</span> <span class="tag">#ICT</span> <span class="tag">#value-gap</span> <span class="tag">#liquidity</span> <span class="tag">#equal-highs-lows</span> <span class="tag">#price-action</span></div>
   <div class="apply-plan">승인 시 검증 가치 낮음 — 적용 보류. 단, ICT 밸류갭+리퀴디티 개념이 alphabot 리서치 모듈에 아직 없다면 ~/dev/Auto_bot 리서치 노트에 'ICT value gap entry' 키워드로 메모 추가 후 정식 소스(ICT 원본 강의)로 재검증 선행.</div>
@@ -8250,6 +8306,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Kalman 필터는 관측 불가능한 값의 추정치와 그 분산을 함께 유지하며, 가우시안 노이즈 조건에서 최소 분산 해를 제공한다. 각 스텝에서 모델로 추정치를 전진시키고, 프로세스 노이즈만큼 분산을 높인 뒤, Kalman gain × (측정값 - 예측값)으로 추정치를 갱신한다. 퀀트 파이낸스와 시계열 통계 모델링에서 핵심 기법으로 활용된다.</p>
   <ul class="claims"><li>Kalman 필터는 가우시안 프로세스 및 측정 노이즈 조건 하에서 최소 분산 추정치를 제공한다</li><li>각 스텝은 모델 전진 → 분산 증가(프로세스 노이즈) → Kalman gain 기반 보정의 3단계로 구성된다</li><li>갱신 공식: 새 추정치 = 이전 추정치 + Kalman gain × (측정값 - 예측값)</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#kalman-filter</span> <span class="tag">#quantfinance</span> <span class="tag">#time-series</span> <span class="tag">#statistical-modeling</span> <span class="tag">#signal-processing</span></div>
   <div class="apply-plan">승인 시 alphabot의 regime-signals 또는 리서치 모듈에서 숨겨진 상태(예: 진짜 추세, 변동성 레짐)를 추적하는 용도로 Kalman 필터를 도입 검토 — ~/dev/Auto_bot 또는 ~/dev/trader의 시그널 생성 모듈에 kalman_filter.py를 추가하고 가격/수익률 시계열의 노이즈 제거 또는 동적 베타 추정에 적용</div>
@@ -8305,6 +8362,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">2026년 주목할 RAG 아키텍처 5가지(Hybrid, GraphRAG, Agentic, Corrective, Multimodal)와 각각의 실제 비용/트레이드오프를 실무 관점에서 정리. 이들은 단독보다 조합해서 쓰이며, 추가 컴포넌트마다 레이턴시와 장애 포인트가 늘어남. Corrective RAG의 핵심은 관련 없는 문서를 모델이 보기 전에 차단하는 것.</p>
   <ul class="claims"><li>Hybrid RAG(벡터+BM25 융합)는 반나절 작업으로 구현 가능하며 정확 문자열 조회 실패 유형을 제거한다</li><li>GraphRAG의 엔티티 해소(entity resolution)는 팀 전체 쿼터를 소모할 수 있다</li><li>Agentic RAG는 예측 가능한 레이턴시를 희생하며 반복 횟수 상한과 플래너 결정 로깅이 필수다</li><li>Corrective RAG에서 관련 없는 문서를 검색하는 것은 아무것도 검색하지 않는 것보다 나쁘다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#RAG</span> <span class="tag">#Hybrid RAG</span> <span class="tag">#GraphRAG</span> <span class="tag">#Agentic RAG</span> <span class="tag">#Corrective RAG</span> <span class="tag">#Multimodal RAG</span> <span class="tag">#AI 아키텍처</span> <span class="tag">#검색 증강 생성</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -8362,6 +8420,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Claude AI를 TradingView에 연결해 주식, 지수, 암호화폐를 자동 거래하는 설정을 소개하는 소셜 미디어 캡션. 구체적인 기술 구현 내용 없이 'TRADING VIEW' 댓글로 가이드 제공을 유도하는 마케팅성 게시물이다.</p>
   <ul class="claims"><li>Claude AI를 TradingView에 연결해 주식·지수·암호화폐 자동 거래가 가능하다</li><li>댓글로 설정 가이드를 제공한다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#claude</span> <span class="tag">#tradingview</span> <span class="tag">#자동매매</span> <span class="tag">#AI트레이딩</span> <span class="tag">#암호화폐</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/workflow.md 또는 alphabot 관련 설계문서에 'TradingView webhook → Claude 판단 → 자동 주문' 파이프라인 아키텍처 검토 항목으로 추가 검토 후, 실제 구현 방식 확인 시 ~/dev/Auto_bot 또는 ~/dev/trader에 TradingView 인테그레이션 실험 브랜치 생성 고려</div>
@@ -8417,6 +8476,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">영보스매거진이 소개하는 초기 자본 없이 사업을 시작할 때 쓸 수 있는 무료 도구 모음. 시장조사(네이버 데이터랩, Google Trends), 기획(ChatGPT, Perplexity), 브랜드 디자인(미리캔버스, Canva), 신청 페이지(Tally, 카카오 비즈니스폼) 등 창업 단계별로 무료 SaaS를 제시한다. 핵심 철학은 '제품 먼저 만들지 말고 수요 먼저 확인'이다.</p>
   <ul class="claims"><li>네이버 데이터랩으로 검색어 추이와 쇼핑 분야별 관심도를 무료로 확인할 수 있다</li><li>Tally는 신청 폼과 응답을 제한 없이 무료로 받을 수 있다</li><li>영보스매거진은 초기 자본 없이 순수 콘텐츠 체급으로 성장해 전자책·컨설팅을 판매하고 있다</li><li>AI 도구는 사업을 대신 기획하게 하는 것이 아니라 내 생각에서 빠진 질문을 찾는 용도로 써야 한다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#무자본창업</span> <span class="tag">#무료툴</span> <span class="tag">#소자본사업</span> <span class="tag">#린스타트업</span> <span class="tag">#시장조사</span> <span class="tag">#AI활용창업</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -8474,6 +8534,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">AI 에이전트를 처음부터 구축하는 방법을 다루는 치트시트 소개 게시물이다. 실질적인 기술 내용 없이 팔로워 유도와 해시태그 중심의 마케팅 콘텐츠다.</p>
   <ul class="claims"><li>이 치트시트로 AI 에이전트를 처음부터 만들 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#ai-agents</span> <span class="tag">#cheatsheet</span> <span class="tag">#developer</span> <span class="tag">#marketing</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -8531,6 +8592,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">현금담보풋(CSP)으로 프리미엄을 수집해 LEAP 옵션 매수 자금을 자체 조달하는 '플라이휠' 전략. 주당 30-50%의 프리미엄을 별도 펀드에 적립해 신규 자본 없이 딥인더머니 LEAP를 확보하고, 이후 PMCC(Poor Man's Covered Call)로 추가 프리미엄 생성. 복리 구조로 외부 자본 투입 없이 포지션이 자기 증식하도록 설계.</p>
   <ul class="claims"><li>CSP를 현재가 5% 아래에서 판매하면 배정 위험 없이 타임디케이 수익 가능</li><li>50-75% 수익 시점에 조기 청산하면 자본 회전율이 올라간다</li><li>LEAP는 델타가 높은 딥인더머니 계약(18-24개월)을 써야 주식과 유사하게 움직인다</li><li>단일 LEAP 비중을 계좌의 15% 이하로 제한해야 플라이휠이 붕괴되지 않는다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#options</span> <span class="tag">#LEAP</span> <span class="tag">#cash-secured-put</span> <span class="tag">#PMCC</span> <span class="tag">#theta</span> <span class="tag">#flywheel</span> <span class="tag">#premium-selling</span> <span class="tag">#position-sizing</span></div>
   <div class="apply-plan">승인 시 AlphaBot의 옵션 전략 모듈에 CSP→LEAP 플라이휠 로직 추가 검토: ~/dev/Auto_bot/strategies/ 하위에 csp_leap_flywheel.py 설계 착수 전 ~/agent_hub/refs/review-tiers.md로 Tier 판정 후 설계문서 작성.</div>
@@ -8586,6 +8648,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Cell지 2026년 7월 논문으로, 신경퇴행성 질환을 단순 뉴런 손상이 아닌 신경계-면역계 간 크로스톡(neuroimmune crosstalk) 붕괴로 재정의한다. 면역세포가 뇌 건강의 수동적 반응자가 아니라 신경 회복력의 능동적 조절자임을 주장하며, 면역 항상성 복원·에피제네틱 조절을 치료 전략으로 제시한다.</p>
   <ul class="claims"><li>신경퇴행성 질환은 신경-면역 크로스톡 실패로 발생한다</li><li>면역세포는 신경 회복력·취약성·수복의 능동적 조절자다</li><li>면역 항상성 복원 또는 염증 반응 미세조정이 신경퇴행 치료 전략이 될 수 있다</li><li>에피제네틱 조절인자가 면역계를 통해 뇌 건강에 영향을 준다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#신경퇴행</span> <span class="tag">#신경면역</span> <span class="tag">#neuroimmune crosstalk</span> <span class="tag">#알츠하이머</span> <span class="tag">#에피제네틱스</span> <span class="tag">#면역항상성</span> <span class="tag">#Cell논문</span> <span class="tag">#2026</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/learned-practices.md 또는 랩 PI 관련 메모(lab-pi-stroke-foundation-model.md)에 뇌졸중·신경퇴행 연구 맥락으로 이 논문(DOI: 10.1016/j.cell.2026.07.015) 참조를 추가하고, Woosung의 랩 연구(뇌졸중 아틀라스, PICALM 등)와의 연결점을 기록한다.</div>
@@ -8641,6 +8704,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">옵션 셀링(풋 매도) 전략 소개 게시물. 시장이 하락할 때만 진입하고, 높은 IV(내재변동성)를 가진 종목의 풋을 매도해 프리미엄을 수집한 뒤 50% 이익 시 자동 청산하는 규칙 기반 접근법을 설명한다. 월 3회 거래로 각 5% 수익을 목표로 한다.</p>
   <ul class="claims"><li>시장 하락일에 옵션 프리미엄(IV)이 상승하므로 진입 조건으로 활용 가능</li><li>50% 프리미엄 회수 시 청산하면 동일 자본으로 재투자 사이클을 빠르게 돌릴 수 있다</li><li>월 3회 거래 × 5% 수익으로 복리 효과를 낼 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#options-selling</span> <span class="tag">#cash-secured-put</span> <span class="tag">#IV</span> <span class="tag">#implied-volatility</span> <span class="tag">#put-selling</span> <span class="tag">#premium-collection</span> <span class="tag">#systematic-trading</span></div>
   <div class="apply-plan">승인 시 alphabot의 옵션 셀링 모듈(있다면 ~/dev/Auto_bot 내 options 관련 모듈) 또는 리서치 문서에 'VIX 상승일(시장 하락일) IV spike 필터'와 '50% max-profit 자동 청산' 조건을 진입/청산 규칙 후보로 추가 검토 항목으로 기록</div>
@@ -8696,6 +8760,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">APOE4는 알츠하이머병(AD)의 주요 유전적 위험인자로, 세포 유형별·시간적 순서에 따라 AD 진행에 기여한다. 노화 관련 스트레스가 뉴런의 APOE4 발현을 증가시켜 전임상 단계 결손을 유발하고, 이후 신경교세포(글리아) 반응이 활성화되어 신경퇴행을 가속한다. 이 리뷰는 APOE4의 시간적·세포특이적 캐스케이드 모델을 제안하며 단계별 맞춤 치료 전략의 필요성을 강조한다.</p>
   <ul class="claims"><li>APOE4는 알츠하이머병의 가장 강력한 유전적 위험인자이자 인과적 기여인자로 점차 인정받고 있다</li><li>노화 스트레스가 뉴런의 APOE4 발현을 상향 조절하여 전임상 AD의 초기 신경 결손을 유발한다</li><li>뉴런의 APOE4 유도 손상이 유해한 신경교세포 반응을 촉발하여 전구 및 치매 AD 발병을 가속한다</li><li>APOE4 효과는 전임상→전구→치매 단계에 걸쳐 뉴런, 미세아교세포, 성상세포 등 서로 다른 세포 유형에서 순차적으로 나타난다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#APOE4</span> <span class="tag">#알츠하이머</span> <span class="tag">#신경퇴행</span> <span class="tag">#세포특이적</span> <span class="tag">#신경교세포</span> <span class="tag">#아밀로이드</span> <span class="tag">#타우</span> <span class="tag">#치매</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 이 인사이트는 신경과학/알츠하이머 연구 도메인이며 현재 운영 중인 프로젝트(alphabot, ai-feed, trader 등)에 직접 적용할 수 있는 액션이 없다.</div>
@@ -8751,6 +8816,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">딥러닝의 수학적 기초를 다루는 무료 eBook 소개. 근사 이론, 최적화 이론, 통계적 학습 이론, 고차원 수학, DNN/RNN을 포괄하는 엄밀한 수학적 접근. 딥러닝이 왜 작동하는지를 수학적 프레임워크로 이해하려는 학생과 연구자 대상.</p>
   <ul class="claims"><li>딥러닝의 수학적 기초를 근사 이론, 최적화 이론, 통계적 학습 이론, 고차원 수학 네 축으로 설명할 수 있다</li><li>해당 eBook은 무료로 제공된다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#딥러닝</span> <span class="tag">#수학</span> <span class="tag">#무료eBook</span> <span class="tag">#기초이론</span> <span class="tag">#최적화</span> <span class="tag">#통계학습이론</span> <span class="tag">#고차원수학</span> <span class="tag">#RNN</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -8808,6 +8874,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">중국 AI 숏드라마 제작팀(toonkit_official)이 공개한 영상 생성 프롬프트 설계 방법론. 핵심은 ①조명·재질을 절대값 대신 상대 비율로 지시해 룩 일관성 확보 ②캐릭터시트 얼굴 부분 의도적 훼손으로 생성 모델의 레퍼런스 직접 복사 방지 ③시작/종료 프레임을 텍스트로 고정해 컷 연결 자동화. 80편 이상 시리즈를 한 번의 생성으로 90% 일관성을 달성했으며, 더빙 지시를 상수(음색·성격)와 변수(상태·어조)로 분리해 재사용성을 극대화했다.</p>
   <ul class="claims"><li>재질 하이라이트를 절대값이 아닌 상대 비율(금속×1.5, 피부×0.5, 천×0.3)로 지시하면 반복 생성 시에도 재질 간 관계성이 유지된다</li><li>캐릭터시트에서 얼굴 섹션을 의도적으로 훼손하면 영상 생성 모델이 클로즈업 장면에서 레퍼런스 이미지를 그대로 복사하지 않고 새로 생성한다</li><li>시작 프레임과 종료 프레임을 텍스트로만 고정하고 다음 에피소드 인계 내용까지 프롬프트에 포함하면 영상 확인 없이 연속 생성이 가능하다</li><li>더빙 지시를 상수(음색·성격)와 컷별 변수(상태·어조)로 분리하면 캐릭터 일관성을 유지하면서 복붙 재사용이 가능하다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#AI영상생성</span> <span class="tag">#프롬프트엔지니어링</span> <span class="tag">#숏드라마</span> <span class="tag">#컨시스턴시</span> <span class="tag">#워크플로우자동화</span> <span class="tag">#캐릭터일관성</span> <span class="tag">#Dreamina</span> <span class="tag">#Seedance</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -8865,6 +8932,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">AI 영상 생성(애니메이션 시리즈)에서 단 한 번의 생성으로 90% 일관성을 확보하는 프롬프트 구조를 공개. 80편 이상 시리즈를 거의 프롬프트 수정 없이 제작했으며, 컷 간 전환 자동화·캐릭터 시트 의도적 훼손으로 클로즈업 디테일을 보완하는 기법을 포함한다.</p>
   <ul class="claims"><li>프롬프트 구조화만으로 단일 생성에서 90% 일관성 달성 가능</li><li>80편 이상 시리즈 전체에서 프롬프트 핵심 구조 변경 없이 제작</li><li>캐릭터 시트를 의도적으로 훼손하면 클로즈업 장면 얼굴 디테일 품질이 향상된다</li><li>시작·끝 장면 상태를 캐릭터별 한 줄 서술로 고정하면 영상 간 경계 연결 자동화가 가능</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span> <span class="badge">✍️ prompt</span></div>
   <div class="tags"><span class="tag">#AI 영상 생성</span> <span class="tag">#프롬프트 엔지니어링</span> <span class="tag">#일관성</span> <span class="tag">#애니메이션</span> <span class="tag">#캐릭터 시트</span> <span class="tag">#워크플로우 최적화</span> <span class="tag">#리롤 비용 절감</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -8922,6 +8990,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">볼린저밴드는 가격 방향이 아닌 시장 상태(변동성)를 나타내는 지표다. 상단/하단 밴드 접촉이 반드시 고점/저점을 의미하지 않으며, 강한 추세에서는 밴드를 타고 이동할 수 있다. 거래량·추세 지표와 병행 사용하고 신호 확정까지 기다리는 인내가 핵심이다.</p>
   <ul class="claims"><li>볼린저밴드 상단 터치 = 고점, 하단 터치 = 저점이라는 공식은 성립하지 않는다</li><li>밴드 수축은 변동성 감소, 밴드 확대는 변동성 증가를 의미한다</li><li>가격이 밴드를 타고 지속되면 반전보다 추세 지속 가능성이 높다</li><li>볼린저밴드 단독 사용보다 거래량·추세 지표 병행이 필요하다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#볼린저밴드</span> <span class="tag">#기술적분석</span> <span class="tag">#변동성</span> <span class="tag">#추세추종</span> <span class="tag">#매매타이밍</span></div>
   <div class="apply-plan">승인 시 alphabot의 볼린저밴드 기반 신호 로직이 있다면 `~/dev/Auto_bot` 또는 `~/dev/trader` 내 전략 파일에서 상단/하단 밴드 터치만으로 매수/매도 신호를 발생시키는 조건을 찾아, 거래량 또는 ADX 같은 추세 지표 확인 조건을 AND 조건으로 추가하는 방향으로 검토.</div>
@@ -8977,6 +9046,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">생성형 AI가 애자일 팀 생산성에 미치는 영향을 다룬 arXiv 연구 논문. URL만 제공되어 있으며 본문 내용 없이 제목과 링크만 존재한다.</p>
   <ul class="claims"><li>생성형 AI가 애자일 팀의 생산성에 영향을 미친다는 주장을 연구로 검증 시도</li><li>해당 연구는 arXiv에 게재됨 (논문 ID: 2602.13766)</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#generative-ai</span> <span class="tag">#agile</span> <span class="tag">#productivity</span> <span class="tag">#research</span> <span class="tag">#software-engineering</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -9034,6 +9104,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">TensorTrade는 강화학습(RL) 기반 알고리즘 트레이딩을 위한 오픈소스 Python 프레임워크다. 포트폴리오 재배분 차트 예시에서 Sharpe 0.33, MDD 15.78%를 기록했다. Quant Science 계정이 2026-08-13에 소개했다.</p>
   <ul class="claims"><li>TensorTrade는 강화학습을 활용한 알고리즘 트레이딩 Python 라이브러리다</li><li>예시 포트폴리오에서 Sharpe Ratio 0.33, Max Drawdown 15.78%를 달성했다</li><li>오픈소스 프레임워크다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#TensorTrade</span> <span class="tag">#강화학습</span> <span class="tag">#알고리즘트레이딩</span> <span class="tag">#오픈소스</span> <span class="tag">#Python</span> <span class="tag">#포트폴리오최적화</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/quant-oss-watchlist.md에 TensorTrade(RL 기반 포트폴리오 배분)를 추가하고, AlphaBot R2 리서치 단계에서 RL 기반 포지션 사이징 접근법 후보로 검토 항목에 올린다</div>
@@ -9089,6 +9160,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Nature Communications (2026)에 발표된 연구로, 소아 치매(Mucopolysaccharidosis type IIIA, MPSIIIA)의 시냅스 기능 이상을 인간 iPSC 유래 피질 신경망으로 모델링했다. 환자 섬유아세포를 iPSC로 역분화 후 피질 신경세포·성상세포로 분화시켜 120일간 배양하며 MPSIIIA와 정상군의 세포 구성 및 시냅스 기능 차이를 단일핵 RNA 시퀀싱(snRNAseq)으로 비교 분석했다.</p>
   <ul class="claims"><li>MPSIIIA 환자 iPSC 유래 피질 배양에서 방사교세포(Radial Glia) 비율이 정상군 20%에서 14%로 감소했다</li><li>MPSIIIA 코호트에서 흥분성 뉴런(Excitatory Neurons) 비율이 정상군 5% 대비 9%로 증가했다</li><li>억제성 뉴런(Inhibitory Neurons) 비율은 정상군 11%, MPSIIIA 10%로 유사하게 유지됐다</li><li>120일 배양 playground 배양계에서 snRNAseq을 통해 세포 유형별 전사체 차이를 확인했다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#iPSC</span> <span class="tag">#MPSIIIA</span> <span class="tag">#소아치매</span> <span class="tag">#피질신경망</span> <span class="tag">#시냅스기능이상</span> <span class="tag">#snRNAseq</span> <span class="tag">#신경과학</span> <span class="tag">#희귀질환모델링</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 순수 기초 신경과학 논문으로 현재 운영 중인 프로젝트(alphabot, ai-feed, frankencrawler 등)에 직접 적용할 실천 항목 없음. 랩 PI stroke 모델 연구(lab-pi-stroke-foundation-model.md) 맥락에서 참고 문헌으로만 보관 권장.</div>
@@ -9144,6 +9216,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Trends in Immunology 저널에 게재된 리뷰 논문으로, 미세아교세포(Microglia)가 식세포 작용(phagocytosis) 이외에 수행하는 신경면역 소통 기능을 다룬다. 뉴런-미세아교세포 간 신호전달 경로(CD200-CD200R, CX3CL1-CX3CR1, C1q, TGF-β, IL-34 등)와 터널링 나노튜브(TNT) 같은 직접 접촉 메커니즘을 정리한 도식이 반복 제시된다. Di Pietro, Powley, Perciballi 등 6인 공동 저자의 오픈액세스 논문이다.</p>
   <ul class="claims"><li>미세아교세포는 식세포 작용 외에도 CD200R, CX3CR1, CSF1-R, Fn14 등 다양한 수용체를 통해 뉴런과 양방향 신호를 주고받는다</li><li>터널링 나노튜브(TNT)를 통한 직접 접촉이 뉴런-미세아교세포 간 소통 경로 중 하나로 제시된다</li><li>아드레날린 신호전달(Adrenergic signaling)이 전신 신경면역 소통의 구성 요소로 포함된다</li><li>건강한 세포소기관과 손상된 세포소기관이 미세아교세포 활성화 상태를 구분하는 맥락 신호로 작용한다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#microglia</span> <span class="tag">#neuroimmunology</span> <span class="tag">#neuroinflammation</span> <span class="tag">#CX3CL1</span> <span class="tag">#CD200</span> <span class="tag">#TGF-beta</span> <span class="tag">#tunneling nanotube</span> <span class="tag">#CNS immunity</span></div>
   <div class="apply-plan">승인 시 적용 대상 없음 — 신경면역학 기초과학 리뷰로, 현재 운영 중인 프로젝트(alphabot, ai-feed, trader 등)와 교차점이 없다. 랩 PI 뇌졸중 모델 연구(project_lab-pi-stroke-foundation-model) 컨텍스트가 활성화된 세션이라면 ~/agent_hub/projects/lab-pi/ 아래 참고문헌 목록에 추가 검토 대상으로 기록할 수 있다.</div>
@@ -9199,6 +9272,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Magnitude는 YC 백업 팀이 만든 신규 로컬 LLM 에이전트로, 토큰 비용·API 키·속도 제한이 전혀 없고 모든 데이터가 로컬에서만 처리된다. Apache 2.0 오픈소스로 공개됐으며, 완전한 프라이버시와 무료 운용이 핵심 가치 제안이다.</p>
   <ul class="claims"><li>Magnitude는 Y Combinator 지원 팀이 만든 로컬 LLM 에이전트다</li><li>토큰 비용 없음, API 키 없음, 속도 제한 없음을 표방한다</li><li>프롬프트·파일 등 모든 데이터가 로컬 컴퓨터 밖으로 나가지 않는다</li><li>Apache 2.0 라이선스로 오픈소스 공개됐다</li></ul>
+  
   <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#magnitude</span> <span class="tag">#local-agent</span> <span class="tag">#local-llm</span> <span class="tag">#yc</span> <span class="tag">#open-source</span> <span class="tag">#apache-2.0</span> <span class="tag">#privacy</span> <span class="tag">#no-api-key</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💻 로컬 AI·최적화' 섹션에 반영.
@@ -9256,6 +9330,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">이 문서는 신경면역대사와 비만, 지방조직 변화 간의 관계를 탐색하는 연구입니다. 특히 시냅틱 신경 활성과 면역세포, 성장인자 간 상호작용이 대사 질환에 미치는 영향을 설명합니다.</p>
   <ul class="claims"><li>시냅틱 신경 활성화는 비만 관련 지방조직 변화와 관련이 있다.</li><li>ILC2 및 M2 매크로파지와 같은 면역세포는 비만 상태에서 대사 조절에 관여한다.</li></ul>
+  
   <div class="surfaces"><span class="badge">📄 project-docs</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#neuroimmunology</span> <span class="tag">#metabolism</span> <span class="tag">#obesity</span></div>
   <div class="apply-plan">승인 시 이 인사이트를 적용한다면, 관련 문서에 신경면역대사 관련 연구 내용을 요약하여 project-docs에 추가하는 것을 고려할 수 있음.</div>
@@ -9311,6 +9386,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">뉴런 내 인플라마솜(inflammasome) 신호전달이 감염·CNS 손상·자가면역질환에서 신경염증을 유발할 뿐 아니라, 시냅스 가소성·축삭 가지치기·엑소솜 트래피킹 등 정상 뇌 항상성 유지에도 필수적임을 리뷰. NLRP1 중심의 이중 역할(방어 vs. 퇴행)을 정리하고, CNS 손상·질환에서 염증 조절 치료 표적으로서의 가능성을 제시. Trends in Immunology 2026년 5월호(Vol.47, No.5) 게재.</p>
   <ul class="claims"><li>뉴런 내 기저(basal) 인플라마솜 활성은 신경 가소성·축삭 전정(pruning)·시냅스 형성·엑소솜 트래피킹에 필수적이다</li><li>NLRP1 등 뉴런 인플라마솜의 만성·과도한 활성화는 신경퇴행성 질환을 촉진한다</li><li>K+ 불균형, ROS, 미토콘드리아 기능이상, ER 스트레스, 리소솜 파열, 잘못 접힌 단백질이 뉴런 인플라마솜 활성화 경로를 구성한다</li><li>GSDMD 포어 형성 및 파이롭토시스(pyroptosis)가 뉴런 세포용해의 주요 기전이다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#inflammasome</span> <span class="tag">#neuroinflammation</span> <span class="tag">#NLRP1</span> <span class="tag">#pyroptosis</span> <span class="tag">#CNS</span> <span class="tag">#synaptic plasticity</span> <span class="tag">#neurodegeneration</span> <span class="tag">#GSDMD</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 순수 기초과학 신경면역학 리뷰로, 현재 프로젝트 스택(alphabot, ai-feed, frankencrawler 등)에 직접 적용할 표면이 없음</div>
@@ -9366,6 +9442,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">2026년 4월 Neuroscience(Elsevier) 게재 리뷰 논문. 장-뇌 축(Gut-Brain Axis)이 당뇨병성 신경병증, 인지장애, 정서장애에 미치는 역할을 분석한다. 장내 미생물 불균형 → 인슐린 저항성·장벽 손상·신경내분비 불균형 → 당뇨 합병증 진행의 경로를 제시하며, 장내 미생물 조절·장벽 복구·신경내분비 불균형 개선을 새 치료 전략으로 제안한다.</p>
   <ul class="claims"><li>장-뇌 축(GBA)은 신경, 내분비, 면역 경로를 통해 장과 뇌 사이 양방향 신호를 전달한다</li><li>장내 미생물 불균형은 에너지 대사, 인슐린 감수성, 면역 반응을 대사산물을 통해 조절하며 당뇨 진행에 관여한다</li><li>손상된 장 장벽 기능은 전신 만성 염증 및 인슐린 저항성을 유발한다</li><li>장내 미생물 조절, 장벽 기능 복구, 신경내분비 불균형 개선이 새로운 당뇨 치료 전략으로 제시된다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#gut-brain axis</span> <span class="tag">#diabetic neuropathy</span> <span class="tag">#cognitive impairment</span> <span class="tag">#gut microbiota</span> <span class="tag">#insulin resistance</span> <span class="tag">#neuroinflammation</span> <span class="tag">#neuroscience</span> <span class="tag">#diabetes</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 바이오메디컬 기초과학 리뷰로 현재 프로젝트(alphabot, ai-feed, frankencrawler 등)에 직접 적용 가능한 인사이트 없음</div>
@@ -9421,6 +9498,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Google Research·Cornell 연구팀이 발표한 논문(arXiv:2406.03979)으로, 생물학적 수면의 기억 공고화 메커니즘을 언어 모델 학습에 적용하는 'Language Models Need Sleep' 개념을 제안한다. 수면 중 뇌파(Delta/Theta/Alpha)가 기억을 재조직하듯, LLM도 별도의 '수면 단계'에서 자기 수정 및 메모리 통합을 수행해야 한다고 주장한다. Continual Learning의 맥락에서 기존 ML과의 차이를 도식으로 비교한다.</p>
   <ul class="claims"><li>수면 중 기억 공고화(Delta/Theta/Alpha 뇌파)를 모방한 'sleep phase'를 언어 모델 훈련에 도입하면 지속 학습 성능이 향상된다</li><li>LLM은 활성(wake) 단계 외에 자기 수정·메모리 통합을 위한 별도 단계가 필요하다</li><li>Continual Learning은 기존 단일 태스크 ML 대비 훈련 시간 구조와 활성 단계 설계가 다르다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#continual-learning</span> <span class="tag">#memory-consolidation</span> <span class="tag">#self-modification</span> <span class="tag">#LLM-training</span> <span class="tag">#neuromorphic-AI</span> <span class="tag">#sleep-phase</span> <span class="tag">#Google-Research</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md의 LLM 학습 방법론 섹션에 이 논문(arXiv:2406.03979)을 추가하고, 로컬 모델 파인튜닝 전략 검토 시 continual learning sleep-phase 접근법 참고 항목으로 기록한다</div>
@@ -9481,6 +9559,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Nature Neuroscience(2026년 1월)에 게재된 연구로, 알츠하이머병(AD)에서 아밀로이드-β(Aβ)가 성상세포 반응성(astrocyte reactivity)을 유발할 때 미세아교세포(microglia) 활성화가 필수 매개 역할을 함을 PET 영상 및 혈장·CSF 바이오마커로 확인했다. 101명 PET 코호트와 251명 CSF 코호트를 분석한 결과, Aβ의 성상세포 반응성 효과는 미세아교세포 활성화가 있을 때만 나타났으며, 이 경로는 타우 인산화·응집을 통해 인지 저하로 이어진다.</p>
   <ul class="claims"><li>Aβ 병리는 미세아교세포 활성화가 동반될 때만 피질 전반에 걸쳐 성상세포 반응성(GFAP 상승)과 유의한 연관성을 보인다</li><li>미세아교세포 의존적 Aβ→성상세포 반응성 경로는 p-tau217 및 타우 응집(MK-6240 PET)을 통해 인지 기능 저하와 연결된다</li><li>CSF sTREM2(미세아교세포 마커)가 이 연관성의 매개 역할을 251명 코호트에서 재현했다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#알츠하이머</span> <span class="tag">#미세아교세포</span> <span class="tag">#성상세포</span> <span class="tag">#신경염증</span> <span class="tag">#아밀로이드</span> <span class="tag">#타우</span> <span class="tag">#PET</span> <span class="tag">#바이오마커</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 이 연구는 기초 신경과학 논문으로 현재 운영 중인 프로젝트(alphabot, ai-feed, trader 등)에 직접 적용할 액션 없음. 랩 PI 뇌졸중 모델 관련 작업(lab-pi-stroke-foundation-model.md) 또는 AB-FMT1 관련 신경염증 문헌 맥락이 있다면 ~/agent_hub의 해당 레퍼런스에 인용 추가 고려.</div>
@@ -9536,6 +9615,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Nature 게재 논문(2026-07-15). 알츠하이머병(AD) 위험 유전자들의 뇌 세포 유형별 크로마틴 접근성 패턴이 다양한 인구 집단(아프리카계·유럽계 등)에서 공통적으로 나타남을 단일세포 후성유전체 분석으로 규명했다. 미세아교세포(TREM2, ABI3, PILRA, ABCA7 등)와 희소돌기아교세포·성상세포에 집중된 AD 신호가 세 뇌 영역(AC, DLPFC, STG) 전반에서 일관됨을 보였다.</p>
   <ul class="claims"><li>AD GWAS 위험 유전자의 세포유형별 크로마틴 접근성 시그니처는 인구 집단(population group) 간에 공유된다</li><li>TREM2, ABI3, PILRA, MS4A4A, ABCA7 등 미세아교세포 마커 유전자가 AD 위험 신호의 주요 세포유형 귀속처다</li><li>APOE는 성상세포에서, PICALM·CLU는 혈관·희소돌기아교세포에서 높은 접근성을 보인다</li><li>전두엽(DLPFC), 전대상피질(AC), 상측두회(STG) 세 영역에서 시그니처가 일관된다</li></ul>
+  
   <div class="surfaces"><span class="badge">📄 project-docs</span></div>
   <div class="tags"><span class="tag">#Alzheimer's disease</span> <span class="tag">#snATAC-seq</span> <span class="tag">#cell-type specificity</span> <span class="tag">#GWAS</span> <span class="tag">#microglia</span> <span class="tag">#chromatin accessibility</span> <span class="tag">#population genetics</span> <span class="tag">#neuroscience</span></div>
   <div class="apply-plan">승인 시 Zlokovic 랩 연구 맥락에서 참고할 경우, ~/agent_hub/refs/learned-practices.md 또는 해당 연구 노트에 'AD 위험 유전자 × 세포유형 귀속 표(microglia: TREM2/ABI3/PILRA/ABCA7, astrocyte: APOE, OPC/vascular: PICALM/CLU)' 형태로 요약 추가; DOI: 10.1038/s41586-026-10793-0</div>
@@ -9591,6 +9671,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">Science지 특별호에 게재된 알츠하이머병(AD) 단일세포 멀티오믹스 연구. GAGE-seq(Hi-C+RNA), snATAC-seq, Xenium 공간전사체 기술을 통합해 AD 뇌에서 3D 게놈 구조(컴파트먼트 뒤섞임)와 전사체 변화의 연관성을 규명했으며, Hicformer 모델로 3D 게놈 특징에서 유전자 발현을 예측한다.</p>
   <ul class="claims"><li>AD 뇌에서 3D 게놈 컴파트먼트 뒤섞임(Compartment Mingling)이 증가한다</li><li>Hicformer는 DNA 서열과 3D 게놈 특징을 입력받아 유전자 발현을 예측한다</li><li>단거리+중거리 조절 아키텍처 변화가 AD의 유전자 발현 이상과 연결된다</li><li>공간전사체 분석(Xenium)으로 미세환경·공간 유전자 프로그램·리간드-수용체 상호작용을 통합 분석했다</li></ul>
+  
   <div class="surfaces"></div>
   <div class="tags"><span class="tag">#알츠하이머</span> <span class="tag">#3D게놈</span> <span class="tag">#단일세포멀티오믹스</span> <span class="tag">#Hicformer</span> <span class="tag">#공간전사체</span> <span class="tag">#Hi-C</span> <span class="tag">#후성유전학</span> <span class="tag">#뇌질환</span></div>
   <div class="apply-plan">승인 시 해당 없음 — 기초과학 연구 논문으로 현재 프로젝트(alphabot·ai-feed·frankencrawler 등)에 직접 적용할 액션 없음. Woosung의 랩 PI 뇌졸중 모델 연구(lab-pi-stroke-foundation-model.md) 맥락에서 참고 문헌으로 기록하려면 ~/agent_hub/refs/learned-practices.md 또는 연구 RAG(project_research_rag.md) 코퍼스에 추가.</div>
@@ -9646,6 +9727,7 @@ gpt_haterz AI한테 페이지를 만들어 달라고 하면 배치는 제법 나
   </div>
   <p class="summary">[Caption]
 phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 활용하기 좋은 AI 스킬들을 정리해봤습니다. 문헌 탐색, 분석, 인용 검토 세 가지 카테고리로 나눴고, 제가 만든 ref-verify도 살짝 넣어봤어요. 🤭 카드를 캡처한 뒤 채팅에서 “이 스킬 설치해줘”라고 요청해 사용해보세요. 웹 환경에서는 설치나 실행에 제약이 있을 수 있으니, 가능하면 데스크톱 앱에서 써보시길 바라요. 스킬이 복잡해 보일 수 있지만, 결국은 잘 짜인 수행 가이드를 AI에게 주는 방식이에요. 처음에는 사람들이 잘 만들어 둔 스킬을 써보다가, 점점 내 연구 맥락과 지침을 담은 스킬을 직접 만들어 쓰게 되는 것 같아요. 아무리 잘 만든 스킬이라도 각자의 연구 맥락까지 완전히 파악하기는 어렵기 때문이죠. AI에게 “스킬 만들어줘”라고 한마디만 해도 시작할 수 있으니, 자신만의 맥락을 담은 연구 스킬도 만들어 써보세요. #AI #AI스킬 #연구 #대학원생 Add a comment.</p>
+  
   
   <div class="surfaces"></div>
   <div class="tags"></div>
@@ -9706,6 +9788,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">arXiv:2606.03979 논문 'Language Models Need Sleep'은 연속학습(continual learning) 설정에서 LLM이 인간 수면과 유사한 '슬립 페이즈'를 통해 내부 지식을 자기수정·통합할 수 있는 프레임워크를 제안한다. 슬립 타임은 외부 입력 없이 모델이 고주파 모듈 처리를 중단하고 저주파의 안정적인 메모리 컴포넌트로 지식을 통합하는 능동적 단계로 정의된다. 기존 학습/테스트 시간 구분 대신 Wake(활성)와 Sleep(통합) 사이클로 연속학습을 모델링한다.</p>
   <ul class="claims"><li>연속학습 설정에는 기존 ML의 training/test time 구분이 없고, 대신 Active(Wake)와 Sleep 단계가 존재한다</li><li>슬립은 수동적 상태가 아니라 모델이 내부 지식을 자기개선·메모리 통합하는 고도로 동적인 단계다</li><li>슬립 페이즈에서 고주파 모듈 처리를 멈추고 저주파의 더 크고 안정적인 컴포넌트로 메모리를 통합한다</li><li>논문 저자는 Ali Behrouz, Farnoosh Hashemi, Adel Javanmard, Vahab Mirrokni이며 2026년 6월 제출, 7월 개정</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#continual-learning</span> <span class="tag">#memory-consolidation</span> <span class="tag">#self-modification</span> <span class="tag">#sleep-cycle</span> <span class="tag">#LLM</span> <span class="tag">#arXiv</span> <span class="tag">#2026</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '🛠 AI 도구·모델 동향' 섹션에 반영.
@@ -9763,6 +9846,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">앤트로픽 엔지니어 강연 기반 AI 에이전트 설계 3단계 프레임워크. 1단계 질문(if-then 적합성·비용·도구·리스크), 2단계 설계(무대·도구·지침·함정), 3단계 점검(10~20K 토큰 제약 에이전트 관점 누락 탐지). 핵심 메시지는 에이전트를 무조건 만들지 말고 가치·적합성 먼저 검증하라.</p>
   <ul class="claims"><li>앤트로픽 엔지니어가 공식 강연에서 모든 작업에 에이전트를 만들지 말라고 직접 발언함</li><li>에이전트 설계 전 if-then 적합성·단위 비용(130~150원)·도구 연결·실패 피해 규모 4가지를 먼저 검증해야 함</li><li>에이전트 시스템 프롬프트는 목표와 금지선을 포함한 붙여 쓰는 형태로 설계해야 함</li><li>실전 에이전트는 10~20K 토큰 제약 안에서 동작하므로 정보 범위 한계를 설계 단계에서 점검해야 함</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#AI에이전트</span> <span class="tag">#에이전트설계</span> <span class="tag">#시스템프롬프트</span> <span class="tag">#앤트로픽</span> <span class="tag">#에이전트프레임워크</span> <span class="tag">#ROI검증</span></div>
   <div class="apply-plan">승인 시 ~/.claude/CLAUDE.md의 '절대 규칙' 섹션 또는 ~/agent_hub/refs/workflow.md에 에이전트 신규 설계 전 체크리스트(if-then 적합성 → 단위 비용 정당성 → 필요 도구 목록 → 실패 피해 규모)를 게이트 항목으로 추가하고, 시스템 프롬프트 작성 시 '목표 + 금지선' 템플릿을 명시</div>
@@ -9823,6 +9907,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">seb.ai가 Fable 5 모델로 24/7 AI 트레이더를 구축한 사례 소개. 마켓 스캐너 → 시그널 엔진 → 트레이드 플래너 → 리스크 모듈 → 모니터 루프 → 최종 결정의 6단계 파이프라인으로 구성. 최종 트레이드 실행은 인간 승인(Human Review Required)이 필수.</p>
   <ul class="claims"><li>Fable 5 모델로 가격·뉴스·거래량·온체인 데이터를 24/7 스캔하는 트레이딩 파이프라인 구축 가능</li><li>브레이크아웃·풀백·모멘텀·트렌드 컨티뉴에이션·리버설 5가지 셋업을 자동 탐지하고 확률 스코어링</li><li>포지션 사이징·익스포저 한도·드로다운·변동성·최대손실 5중 리스크 체크 게이트 적용</li><li>최종 결정 단계에서 APPROVED/WATCHLIST/REJECTED 분기 후 인간 승인 필요</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#Fable 5</span> <span class="tag">#AI trader</span> <span class="tag">#trading bot</span> <span class="tag">#signal engine</span> <span class="tag">#risk management</span> <span class="tag">#24/7 monitoring</span> <span class="tag">#human-in-the-loop</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/projects.md 또는 alphabot 설계문서에 6단계 모듈식 파이프라인(스캔→시그널→플랜→리스크→모니터→최종결정+인간승인) 아키텍처를 참조 패턴으로 메모; alphabot에 유사한 리스크 게이트 다중화 및 human-in-the-loop 최종 결정 모듈 도입 검토</div>
@@ -9883,6 +9968,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">seb.ai가 제시하는 'AI Operating System' 개념으로, CEO 1인이 AI 에이전트 팀(7개 부서, 33개 스킬)을 운영해 SEO·CRO·콘텐츠·광고·성장·세일즈·전략을 자동화하는 구조다. 각 부서는 독립된 AI 역할(skill)로 구성되며, 전통적인 마케팅 팀을 AI 에이전트로 대체하는 비즈니스 모델을 제시한다. 총 7개 부서(SEO&Content, CRO, Content&Copy, Paid Ads, Growth, Sales&GTM, Strategy)에 33개의 세부 AI 스킬이 정의되어 있다.</p>
   <ul class="claims"><li>CEO 1인 + AI 에이전트 구조로 전통 마케팅 팀(SEO·CRO·카피·광고·성장·세일즈·전략) 전체를 대체할 수 있다</li><li>33개의 세분화된 AI 스킬(seo-audit, page-cro, copywriting, paid-ads 등)로 마케팅 전 과정을 모듈화할 수 있다</li><li>AI 에이전트를 부서 단위로 구조화하면 반복 가능한 성장 시스템(referral-program, churn-prevention 등)을 구축할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#AI-OS</span> <span class="tag">#AI-에이전트팀</span> <span class="tag">#마케팅자동화</span> <span class="tag">#SEO</span> <span class="tag">#CRO</span> <span class="tag">#성장전략</span> <span class="tag">#1인CEO</span> <span class="tag">#seb.ai</span></div>
   <div class="apply-plan">승인 시 agent_hub의 AI 에이전트 역할 설계 시 이 7부서 33스킬 분류 체계를 참조 템플릿으로 활용 가능 — ~/agent_hub/refs/ai-business-patterns.md(신규 또는 기존)에 'AI-OS 부서 구조' 섹션으로 추가하거나, polypoly 프로젝트의 에이전트 역할 설계에 마케팅 자동화 모듈 분류 기준으로 참조</div>
@@ -9943,6 +10029,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">Claude의 세션 간 기억 손실 문제를 Google NotebookLM 연동으로 해결하는 워크플로우. 대화 종료 시 요점을 NotebookLM에 저장하고, 새 세션 시작 시 필요한 부분만 검색해 로드함으로써 컨텍스트를 유지하면서 토큰 사용량도 절감한다는 주장. 세팅은 4단계 16분 소요라고 설명.</p>
   <ul class="claims"><li>NotebookLM을 Claude와 연동하면 세션 간 기억 손실 문제를 해결할 수 있다</li><li>필요한 부분만 선택적으로 로드하므로 컨텍스트 전체를 붙여넣는 것보다 토큰 사용량이 줄어든다</li><li>세팅은 4단계, 약 16분이면 완료된다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span></div>
   <div class="tags"><span class="tag">#claude</span> <span class="tag">#notebooklm</span> <span class="tag">#memory</span> <span class="tag">#context-management</span> <span class="tag">#token-optimization</span> <span class="tag">#cross-session</span> <span class="tag">#ai-workflow</span></div>
   <div class="apply-plan">승인 시 현재 ~/agent_hub/docs/handoffs/ 핸드오프 + CLAUDE.md 세션 마무리 규정으로 이미 유사 문제를 해결 중이므로 즉시 적용보다는 실제 가이드 문서(tinyurl 링크) 확인 후 자동화 수준 검증. 가치 있으면 ~/agent_hub/refs/engineering.md 세션 관리 섹션에 NotebookLM 연동 옵션으로 추가.</div>
@@ -10003,6 +10090,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">한국 PyTorch 커뮤니티(discuss.pytorch.kr)의 'LLM Wiki Newsroom' 시리즈 중 Claude Code를 다룬 게시글. URL만 제공되어 본문 내용 미확인 — 실제 분석은 본문 fetch 필요.</p>
   <ul class="claims"><li>discuss.pytorch.kr에 Claude Code 관련 LLM 뉴스룸 게시글이 존재한다</li><li>한국 ML 커뮤니티에서 Claude Code가 주목받고 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#claude-code</span> <span class="tag">#LLM</span> <span class="tag">#한국커뮤니티</span> <span class="tag">#pytorch-kr</span></div>
   <div class="apply-plan">승인 시 본문 fetch 후 재분석 필요. 유효 인사이트 확인 시 ~/agent_hub/hub/ai-trends.md에 Claude Code 관련 커뮤니티 동향으로 추가.</div>
@@ -10077,6 +10165,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">Moonshine Micro는 500KB 미만 크기로 음성 인식(ASR)과 TTS를 동시에 구현한 경량 모델이다. 클라우드 없이 엣지 디바이스·오프라인 환경에서 동작하며, 로컬 음성 AI의 실용적 가능성을 증명한다.</p>
   <ul class="claims"><li>Moonshine Micro는 500KB 미만 크기로 음성 인식과 TTS를 모두 구현한다</li><li>클라우드 없이 엣지 디바이스·오프라인 환경에서 동작한다</li><li>GitHub 오픈소스로 공개되어 있다(moonshine-ai/moonshine/tree/main/micro)</li></ul>
+  
   <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#local-ai</span> <span class="tag">#edge-ai</span> <span class="tag">#ASR</span> <span class="tag">#TTS</span> <span class="tag">#경량모델</span> <span class="tag">#오프라인AI</span> <span class="tag">#음성인식</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/learned-practices.md 또는 로컬 모델 비교 실험 메모리(local-model-comparison.md)에 Moonshine Micro를 오프라인 음성 인식 후보로 추가하고, OCR 파이프라인에서 음성 입력이 필요해질 경우 우선 평가 대상으로 기록한다.</div>
@@ -10137,6 +10226,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">유료 SaaS를 대체하는 오픈소스/로컬 AI 도구 5가지 소개. Open Montage(영상 제작), Codebase Memory MCP(토큰 절감), Fluid Voice/Voice Box(음성), Google TimesFM(예측), Zapier MCP(통합). 클라우드 구독에서 로컬 소유로의 전환 트렌드.</p>
   <ul class="claims"><li>Codebase Memory MCP로 대규모 코드베이스 토큰을 최대 99% 절감 가능</li><li>Open Montage는 클라우드 API 없이 로컬에서 스톡 푸티지 기반 영상 자동 제작</li><li>Fluid Voice가 Whisper Flow·Super Whisper를 대체하며 월 $15 절감</li><li>Google TimesFM은 추가 훈련 없이 시계열 데이터로 매출·트래픽 예측 가능</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span> <span class="badge">🤖 claude-code</span></div>
   <div class="tags"><span class="tag">#오픈소스</span> <span class="tag">#로컬AI</span> <span class="tag">#SaaS대체</span> <span class="tag">#비용절감</span> <span class="tag">#MCP</span> <span class="tag">#음성합성</span> <span class="tag">#시계열예측</span> <span class="tag">#영상제작</span></div>
   <div class="apply-plan">승인 시 Codebase Memory MCP는 ai-feed 또는 agent_hub 프로젝트에서 Claude Code 사용 시 토큰 비용 절감 목적으로 즉시 검토 가능 — ~/agent_hub/refs/mcp-tools.md에 후보 MCP로 추가하고 실험 항목으로 등록</div>
@@ -10197,6 +10287,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">HKUDS가 Claude Code 같은 코딩 에이전트 하네스 구조를 오픈소스로 재현한 완성형 프레임워크를 공개했다. GitHub에서 14,853 스타를 받았으며, 에이전트 내부 동작 방식을 4가지 관점으로 분석 가능하다. 기존에 소스 비공개로 접근이 불가했던 에이전트 하네스 구조를 직접 뜯어볼 수 있게 되었다.</p>
   <ul class="claims"><li>HKUDS가 Claude Code 스타일 코딩 에이전트 프레임워크를 오픈소스로 공개했다</li><li>해당 프레임워크는 GitHub에서 14,853 스타를 받았다</li><li>에이전트 하네스 구조를 4가지 관점으로 분석할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#coding-agent</span> <span class="tag">#open-source</span> <span class="tag">#HKUDS</span> <span class="tag">#agent-harness</span> <span class="tag">#claude-code</span> <span class="tag">#framework</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 HKUDS 오픈소스 코딩 에이전트 프레임워크 항목을 추가하고, 저장소를 확인한 뒤 claude-code 설계 참조 자료로 ~/agent_hub/refs/에 링크 기록</div>
@@ -10257,6 +10348,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">Claude MCP 서버 24개를 5개 버킷(기본 엔진·웹리서치·업무앱·개발자동화·데이터제작)으로 분류한 입문 가이드. 직업군별(개발자·마케터·크리에이터·기획자·데이터)로 5개씩 추천 조합을 제시. 전부 설치 말고 역할에 맞는 5개 조합부터 시작하라는 실용적 온보딩 전략.</p>
   <ul class="claims"><li>Claude MCP 필수 5개(기본 엔진): claude-code, filesystem, memory, sequential-thinking, fetch</li><li>웹·리서치 버킷: playwright, perplexity, firecrawl, exa, brave-search</li><li>업무앱 연결 버킷: notion, slack, google-drive, linear, figma</li><li>개발 자동화 버킷: github, git, context7, docker, sentry</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#MCP</span> <span class="tag">#Claude</span> <span class="tag">#claude-code</span> <span class="tag">#MCP서버</span> <span class="tag">#AI도구세팅</span> <span class="tag">#온보딩</span> <span class="tag">#개발자도구</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/mcp-tools.md에 24개 MCP 버킷 분류 및 직업별 추천 조합 섹션을 추가하거나, ~/.claude/CLAUDE.md MCP 툴 참조 섹션에 버킷 체계 링크 추가</div>
@@ -10317,6 +10409,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">볼린저 밴드 돌파 후 리테스트(눌림목/되돌림) 지점에서 RSI 50선 반응을 컨펌으로 삼는 매수·매도 진입 전략. 추세 팽창 초기 진입을 노리는 모멘텀 기반 접근법이다. 정보방 유입 유도 마케팅 콘텐츠이기도 하다.</p>
   <ul class="claims"><li>볼린저 밴드 상단 강력 돌파 후 밴드 상단/중심선 눌림에서 RSI 50선 지지가 확인되면 매수 진입 유효</li><li>볼린저 밴드 하단 이탈 후 밴드 하단/중심선 되돌림에서 RSI 50선 저항이 확인되면 매도 진입 유효</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#볼린저밴드</span> <span class="tag">#RSI</span> <span class="tag">#리테스트</span> <span class="tag">#추세추종</span> <span class="tag">#기술적분석</span> <span class="tag">#모멘텀</span></div>
   <div class="apply-plan">승인 시 alphabot의 신호 로직에 '밴드 돌파 후 리테스트 + RSI 50선 컨펌' 조합을 진입 필터로 검토. ~/dev/Auto_bot 내 볼린저밴드 관련 신호 모듈에 rsi_threshold=50 지지/저항 조건 추가 여부를 백테스트로 검증.</div>
@@ -10377,6 +10470,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">키움증권 자동매매 파이썬 오픈소스 코드를 GitHub/위키독스에서 찾아 복사 후, 조건검색식 번호만 교체해 즉시 실행하는 방법을 소개하는 입문자 가이드. 백테스팅을 통한 사전 검증을 다음 단계로 제시함.</p>
   <ul class="claims"><li>GitHub 및 위키독스에 키움증권 자동매매용 완성형 파이썬 오픈소스 코드가 공개돼 있다</li><li>조건검색식 번호(예: 001)만 교체하면 코드 수정 없이 자동매매 실행이 가능하다</li><li>과거 데이터로 백테스팅을 통해 조건식의 승률을 무료로 사전 확인할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">📄 project-docs</span></div>
   <div class="tags"><span class="tag">#키움증권</span> <span class="tag">#자동매매</span> <span class="tag">#파이썬</span> <span class="tag">#오픈소스</span> <span class="tag">#조건검색식</span> <span class="tag">#백테스팅</span> <span class="tag">#입문</span></div>
   <div class="apply-plan">승인 시 직접 적용 가치 낮음. 참고 수준이라면 ~/dev/Auto_bot/docs/ 또는 agent_hub의 alphabot 관련 project_profile에 '키움 오픈소스 레퍼런스 링크(GitHub 검색어: 키움증권 자동매매 파이썬 오픈소스)' 메모 정도로 보관.</div>
@@ -10437,6 +10531,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">MiaoYan은 macOS용 경량 로컬 퍼스트 Markdown 노트 앱으로, Swift 6 네이티브로 작성되어 분할 편집기·미리보기, WikiLink 백링크, LaTeX, Mermaid를 지원한다. iCloud/Nutstore 등 외부 클라우드 클라이언트를 통한 동기화를 지원하며 CLI 인터페이스도 제공한다. GitHub Stars 8.4k, MIT 라이선스 오픈소스.</p>
   <ul class="claims"><li>Swift 6 네이티브로 Electron 기반 앱보다 성능이 우수하다고 주장</li><li>로컬 퍼스트로 데이터 수집 없음, iCloud/Nutstore/Dropbox로 크로스디바이스 동기화 가능</li><li>CLI(`miao`)로 터미널에서 노트 열기·생성·검색·목록 조회 가능</li><li>Mac App Store, Homebrew, GitHub Releases 세 채널 모두 동일 코드베이스로 배포</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#markdown</span> <span class="tag">#macos</span> <span class="tag">#local-first</span> <span class="tag">#swift</span> <span class="tag">#note-taking</span> <span class="tag">#open-source</span> <span class="tag">#cli</span></div>
   <div class="apply-plan">승인 시 현재 Markdown 문서 작성 도구가 필요하다면 ~/agent_hub/refs/projects.md 또는 tools 섹션에 MiaoYan을 로컬 퍼스트 macOS Markdown 에디터 옵션으로 추가 기록</div>
@@ -10497,6 +10592,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">Pake는 Rust/Tauri 기반으로 웹페이지를 단 한 줄 명령어로 데스크톱 앱(macOS/Windows/Linux)으로 패키징하는 오픈소스 CLI 툴이다. Electron 대비 인스톨러 크기 20배 작고 메모리 사용량이 낮으며, 59.8k GitHub 스타를 보유한 검증된 프로젝트다. CLI, GitHub Actions 온라인 빌드, 로컬 커스텀 개발 세 가지 경로를 지원한다.</p>
   <ul class="claims"><li>Electron 패키지 대비 인스톨러 크기 약 20배 작음(보통 10MB 이하)</li><li>Rust Tauri 기반으로 JS 프레임워크보다 빠르고 메모리 사용량 낮음</li><li>pake-cli 단일 명령어로 아이콘·윈도우 설정 포함 패키징 가능</li><li>ChatGPT, Gemini, DeepSeek, Notion 등 주요 웹앱 사전 빌드 패키지 제공</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#Tauri</span> <span class="tag">#Rust</span> <span class="tag">#desktop-app</span> <span class="tag">#web-to-app</span> <span class="tag">#CLI</span> <span class="tag">#cross-platform</span> <span class="tag">#no-electron</span> <span class="tag">#open-source</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/projects.md 또는 ai-tools 인사이트 DB에 Pake 항목 추가; AI 웹 도구(ai-feed 대시보드 등)를 데스크톱 앱으로 배포할 때 Electron 대신 Pake CLI 우선 검토 후보로 등록</div>
@@ -10564,6 +10660,7 @@ phd.ai.log AI를 활용하다 보면 스킬을 빼놓기 어렵죠! 연구에 �
   </div>
   <p class="summary">로컬 LLM 구축 시 고성능 GPU와 충분한 메모리가 필수임을 강조. AMD R9700 GPU + EPYC 4585PX CPU 조합이 비용 대비 효율적인 로컬 AI 에이전트 운영 옵션으로 소개됨. 장비 선택 실수를 방지하기 위한 실용 가이드 콘텐츠.</p>
   <ul class="claims"><li>로컬 LLM 실용적 활용에는 고성능 GPU와 충분한 메모리가 필수</li><li>AMD R9700 + EPYC 4585PX 조합은 비용 대비 효율이 뛰어남</li><li>해당 하드웨어로 AI 에이전트 작업이 가능</li></ul>
+  
   <div class="surfaces"><span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#로컬LLM</span> <span class="tag">#하드웨어</span> <span class="tag">#AMD</span> <span class="tag">#GPU</span> <span class="tag">#AI에이전트</span> <span class="tag">#비용효율</span> <span class="tag">#구축가이드</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md의 로컬 AI 하드웨어 섹션에 AMD R9700 + EPYC 4585PX 조합을 비용효율 옵션으로 추가 기록; Ollama 로컬 모델 업그레이드 시 참조 후보로 메모</div>
@@ -10630,6 +10727,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">정부 소유 부동산 할인 매물의 계약 플리핑 전략: Tranchi Al을 통해 할인 매물을 통합하고, 계약권을 투자자에게 매각해 수익화하는 방법.</p>
   <ul class="claims"><li>Tranchi Al이 정부 사이트의 할인 매물을 자동 수집해 검색 효율성 향상</li><li>$2K-$10K 구매 대비 $50K-$100K+ 시세 차익 발생 가능성</li><li>계약권 매각을 통한 직접 집 구매 없이 수익 창출</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">📄 project-docs</span></div>
   <div class="tags"><span class="tag">#부동산</span> <span class="tag">#계약플리핑</span> <span class="tag">#투자전략</span></div>
   <div class="apply-plan">승인 시 Tranchi Al API를 ~/.ai-business/REAL_ESTATE.md 문서의 '할인매물 모니터링' 섹션에 통합 연결</div>
@@ -10696,6 +10794,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">GitHub 저장소 system_prompts_leaks(45k stars)에 Claude Fable 5 시스템 프롬프트가 2일 전 추가됨. Anthropic·OpenAI·Google 등 주요 AI 제품의 유출 시스템 프롬프트 모음집으로, 공식 검증본은 아니지만 커뮤니티에서 실사용 효과가 확인된 참고 자료.</p>
   <ul class="claims"><li>github.com/asgeirtj/system_prompts_leaks 저장소에 Claude Fable 5 시스템 프롬프트가 공개됨 (Anthropic/claude-fable-5.md)</li><li>해당 저장소는 45k stars, 3.8k forks로 커뮤니티 검증 규모가 상당함</li><li>Anthropic 공식 확인본이 아니며, 다수 사용자의 실사용 테스트로 효과가 입증된 수준</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">✍️ prompt</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#claude-fable-5</span> <span class="tag">#system-prompt</span> <span class="tag">#leaked</span> <span class="tag">#anthropic</span> <span class="tag">#openai</span> <span class="tag">#google</span> <span class="tag">#github</span></div>
   <div class="apply-plan">승인 시 github.com/asgeirtj/system_prompts_leaks/blob/main/Anthropic/claude-fable-5.md 열람 후 ~/agent_hub/refs/prompt-commands.md 또는 CLAUDE.md 프롬프트 설계 섹션에 유효한 패턴만 발췌·참고용으로 메모 추가</div>
@@ -10756,6 +10855,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">포트폴리오를 통해 해결한 어려운 문제 3가지를 구체적으로 기록하고 유지 관리해야 커리어 역량을 입증한다. 문제 난이도, 역할, 해결 과정, 결과 등을 수치화하여 정리한다.</p>
   <ul class="claims"><li>포트폴리오로 문제 해결 능력을 객관적으로 증명해야 한다</li><li>포트폴리오를 최신 상태로 유지 관리해야 한다</li><li>문제 설명 시 수치화된 영향을 포함해야 한다</li></ul>
+  
   <div class="surfaces"><span class="badge">📄 project-docs</span> <span class="badge">✍️ prompt</span></div>
   <div class="tags"><span class="tag">#career</span> <span class="tag">#portfolio</span> <span class="tag">#problem-solving</span></div>
   <div class="apply-plan">승인 시 ~/.portfolio/README.md 파일에 문제 해결 구조(제목/요약/역할/결과)를 3가지 케이스로 정리하여 기술</div>
@@ -10816,6 +10916,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">성능 개선을 수치로 정리한 예시로, 응답속도 42% 감소, 출력량 3.1배 증가, 월 $18k 절감 등 주요 지표 개선을 강조합니다.</p>
   <ul class="claims"><li>응답속도 42% 감소</li><li>출력량 3.1배 증가</li><li>월 $18k 비용 절감</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#performance-optimization</span> <span class="tag">#cost-efficiency</span></div>
   <div class="apply-plan">승인 시 프로젝트 문서의 '성과 지표' 섹션에 해당 수치를 기록하고, 다음 개선 방향으로 활용</div>
@@ -10884,6 +10985,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">스타트업 창업자가 12년간 직접 체득한 마케팅·채용·팀문화 교훈 12가지. Netflix 카테고리 모델을 마케팅에 적용하고, 콘텐츠 퍼널을 Entertainment→Education→Product 3단계로 구조화하며, 팀을 '가족'이 아닌 '스포츠팀'으로 운영하라는 것이 핵심. 창업자 개인 브랜드 대신 팀원 전체의 브랜드를 함께 키우고, 제품 완성 전 배포망 확보가 제품만큼 중요하다고 강조.</p>
   <ul class="claims"><li>콘텐츠 퍼널 상단(Entertainment)은 바이럴·브랜드 인지, 중단(Education)은 팔로워·리드 전환, 하단(Product)은 조회수는 낮지만 전환율이 가장 높다</li><li>제품 완성 전 마케팅으로 10,000명 대기자 명단을 확보했다</li><li>팀원에게 지분(ESOP)을 부여하면 오너십 마인드로 일한다 — 4년 베스팅·1년 클리프 구조 권장</li><li>iPhone으로 찍은 진정성 있는 콘텐츠가 과잉 제작 콘텐츠보다 성과가 좋다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#스타트업</span> <span class="tag">#마케팅</span> <span class="tag">#채용</span> <span class="tag">#팀문화</span> <span class="tag">#콘텐츠전략</span> <span class="tag">#ESOP</span> <span class="tag">#브랜딩</span> <span class="tag">#창업</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -10941,6 +11043,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">Claude를 활용해 디지털 제품을 만들고 7일 내 146건 판매를 달성했다는 Instagram 마케터의 사례 공유. 'Content Revenue Machine'이라는 7일 프로그램을 홍보하며, Claude 프롬프트로 수요 조사 → 콘텐츠 제작 → 자동 판매 파이프라인을 구축했다고 주장. 실제 프롬프트는 '8자리 비즈니스 전략가 역할' 지시로 디지털 제품 아이디어를 도출하는 방식.</p>
   <ul class="claims"><li>Claude 프롬프트만으로 24시간 내 26건, 7일 내 146건 디지털 제품 판매 달성</li><li>Claude를 수요 조사 도구로 활용해 18일 내 $10,000 추가 수익 창출</li><li>콘텐츠 링크 배포 후 60분 이내 첫 구매 발생 가능</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#Claude 프롬프트</span> <span class="tag">#디지털 제품</span> <span class="tag">#Instagram 마케팅</span> <span class="tag">#수익화</span> <span class="tag">#소셜미디어</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 '💼 AI 비즈니스·수익화' 섹션에 반영.
@@ -10998,6 +11101,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">Microsoft Azure 무료 계정으로 가상 머신을 생성하고, RDP를 통해 Windows를 실행한 뒤 Ubuntu 터미널에서 OpenCLaW(오픈소스 AI 도구)를 무료로 설치·실행하는 방법을 소개한다. Mac 없이도 클라우드 VM을 통해 무료로 사용 가능하다는 점을 강조한다.</p>
   <ul class="claims"><li>Azure 무료 계정으로 OpenCLaW를 무료로 실행할 수 있다</li><li>Azure VM + RDP + Ubuntu 터미널 조합으로 Mac 없이 OpenCLaW 설치 가능하다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#Azure</span> <span class="tag">#OpenCLaW</span> <span class="tag">#가상머신</span> <span class="tag">#무료</span> <span class="tag">#Ubuntu</span> <span class="tag">#RDP</span> <span class="tag">#클라우드AI</span></div>
   <div class="apply-plan">승인 시 해당 없음 — OpenCLaW 정체가 불명확하고 명령어도 누락되어 있어 즉시 적용 불가. OpenCLaW가 로컬 AI 관련 도구로 확인될 경우 ~/agent_hub/refs/projects.md에 Azure VM 기반 무료 실행 옵션으로 메모 추가 검토.</div>
@@ -11058,6 +11162,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">계층형 멀티에이전트 워크플로우: 팀리더 → 팀원 4명 → 병렬 심부름꾼 최대 30명 구조로 리서치와 구현을 2단계로 분리 실행한다. 리서치 단계에서 팀원들이 실시간 대화로 합의 후 3가지 제안서를 도출하고, 사용자가 승인한 안을 새 팀으로 병렬 구현한다. 구현 완료 후 팀원 검토 → 팀리더 최종검토 이중 게이트로 품질을 보증한다.</p>
   <ul class="claims"><li>팀리더-팀원-심부름꾼 3계층 구조에서 심부름꾼 최대 30개를 동시에 호출하면 리서치 속도가 대폭 단축된다</li><li>리서치 팀과 구현 팀을 완전히 분리(기존 팀원 해고 후 새 팀 구성)하면 설계 편향 없이 구현할 수 있다</li><li>심부름꾼 단위 검토 → 팀원 검토 → 팀리더 최종검토 3단계 게이트를 거치면 버그가 제거된다</li><li>팀원들이 심부름꾼 결과물을 토대로 실시간 대화(토론)하여 최적안을 수렴한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span> <span class="badge">💼 ai-business</span></div>
   <div class="tags"><span class="tag">#multi-agent</span> <span class="tag">#계층형-오케스트레이션</span> <span class="tag">#병렬-실행</span> <span class="tag">#research-then-implement</span> <span class="tag">#품질게이트</span> <span class="tag">#팀분리</span> <span class="tag">#AI워크플로우</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/refs/workflow.md의 멀티에이전트 설계 섹션에 '리서치-구현 팀 분리 패턴(Research-then-Implement with fresh team)'을 추가하고, agent_hub의 Workflow 스크립트 템플릿으로 팀리더→팀원→심부름꾼 3계층 병렬 구조를 pipeline()+parallel() 조합으로 구현하는 예시 코드를 작성한다.</div>
@@ -11118,6 +11223,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">Claude 구독만으로 AI 기반 자동 영상 편집이 이미 가능하다는 주장. 프리미어·파이널컷 자동화가 '아직 멀었다'는 일반적 인식과 달리, 기술적 한계를 이해하면 현재도 실현 가능하다고 역설한다. 구체적인 방법론은 별도 콘텐츠로 소개 예정.</p>
   <ul class="claims"><li>Claude 구독만으로 AI 기반 자동 영상 편집이 현재 가능하다</li><li>프리미어·파이널컷 자동화가 아직 불가능하다는 인식은 기술적 한계를 모르기 때문이다</li></ul>
+  
   <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#AI 영상 편집</span> <span class="tag">#자동화</span> <span class="tag">#Claude</span> <span class="tag">#크리에이터 툴</span> <span class="tag">#워크플로우</span></div>
   <div class="apply-plan">승인 시 구체적인 방법론 공개 후 재검토 필요. 현재는 ~/agent_hub/hub/ai-trends.md에 'Claude 기반 영상 편집 자동화 클레임' 항목으로 추가하고 후속 콘텐츠 모니터링 대기.</div>
@@ -11180,6 +11286,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">Anchored VWAP(고정 VWAP)을 활용해 차트에서 매수·매도 세력의 평균단가를 읽는 기법을 설명한다. 급락봉, 돌파봉, 고점 실패봉 세 가지 기준점에 VWAP을 고정하면 각각 수요 평균단가, 돌파 매수세 단가, 상단 물량 단가를 파악할 수 있다. VWAP 위/아래 여부로 현재 매수·매도 중 어느 쪽이 유리한지 판단하는 실용적 프레임이다.</p>
   <ul class="claims"><li>Anchored VWAP 기준선 위에 있으면 해당 사건 이후 진입한 매수세가 평균적으로 수익 상태다</li><li>급락봉에 VWAP을 고정하면 투매 이후 들어온 수요의 평균단가를 확인할 수 있다</li><li>돌파봉에 고정하면 돌파 매수세의 평균단가, 고점 실패봉에 고정하면 상단에 갇힌 물량의 평균단가를 파악할 수 있다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
   <div class="tags"><span class="tag">#anchored-vwap</span> <span class="tag">#고정vwap</span> <span class="tag">#차트분석</span> <span class="tag">#매매심리</span> <span class="tag">#거래량분석</span> <span class="tag">#기술적분석</span> <span class="tag">#물량분석</span></div>
   <div class="apply-plan">승인 시 alphabot의 진입·청산 로직(~/dev/Auto_bot)에 Anchored VWAP 계산 모듈을 추가하고, 급락봉·돌파봉을 자동 감지해 해당 봉 기준 AVWAP을 산출한 뒤 현재가와의 위치 관계를 진입 필터 조건으로 편입한다.</div>
@@ -11240,6 +11347,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">구글 딥마인드 연구자 Brendan O'Donoghue가 2026년 6월 텍스트 확산 모델 DiffusionGemma를 공개했다. 2016년 '확산 모델은 자기회귀 모델을 이기기엔 이르다'고 판단했던 당사자가 10년 만에 직접 모델을 출시한 것으로, 속도와 지능을 트레이드오프했음에도 요약·검색 태스크에서 탁월한 성능을 보인다. 실사용자가 aikeep24 프로덕션에 적용 중이며 '경주마'라는 표현이 나올 만큼 실용적 잠재력이 높다.</p>
   <ul class="claims"><li>DiffusionGemma는 자기회귀 모델 대비 속도와 지능이 트레이드오프된 텍스트 확산 모델이다</li><li>문장 요약·검색 등 특정 태스크에서 자기회귀 모델과 경쟁할 만한 성능을 보인다</li><li>구글 딥마인드 연구자 Brendan O'Donoghue가 2026년 6월 10일에 직접 공개했다</li><li>이미 aikeep24 서비스에 프로덕션 적용 사례가 존재한다</li></ul>
+  
   <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">💻 local-ai</span></div>
   <div class="tags"><span class="tag">#DiffusionGemma</span> <span class="tag">#텍스트확산모델</span> <span class="tag">#자기회귀모델</span> <span class="tag">#구글딥마인드</span> <span class="tag">#로컬AI</span> <span class="tag">#요약</span> <span class="tag">#검색</span></div>
   <div class="apply-plan">승인 시 ~/agent_hub/hub/ai-trends.md에 DiffusionGemma 항목을 추가하고, 로컬 모델 비교 실험 후보로 ~/agent_hub/experiments/ 아래 벤치마크 계획 파일에 등재해 요약·검색 태스크 기준선 대비 성능을 측정한다.</div>
@@ -11300,6 +11408,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">와이코프(Wyckoff) 분석법의 핵심 개념을 설명한 콘텐츠. 세력(기관/큰손)이 매집·분산 과정에서 남기는 가격·거래량 흔적을 스프링(Spring)과 UTAD 패턴으로 읽는 방법을 다루며, 차트에서 와이코프 구조를 자동 감지하고 GPT로 진입·손절·목표가를 산출하는 도구 아이디어를 언급한다.</p>
   <ul class="claims"><li>세력은 대량 매수 시 가격 급등을 피하기 위해 박스권에서 장기간 분산 매집한다</li><li>스프링(Spring)은 박스 바닥을 일시 이탈시켜 개미 손절 물량을 흡수하는 세력의 패턴이다</li><li>UTAD(Upthrust After Distribution)는 박스 상단 돌파 후 되돌림으로 추격매수 개미를 무는 분산 신호다</li><li>거래량 감소는 매도 압력 소진의 신호로 와이코프 매집 완료를 암시한다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#와이코프</span> <span class="tag">#Wyckoff</span> <span class="tag">#기술적분석</span> <span class="tag">#매집분산</span> <span class="tag">#스프링</span> <span class="tag">#UTAD</span> <span class="tag">#박스권</span> <span class="tag">#거래량분석</span></div>
   <div class="apply-plan">승인 시 ~/dev/Auto_bot(alphabot) 전략 모듈에 와이코프 박스권·스프링·UTAD 패턴 감지 로직을 추가하거나, docs/design-wyckoff-detector.md를 작성해 차트 자동 구조 감지 + GPT 진입·손절 산출 파이프라인 설계를 문서화한다.</div>
@@ -11360,6 +11469,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
   </div>
   <p class="summary">와이코프(Wyckoff) 방법론의 핵심 원리를 설명한 글. 세력(기관/스마트머니)이 티 안 나게 물량을 축적(매집)하거나 분산(배포)하는 과정이 가격·거래량 패턴으로 남으며, 스프링(바닥 허위 이탈)과 UTAD(천장 허위 돌파)가 핵심 신호. 이를 자동으로 감지하고 GPT로 진입·손절·목표를 산출하는 도구 구현을 언급함.</p>
   <ul class="claims"><li>세력은 물량이 커서 한 번에 매수하면 가격이 급등하므로 박스권 내에서 조금씩 분산 매집한다</li><li>박스권 하단 이탈 후 재진입(스프링)은 매집 완료의 강한 신호다</li><li>박스권 상단 돌파 후 되밀림(UTAD)은 분산(배포) 구간에서 개미 추격매수를 유인하는 함정이다</li><li>거래량 감소는 매도 세력 소진 신호이며, 거래량 급증 + 가격 정체는 분산 신호다</li></ul>
+  
   <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">🛠 ai-tools</span></div>
   <div class="tags"><span class="tag">#와이코프</span> <span class="tag">#Wyckoff</span> <span class="tag">#스마트머니</span> <span class="tag">#매집</span> <span class="tag">#분산</span> <span class="tag">#스프링</span> <span class="tag">#UTAD</span> <span class="tag">#박스권</span></div>
   <div class="apply-plan">승인 시 ~/dev/Auto_bot 또는 trader 프로젝트에서 Wyckoff 구조(Spring, UTAD, 박스권 감지) 탐지 모듈을 신규 전략 파일로 추가하고, 와이코프 단계별 레이블(Accumulation/Distribution/Spring/UTAD)을 백테스트 피처로 주입하는 파이프라인을 구성한다.</div>
