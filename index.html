@@ -172,7 +172,7 @@
 <body>
 <header>
   <h1>🧠 ai-feed 인사이트</h1>
-  <span class="meta">업데이트: 2026-09-23</span>
+  <span class="meta">업데이트: 2026-09-24</span>
 </header>
 
 <div class="mirror-banner">📌 정적 미러 (빌드 시점 스냅샷) — 실시간: <a href="https://pm.mwco.io/feed">https://pm.mwco.io/feed</a></div>
@@ -5177,8 +5177,392 @@ AI 툴 기반 수익화·자동화 아이디어 컬렉션에 누적.
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 108건</p>
+<p class="count">승인 대기 114건</p>
 <div class="grid">
+
+<div class="card" id="card-feed_099c2093e517478eabb1786c4d0f231a" data-id="feed_099c2093e517478eabb1786c4d0f231a">
+  <div class="card-header">
+    <span class="item-tag" title="feed_099c2093e517478eabb1786c4d0f231a">#099c2093</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-09-24</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">TypeSafe AI의 Jev는 텍스트를 생성하지 않고, 컨텍스트와 여러 예/아니오 질문을 받아 각 질문에 대한 판정과 신뢰도 점수를 반환하는 판정 전용 모델이다. 작성자는 에이전트 파이프라인에서 시도해볼 9개 지점(입력 스크리닝, 검색 여부 결정, 복합 점수화, 툴 호출 게이팅, 종료 판단, 단계별 모델 라우팅, 근거 확인, 메모리 쓰기 필터, 신뢰도 기반 인계)을 제시한다. 다만 계산·수학·날짜 파싱·텍스트 작성은 못 하고, 속도·가격 수치는 TypeSafe 자체 발표라 자체 검증이 필요하다고 경고한다.</p>
+  <ul class="claims"><li>Jev는 TypeSafe AI가 내놓은 새 모델이며 텍스트를 생성하지 않는다</li><li>컨텍스트와 질문 여러 개를 입력하면 각 질문마다 결정과 신뢰도 점수를 반환한다</li><li>입력 스크리닝, 검색 결정, 툴 호출 게이팅, 종료 판단, 모델 라우팅, 근거 확인, 메모리 쓰기 필터, 신뢰도 인계 등 에이전트 내 9개 지점에 적용할 수 있다</li><li>계산, 수학, 날짜 파싱, 텍스트 작성은 안정적으로 수행하지 못한다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-09-24T07:14</span>
+    <p>게시물의 핵심 주장은 모두 사실로 확인됨. Jev는 2026-09-15 스텔스 해제한 TypeSafe AI의 판정 전용(&quot;System One&quot;) 모델로, 텍스트를 생성하지 않고 상태와 여러 타입 질문(Choice/Score/Yes-No &quot;Noul&quot;)을 받아 질문마다 보정된 확률·신뢰도를 반환한다. 계산·카운팅·날짜 비교·텍스트 생성이 안 된다는 한계는 TypeSafe 공식 jaggedness 문서에 명시돼 있다. 속도·가격(193.6배 빠름/444.6배 저렴, 입력 $42/십억 토큰)은 TypeSafe 자체 발표다. 게시물이 언급하지 않은 사항: API 전용(로컬/오픈웨이트 없음), 모델 크기·라이선스 미공개, 직접 가입은 9/22 일시 중단(OpenRouter·Vercel AI Gateway로는 접근 가능), 프롬프트 인젝션에 답이 흔들릴 수 있음. 독립 검증(Every)에서는 Fable 5.1 대비 훨씬 빠르고 저렴했지만 심어둔 결함 7개 중 6개만 잡았다(Fable은 7개). 9개 활용 지점은 작성자의 시도 계획이지 검증 결과가 아니다.</p>
+    <p class="research-source">출처: 미확인 (TypeSafe Jev jaggedness 문서 / TypeSafe AI 공식 사이트)</p>
+    <ul><li>Jev는 TypeSafe AI의 새 모델이며 텍스트를 생성하지 않고 typed decision과 확률을 반환한다 · confirmed · <a href="https://www.marktechpost.com/2026/09/19/typesafe-ai-releases-jev/" target="_blank" rel="noopener">근거</a></li><li>컨텍스트와 여러 질문을 넣으면 질문마다 결정과 신뢰도 점수를 반환한다 · confirmed · <a href="https://beam.ai/agentic-insights/jev-typesafe-ai-agents" target="_blank" rel="noopener">근거</a></li><li>계산·수학·날짜 파싱·텍스트 작성은 안정적으로 못 한다 · unverified · 근거 없음</li></ul>
+    
+    <p>적용성: partial ·  — [제안 위치 무효] 판정 전용 소형 모델을 예/아니오 게이트에 쓰는 패턴은 이미 있다. critique_before_apply.py가 Laya(33ms/판단, laya_mlx)를 우선 쓰고, 사용할 수 없으면 LLM</p>
+  </div>
+  <div class="surfaces"><span class="badge">🛠 ai-tools</span> <span class="badge">🤖 claude-code</span></div>
+  <div class="tags"><span class="tag">#Jev</span> <span class="tag">#TypeSafe AI</span> <span class="tag">#AI 에이전트</span> <span class="tag">#판정 모델</span> <span class="tag">#툴 호출 게이팅</span> <span class="tag">#모델 라우팅</span> <span class="tag">#그라운딩 체크</span> <span class="tag">#메모리 필터</span></div>
+  <div class="apply-plan">승인 시 ai-feed 파이프라인의 기존 예/아니오 판정 단계(예: 수집 항목 관련성 필터, 중복·노출 판정)를 골라 Jev 후보 대상 목록을 project-docs의 메모리 또는 백로그 문서에 기록하고, 실제 도입 전에 자체 판정 샘플로 정확도·지연·비용을 LLM 호출과 비교하는 소규모 벤치를 먼저 수행한다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_099c2093e517478eabb1786c4d0f231a')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_099c2093e517478eabb1786c4d0f231a','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_099c2093e517478eabb1786c4d0f231a','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_099c2093e517478eabb1786c4d0f231a')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_099c2093e517478eabb1786c4d0f231a&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_099c2093e517478eabb1786c4d0f231a" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/Ddp_KpJDpgX/?stkn=MWpiOHc2MDZiZThqeA==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_099c2093e517478eabb1786c4d0f231a" style="display:none">
+    <div class="delegate-reference">적용 안내: ai-feed 파이프라인의 기존 예/아니오 판정 단계(예: 수집 항목 관련성 필터, 중복·노출 판정)를 골라 Jev 후보 대상 목록을 project-docs의 메모리 또는 백로그 문서에 기록하고, 실제 도입 전에 자체 판정 샘플로 정확도·지연·비용을 LLM 호출과 비교하는 소규모 벤치를 먼저 수행한다.
+
+원문 요약: TypeSafe AI의 Jev는 텍스트를 생성하지 않고, 컨텍스트와 여러 예/아니오 질문을 받아 각 질문에 대한 판정과 신뢰도 점수를 반환하는 판정 전용 모델이다. 작성자는 에이전트 파이프라인에서 시도해볼 9개 지점(입력 스크리닝, 검색 여부 결정, 복합 점수화, 툴 호출 게이팅, 종료 판단, 단계별 모델 라우팅, 근거 확인, 메모리 쓰기 필터, 신뢰도 기반 인계)을 제시한다. 다만 계산·수학·날짜 파싱·텍스트 작성은 못 하고, 속도·가격 수치는 TypeSafe 자체 발표라 자체 검증이 필요하다고 경고한다.</div>
+    <select id="delegate-project-feed_099c2093e517478eabb1786c4d0f231a" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_099c2093e517478eabb1786c4d0f231a" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_099c2093e517478eabb1786c4d0f231a')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_099c2093e517478eabb1786c4d0f231a')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_099c2093e517478eabb1786c4d0f231a" style="display:none">
+    <textarea id="comment-text-feed_099c2093e517478eabb1786c4d0f231a" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_099c2093e517478eabb1786c4d0f231a')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_099c2093e517478eabb1786c4d0f231a')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_5c922a95f7ab4d94ae8de754a47f689b" data-id="feed_5c922a95f7ab4d94ae8de754a47f689b">
+  <div class="card-header">
+    <span class="item-tag" title="feed_5c922a95f7ab4d94ae8de754a47f689b">#5c922a95</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-09-24</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">직장인이 매일 아침 런던 세션 개장 전 아시안 세션의 고점·저점을 박스로 표시하고, DAX/UK100이 박스를 종가 기준으로 확실히 이탈하면 모멘텀 방향으로 진입하는 브레이크아웃 전략을 소개한다. 손절은 박스 내부 또는 돌파 캔들 아래, 목표는 고정 손익비로 설정하며 8:30 전에 매매를 끝낸다고 주장한다. 월 $25k 수익을 내세우지만 검증 자료는 없고, &#x27;SYSTEM&#x27; 댓글을 유도하는 전형적인 리드 수집형 마케팅 콘텐츠다.</p>
+  <ul class="claims"><li>아시안 세션 고점/저점 박스 후 런던 오픈 브레이크아웃을 매매하면 월 $25k 수익이 가능하다</li><li>시장은 아시안 세션에 주문을 축적하고 런던 오픈 때 거래량과 함께 매일 예외 없이 돌파한다</li><li>돌파 캔들이 박스 밖에서 완전히 종가 마감하는 것이 유효한 진입 신호다</li><li>손절은 박스 내부 또는 돌파 캔들 아래, 목표는 고정 손익비로 설정하면 된다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 contradicted</span> <span class="research-at">2026-09-24T03:44</span>
+    <p>게시물은 널리 알려진 런던 오픈 브레이크아웃(아시안 레인지 돌파)을 소개하는 리드 수집형 콘텐츠다. 월 $25k 수익 주장은 검증 자료가 없다. 전략 자체는 실재하지만 공개 백테스트 결과는 혼재~부정적이고, &quot;매일 예외 없이 돌파&quot;는 사실과 다르다. 직접 적용하지 말고 alphabot에서 비용 반영 백테스트로 가설 검증만 하는 것이 맞다.</p>
+    <p class="research-source">출처: <a href="https://www.quantifiedstrategies.com/london-breakout-strategy/" target="_blank" rel="noopener">London Breakout Strategy: Rules and Backtest Performance – QuantifiedStrategies.com</a> (article)</p>
+    <ul><li>게시자(@elitradet)가 월 $25k 수익을 주장하나 증빙이 없다 · confirmed · <a href="https://www.instagram.com/reel/DdmlQKXNIJ1/" target="_blank" rel="noopener">근거</a></li><li>아시안 세션 고저 박스 후 런던 오픈 돌파를 거래하는 전략은 실제로 널리 알려진 방식이다 · confirmed · <a href="https://www.quantifiedstrategies.com/london-breakout-strategy/" target="_blank" rel="noopener">근거</a></li><li>시장이 매일 예외 없이 런던 오픈에 거래량과 함께 돌파한다 · contradicted · <a href="https://tradersmastermind.com/london-breakout-trading-strategy/" target="_blank" rel="noopener">근거</a></li></ul>
+    <p>미끼: 전체 &#x27;SYSTEM&#x27; 설명(유료 강의/시그널/리퍼럴 가능성)(키워드 SYSTEM) → 미확인</p>
+    <p>적용성: new ·  — [제안 위치 무효] 제시된 alphabot 후보 파일 5개는 모두 MACD/TRIX/Z-Score 등 지표 기반 전략이라 matched=false입니다. 아시안 세션 레인지 박스와 런던 오픈 브레이크아웃, DAX/U</p>
+  </div>
+  <div class="surfaces"><span class="badge">📈 alphabot-strategy</span></div>
+  <div class="tags"><span class="tag">#London breakout</span> <span class="tag">#Asian range</span> <span class="tag">#session trading</span> <span class="tag">#DAX</span> <span class="tag">#UK100</span> <span class="tag">#day trading</span> <span class="tag">#SNS marketing</span> <span class="tag">#lead generation</span></div>
+  <div class="apply-plan">승인 시 직접 적용하지 말고, alphabot 백테스트 백로그에 &#x27;Asian range 런던 오픈 브레이크아웃(DAX/UK100, 종가 이탈 확인, 고정 RR)&#x27;을 가설 후보로만 등록해 과거 데이터로 승률·기대값·비용 반영 성과를 먼저 검증한다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_5c922a95f7ab4d94ae8de754a47f689b')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_5c922a95f7ab4d94ae8de754a47f689b','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_5c922a95f7ab4d94ae8de754a47f689b','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_5c922a95f7ab4d94ae8de754a47f689b')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_5c922a95f7ab4d94ae8de754a47f689b&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_5c922a95f7ab4d94ae8de754a47f689b" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/reel/DdmlQKXNIJ1/?stkn=YmoybW41OTVjcW9x" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_5c922a95f7ab4d94ae8de754a47f689b" style="display:none">
+    <div class="delegate-reference">적용 안내: 직접 적용하지 말고, alphabot 백테스트 백로그에 &#x27;Asian range 런던 오픈 브레이크아웃(DAX/UK100, 종가 이탈 확인, 고정 RR)&#x27;을 가설 후보로만 등록해 과거 데이터로 승률·기대값·비용 반영 성과를 먼저 검증한다.
+
+원문 요약: 직장인이 매일 아침 런던 세션 개장 전 아시안 세션의 고점·저점을 박스로 표시하고, DAX/UK100이 박스를 종가 기준으로 확실히 이탈하면 모멘텀 방향으로 진입하는 브레이크아웃 전략을 소개한다. 손절은 박스 내부 또는 돌파 캔들 아래, 목표는 고정 손익비로 설정하며 8:30 전에 매매를 끝낸다고 주장한다. 월 $25k 수익을 내세우지만 검증 자료는 없고, &#x27;SYSTEM&#x27; 댓글을 유도하는 전형적인 리드 수집형 마케팅 콘텐츠다.</div>
+    <select id="delegate-project-feed_5c922a95f7ab4d94ae8de754a47f689b" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_5c922a95f7ab4d94ae8de754a47f689b" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_5c922a95f7ab4d94ae8de754a47f689b')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_5c922a95f7ab4d94ae8de754a47f689b')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_5c922a95f7ab4d94ae8de754a47f689b" style="display:none">
+    <textarea id="comment-text-feed_5c922a95f7ab4d94ae8de754a47f689b" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_5c922a95f7ab4d94ae8de754a47f689b')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5c922a95f7ab4d94ae8de754a47f689b')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_ae32a483ceb84ebdbd376db47f0ffe26" data-id="feed_ae32a483ceb84ebdbd376db47f0ffe26">
+  <div class="card-header">
+    <span class="item-tag" title="feed_ae32a483ceb84ebdbd376db47f0ffe26">#ae32a483</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-09-24</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">인스타그램 캡션으로, 파킨슨병을 단순한 흑질-선조체 도파민 결핍이 아니라 α-synuclein, 미토콘드리아 기능장애, 리소좀/자가포식 실패, 신경염증, 유전, 장-뇌 축, 신경망 기능이상이 얽힌 다계통·생물학적 이질성 질환으로 이해해야 한다고 주장한다. 치료도 도파민 보충(levodopa)에서 아형 식별, 기전 조절(질병 수식), 회로 재건으로 이동 중이라고 강조한다.</p>
+  <ul class="claims"><li>파킨슨병은 도파민 결핍만으로 설명되지 않는 다계통 신경퇴행성 질환이다</li><li>α-synuclein, 미토콘드리아 기능장애, 리소좀/자가포식 실패, 신경염증, 유전, 장-뇌 축이 병태생리에 관여한다</li><li>파킨슨병은 생물학적으로 이질적이며 아형 구분이 가능하다</li><li>치료 패러다임이 도파민 보충에서 질병 수식 및 회로 재건 방향으로 진화하고 있다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-09-24T02:17</span>
+    <p>The Instagram caption is a general, non-AI medical commentary post. Its main points match current literature. PD is regarded as a multisystem, biologically heterogeneous disease. α-synuclein seed amplification assay (SAA) frameworks are used for biological classification, and subtype work is ongoing. Dopamine cell-replacement (bemdaneprocel) is in a Phase 3 trial. The caption cites no sources, and the &quot;modify the mechanism&quot; claim is aspirational because approved therapies remain symptomatic. I did not fetch the Instagram page itself. This was checked against search results only. It has no ai-feed relevance and needs no project action.</p>
+    <p class="research-source">출처: <a href="https://link.springer.com/article/10.1007/s00415-025-13049-5" target="_blank" rel="noopener">Biological frameworks for Parkinson&#x27;s disease: the heterogeneity SAAgged (J Neurol 2025)</a> (paper)</p>
+    <ul><li>파킨슨병은 도파민 결핍만으로 설명되지 않는 다계통 신경퇴행성 질환이다 · unverified · 근거 없음</li><li>α-synuclein 등 여러 기전이 병태생리에 관여하고 아형 구분이 가능하다 · partially_confirmed · <a href="https://link.springer.com/article/10.1007/s00415-025-13049-5" target="_blank" rel="noopener">근거</a></li><li>치료 패러다임이 도파민 보충에서 질병 수식 및 회로 재건 방향으로 진화 중이다 · partially_confirmed · <a href="https://www.clinicaltrialsarena.com/analyst-comment/aan-2026-bluerock-reports-positive-safety-data-for-bemdaneprocel-in-parkinsons/" target="_blank" rel="noopener">근거</a></li></ul>
+    
+    <p>적용성: new ·  — [발췌 없음]</p>
+  </div>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#parkinson</span> <span class="tag">#neurodegeneration</span> <span class="tag">#alpha-synuclein</span> <span class="tag">#psychiatry</span> <span class="tag">#disease-modifying-therapy</span> <span class="tag">#gut-brain-axis</span></div>
+  <div class="apply-plan">승인 시 적용 대상 없음: ai-feed 프로젝트의 어떤 파일에도 직접 반영할 실행 항목이 없으며, 필요 시 비AI 의학 콘텐츠로 분류해 아카이브만 한다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_ae32a483ceb84ebdbd376db47f0ffe26')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_ae32a483ceb84ebdbd376db47f0ffe26','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_ae32a483ceb84ebdbd376db47f0ffe26','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_ae32a483ceb84ebdbd376db47f0ffe26')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_ae32a483ceb84ebdbd376db47f0ffe26&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_ae32a483ceb84ebdbd376db47f0ffe26" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DdW5TIcjSPk/?stkn=MTVnNnYyZzUzbHdh" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_ae32a483ceb84ebdbd376db47f0ffe26" style="display:none">
+    <div class="delegate-reference">적용 안내: 적용 대상 없음: ai-feed 프로젝트의 어떤 파일에도 직접 반영할 실행 항목이 없으며, 필요 시 비AI 의학 콘텐츠로 분류해 아카이브만 한다.
+
+원문 요약: 인스타그램 캡션으로, 파킨슨병을 단순한 흑질-선조체 도파민 결핍이 아니라 α-synuclein, 미토콘드리아 기능장애, 리소좀/자가포식 실패, 신경염증, 유전, 장-뇌 축, 신경망 기능이상이 얽힌 다계통·생물학적 이질성 질환으로 이해해야 한다고 주장한다. 치료도 도파민 보충(levodopa)에서 아형 식별, 기전 조절(질병 수식), 회로 재건으로 이동 중이라고 강조한다.</div>
+    <select id="delegate-project-feed_ae32a483ceb84ebdbd376db47f0ffe26" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_ae32a483ceb84ebdbd376db47f0ffe26" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_ae32a483ceb84ebdbd376db47f0ffe26')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_ae32a483ceb84ebdbd376db47f0ffe26')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_ae32a483ceb84ebdbd376db47f0ffe26" style="display:none">
+    <textarea id="comment-text-feed_ae32a483ceb84ebdbd376db47f0ffe26" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_ae32a483ceb84ebdbd376db47f0ffe26')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ae32a483ceb84ebdbd376db47f0ffe26')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_ee2e683a82a044a69052c66364ec5eec" data-id="feed_ee2e683a82a044a69052c66364ec5eec">
+  <div class="card-header">
+    <span class="item-tag" title="feed_ee2e683a82a044a69052c66364ec5eec">#ee2e683a</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-09-24</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">스탠포드 의대 연구진이 Nature Neuroscience에 발표한 논문으로, 마우스 배아 계보 추적 연구를 통해 뇌가 단일 신경외배엽 전구세포가 아닌 두 개의 병렬적이고 독립된 전구세포(전방-전뇌/중뇌, 후방-후뇌)에서 유래한다는 것을 밝혔다. 인간 만능줄기세포 분화 실험으로 각 전구세포가 서로 다른 크로마틴 지형을 가지며 계보가 조기에 결정됨을 확인했고, 이 이중 전구세포 구조는 5억5천만 년 전부터 진화적으로 보존되었을 가능성을 제시한다.</p>
+  <ul class="claims"><li>뇌는 단일 공통 신경외배엽 전구세포가 아닌 두 개의 병렬적 전구세포(전방/후방)에서 유래한다</li><li>전방(전뇌/중뇌)과 후방(후뇌) 신경외배엽 전구세포는 위배엽형성(gastrulation) 시기에 동시에 발생한다</li><li>인간 만능줄기세포로 분화된 전방/후방 신경외배엽 유사세포는 서로 다른 크로마틴 지형을 가지며 각각 전뇌/중뇌 대 후뇌 정체성으로 계보가 결정되어 있다</li><li>연구진은 기존에 시험관 내 생성이 어려웠던 후뇌 rhombomere 5/6 특이적 운동뉴런을 인간 만능줄기세포로부터 분화시키는 데 성공했다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 unverified</span> <span class="research-at">2026-09-24T02:16</span>
+    <p></p>
+    <p class="research-source">출처: 미확인</p>
+    
+    
+    <p>적용성: new ·  — [발췌 없음]</p>
+  </div>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#신경발생학</span> <span class="tag">#줄기세포</span> <span class="tag">#뇌발달</span> <span class="tag">#스탠포드의대</span> <span class="tag">#계보추적</span> <span class="tag">#신경외배엽</span> <span class="tag">#진화생물학</span></div>
+  <div class="apply-plan">승인 시 해당 없음 — 순수 학술 뉴스 기사로 코딩/프로젝트/트레이딩 실무에 적용할 항목 없음</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_ee2e683a82a044a69052c66364ec5eec')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_ee2e683a82a044a69052c66364ec5eec','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_ee2e683a82a044a69052c66364ec5eec','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_ee2e683a82a044a69052c66364ec5eec')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_ee2e683a82a044a69052c66364ec5eec&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_ee2e683a82a044a69052c66364ec5eec" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/Ddo8Fp1NXXa/?stkn=MWc5eG96MXB1ZzFtdw==" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_ee2e683a82a044a69052c66364ec5eec" style="display:none">
+    <div class="delegate-reference">적용 안내: 해당 없음 — 순수 학술 뉴스 기사로 코딩/프로젝트/트레이딩 실무에 적용할 항목 없음
+
+원문 요약: 스탠포드 의대 연구진이 Nature Neuroscience에 발표한 논문으로, 마우스 배아 계보 추적 연구를 통해 뇌가 단일 신경외배엽 전구세포가 아닌 두 개의 병렬적이고 독립된 전구세포(전방-전뇌/중뇌, 후방-후뇌)에서 유래한다는 것을 밝혔다. 인간 만능줄기세포 분화 실험으로 각 전구세포가 서로 다른 크로마틴 지형을 가지며 계보가 조기에 결정됨을 확인했고, 이 이중 전구세포 구조는 5억5천만 년 전부터 진화적으로 보존되었을 가능성을 제시한다.</div>
+    <select id="delegate-project-feed_ee2e683a82a044a69052c66364ec5eec" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_ee2e683a82a044a69052c66364ec5eec" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_ee2e683a82a044a69052c66364ec5eec')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_ee2e683a82a044a69052c66364ec5eec')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_ee2e683a82a044a69052c66364ec5eec" style="display:none">
+    <textarea id="comment-text-feed_ee2e683a82a044a69052c66364ec5eec" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_ee2e683a82a044a69052c66364ec5eec')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ee2e683a82a044a69052c66364ec5eec')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_67749d1eeced4863a6f511ecc2bd6f67" data-id="feed_67749d1eeced4863a6f511ecc2bd6f67">
+  <div class="card-header">
+    <span class="item-tag" title="feed_67749d1eeced4863a6f511ecc2bd6f67">#67749d1e</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-09-23</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">Nature Reviews Neurology 리뷰(Zhou &amp; Walsh)는 뇌의 체세포 모자이시즘이 발달·노화·신경퇴행성 질환에 관여한다고 종합한다. 변이가 발생하는 발생 시기, 클론 구조, 세포 유형별 선택압에 따라 클론 크기와 해부학적 범위가 달라지며(초기=전뇌 광범위·높은 VAF, 후기=국소·낮은 VAF), 이것이 HME, FCD, MTLE 같은 질환 표현형으로 이어진다. PI3K-AKT-mTOR 및 RAS-RAF-MEK-ERK 경로 활성화가 핵심이며 mTOR 억제제(rapamycin, everolimus)와 MEK 억제제(trametinib)가 치료 시사점으로 제시된다.</p>
+  <ul class="claims"><li>체세포 변이는 접합 후에 발생하며 뇌 영역, 세포 유형, 개별 뉴런에 걸쳐 불균등하게 분포한다</li><li>발생 시기가 이를수록 클론 크기와 해부학적 범위가 크고 VAF가 높으며, 늦을수록 국소적이고 VAF가 낮다</li><li>PIK3CA, AKT3, MTOR 변이는 PI3K-AKT-mTOR 경로를 활성화해 과성장, 비정상 피질 발달, 과흥분과 발작을 유발한다</li><li>PTPN11, NF1, BRAF, KRAS 변이는 RAS-RAF-MEK-ERK 경로를 통해 MTLE와 관련된 신경교증, 염증, 시냅스 재구성, 과흥분을 일으킨다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-09-23T14:42</span>
+    <p>Nature Reviews Neurology에 Zhou &amp; Walsh의 리뷰 &quot;Somatic mosaicism in the brain: linking development, ageing and neurodegeneration&quot;가 실제로 있고, DOI는 10.1038/s41582-026-01268-x가 맞다. 초록에 해당하는 핵심 주장(접합 후 발생, 영역·세포·뉴런별 불균등 분포, 발생 시기와 클론 구조에 따른 영향, 노화에 따른 변이 축적)은 검색 결과로 확인했다. 도식 세부(PI3K/mTOR·RAS-MAPK 경로, MTLE 유전자와 MEK 억제제 매핑, VAF 구분)는 Nature 페이지가 인증 리다이렉트로 막혀 원문을 못 봐서 확인하지 못했다. 이 게시물은 ai-feed 프로젝트와 무관한 신경과학 논문이다.</p>
+    <p class="research-source">출처: <a href="https://www.nature.com/articles/s41582-026-01268-x" target="_blank" rel="noopener">Somatic mosaicism in the brain: linking development, ageing and neurodegeneration (Zhou &amp; Walsh, Nature Reviews Neurology)</a> (paper)</p>
+    <ul><li>논문이 존재하며 제목·저자·저널이 일치한다 (Zhou &amp; Walsh, Nature Reviews Neurology, DOI 10.1038/s41582-026-01268-x) · confirmed · <a href="https://www.nature.com/articles/s41582-026-01268-x" target="_blank" rel="noopener">근거</a></li><li>체세포 변이는 접합 후에 발생하며 영역, 세포 유형, 개별 뉴런에 걸쳐 불균등하게 분포하고, 국소 효과가 네트워크 수준 기능 이상으로 확대될 수 있다 · confirmed · <a href="https://www.nature.com/articles/s41582-026-01268-x" target="_blank" rel="noopener">근거</a></li><li>발생 시기가 이르면 클론이 넓고 표현형이 심하며, 늦으면 국소적이다 (VAF 높음/낮음) · partially_confirmed · <a href="https://www.nature.com/articles/s41582-026-01268-x" target="_blank" rel="noopener">근거</a></li></ul>
+    
+    <p>적용성: new ·  — [발췌 없음]</p>
+  </div>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#somatic mosaicism</span> <span class="tag">#neurodegeneration</span> <span class="tag">#epilepsy</span> <span class="tag">#mTOR</span> <span class="tag">#RAS-MAPK</span> <span class="tag">#clonal architecture</span> <span class="tag">#Nature Reviews Neurology</span> <span class="tag">#OCR</span></div>
+  <div class="apply-plan">승인 시 해당 없음: 이 인사이트는 코드, 프롬프트, 트레이딩, AI 툴 어디에도 직접 적용할 대상이 없으므로 ai-feed 수집 분류에서 비관련 신경과학 논문으로 태깅해 보관만 한다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_67749d1eeced4863a6f511ecc2bd6f67')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_67749d1eeced4863a6f511ecc2bd6f67','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_67749d1eeced4863a6f511ecc2bd6f67','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_67749d1eeced4863a6f511ecc2bd6f67')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_67749d1eeced4863a6f511ecc2bd6f67&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_67749d1eeced4863a6f511ecc2bd6f67" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DdjlodEjQZo/?stkn=ZDV5dGF3OXk2Zmpx" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_67749d1eeced4863a6f511ecc2bd6f67" style="display:none">
+    <div class="delegate-reference">적용 안내: 해당 없음: 이 인사이트는 코드, 프롬프트, 트레이딩, AI 툴 어디에도 직접 적용할 대상이 없으므로 ai-feed 수집 분류에서 비관련 신경과학 논문으로 태깅해 보관만 한다.
+
+원문 요약: Nature Reviews Neurology 리뷰(Zhou &amp; Walsh)는 뇌의 체세포 모자이시즘이 발달·노화·신경퇴행성 질환에 관여한다고 종합한다. 변이가 발생하는 발생 시기, 클론 구조, 세포 유형별 선택압에 따라 클론 크기와 해부학적 범위가 달라지며(초기=전뇌 광범위·높은 VAF, 후기=국소·낮은 VAF), 이것이 HME, FCD, MTLE 같은 질환 표현형으로 이어진다. PI3K-AKT-mTOR 및 RAS-RAF-MEK-ERK 경로 활성화가 핵심이며 mTOR 억제제(rapamycin, everolimus)와 MEK 억제제(trametinib)가 치료 시사점으로 제시된다.</div>
+    <select id="delegate-project-feed_67749d1eeced4863a6f511ecc2bd6f67" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_67749d1eeced4863a6f511ecc2bd6f67" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_67749d1eeced4863a6f511ecc2bd6f67')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_67749d1eeced4863a6f511ecc2bd6f67')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_67749d1eeced4863a6f511ecc2bd6f67" style="display:none">
+    <textarea id="comment-text-feed_67749d1eeced4863a6f511ecc2bd6f67" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_67749d1eeced4863a6f511ecc2bd6f67')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_67749d1eeced4863a6f511ecc2bd6f67')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_cecf470dec2c4f488a6baa418810025d" data-id="feed_cecf470dec2c4f488a6baa418810025d">
+  <div class="card-header">
+    <span class="item-tag" title="feed_cecf470dec2c4f488a6baa418810025d">#cecf470d</span>
+    
+    
+    
+    
+    <span class="platform">Instagram</span>
+    <span class="date">2026-09-23</span>
+    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    
+  </div>
+  <p class="summary">Cell 저널에 게재된 논문으로, Xenium 공간전사체 기술과 커스텀 300개 신경혈관 유전자 패널을 이용해 인간 뇌혈관계의 세포 수준 공간 아틀라스를 구축했다. 측두엽과 해마에서 5개의 독립적 뇌혈관 아틀라스를 통합하여 벽세포(mural cell)의 동정맥 패턴, 부위별 신경혈관 관계, 인간 특이적 혈액뇌장벽 특성 등을 규명했다.</p>
+  <ul class="claims"><li>이 연구는 300개 유전자로 구성된 커스텀 신경혈관 Xenium 패널을 사용해 인간 뇌혈관계의 세포 수준 공간 아틀라스를 구축했다</li><li>측두엽과 해마에서 5개의 독립적 뇌혈관 아틀라스가 통합되어 인간 뇌혈관 컨센서스 아틀라스를 형성했다</li><li>벽세포(mural cell) 정체성이 동정맥 축을 따라 정형화된(stereotyped) 패턴을 보인다</li><li>혈관 구획(segment)별로 신경계 질환에 대한 취약성이 다르게 나타난다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-09-23T14:40</span>
+    <p>Cell 2026에 Wang et al.(교신 Ethan A. Winkler)로 실제 게재된 논문이다. 핵심 주장은 PubMed 초록과 일치한다. 다만 순수 생물의학 연구라 ai-feed 적용 대상(코딩/AI/트레이딩)에는 해당하지 않는다.</p>
+    <p class="research-source">출처: <a href="https://pubmed.ncbi.nlm.nih.gov/42537647/" target="_blank" rel="noopener">Spatial atlas of the human brain vasculature reveals specialized cell ensembles (Cell, 2026)</a> (paper)</p>
+    <ul><li>논문이 Cell 2026에 Wang et al.(Winkler 교신)로 게재되었다 · confirmed · <a href="https://pubmed.ncbi.nlm.nih.gov/42537647/" target="_blank" rel="noopener">근거</a></li><li>5개 독립 뇌혈관 아틀라스를 통합한 컨센서스 아틀라스와 동정맥 축 구조 · unverified · 근거 없음</li><li>공간 전사체로 측두엽·해마의 세포 수준 공간 아틀라스를 구축했다 · confirmed · <a href="https://pubmed.ncbi.nlm.nih.gov/42537647/" target="_blank" rel="noopener">근거</a></li></ul>
+    
+    <p>적용성: not_applicable ·  — 생물의학 학술논문(Xenium 공간전사체 기반 인간 뇌혈관 아틀라스)으로, 시스템의 target_surfaces(claude-code, project-docs, prompt, alphabot-strategy, ai-</p>
+  </div>
+  <div class="surfaces"></div>
+  <div class="tags"><span class="tag">#뇌혈관</span> <span class="tag">#공간전사체</span> <span class="tag">#Xenium</span> <span class="tag">#혈액뇌장벽</span> <span class="tag">#벽세포</span> <span class="tag">#신경과학</span> <span class="tag">#Cell저널</span></div>
+  <div class="apply-plan">승인 시 해당 없음 — 이 텍스트는 생물의학 학술논문으로 현재 시스템의 target_surfaces(claude-code, project-docs, prompt, alphabot-strategy, ai-business, ai-tools, local-ai) 어느 것에도 부합하지 않아 적용할 파일/위치가 없음</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_cecf470dec2c4f488a6baa418810025d')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_cecf470dec2c4f488a6baa418810025d','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_cecf470dec2c4f488a6baa418810025d','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_cecf470dec2c4f488a6baa418810025d')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_cecf470dec2c4f488a6baa418810025d&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_cecf470dec2c4f488a6baa418810025d" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    <a href="https://www.instagram.com/p/DdDqB6oHOZT/?img_index=1&amp;stkn=MTVmaGZ1ZGZxenJq" target="_blank" rel="noopener">🔗 원문</a>
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_cecf470dec2c4f488a6baa418810025d" style="display:none">
+    <div class="delegate-reference">적용 안내: 해당 없음 — 이 텍스트는 생물의학 학술논문으로 현재 시스템의 target_surfaces(claude-code, project-docs, prompt, alphabot-strategy, ai-business, ai-tools, local-ai) 어느 것에도 부합하지 않아 적용할 파일/위치가 없음
+
+원문 요약: Cell 저널에 게재된 논문으로, Xenium 공간전사체 기술과 커스텀 300개 신경혈관 유전자 패널을 이용해 인간 뇌혈관계의 세포 수준 공간 아틀라스를 구축했다. 측두엽과 해마에서 5개의 독립적 뇌혈관 아틀라스를 통합하여 벽세포(mural cell)의 동정맥 패턴, 부위별 신경혈관 관계, 인간 특이적 혈액뇌장벽 특성 등을 규명했다.</div>
+    <select id="delegate-project-feed_cecf470dec2c4f488a6baa418810025d" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_cecf470dec2c4f488a6baa418810025d" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_cecf470dec2c4f488a6baa418810025d')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_cecf470dec2c4f488a6baa418810025d')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_cecf470dec2c4f488a6baa418810025d" style="display:none">
+    <textarea id="comment-text-feed_cecf470dec2c4f488a6baa418810025d" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_cecf470dec2c4f488a6baa418810025d')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_cecf470dec2c4f488a6baa418810025d')">취소</button>
+    </div>
+  </div>
+</div>
 
 <div class="card" id="card-feed_de12f23a6b174b38b8bf97ab9bc8214c" data-id="feed_de12f23a6b174b38b8bf97ab9bc8214c">
   <div class="card-header">
