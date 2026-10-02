@@ -2646,7 +2646,7 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 149건</p>
+<p class="count">승인 대기 148건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_fe80459a6d0a4064a7f1b5980cd9a9c5" data-id="feed_fe80459a6d0a4064a7f1b5980cd9a9c5">
@@ -2905,7 +2905,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
     
     
     
-    
+    <span class="badge badge-pm-task">⏳ 실행 대기/중</span>
     <span class="platform">Manual</span>
     <span class="date">2026-10-01</span>
     <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
@@ -2925,29 +2925,23 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
   <div class="surface-row">
     <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">🛠 ai-tools</span></div>
     
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_c725473099494a62aded8fb8b774ad48')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_c725473099494a62aded8fb8b774ad48" data-current="[&quot;claude-code&quot;, &quot;ai-tools&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip selected" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip selected" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_c725473099494a62aded8fb8b774ad48')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_c725473099494a62aded8fb8b774ad48')">취소</button>
-    </div>
-  </div>
   </div>
   <div class="tags"><span class="tag">#RAG</span> <span class="tag">#prompt-injection</span> <span class="tag">#poisoned-knowledge-base</span> <span class="tag">#retrieval</span> <span class="tag">#evaluation-methodology</span> <span class="tag">#Groq</span> <span class="tag">#reranker</span> <span class="tag">#LLM-security</span></div>
   <div class="apply-plan">승인 시 ai-feed 또는 관련 RAG 작업 시 &#x27;패시지 격리 + 프롬프트 미노출 메타데이터(출처등급/날짜)로 해소&#x27; 패턴과 &#x27;공격 랜딩 여부를 사전 게이트로 검증&#x27; 패턴을 참고 자료로 MEMORY-project-ai-feed.md 또는 reference 파일에 링크/요약 추가.</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-02T19:51</div>
+    <div class="response-body">agent_hub PM 태스크로 위임했습니다 (task_id: 5485f398).</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_c725473099494a62aded8fb8b774ad48')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_c725473099494a62aded8fb8b774ad48','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_c725473099494a62aded8fb8b774ad48','debunk')">❌ 터무니없음</button>
+      
+      <button class="btn-comment" onclick="toggleCommentBox('feed_c725473099494a62aded8fb8b774ad48')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_c725473099494a62aded8fb8b774ad48')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_c725473099494a62aded8fb8b774ad48','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_c725473099494a62aded8fb8b774ad48','debunk')">🚫 알고보니 별로</button>
-    
-      <button class="btn-secondary" onclick="decide('feed_c725473099494a62aded8fb8b774ad48','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_c725473099494a62aded8fb8b774ad48','already')">✔ 이미 있음</button>
-
-    <button class="btn-comment" onclick="toggleCommentBox('feed_c725473099494a62aded8fb8b774ad48')">💬 의견</button>
-
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_c725473099494a62aded8fb8b774ad48&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_c725473099494a62aded8fb8b774ad48" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     
   </div>
@@ -3868,92 +3862,13 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
   </div>
 </div>
 
-<div class="card" id="card-feed_77ba4dddcd614736bc9e2224b049c2c9" data-id="feed_77ba4dddcd614736bc9e2224b049c2c9">
-  <div class="card-header">
-    <span class="item-tag" title="feed_77ba4dddcd614736bc9e2224b049c2c9">#77ba4ddd</span>
-    
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-09-29</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    
-  </div>
-  <p class="summary">Instagram 게시물로, &#x27;JEV&#x27;(6 projects, ideas/tools/systems/better)라는 프레임워크를 활용해 더 스마트한 AI 시스템을 만드는 방법을 소개한다고 주장하나, 실제 텍스트 내용은 반복적인 이미지 캡션(라벨)만 나열되어 실질적 정보가 거의 없다.</p>
-  <ul class="claims"><li>&#x27;6JEV Projects&#x27;라는 프레임워크로 더 스마트한 AI 시스템을 만들 수 있다고 주장함</li><li>댓글로 &#x27;ACCESS&#x27;를 남기면 가이드와 리소스를 제공한다고 주장함</li></ul>
-  
-  <div class="research">
-    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-09-29T13:43</span>
-    <p>계정(@lifeofarjav = Arjav Jain, Hyperke COO)은 실존 인물로 확인되나, 게시물 본문(OCR)에 실제 &quot;JEV&quot; 방법론 설명은 없고 반복되는 캐러셀 표지 라벨(IDEAS/TOOLS/SYSTEMS/BETTER/6 JEV PROJECTS)뿐이라 핵심 주장은 검증 불가. &quot;댓글 ACCESS → 가이드 제공&quot;은 팔로워 확보용 고전적 미끼 패턴으로, 실제 리소스는 팔로우+댓글이라는 참여 행동 뒤에 있어 명명된 출처 인용 없이는 확인 불가능. 검색 중 &quot;Jev AI / TypeSafe AI System One 모델&quot;을 다루는 유사 도메인 다수(jevai.net, jev-ai.pro, jevai.info, jevai.org, Wikipedia &quot;Jev_(AI_model)&quot;)가 발견됐는데, 이 게시물과 무관한 별도의 스팸/마케팅성 네트워크로 판단되어 방문하지 않았고 검증 근거로 채택하지 않음.</p>
-    <p class="research-source">출처: 미확인</p>
-    <ul><li>@lifeofarjav는 실제 AI/운영 분야 종사자(Arjav Jain, Hyperke COO)의 계정이다 · confirmed · <a href="https://arjavjain.org/" target="_blank" rel="noopener">근거</a></li><li>&#x27;6 JEV Projects&#x27;가 검증된 AI 시스템 구축 프레임워크다 · unverified · 근거 없음</li><li>댓글에 &#x27;ACCESS&#x27;를 남기면 가이드·리소스를 받을 수 있다 · unverified · 근거 없음</li></ul>
-    <p>미끼: AI 시스템 구축 가이드/리소스(추정 DM 자동발송)(키워드 ACCESS) → 미확인</p>
-    <p>적용성: new ·  — [발췌 없음]</p>
-  </div>
-  <div class="surface-row">
-    <div class="surfaces"></div>
-    
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_77ba4dddcd614736bc9e2224b049c2c9')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_77ba4dddcd614736bc9e2224b049c2c9" data-current="[]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_77ba4dddcd614736bc9e2224b049c2c9')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_77ba4dddcd614736bc9e2224b049c2c9')">취소</button>
-    </div>
-  </div>
-  </div>
-  <div class="tags"><span class="tag">#소셜미디어마케팅</span> <span class="tag">#AI콘텐츠</span> <span class="tag">#저품질텍스트</span> <span class="tag">#인스타그램</span> <span class="tag">#리드제너레이션</span></div>
-  <div class="apply-plan">승인 시 적용 불가 — 실질적 정보나 방법론이 텍스트에 포함되어 있지 않으므로 별도 파일 반영 조치 없음.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_77ba4dddcd614736bc9e2224b049c2c9')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_77ba4dddcd614736bc9e2224b049c2c9','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_77ba4dddcd614736bc9e2224b049c2c9','debunk')">🚫 알고보니 별로</button>
-    
-      <button class="btn-secondary" onclick="decide('feed_77ba4dddcd614736bc9e2224b049c2c9','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_77ba4dddcd614736bc9e2224b049c2c9','already')">✔ 이미 있음</button>
-
-    <button class="btn-comment" onclick="toggleCommentBox('feed_77ba4dddcd614736bc9e2224b049c2c9')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_77ba4dddcd614736bc9e2224b049c2c9&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_77ba4dddcd614736bc9e2224b049c2c9" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/Ddm2r7KkiXU/?stkn=MW1ha3c0dTg1c3I1cA==" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_77ba4dddcd614736bc9e2224b049c2c9" style="display:none">
-    <div class="delegate-reference">적용 안내: 적용 불가 — 실질적 정보나 방법론이 텍스트에 포함되어 있지 않으므로 별도 파일 반영 조치 없음.
-
-원문 요약: Instagram 게시물로, &#x27;JEV&#x27;(6 projects, ideas/tools/systems/better)라는 프레임워크를 활용해 더 스마트한 AI 시스템을 만드는 방법을 소개한다고 주장하나, 실제 텍스트 내용은 반복적인 이미지 캡션(라벨)만 나열되어 실질적 정보가 거의 없다.</div>
-    <select id="delegate-project-feed_77ba4dddcd614736bc9e2224b049c2c9" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_77ba4dddcd614736bc9e2224b049c2c9" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_77ba4dddcd614736bc9e2224b049c2c9')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_77ba4dddcd614736bc9e2224b049c2c9')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_77ba4dddcd614736bc9e2224b049c2c9" style="display:none">
-    <textarea id="comment-text-feed_77ba4dddcd614736bc9e2224b049c2c9" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_77ba4dddcd614736bc9e2224b049c2c9')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_77ba4dddcd614736bc9e2224b049c2c9')">취소</button>
-    </div>
-  </div>
-</div>
-
 <div class="card" id="card-feed_718eb31e78084a19b1d52b749d5c5889" data-id="feed_718eb31e78084a19b1d52b749d5c5889">
   <div class="card-header">
     <span class="item-tag" title="feed_718eb31e78084a19b1d52b749d5c5889">#718eb31e</span>
     
     
     
-    
+    <span class="badge badge-pm-task">⏳ 실행 대기/중</span>
     <span class="platform">Instagram</span>
     <span class="date">2026-09-29</span>
     <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
@@ -3973,30 +3888,24 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
   <div class="surface-row">
     <div class="surfaces"><span class="badge">💻 local-ai</span></div>
     
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_718eb31e78084a19b1d52b749d5c5889')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_718eb31e78084a19b1d52b749d5c5889" data-current="[&quot;local-ai&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip selected" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_718eb31e78084a19b1d52b749d5c5889')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_718eb31e78084a19b1d52b749d5c5889')">취소</button>
-    </div>
-  </div>
   </div>
   <div class="tags"><span class="tag">#local-llm</span> <span class="tag">#unsloth</span> <span class="tag">#fine-tuning</span> <span class="tag">#소셜미디어홍보</span></div>
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💻 로컬 AI·최적화&#x27; 섹션에 반영.
 섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
   
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-02T19:52</div>
+    <div class="response-body">agent_hub PM 태스크로 위임했습니다 (task_id: 1625ed8b).</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_718eb31e78084a19b1d52b749d5c5889')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_718eb31e78084a19b1d52b749d5c5889','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_718eb31e78084a19b1d52b749d5c5889','debunk')">❌ 터무니없음</button>
+      
+      <button class="btn-comment" onclick="toggleCommentBox('feed_718eb31e78084a19b1d52b749d5c5889')">💬 재피드백</button>
+    </div>
+  </div>
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_718eb31e78084a19b1d52b749d5c5889')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_718eb31e78084a19b1d52b749d5c5889','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_718eb31e78084a19b1d52b749d5c5889','debunk')">🚫 알고보니 별로</button>
-    
-      <button class="btn-secondary" onclick="decide('feed_718eb31e78084a19b1d52b749d5c5889','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_718eb31e78084a19b1d52b749d5c5889','already')">✔ 이미 있음</button>
-
-    <button class="btn-comment" onclick="toggleCommentBox('feed_718eb31e78084a19b1d52b749d5c5889')">💬 의견</button>
-
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_718eb31e78084a19b1d52b749d5c5889&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_718eb31e78084a19b1d52b749d5c5889" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/DdygoZDCfci/?img_index=5&amp;stkn=aGppazhtejBpbms=" target="_blank" rel="noopener">🔗 원문</a>
   </div>
@@ -4145,17 +4054,30 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
   <div class="tags"><span class="tag">#algorithmic-trading</span> <span class="tag">#mean-reversion</span> <span class="tag">#market-making</span> <span class="tag">#pairs-trading</span> <span class="tag">#statistical-arbitrage</span> <span class="tag">#momentum</span> <span class="tag">#trend-following</span> <span class="tag">#options-selling</span></div>
   <div class="apply-plan">승인 시 신규 인사이트가 거의 없으므로 alphabot 전략 문서(예: MEMORY-project-alphabot.md에서 참조하는 전략 목록)에서 이미 커버된 전략 유형과 대조해 미구현 항목(페어 트레이딩, 통계적 차익거래, 센티먼트)만 후보 백로그에 한 줄로 추가한다.</div>
   
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_0ef5d5e40b1d4224a363d77c5c38baba')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_0ef5d5e40b1d4224a363d77c5c38baba','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_0ef5d5e40b1d4224a363d77c5c38baba','debunk')">🚫 알고보니 별로</button>
-    
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-02T19:54</div>
+    <div class="response-body">현재 세션은 텍스트 전용이라 Instagram 링크 접근과 MEMORY 파일 읽기가 불가능해 대조 작업을 바로 진행할 수 없습니다. 
+
+alphabot PM 태스크 **8f0286cc**로 이미 등록된 만큼, 실제 작업(Instagram 캡션 파싱 → alphabot 전략 목록 대조 → 미구현 항목 백로그 추가 → 5개 전략 구현문서 작성)이 필요하면 로컬 세션으로 전환해야 합니다:
+
+```bash
+cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a363d77c5c38baba
+```
+
+이 명령으로 전체 대화 맥락을 가진 인터랙티브 Claude가 열리고, 거기서 파일 수정·메모리 참조·구현 문서 작성을 진행할 수 있습니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_0ef5d5e40b1d4224a363d77c5c38baba')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_0ef5d5e40b1d4224a363d77c5c38baba','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_0ef5d5e40b1d4224a363d77c5c38baba','debunk')">❌ 터무니없음</button>
+      
       <button class="btn-secondary" onclick="decide('feed_0ef5d5e40b1d4224a363d77c5c38baba','reference')">📚 참고용</button>
       <button class="btn-secondary" onclick="decide('feed_0ef5d5e40b1d4224a363d77c5c38baba','already')">✔ 이미 있음</button>
 
-    <button class="btn-comment" onclick="toggleCommentBox('feed_0ef5d5e40b1d4224a363d77c5c38baba')">💬 의견</button>
-
+      <button class="btn-comment" onclick="toggleCommentBox('feed_0ef5d5e40b1d4224a363d77c5c38baba')">💬 재피드백</button>
+    </div>
+  </div>
+  <div class="actions">
+    
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_0ef5d5e40b1d4224a363d77c5c38baba&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_0ef5d5e40b1d4224a363d77c5c38baba" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/p/Dda8c6DRRtG/?stkn=MTJ0NTNxNDZyMWlsZQ==" target="_blank" rel="noopener">🔗 원문</a>
   </div>
