@@ -2697,86 +2697,326 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 151건</p>
+<p class="count">승인 대기 154건</p>
 <div class="grid">
 
-<div class="card" id="card-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" data-id="feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b">
+<div class="card" id="card-feed_f1d7916d1e294057b448c55e362c1b83" data-id="feed_f1d7916d1e294057b448c55e362c1b83">
   <div class="card-header">
-    <span class="item-tag" title="feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b">#914aaa6d</span>
+    <span class="item-tag" title="feed_f1d7916d1e294057b448c55e362c1b83">#f1d7916d</span>
     
     
     
     
-    <span class="platform">Instagram</span>
-    <span class="date">2026-10-03</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
+    <span class="platform">Manual</span>
+    <span class="date">2026-10-05</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
     
   </div>
-  <p class="summary">Claude를 LiquidTrade와 QuiverQuant에 연결해 AI 트레이딩 에이전트를 구축, 시장 모니터링·내부자 데이터 분석·포트폴리오 대비 매매 추천을 자동화하고 페이퍼 트레이딩으로 전략을 테스트할 수 있다는 마케팅성 소셜 미디어 캡션.</p>
-  <ul class="claims"><li>Claude를 LiquidTrade와 QuiverQuant에 연결해 다양한 자산 및 내부자 거래 데이터에 접근할 수 있다</li><li>이 조합으로 포트폴리오 대비 거래를 분석하고 실행 가능한 추천을 제공할 수 있다</li><li>지속적 체크를 자동화하고 실제 투자 전 페이퍼 트레이딩으로 전략을 테스트할 수 있다</li></ul>
+  <p class="summary">Strata는 Qwen3.8-Flash-Next(1,250억 파라미터 MoE, 토큰당 약 60억 활성)를 일반 게이밍 PC(GPU 12GB+, RAM 32GB+)에서 돌리는 오픈소스 추론 엔진으로, GPU/RAM/SSD에 전문가를 나눠 배치하고 추측 디코딩으로 1.6~1.8배 가속한다. 제작자 측정치로 RTX 5070에서 생성 94 tok/s, 프롬프트 읽기 2,650 tok/s이며 OpenAI/Anthropic 호환 API를 localhost로 제공해 코딩 도구 연결도 가능하다고 소개된다.</p>
+  <ul class="claims"><li>Qwen3.8-Flash-Next는 1,250억 파라미터 MoE 모델이며 전문가 24,576개 중 토큰당 10개만 활성화되어 실제 활성 파라미터는 약 60억 개다</li><li>RTX 5070(12GB)과 RAM 64GB 환경에서 가장 빠른 양자화 버전(Q2_0, 엔진 0.1.36)은 생성 94 tok/s, 프롬프트 읽기 2,650 tok/s를 기록했다</li><li>AMD RX 9070 XT(16GB) 환경에서 생성 속도는 약 60 tok/s였다</li><li>추측 디코딩(speculative decoding) 방식으로 답변 품질 변화 없이 1.6~1.8배 가속된다</li></ul>
   
   <div class="research">
-    <span class="badge-research">🔎 unverified</span> <span class="research-at">2026-10-03T03:05</span>
-    <p></p>
-    <p class="research-source">출처: 미확인</p>
+    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-10-05T22:07</span>
+    <p>Strata(Niko1221/Strata) 게시물의 핵심 수치는 GitHub 레포 페이지에서 대부분 확인됨: 125B 모델, 전문가 24,576개, RTX 5070 생성 94 tok/s·프롬프트 2,650 tok/s, RX 9070 XT 60 tok/s, 추측 디코딩 1.6~1.8배, GPU 12GB·RAM 32GB·디스크 약 80GB·다운로드 약 70GB, Windows/Linux만 지원, Coder 변형의 CJK 약점. 미검증/상충: 2차 검색 요약이 Qwen3.8-Flash-Next를 512개 전문가 중 10 routed + 1 shared로 설명해 24,576과 상충(기반 모델 아키텍처 vs Strata 전용 표기 차이로 보이나 확정 못함). 제작자 벤치마크의 재현성, 128K 수치, 4090 130tps 댓글, RTX 3090 100~140 추정, 1~3분 초기 로딩은 확인 못함.</p>
+    <p class="research-source">출처: <a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">Niko1221/Strata (GitHub README)</a> (repo)</p>
+    <ul><li>Qwen3.8-Flash-Next는 125B 파라미터 MoE, 전문가 24,576개 중 토큰당 10개 활성, 활성 파라미터 약 6B · partially_confirmed · <a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">근거</a></li><li>RTX 5070(12GB)·RAM 64GB에서 Q2_0 생성 94 tok/s, 프롬프트 읽기 2,650 tok/s · confirmed · <a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">근거</a></li><li>AMD RX 9070 XT(16GB)에서 생성 약 60 tok/s · confirmed · <a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">근거</a></li></ul>
     
-    <p>미끼: 미확인(키워드 trader) → 미확인</p>
-    <p>적용성: not_applicable ·  — </p>
+    <p>적용성: new ·  — [제안 위치 무효] [근거 경로 없음] 제공된 발췌에는 Strata 자체나 ~/agent_hub/hub/ai-trends.md 본문이 없어서, 이 항목이 다이제스트에 이미 실렸는지는 확인하지 못했다(미검증). 확인된</p>
   </div>
   <div class="surface-row">
-    <div class="surfaces"><span class="badge">💼 ai-business</span> <span class="badge">🛠 ai-tools</span></div>
+    <div class="surfaces"><span class="badge">💻 local-ai</span> <span class="badge">🛠 ai-tools</span></div>
     
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" data-current="[&quot;ai-business&quot;, &quot;ai-tools&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip selected" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip selected" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
+  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_f1d7916d1e294057b448c55e362c1b83')">✏️ surface</button>
+  <div class="surface-box" id="surface-box-feed_f1d7916d1e294057b448c55e362c1b83" data-current="[&quot;local-ai&quot;, &quot;ai-tools&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
+    <div class="surface-chips"><button type="button" class="surface-chip selected" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip selected" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
     <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">취소</button>
+      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_f1d7916d1e294057b448c55e362c1b83')">저장</button>
+      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_f1d7916d1e294057b448c55e362c1b83')">취소</button>
     </div>
   </div>
   </div>
-  <div class="tags"><span class="tag">#AI트레이딩</span> <span class="tag">#Claude</span> <span class="tag">#LiquidTrade</span> <span class="tag">#QuiverQuant</span> <span class="tag">#페이퍼트레이딩</span> <span class="tag">#마케팅캡션</span></div>
-  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💼 AI 비즈니스·수익화&#x27; 섹션에 반영.
+  <div class="tags"><span class="tag">#로컬LLM</span> <span class="tag">#MoE</span> <span class="tag">#Qwen</span> <span class="tag">#추론엔진</span> <span class="tag">#양자화</span> <span class="tag">#추측디코딩</span> <span class="tag">#오프로딩</span> <span class="tag">#GPU-RAM-SSD</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💻 로컬 AI·최적화&#x27; 섹션에 반영.
 섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
   
   <div class="actions">
     
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b','debunk')">🚫 알고보니 별로</button>
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_f1d7916d1e294057b448c55e362c1b83')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_f1d7916d1e294057b448c55e362c1b83','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_f1d7916d1e294057b448c55e362c1b83','debunk')">🚫 알고보니 별로</button>
     
-      <button class="btn-secondary" onclick="decide('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b','already')">✔ 이미 있음</button>
+      <button class="btn-secondary" onclick="decide('feed_f1d7916d1e294057b448c55e362c1b83','reference')">📚 참고용</button>
+      <button class="btn-secondary" onclick="decide('feed_f1d7916d1e294057b448c55e362c1b83','already')">✔ 이미 있음</button>
 
-    <button class="btn-comment" onclick="toggleCommentBox('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">💬 의견</button>
+    <button class="btn-comment" onclick="toggleCommentBox('feed_f1d7916d1e294057b448c55e362c1b83')">💬 의견</button>
 
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/reel/Dd951zjohCk/?stkn=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_f1d7916d1e294057b448c55e362c1b83&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_f1d7916d1e294057b448c55e362c1b83" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
   </div>
   
-  <div class="delegate-box" id="delegate-box-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" style="display:none">
-    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💼 AI 비즈니스·수익화&#x27; 섹션에 반영.
+  <div class="delegate-box" id="delegate-box-feed_f1d7916d1e294057b448c55e362c1b83" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💻 로컬 AI·최적화&#x27; 섹션에 반영.
 섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
 
-원문 요약: Claude를 LiquidTrade와 QuiverQuant에 연결해 AI 트레이딩 에이전트를 구축, 시장 모니터링·내부자 데이터 분석·포트폴리오 대비 매매 추천을 자동화하고 페이퍼 트레이딩으로 전략을 테스트할 수 있다는 마케팅성 소셜 미디어 캡션.</div>
-    <select id="delegate-project-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" class="delegate-select">
+원문 요약: Strata는 Qwen3.8-Flash-Next(1,250억 파라미터 MoE, 토큰당 약 60억 활성)를 일반 게이밍 PC(GPU 12GB+, RAM 32GB+)에서 돌리는 오픈소스 추론 엔진으로, GPU/RAM/SSD에 전문가를 나눠 배치하고 추측 디코딩으로 1.6~1.8배 가속한다. 제작자 측정치로 RTX 5070에서 생성 94 tok/s, 프롬프트 읽기 2,650 tok/s이며 OpenAI/Anthropic 호환 API를 localhost로 제공해 코딩 도구 연결도 가능하다고 소개된다.</div>
+    <select id="delegate-project-feed_f1d7916d1e294057b448c55e362c1b83" class="delegate-select">
       <option value="">프로젝트 선택...</option>
       
     </select>
-    <textarea id="delegate-text-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" class="comment-textarea"
+    <textarea id="delegate-text-feed_f1d7916d1e294057b448c55e362c1b83" class="comment-textarea"
               placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
     <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">취소</button>
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_f1d7916d1e294057b448c55e362c1b83')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_f1d7916d1e294057b448c55e362c1b83')">취소</button>
     </div>
   </div>
   
-  <div class="comment-box" id="comment-box-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" style="display:none">
-    <textarea id="comment-text-feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b" class="comment-textarea"
+  <div class="comment-box" id="comment-box-feed_f1d7916d1e294057b448c55e362c1b83" style="display:none">
+    <textarea id="comment-text-feed_f1d7916d1e294057b448c55e362c1b83" class="comment-textarea"
               placeholder="의견을 입력하세요..." rows="3"></textarea>
     <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_914aaa6d3d5f4a7ba30b7e5e2fb2df1b')">취소</button>
+      <button class="btn-comment-submit" onclick="submitComment('feed_f1d7916d1e294057b448c55e362c1b83')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f1d7916d1e294057b448c55e362c1b83')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_1863bb05bba6410b8cb2a8a26cc0bf78" data-id="feed_1863bb05bba6410b8cb2a8a26cc0bf78">
+  <div class="card-header">
+    <span class="item-tag" title="feed_1863bb05bba6410b8cb2a8a26cc0bf78">#1863bb05</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-10-05</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">한 달 만에 시드 3배를 만들었다고 주장하는 &#x27;추세 전환 매매법&#x27;을 4시간봉 기준 하락추세 확인, 저점 유지, 거래량 동반 고점 돌파 후 눌림 진입의 5단계로 소개하는 투자 홍보 게시물이다. 같은 게시물은 쌍바닥, 역헤드앤숄더, 추세선 돌파, 저점 높이기 4개 패턴을 하락 종료 시그널로 제시하며, 교육비를 하트·리포 요청으로 받는다고 명시한다. 별도로 구글 딥마인드가 DNA 한 글자 변이 약 90억 건을 계산해 1페타바이트 규모의 지도를 만들었다는 생명과학 소식도 함께 담겨 있다.</p>
+  <ul class="claims"><li>이 매매법으로 한 달 만에 시드 3배를 만들었다</li><li>보조지표를 사용하지 않는다</li><li>4시간봉에서 고점이 계속 낮아지는 하락추세 후 마지막 저점이 깨지지 않고 올라오면 추세 전환 신호다</li><li>직전 고점을 거래량을 동반해 돌파하고 한 번 눌릴 때 진입한다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 unverified</span> <span class="research-at">2026-10-05T21:48</span>
+    <p>게시물 요약: 주장 8개 중 유전체 관련 3개(90억 변이 지도, 1PB·알파폴드 30배, 실사례)는 확인됨. 트레이딩 관련 4~5개(시드 3배, 추세전환 5단계, 패턴 4종 하락 종료 신호, 보조지표 미사용)는 근거가 없어 검증 불가. 참고용으로만 기록하고 백테스트 전까지 전략 반영 금지.</p>
+    <p class="research-source">출처: 미확인 (Google&#x27;s map of every possible DNA typo could speed up rare disease research (TheNextWeb))</p>
+    <ul><li>딥마인드가 사람 DNA 한 글자 변이 전체(약 90억 개)를 미리 계산한 지도를 공개했다 · unverified · 근거 없음</li><li>데이터 크기는 약 1페타바이트이며 알파폴드 DB의 30배가 넘는다 · unverified · 근거 없음</li><li>쓸모는 크기가 아니라 다른 데 있었다 (실제 활용) · unverified · 근거 없음</li></ul>
+    
+    <p>적용성: partial ·  — [제안 위치 무효] 발췌에는 추세·거래량 기반 전략(Momentum_VolumeEntropy_TrendBoost_v1)과 볼린저 하단 회복 후보(BollingerLowerReclaim)만 보이며, 쌍바닥·역헤드앤숄더</p>
+  </div>
+  <div class="surface-row">
+    <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💰 project-docs-financial</span></div>
+    
+  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">✏️ surface</button>
+  <div class="surface-box" id="surface-box-feed_1863bb05bba6410b8cb2a8a26cc0bf78" data-current="[&quot;alphabot-strategy&quot;, &quot;project-docs-financial&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
+    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip selected" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip selected" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
+    <div class="surface-actions">
+      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">저장</button>
+      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">취소</button>
+    </div>
+  </div>
+  </div>
+  <div class="tags"><span class="tag">#기술적분석</span> <span class="tag">#추세전환</span> <span class="tag">#차트패턴</span> <span class="tag">#매매법</span> <span class="tag">#투자홍보</span> <span class="tag">#구글딥마인드</span> <span class="tag">#유전체</span> <span class="tag">#알파폴드</span></div>
+  <div class="apply-plan">승인 시 alphabot 전략 리서치 목록에 &#x27;추세 전환 패턴(쌍바닥·역H&amp;S·추세선 돌파·저점 높이기)&#x27; 후보를 참고 아이디어로만 기록하고, 백테스트와 OOS 검증 없이는 전략에 반영하지 않는다. 유전체 관련 내용은 적용 대상이 아니므로 기록하지 않는다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','debunk')">🚫 알고보니 별로</button>
+    
+      <button class="btn-secondary" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','reference')">📚 참고용</button>
+      <button class="btn-secondary" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','already')">✔ 이미 있음</button>
+
+    <button class="btn-comment" onclick="toggleCommentBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_1863bb05bba6410b8cb2a8a26cc0bf78&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_1863bb05bba6410b8cb2a8a26cc0bf78" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_1863bb05bba6410b8cb2a8a26cc0bf78" style="display:none">
+    <div class="delegate-reference">적용 안내: alphabot 전략 리서치 목록에 &#x27;추세 전환 패턴(쌍바닥·역H&amp;S·추세선 돌파·저점 높이기)&#x27; 후보를 참고 아이디어로만 기록하고, 백테스트와 OOS 검증 없이는 전략에 반영하지 않는다. 유전체 관련 내용은 적용 대상이 아니므로 기록하지 않는다.
+
+원문 요약: 한 달 만에 시드 3배를 만들었다고 주장하는 &#x27;추세 전환 매매법&#x27;을 4시간봉 기준 하락추세 확인, 저점 유지, 거래량 동반 고점 돌파 후 눌림 진입의 5단계로 소개하는 투자 홍보 게시물이다. 같은 게시물은 쌍바닥, 역헤드앤숄더, 추세선 돌파, 저점 높이기 4개 패턴을 하락 종료 시그널로 제시하며, 교육비를 하트·리포 요청으로 받는다고 명시한다. 별도로 구글 딥마인드가 DNA 한 글자 변이 약 90억 건을 계산해 1페타바이트 규모의 지도를 만들었다는 생명과학 소식도 함께 담겨 있다.</div>
+    <select id="delegate-project-feed_1863bb05bba6410b8cb2a8a26cc0bf78" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_1863bb05bba6410b8cb2a8a26cc0bf78" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_1863bb05bba6410b8cb2a8a26cc0bf78" style="display:none">
+    <textarea id="comment-text-feed_1863bb05bba6410b8cb2a8a26cc0bf78" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_2c703ec72a2b4489b6094ab2c683f29e" data-id="feed_2c703ec72a2b4489b6094ab2c683f29e">
+  <div class="card-header">
+    <span class="item-tag" title="feed_2c703ec72a2b4489b6094ab2c683f29e">#2c703ec7</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-10-05</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">구글 딥마인드가 AlphaGenome 모델로 사람 유전체의 약 90억 개 가능한 DNA 한 글자 변이에 대한 영향 예측을 미리 계산한 &#x27;AlphaGenome Atlas&#x27;(약 1PB)를 공개했다. 여기에 변이 영향 점수 AVI(AlphaGenome Variant Impact)가 함께 제공되며, 브로드 연구소와 엑서터대의 초기 활용 사례가 소개됐다. 딥마인드는 이를 임상용이 아닌 기준선으로 규정했다.</p>
+  <ul class="claims"><li>사람 유전체에서 가능한 단일 염기 변이는 약 90억 개이다</li><li>AlphaGenome Atlas의 데이터 크기는 약 1페타바이트이며 알파폴드 DB의 30배 이상이다</li><li>AlphaGenome Atlas는 모든 가능한 DNA 단일 염기 변이에 대한 예측을 사전 계산한 지도이다</li><li>비상업 용도로 웹사이트에서 바로 사용 가능하며 API와 구글 안티그래비티 스킬로도 제공된다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 unverified</span> <span class="research-at">2026-10-05T21:47</span>
+    <p>DeepMind의 AlphaGenome Atlas(9억 개가 아닌 약 90억 개 단일염기 변이 예측, 1PB, AlphaFold DB 30배 이상), AVI 점수(AlphaGenome+AlphaMissense 결합), 2%/98% 커버리지, DNM1 사례, UK Biobank 5만 4천 명 분석, 비임상·비상업 무료 접근은 DeepMind 공식 블로그 본문과 2차 보도로 확인됨. 다만 &#x27;22% 더 찾았다&#x27;의 정확한 맥락(비코딩 연관성인지, 단백질 수준 변이 분석인지)은 공식 본문 요약에서 모호했고, &#x27;기준선(baseline)&#x27; 표현은 확인하지 못함. &#x27;Broad 팀이 기존 연구에서 놓쳤다&#x27;는 공식 본문에 맞고, &#x27;실험 검증&#x27;은 2차 보도에서만 확인.&lt;/summary&gt;
+&lt;parameter name=&quot;findings&quot;&gt;[{&quot;claim&quot;:&quot;사람 유전체에서 가능한 단일 염기 변이는 약 90억 개&quot;,&quot;status&quot;:&quot;confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;공식 블로그: 9 billion single-nucleotide variants.&quot;},{&quot;claim&quot;:&quot;데이터 크기 약 1PB, 알파폴드 DB의 30배 이상&quot;,&quot;status&quot;:&quot;confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;공식: 1-petabyte dataset, more than 30 times larger than AlphaFold Database.&quot;},{&quot;claim&quot;:&quot;모든 가능한 DNA 단일 글자 변이에 대한 예측을 사전 계산한 지도&quot;,&quot;status&quot;:&quot;confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;제목 및 2차 보도(사전 계산 방식) 일치.&quot;},{&quot;claim&quot;:&quot;비상업 웹사이트 무료 이용, API·구글 안티그래비티 스킬 제공&quot;,&quot;status&quot;:&quot;confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;공식: free-to-use website portal, AlphaGenome API, Google Antigravity. 상업용은 Google Cloud로 추후 제공.&quot;},{&quot;claim&quot;:&quot;AVI는 AlphaGenome과 AlphaMissense 예측을 하나의 숫자로 합친 점수&quot;,&quot;status&quot;:&quot;confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;공식: condensing both models&#x27; predictions into a single number.&quot;},{&quot;claim&quot;:&quot;AVI는 코딩 2%뿐 아니라 비코딩 98%에도 적용&quot;,&quot;status&quot;:&quot;confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;공식: 2% coding, remaining 98% non-coding 명시.&quot;},{&quot;claim&quot;:&quot;브로드 연구소가 AVI로 기존 연구에서 놓친 DNM1 희귀 질환 변이를 찾았고 실험으로 검증&quot;,&quot;status&quot;:&quot;partially_confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;공식: DNM1 변이를 AVI로 찾음(뇌전증성 뇌병증 연관). &#x27;실험 검증&#x27;은 2차 보도(Broad 팀 cryptic splice site 실험 스크린)에서만 확인.&quot;},{&quot;claim&quot;:&quot;엑서터대 UK Biobank 5만 4천여 명 데이터에서 비코딩 유전 연관성을 22% 더 찾음&quot;,&quot;status&quot;:&quot;partially_confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;5만 4천 명·22% 수치는 공식 확인. 단 공식 요약에서 &#x27;22%&#x27;가 비코딩 연관성인지 단백질 수준 변이 분석 맥락인지 모호 — 원문 확인 필요.&quot;},{&quot;claim&quot;:&quot;딥마인드는 이 지도를 기준선이며 임상용이 아니라고 밝힘&quot;,&quot;status&quot;:&quot;partially_confirmed&quot;,&quot;evidence_url&quot;:&quot;https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/&quot;,&quot;note&quot;:&quot;임상용 아님(not validated/approved for clinical use)은 공식 확인. &#x27;기준선(baseline)&#x27; 표현은 확인 못 함 — 번역/요약 가능성.&quot;}]</p>
+    <p class="research-source">출처: <a href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/" target="_blank" rel="noopener">AlphaGenome Atlas: Molecular predictions for 9 Billion human DNA variants — Google DeepMind</a> (official_doc)</p>
+    
+    
+    <p>적용성: not_applicable ·  — AlphaGenome Atlas(딥마인드, 인간 유전체 DNA 변이 약 90억 개의 영향 예측 사전계산 데이터셋, AVI 점수)는 유전체학·생물학 연구 자원이지 로컬 AI 실행이나 추론 최적화 사례가 아닙니다. 따라</p>
+  </div>
+  <div class="surface-row">
+    <div class="surfaces"><span class="badge">💻 local-ai</span></div>
+    
+  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">✏️ surface</button>
+  <div class="surface-box" id="surface-box-feed_2c703ec72a2b4489b6094ab2c683f29e" data-current="[&quot;local-ai&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
+    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip selected" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
+    <div class="surface-actions">
+      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_2c703ec72a2b4489b6094ab2c683f29e')">저장</button>
+      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">취소</button>
+    </div>
+  </div>
+  </div>
+  <div class="tags"><span class="tag">#AlphaGenome</span> <span class="tag">#DeepMind</span> <span class="tag">#유전체학</span> <span class="tag">#변이 예측</span> <span class="tag">#AVI</span> <span class="tag">#AlphaMissense</span> <span class="tag">#바이오AI</span> <span class="tag">#UK Biobank</span></div>
+  <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💻 로컬 AI·최적화&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_2c703ec72a2b4489b6094ab2c683f29e','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_2c703ec72a2b4489b6094ab2c683f29e','debunk')">🚫 알고보니 별로</button>
+    
+      <button class="btn-secondary" onclick="decide('feed_2c703ec72a2b4489b6094ab2c683f29e','reference')">📚 참고용</button>
+      <button class="btn-secondary" onclick="decide('feed_2c703ec72a2b4489b6094ab2c683f29e','already')">✔ 이미 있음</button>
+
+    <button class="btn-comment" onclick="toggleCommentBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_2c703ec72a2b4489b6094ab2c683f29e&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_2c703ec72a2b4489b6094ab2c683f29e" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_2c703ec72a2b4489b6094ab2c683f29e" style="display:none">
+    <div class="delegate-reference">적용 안내: 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;💻 로컬 AI·최적화&#x27; 섹션에 반영.
+섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.
+
+원문 요약: 구글 딥마인드가 AlphaGenome 모델로 사람 유전체의 약 90억 개 가능한 DNA 한 글자 변이에 대한 영향 예측을 미리 계산한 &#x27;AlphaGenome Atlas&#x27;(약 1PB)를 공개했다. 여기에 변이 영향 점수 AVI(AlphaGenome Variant Impact)가 함께 제공되며, 브로드 연구소와 엑서터대의 초기 활용 사례가 소개됐다. 딥마인드는 이를 임상용이 아닌 기준선으로 규정했다.</div>
+    <select id="delegate-project-feed_2c703ec72a2b4489b6094ab2c683f29e" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_2c703ec72a2b4489b6094ab2c683f29e" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_2c703ec72a2b4489b6094ab2c683f29e')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_2c703ec72a2b4489b6094ab2c683f29e" style="display:none">
+    <textarea id="comment-text-feed_2c703ec72a2b4489b6094ab2c683f29e" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_2c703ec72a2b4489b6094ab2c683f29e')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">취소</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="card-feed_af7d980ea95446fdb0b0dcc11656a601" data-id="feed_af7d980ea95446fdb0b0dcc11656a601">
+  <div class="card-header">
+    <span class="item-tag" title="feed_af7d980ea95446fdb0b0dcc11656a601">#af7d980e</span>
+    
+    
+    
+    
+    <span class="platform">Manual</span>
+    <span class="date">2026-10-05</span>
+    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
+    
+  </div>
+  <p class="summary">Qwen 3.8 27B 로컬 모델로 코딩 에이전트를 몇 시간씩 안정적으로 돌리기 위해 필요한 장치들을 정리한 글. 핵심은 도구 호출·결과의 원문 영속화, 중간 압축 설계(재읽기 비용 고려), 스트리밍 요약, 잘린 쓰기·미지 인자 거부, 완료 보고의 결과 대조 등 &#x27;아무 장치 없이 쓰면 실패한다&#x27;는 주장이다.</p>
+  <ul class="claims"><li>대부분의 코딩 에이전트는 턴이 끝나면 최종 답변만 저장하고 턴 내 도구 호출과 결과는 사라진다</li><li>서버가 toolcalls와 tool 결과 행을 원문 그대로 영속화하고 다음 턴에 toolcall id를 맞춰 시드하자 함수명 등을 잊던 문제가 해결되었다</li><li>중간 압축 후 재읽기 루프로 작업이 끝나지 않는 현상이 발생했다</li><li>압축 요약 요청이 295초 만에 타임아웃됐고, 출력 상한을 15배 줄여도 49~57초로 평평해 출력 상한이 원인이 아니었다</li></ul>
+  
+  <div class="research">
+    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-10-05T21:41</span>
+    <p>모델 존재와 공개 스펙은 확인됨: Qwen3.8-27B는 2026-08-14 공개, Apache 2.0, 네이티브 262,144 토큰 컨텍스트(1M 확장), 27B 밀집 멀티모달, SWE-bench Pro 61.7% vs Claude Opus 4.6 Max 53.4%(Alibaba 자체 평가). 그러나 게시물의 핵심 엔지니어링 주장(영속화·압축·스트리밍 요약·쓰기 가드·65%/20-20/0건 등 수치)은 작성자 개인 측정으로, 독립 출처를 찾지 못해 검증 불가.</p>
+    <p class="research-source">출처: <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">Alibaba releases Qwen3.8-27B (DataNorth 보도, 공식 블로그 링크 인용)</a> (article)</p>
+    <ul><li>&#x27;Qwen 3.8 27B&#x27;라는 모델이 존재한다 · confirmed · <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">근거</a></li><li>Apache 2.0 라이선스, 27B 밀집 멀티모달, 262,144 네이티브 컨텍스트(1M 확장) · confirmed · <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">근거</a></li><li>SWE-bench Pro 61.7% vs Claude Opus 4.6 Max 53.4% · partially_confirmed · <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">근거</a></li></ul>
+    
+    <p>적용성: new ·  — [제안 위치 무효] [근거 경로 없음] 이 글의 핵심 주장(긴 로컬 에이전트 세션을 돌릴 때 필요한 장치)은 일부만 이미 있다. 이미 있는 것: 모델 출력 JSON 방어 파싱, 특정 경로 쓰기 차단 게이트, 완료 전</p>
+  </div>
+  <div class="surface-row">
+    <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💻 local-ai</span></div>
+    
+  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_af7d980ea95446fdb0b0dcc11656a601')">✏️ surface</button>
+  <div class="surface-box" id="surface-box-feed_af7d980ea95446fdb0b0dcc11656a601" data-current="[&quot;claude-code&quot;, &quot;local-ai&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
+    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip selected" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip selected" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
+    <div class="surface-actions">
+      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_af7d980ea95446fdb0b0dcc11656a601')">저장</button>
+      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_af7d980ea95446fdb0b0dcc11656a601')">취소</button>
+    </div>
+  </div>
+  </div>
+  <div class="tags"><span class="tag">#로컬LLM</span> <span class="tag">#코딩에이전트</span> <span class="tag">#Qwen</span> <span class="tag">#컨텍스트압축</span> <span class="tag">#롱러닝</span> <span class="tag">#도구호출</span> <span class="tag">#세션영속화</span> <span class="tag">#쓰기가드</span></div>
+  <div class="apply-plan">승인 시 로컬 모델 기반 에이전트 워크플로우(예: qwen-code)를 쓸 때 세션에 도구 호출·결과 원문을 저장하고, 쓰기 전 잘린 JSON 거부와 미지 인자 거부를 넣으며, 완료 보고를 실행 결과로 검증하는 체크를 프로젝트 가이드(예: ~/.claude/CLAUDE.md 또는 해당 에이전트 설정)에 추가 검토한다.</div>
+  
+  <div class="actions">
+    
+    <button class="btn-approve" onclick="toggleDelegateBox('feed_af7d980ea95446fdb0b0dcc11656a601')">✅ 승인</button>
+    <button class="btn-reject" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','skip')">❌ 스킵</button>
+    <button class="btn-debunk" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','debunk')">🚫 알고보니 별로</button>
+    
+      <button class="btn-secondary" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','reference')">📚 참고용</button>
+      <button class="btn-secondary" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','already')">✔ 이미 있음</button>
+
+    <button class="btn-comment" onclick="toggleCommentBox('feed_af7d980ea95446fdb0b0dcc11656a601')">💬 의견</button>
+
+    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_af7d980ea95446fdb0b0dcc11656a601&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_af7d980ea95446fdb0b0dcc11656a601" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
+    
+  </div>
+  
+  <div class="delegate-box" id="delegate-box-feed_af7d980ea95446fdb0b0dcc11656a601" style="display:none">
+    <div class="delegate-reference">적용 안내: 로컬 모델 기반 에이전트 워크플로우(예: qwen-code)를 쓸 때 세션에 도구 호출·결과 원문을 저장하고, 쓰기 전 잘린 JSON 거부와 미지 인자 거부를 넣으며, 완료 보고를 실행 결과로 검증하는 체크를 프로젝트 가이드(예: ~/.claude/CLAUDE.md 또는 해당 에이전트 설정)에 추가 검토한다.
+
+원문 요약: Qwen 3.8 27B 로컬 모델로 코딩 에이전트를 몇 시간씩 안정적으로 돌리기 위해 필요한 장치들을 정리한 글. 핵심은 도구 호출·결과의 원문 영속화, 중간 압축 설계(재읽기 비용 고려), 스트리밍 요약, 잘린 쓰기·미지 인자 거부, 완료 보고의 결과 대조 등 &#x27;아무 장치 없이 쓰면 실패한다&#x27;는 주장이다.</div>
+    <select id="delegate-project-feed_af7d980ea95446fdb0b0dcc11656a601" class="delegate-select">
+      <option value="">프로젝트 선택...</option>
+      
+    </select>
+    <textarea id="delegate-text-feed_af7d980ea95446fdb0b0dcc11656a601" class="comment-textarea"
+              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-delegate-submit" onclick="submitDelegate('feed_af7d980ea95446fdb0b0dcc11656a601')">위임</button>
+      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_af7d980ea95446fdb0b0dcc11656a601')">취소</button>
+    </div>
+  </div>
+  
+  <div class="comment-box" id="comment-box-feed_af7d980ea95446fdb0b0dcc11656a601" style="display:none">
+    <textarea id="comment-text-feed_af7d980ea95446fdb0b0dcc11656a601" class="comment-textarea"
+              placeholder="의견을 입력하세요..." rows="3"></textarea>
+    <div class="comment-actions">
+      <button class="btn-comment-submit" onclick="submitComment('feed_af7d980ea95446fdb0b0dcc11656a601')">제출</button>
+      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_af7d980ea95446fdb0b0dcc11656a601')">취소</button>
     </div>
   </div>
 </div>
