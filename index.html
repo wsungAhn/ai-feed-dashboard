@@ -37,6 +37,9 @@
                  padding: 2px 8px; border-radius: 999px; }
   .badge-ocr-needed { font-size: 11px; background: #fef9c3; color: #92400e;
                        padding: 2px 8px; border-radius: 999px; }
+  .screenshot-notice { font-size: 12px; background: #fef9c3; color: #92400e;
+                        border-left: 3px solid #d97706; padding: 8px 10px;
+                        border-radius: 4px; margin-top: 8px; line-height: 1.5; }
   .badge-pm-task { font-size: 11px; background: #fee2e2; color: #991b1b;
                     padding: 2px 8px; border-radius: 999px; }
   .badge-extraction { font-size: 11px; background: #fce7e7; color: #9f1239;
@@ -2697,7 +2700,7 @@
   </div>
 </section>
 <h2 class="section-title">승인 대기</h2>
-<p class="count">승인 대기 158건</p>
+<p class="count">승인 대기 155건</p>
 <div class="grid">
 
 <div class="card" id="card-feed_7a5c43813c1248e6875abbb8d9b44c75" data-id="feed_7a5c43813c1248e6875abbb8d9b44c75">
@@ -2777,6 +2780,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7a5c43813c1248e6875abbb8d9b44c75')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_50af5418959e465f8dcfe8e1ce2ac79b" data-id="feed_50af5418959e465f8dcfe8e1ce2ac79b">
@@ -2856,6 +2860,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_50af5418959e465f8dcfe8e1ce2ac79b')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_6b5dbcbd751f4cd7a4a3f84ea0edc84f" data-id="feed_6b5dbcbd751f4cd7a4a3f84ea0edc84f">
@@ -2935,6 +2940,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6b5dbcbd751f4cd7a4a3f84ea0edc84f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f1d7916d1e294057b448c55e362c1b83" data-id="feed_f1d7916d1e294057b448c55e362c1b83">
@@ -3010,6 +3016,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f1d7916d1e294057b448c55e362c1b83')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_1863bb05bba6410b8cb2a8a26cc0bf78" data-id="feed_1863bb05bba6410b8cb2a8a26cc0bf78">
@@ -3018,7 +3025,7 @@
     
     
     
-    
+    <span class="badge badge-pm-task">✅ PM 완료</span>
     <span class="platform">Manual</span>
     <span class="date">2026-10-05</span>
     <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
@@ -3038,47 +3045,18 @@
   <div class="surface-row">
     <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💰 project-docs-financial</span></div>
     
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_1863bb05bba6410b8cb2a8a26cc0bf78" data-current="[&quot;alphabot-strategy&quot;, &quot;project-docs-financial&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip selected" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip selected" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">취소</button>
-    </div>
-  </div>
   </div>
   <div class="tags"><span class="tag">#기술적분석</span> <span class="tag">#추세전환</span> <span class="tag">#차트패턴</span> <span class="tag">#매매법</span> <span class="tag">#투자홍보</span> <span class="tag">#구글딥마인드</span> <span class="tag">#유전체</span> <span class="tag">#알파폴드</span></div>
   <div class="apply-plan">승인 시 alphabot 전략 리서치 목록에 &#x27;추세 전환 패턴(쌍바닥·역H&amp;S·추세선 돌파·저점 높이기)&#x27; 후보를 참고 아이디어로만 기록하고, 백테스트와 OOS 검증 없이는 전략에 반영하지 않는다. 유전체 관련 내용은 적용 대상이 아니므로 기록하지 않는다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-10-07T21:22</div>
-    <div class="response-body">이 의견은 이미 ai-feed PM 태스크 **8efd22dc**로 등록됐습니다.
-
-피드의 전략을 정리하면:
-
-**진입 신호 (5단계)**
-1. 하락추세 확인
-2. 저점 유지 (더 낮은 저점 없음)
-3. 거래량 동반
-4. 고점 돌파
-5. 눌림 구간에서 진입
-
-**하락 종료 패턴 (4가지)**
-- 쌍바닥
-- 역헤드앤숄더
-- 추세선 돌파
-- 저점 높이기
-
-**평가**
-매우 일반화된 기술적 분석입니다. 대부분의 추세 추종 전략과 동일한 로직이고, 구체적인 손실 관리·수익실현 기준이 없으며, &quot;한 달 3배&quot; 주장에 근거가 없습니다. 교육비를 요청하는 점도 신뢰도를 낮춥니다.</div>
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-07T21:28</div>
+    <div class="response-body">alphabot PM 태스크로 위임했습니다 (task_id: dd700ca6).</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="toggleDelegateBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','skip')">⏭ 스킵</button>
       <button class="btn-debunk" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','debunk')">❌ 터무니없음</button>
       
-      <button class="btn-secondary" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_1863bb05bba6410b8cb2a8a26cc0bf78','already')">✔ 이미 있음</button>
-
       <button class="btn-comment" onclick="toggleCommentBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">💬 재피드백</button>
     </div>
   </div>
@@ -3112,6 +3090,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1863bb05bba6410b8cb2a8a26cc0bf78')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_2c703ec72a2b4489b6094ab2c683f29e" data-id="feed_2c703ec72a2b4489b6094ab2c683f29e">
@@ -3194,164 +3173,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2c703ec72a2b4489b6094ab2c683f29e')">취소</button>
     </div>
   </div>
-</div>
-
-<div class="card" id="card-feed_af7d980ea95446fdb0b0dcc11656a601" data-id="feed_af7d980ea95446fdb0b0dcc11656a601">
-  <div class="card-header">
-    <span class="item-tag" title="feed_af7d980ea95446fdb0b0dcc11656a601">#af7d980e</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-10-05</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">Qwen 3.8 27B 로컬 모델로 코딩 에이전트를 몇 시간씩 안정적으로 돌리기 위해 필요한 장치들을 정리한 글. 핵심은 도구 호출·결과의 원문 영속화, 중간 압축 설계(재읽기 비용 고려), 스트리밍 요약, 잘린 쓰기·미지 인자 거부, 완료 보고의 결과 대조 등 &#x27;아무 장치 없이 쓰면 실패한다&#x27;는 주장이다.</p>
-  <ul class="claims"><li>대부분의 코딩 에이전트는 턴이 끝나면 최종 답변만 저장하고 턴 내 도구 호출과 결과는 사라진다</li><li>서버가 toolcalls와 tool 결과 행을 원문 그대로 영속화하고 다음 턴에 toolcall id를 맞춰 시드하자 함수명 등을 잊던 문제가 해결되었다</li><li>중간 압축 후 재읽기 루프로 작업이 끝나지 않는 현상이 발생했다</li><li>압축 요약 요청이 295초 만에 타임아웃됐고, 출력 상한을 15배 줄여도 49~57초로 평평해 출력 상한이 원인이 아니었다</li></ul>
   
-  <div class="research">
-    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-10-05T21:41</span>
-    <p>모델 존재와 공개 스펙은 확인됨: Qwen3.8-27B는 2026-08-14 공개, Apache 2.0, 네이티브 262,144 토큰 컨텍스트(1M 확장), 27B 밀집 멀티모달, SWE-bench Pro 61.7% vs Claude Opus 4.6 Max 53.4%(Alibaba 자체 평가). 그러나 게시물의 핵심 엔지니어링 주장(영속화·압축·스트리밍 요약·쓰기 가드·65%/20-20/0건 등 수치)은 작성자 개인 측정으로, 독립 출처를 찾지 못해 검증 불가.</p>
-    <p class="research-source">출처: <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">Alibaba releases Qwen3.8-27B (DataNorth 보도, 공식 블로그 링크 인용)</a> (article)</p>
-    <ul><li>&#x27;Qwen 3.8 27B&#x27;라는 모델이 존재한다 · confirmed · <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">근거</a></li><li>Apache 2.0 라이선스, 27B 밀집 멀티모달, 262,144 네이티브 컨텍스트(1M 확장) · confirmed · <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">근거</a></li><li>SWE-bench Pro 61.7% vs Claude Opus 4.6 Max 53.4% · partially_confirmed · <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-27b" target="_blank" rel="noopener">근거</a></li></ul>
-    
-    <p>적용성: new ·  — [제안 위치 무효] [근거 경로 없음] 이 글의 핵심 주장(긴 로컬 에이전트 세션을 돌릴 때 필요한 장치)은 일부만 이미 있다. 이미 있는 것: 모델 출력 JSON 방어 파싱, 특정 경로 쓰기 차단 게이트, 완료 전</p>
-  </div>
-  <div class="surface-row">
-    <div class="surfaces"><span class="badge">🤖 claude-code</span> <span class="badge">💻 local-ai</span></div>
-    
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_af7d980ea95446fdb0b0dcc11656a601')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_af7d980ea95446fdb0b0dcc11656a601" data-current="[&quot;claude-code&quot;, &quot;local-ai&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip selected" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip selected" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_af7d980ea95446fdb0b0dcc11656a601')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_af7d980ea95446fdb0b0dcc11656a601')">취소</button>
-    </div>
-  </div>
-  </div>
-  <div class="tags"><span class="tag">#로컬LLM</span> <span class="tag">#코딩에이전트</span> <span class="tag">#Qwen</span> <span class="tag">#컨텍스트압축</span> <span class="tag">#롱러닝</span> <span class="tag">#도구호출</span> <span class="tag">#세션영속화</span> <span class="tag">#쓰기가드</span></div>
-  <div class="apply-plan">승인 시 로컬 모델 기반 에이전트 워크플로우(예: qwen-code)를 쓸 때 세션에 도구 호출·결과 원문을 저장하고, 쓰기 전 잘린 JSON 거부와 미지 인자 거부를 넣으며, 완료 보고를 실행 결과로 검증하는 체크를 프로젝트 가이드(예: ~/.claude/CLAUDE.md 또는 해당 에이전트 설정)에 추가 검토한다.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_af7d980ea95446fdb0b0dcc11656a601')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','debunk')">🚫 알고보니 별로</button>
-    
-      <button class="btn-secondary" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_af7d980ea95446fdb0b0dcc11656a601','already')">✔ 이미 있음</button>
-
-    <button class="btn-comment" onclick="toggleCommentBox('feed_af7d980ea95446fdb0b0dcc11656a601')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_af7d980ea95446fdb0b0dcc11656a601&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_af7d980ea95446fdb0b0dcc11656a601" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_af7d980ea95446fdb0b0dcc11656a601" style="display:none">
-    <div class="delegate-reference">적용 안내: 로컬 모델 기반 에이전트 워크플로우(예: qwen-code)를 쓸 때 세션에 도구 호출·결과 원문을 저장하고, 쓰기 전 잘린 JSON 거부와 미지 인자 거부를 넣으며, 완료 보고를 실행 결과로 검증하는 체크를 프로젝트 가이드(예: ~/.claude/CLAUDE.md 또는 해당 에이전트 설정)에 추가 검토한다.
-
-원문 요약: Qwen 3.8 27B 로컬 모델로 코딩 에이전트를 몇 시간씩 안정적으로 돌리기 위해 필요한 장치들을 정리한 글. 핵심은 도구 호출·결과의 원문 영속화, 중간 압축 설계(재읽기 비용 고려), 스트리밍 요약, 잘린 쓰기·미지 인자 거부, 완료 보고의 결과 대조 등 &#x27;아무 장치 없이 쓰면 실패한다&#x27;는 주장이다.</div>
-    <select id="delegate-project-feed_af7d980ea95446fdb0b0dcc11656a601" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_af7d980ea95446fdb0b0dcc11656a601" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_af7d980ea95446fdb0b0dcc11656a601')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_af7d980ea95446fdb0b0dcc11656a601')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_af7d980ea95446fdb0b0dcc11656a601" style="display:none">
-    <textarea id="comment-text-feed_af7d980ea95446fdb0b0dcc11656a601" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_af7d980ea95446fdb0b0dcc11656a601')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_af7d980ea95446fdb0b0dcc11656a601')">취소</button>
-    </div>
-  </div>
-</div>
-
-<div class="card" id="card-feed_a51226c215e5479fb19a3c7f3b131e9e" data-id="feed_a51226c215e5479fb19a3c7f3b131e9e">
-  <div class="card-header">
-    <span class="item-tag" title="feed_a51226c215e5479fb19a3c7f3b131e9e">#a51226c2</span>
-    
-    
-    
-    
-    <span class="platform">Instagram</span>
-    <span class="date">2026-10-03</span>
-    <span style="background:#f5f0e8;color:#78716c;padding:2px 8px;border-radius:999px;font-size:12px">LOW</span>
-    
-  </div>
-  <p class="summary">데이트레이더 로스 카메론이 2017~2025년 약 254억 원의 누적 거래 수익을 냈으며, 과거 거래 기록 분석을 통해 상대 거래량 5배 이상, 가격 촉매 뉴스, 유통주식 수를 핵심 종목 선정 기준으로 삼는 소형주 모멘텀 데이트레이딩 전략을 수립했다는 내용의 인스타그램 광고성 게시물이다.</p>
-  <ul class="claims"><li>로스 카메론은 2017~2025년 약 1,881만 달러(약 254억 원)의 누적 거래 수익을 공개했다</li><li>로스 카메론의 종목 선정 기준에는 평균 대비 5배 이상의 상대 거래량이 포함된다</li><li>그는 가격을 움직인 뉴스, 유통주식 수, 매수세 지속 여부를 함께 확인해 종목 후보를 좁힌다</li></ul>
-  
-  <div class="research">
-    <span class="badge-research">🔎 partially_confirmed</span> <span class="research-at">2026-10-03T03:03</span>
-    <p>게시물은 로스 카메론(Warrior Trading)이 2017~2025년 약 1,881만 달러(254억원) 누적 거래수익을 냈다고 주장하며 소형주 모멘텀 전략(상대거래량 5배+, 뉴스 촉매, 유통주식수)을 소개하고 DM으로 유료 아티클을 보내주는 리드젠(lead-gen) 광고 게시물이다. 전략 설명(5 Pillars)은 그의 공개된 교육 콘텐츠와 일치해 신뢰할 만하나, 구체적 수익 수치 &quot;$18,810,638&quot;는 저품질 SEO/넷워스 추정 사이트(financialtechwiz.com) 단 1곳에서만 발견되며 Warrior Trading 공식 페이지는 접근 차단(403)으로 직접 확인 불가했다. 더 중요하게, Warrior Trading과 로스 카메론은 2022년 FTC로부터 &quot;근거 없는 수익 주장(deceptive earnings claims)&quot;으로 300만 달러 환불 합의를 당한 전례가 있어, 이런 유형의 &quot;검증된 수익&quot; 마케팅 주장 자체의 신뢰성에 구조적 의문이 있다.</p>
-    <p class="research-source">출처: <a href="https://www.financialtechwiz.com/post/ross-cameron-net-worth" target="_blank" rel="noopener">Ross Cameron Net Worth (FinancialTechWiz)</a> (article)</p>
-    <ul><li>로스 카메론은 2017~2025년 약 1,881만 달러($18,810,638, 약 254억원)의 누적 거래 수익을 공개했으며 독립 CPA가 감사했다 · unverified · <a href="https://www.financialtechwiz.com/post/ross-cameron-net-worth" target="_blank" rel="noopener">근거</a></li><li>Warrior Trading/로스 카메론은 과거 &#x27;근거 없는 수익 주장&#x27;으로 FTC와 300만 달러 환불 합의를 했다 · unverified · 근거 없음</li><li>종목 선정 기준(평균 대비 5배 이상 상대거래량 + 뉴스 촉매 + 유통주식수 확인)이 로스 카메론의 실제 공개 전략과 일치한다 · confirmed · <a href="https://quantamentaltrader.substack.com/p/high-float-turnover-trading-manual" target="_blank" rel="noopener">근거</a></li></ul>
-    <p>미끼: 소형주 모멘텀 매매법(상대거래량/뉴스/유통주식수 상세 기준, 돌파 진입·손절·수량 계산 포함) 유료/리드젠 아티클(키워드 로스) → 미확인</p>
-    <p>적용성: new ·  — [제안 위치 무효] 제공된 alphabot 코드 발췌(memory/store.py, agents/digest.py, agents/phase_runner.py 등)는 챔피언 전략 이력·리플렉션 다이제스트·감사 DB 등</p>
-  </div>
-  <div class="surface-row">
-    <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💰 project-docs-financial</span></div>
-    
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_a51226c215e5479fb19a3c7f3b131e9e')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_a51226c215e5479fb19a3c7f3b131e9e" data-current="[&quot;alphabot-strategy&quot;, &quot;project-docs-financial&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip selected" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip selected" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_a51226c215e5479fb19a3c7f3b131e9e')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_a51226c215e5479fb19a3c7f3b131e9e')">취소</button>
-    </div>
-  </div>
-  </div>
-  <div class="tags"><span class="tag">#데이트레이딩</span> <span class="tag">#모멘텀매매</span> <span class="tag">#소형주</span> <span class="tag">#상대거래량</span> <span class="tag">#로스카메론</span> <span class="tag">#인스타그램광고</span></div>
-  <div class="apply-plan">승인 시 alphabot 리서치 노트(MEMORY-project-alphabot.md 또는 관련 전략 문서)에 상대거래량(평균 대비 5배 이상)·뉴스 촉매·유통주식 수를 결합한 소형주 모멘텀 스크리닝 아이디어로 참고 메모만 추가, 광고성 콘텐츠이므로 실거래 전략 채택 보류.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_a51226c215e5479fb19a3c7f3b131e9e')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_a51226c215e5479fb19a3c7f3b131e9e','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_a51226c215e5479fb19a3c7f3b131e9e','debunk')">🚫 알고보니 별로</button>
-    
-      <button class="btn-secondary" onclick="decide('feed_a51226c215e5479fb19a3c7f3b131e9e','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_a51226c215e5479fb19a3c7f3b131e9e','already')">✔ 이미 있음</button>
-
-    <button class="btn-comment" onclick="toggleCommentBox('feed_a51226c215e5479fb19a3c7f3b131e9e')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_a51226c215e5479fb19a3c7f3b131e9e&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_a51226c215e5479fb19a3c7f3b131e9e" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    <a href="https://www.instagram.com/p/Dd-rdWfkmFE/?img_index=7&amp;stkn=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_a51226c215e5479fb19a3c7f3b131e9e" style="display:none">
-    <div class="delegate-reference">적용 안내: alphabot 리서치 노트(MEMORY-project-alphabot.md 또는 관련 전략 문서)에 상대거래량(평균 대비 5배 이상)·뉴스 촉매·유통주식 수를 결합한 소형주 모멘텀 스크리닝 아이디어로 참고 메모만 추가, 광고성 콘텐츠이므로 실거래 전략 채택 보류.
-
-원문 요약: 데이트레이더 로스 카메론이 2017~2025년 약 254억 원의 누적 거래 수익을 냈으며, 과거 거래 기록 분석을 통해 상대 거래량 5배 이상, 가격 촉매 뉴스, 유통주식 수를 핵심 종목 선정 기준으로 삼는 소형주 모멘텀 데이트레이딩 전략을 수립했다는 내용의 인스타그램 광고성 게시물이다.</div>
-    <select id="delegate-project-feed_a51226c215e5479fb19a3c7f3b131e9e" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_a51226c215e5479fb19a3c7f3b131e9e" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_a51226c215e5479fb19a3c7f3b131e9e')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_a51226c215e5479fb19a3c7f3b131e9e')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_a51226c215e5479fb19a3c7f3b131e9e" style="display:none">
-    <textarea id="comment-text-feed_a51226c215e5479fb19a3c7f3b131e9e" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_a51226c215e5479fb19a3c7f3b131e9e')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a51226c215e5479fb19a3c7f3b131e9e')">취소</button>
-    </div>
-  </div>
 </div>
 
 <div class="card" id="card-feed_fe80459a6d0a4064a7f1b5980cd9a9c5" data-id="feed_fe80459a6d0a4064a7f1b5980cd9a9c5">
@@ -3425,86 +3247,7 @@
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fe80459a6d0a4064a7f1b5980cd9a9c5')">취소</button>
     </div>
   </div>
-</div>
-
-<div class="card" id="card-feed_60eedecf5fde42669dcec1ff41b82ef0" data-id="feed_60eedecf5fde42669dcec1ff41b82ef0">
-  <div class="card-header">
-    <span class="item-tag" title="feed_60eedecf5fde42669dcec1ff41b82ef0">#60eedecf</span>
-    
-    
-    
-    
-    <span class="platform">Manual</span>
-    <span class="date">2026-10-02</span>
-    <span style="background:#fef9c3;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px">MED</span>
-    
-  </div>
-  <p class="summary">인스타그램 계정이 터틀 트레이딩 규칙(20일 최고가 돌파 진입, 10일 최저가 청산, ATR 기반 N값 손절/포지션 사이징, 1/2N 간격 피라미딩)을 BTC 사례로 소개하며 자사 플랫폼(시그버드)에서 전략화할 수 있다고 홍보하는 게시물.</p>
-  <ul class="claims"><li>20일 최고가 돌파 시 롱 진입, 10일 최저가 이탈 시 전량 청산하는 터틀 트레이딩 규칙 기반 전략</li><li>손절폭은 진입가 - N×2 (N은 ATR(20))로 설정</li><li>포지션 수량 공식은 (계좌 × 1%) ÷ N</li><li>원조 터틀 규칙은 첫 진입가 기준 1/2N 상승마다 최대 4유닛까지 피라미딩 추가</li></ul>
   
-  <div class="research">
-    <span class="badge-research">🔎 unverified</span> <span class="research-at">2026-10-02T09:33</span>
-    <p>게시물이 소개하는 규칙은 1983년 Richard Dennis/William Eckhardt의 원조 터틀 트레이딩 System 1 규칙(20일 신고가 돌파 진입, 10일 신저가 청산, N=ATR(20) 기반 2N 손절, 계좌×1%÷N 포지션사이징, 1/2N 간격 최대 4유닛 피라미딩)을 정확히 재현하고 있다 — 복수의 독립 출처(TradingView 스크립트 설명, 한국어 위키독스/토러스디지털 등)와 일치. 다만 게시물 자체는 개인 거래전략 계정이 &#x27;시그버드(sig_bird)&#x27;라는 자사 트레이딩 플랫폼을 홍보하며 프로필 링크·팔로우를 유도하는 마케팅 게시물이다.&lt;/summary&gt;
-&lt;parameter name=&quot;findings&quot;&gt;[{&quot;claim&quot;:&quot;20일 최고가(신고가) 돌파 시 롱 진입, 10일 최저가 이탈 시 전량 청산&quot;, &quot;status&quot;:&quot;confirmed&quot;, &quot;note&quot;:&quot;원조 터틀 System 1: 20일 브레이크아웃 진입 + 10일 브레이크아웃 청산과 정확히 일치 (System 2는 55일 진입/20일 청산으로 별개)&quot;, &quot;evidence_url&quot;:&quot;https://ar.tradingview.com/script/jbyeMkat/&quot;}, {&quot;claim&quot;:&quot;손절폭 = 진입가 - N×2, N = ATR(20)&quot;, &quot;status&quot;:&quot;confirmed&quot;, &quot;note&quot;:&quot;2N 초기 손절은 적절한 포지션사이징과 결합 시 단일거래 손실을 계좌의 약 2% 이내로 제한한다는 설명과 일치&quot;, &quot;evidence_url&quot;:&quot;https://www.torusdigital.com/toruscope/?p=6475&quot;}, {&quot;claim&quot;:&quot;포지션 수량 = (계좌×1%) ÷ N&quot;, &quot;status&quot;:&quot;confirmed&quot;, &quot;note&quot;:&quot;터틀 유닛 사이징 공식(변동성 단위 N 기반, 1 유닛 = 계좌자본의 1% 리스크)과 일치&quot;}, {&quot;claim&quot;:&quot;원조 터틀 규칙은 1/2N 상승마다 최대 4유닛까지 피라미딩 추가, 추가 시 손절가도 마지막 진입가-2N으로 재계산&quot;, &quot;status&quot;:&quot;confirmed&quot;, &quot;note&quot;:&quot;검색 결과: &#x27;Pyramiding adds units every 0.5N in the favorable direction, up to 4 units maximum&#x27; 및 트레일링 스탑은 유리한 방향으로만 타이트닝&quot;}, {&quot;claim&quot;:&quot;(암묵적 마케팅 주장) 이 조건을 &#x27;시그버드&#x27; 플랫폼에서 공부 없이 바로 전략으로 만들 수 있다&quot;, &quot;status&quot;:&quot;unverified&quot;, &quot;note&quot;:&quot;시그버드라는 제품의 실제 기능·백테스트 신뢰성은 외부에서 검증 불가 — 본문은 프로모션 목적이 뚜렷하고 &#x27;프로필 링크&#x27; 유도 문구가 반복됨&quot;}]</p>
-    <p class="research-source">출처: <a href="https://www.torusdigital.com/toruscope/?p=6475" target="_blank" rel="noopener">Turtle Trading System rules (Richard Dennis/William Eckhardt, popularized via Curtis Faith&#x27;s &#x27;Way of the Turtle&#x27;)</a> (article)</p>
-    
-    <p>미끼: 시그버드 플랫폼에서 &#x27;다음 매매법&#x27;도 조건까지 다 풀어서 공개(키워드 프로필 링크 / 팔로우) → 미확인</p>
-    <p>적용성: not_applicable ·  — </p>
-  </div>
-  <div class="surface-row">
-    <div class="surfaces"><span class="badge">📈 alphabot-strategy</span> <span class="badge">💰 project-docs-financial</span></div>
-    
-  <button type="button" class="btn-surface-edit" onclick="toggleSurfaceBox('feed_60eedecf5fde42669dcec1ff41b82ef0')">✏️ surface</button>
-  <div class="surface-box" id="surface-box-feed_60eedecf5fde42669dcec1ff41b82ef0" data-current="[&quot;alphabot-strategy&quot;, &quot;project-docs-financial&quot;]" data-plans="{&quot;ai-tools&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;ai-business&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;local-ai&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;tutoring&quot;: &quot;→ ai-trends.md 다이제스트 (무료 강의·학습자료)&quot;, &quot;claude-code&quot;: &quot;→ learned-practices.md에 누적 (글로벌 CLAUDE.md 직접 수정 안 함)&quot;, &quot;prompt&quot;: &quot;→ ai-trends.md 다이제스트 (첫 surface 기준 분류)&quot;, &quot;project-docs-financial&quot;: &quot;→ ai-trends.md 다이제스트 (금융·투자)&quot;, &quot;project-docs-science&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성 (과학·연구)&quot;, &quot;project-docs-others&quot;: &quot;→ 프로젝트 설계 문서 반영 제안 생성&quot;, &quot;alphabot-strategy&quot;: &quot;→ alphabot bridge DB 자동 저장 (다음 분석 사이클에 반영)&quot;}" style="display:none">
-    <div class="surface-chips"><button type="button" class="surface-chip" data-surface="ai-tools" onclick="toggleSurfaceChip(this)">🛠 ai-tools</button><button type="button" class="surface-chip" data-surface="ai-business" onclick="toggleSurfaceChip(this)">💼 ai-business</button><button type="button" class="surface-chip" data-surface="local-ai" onclick="toggleSurfaceChip(this)">💻 local-ai</button><button type="button" class="surface-chip" data-surface="tutoring" onclick="toggleSurfaceChip(this)">🎓 tutoring</button><button type="button" class="surface-chip" data-surface="claude-code" onclick="toggleSurfaceChip(this)">🤖 claude-code</button><button type="button" class="surface-chip" data-surface="prompt" onclick="toggleSurfaceChip(this)">✍️ prompt</button><button type="button" class="surface-chip selected" data-surface="project-docs-financial" onclick="toggleSurfaceChip(this)">💰 project-docs-financial</button><button type="button" class="surface-chip" data-surface="project-docs-science" onclick="toggleSurfaceChip(this)">🔬 project-docs-science</button><button type="button" class="surface-chip" data-surface="project-docs-others" onclick="toggleSurfaceChip(this)">📄 project-docs-others</button><button type="button" class="surface-chip selected" data-surface="alphabot-strategy" onclick="toggleSurfaceChip(this)">📈 alphabot-strategy</button></div>
-    <div class="surface-actions">
-      <button type="button" class="btn-surface-save" onclick="saveSurfaces('feed_60eedecf5fde42669dcec1ff41b82ef0')">저장</button>
-      <button type="button" class="btn-surface-cancel" onclick="toggleSurfaceBox('feed_60eedecf5fde42669dcec1ff41b82ef0')">취소</button>
-    </div>
-  </div>
-  </div>
-  <div class="tags"><span class="tag">#터틀트레이딩</span> <span class="tag">#추세추종</span> <span class="tag">#ATR</span> <span class="tag">#포지션사이징</span> <span class="tag">#BTC</span> <span class="tag">#손절전략</span> <span class="tag">#피라미딩</span> <span class="tag">#인스타그램마케팅</span></div>
-  <div class="apply-plan">승인 시 alphabot 전략 문서(예: strategies/turtle_btc.md 또는 trader 레포 Turtle 관련 노트)에 ATR(20) 기반 20일 돌파/10일 청산 + 1%룰 포지션사이징 + 1/2N 피라미딩 규칙을 체크리스트로 정리해 기존 Turtle 전략 구현과 대조.</div>
-  
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_60eedecf5fde42669dcec1ff41b82ef0')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_60eedecf5fde42669dcec1ff41b82ef0','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_60eedecf5fde42669dcec1ff41b82ef0','debunk')">🚫 알고보니 별로</button>
-    
-      <button class="btn-secondary" onclick="decide('feed_60eedecf5fde42669dcec1ff41b82ef0','reference')">📚 참고용</button>
-      <button class="btn-secondary" onclick="decide('feed_60eedecf5fde42669dcec1ff41b82ef0','already')">✔ 이미 있음</button>
-
-    <button class="btn-comment" onclick="toggleCommentBox('feed_60eedecf5fde42669dcec1ff41b82ef0')">💬 의견</button>
-
-    <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_60eedecf5fde42669dcec1ff41b82ef0&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_60eedecf5fde42669dcec1ff41b82ef0" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
-    
-  </div>
-  
-  <div class="delegate-box" id="delegate-box-feed_60eedecf5fde42669dcec1ff41b82ef0" style="display:none">
-    <div class="delegate-reference">적용 안내: alphabot 전략 문서(예: strategies/turtle_btc.md 또는 trader 레포 Turtle 관련 노트)에 ATR(20) 기반 20일 돌파/10일 청산 + 1%룰 포지션사이징 + 1/2N 피라미딩 규칙을 체크리스트로 정리해 기존 Turtle 전략 구현과 대조.
-
-원문 요약: 인스타그램 계정이 터틀 트레이딩 규칙(20일 최고가 돌파 진입, 10일 최저가 청산, ATR 기반 N값 손절/포지션 사이징, 1/2N 간격 피라미딩)을 BTC 사례로 소개하며 자사 플랫폼(시그버드)에서 전략화할 수 있다고 홍보하는 게시물.</div>
-    <select id="delegate-project-feed_60eedecf5fde42669dcec1ff41b82ef0" class="delegate-select">
-      <option value="">프로젝트 선택...</option>
-      
-    </select>
-    <textarea id="delegate-text-feed_60eedecf5fde42669dcec1ff41b82ef0" class="comment-textarea"
-              placeholder="무엇을 해달라는 건지 직접 적어주세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-delegate-submit" onclick="submitDelegate('feed_60eedecf5fde42669dcec1ff41b82ef0')">위임</button>
-      <button class="btn-comment-cancel" onclick="toggleDelegateBox('feed_60eedecf5fde42669dcec1ff41b82ef0')">취소</button>
-    </div>
-  </div>
-  
-  <div class="comment-box" id="comment-box-feed_60eedecf5fde42669dcec1ff41b82ef0" style="display:none">
-    <textarea id="comment-text-feed_60eedecf5fde42669dcec1ff41b82ef0" class="comment-textarea"
-              placeholder="의견을 입력하세요..." rows="3"></textarea>
-    <div class="comment-actions">
-      <button class="btn-comment-submit" onclick="submitComment('feed_60eedecf5fde42669dcec1ff41b82ef0')">제출</button>
-      <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_60eedecf5fde42669dcec1ff41b82ef0')">취소</button>
-    </div>
-  </div>
 </div>
 
 <div class="card" id="card-feed_27eefdc74e464489acc955090085488f" data-id="feed_27eefdc74e464489acc955090085488f">
@@ -3602,6 +3345,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_27eefdc74e464489acc955090085488f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_c725473099494a62aded8fb8b774ad48" data-id="feed_c725473099494a62aded8fb8b774ad48">
@@ -3675,6 +3419,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c725473099494a62aded8fb8b774ad48')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_174802f3aa2348d695d2fbcb149e55a9" data-id="feed_174802f3aa2348d695d2fbcb149e55a9">
@@ -3748,6 +3493,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_174802f3aa2348d695d2fbcb149e55a9')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_1c9ccdce9e6b4eb3ab34ac14974dec6b" data-id="feed_1c9ccdce9e6b4eb3ab34ac14974dec6b">
@@ -3821,6 +3567,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1c9ccdce9e6b4eb3ab34ac14974dec6b')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_92fe3288afc34f07ad5fa9cc33d0d629" data-id="feed_92fe3288afc34f07ad5fa9cc33d0d629">
@@ -3894,6 +3641,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_92fe3288afc34f07ad5fa9cc33d0d629')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_0523474a50ed4f35b245d489830b4b3c" data-id="feed_0523474a50ed4f35b245d489830b4b3c">
@@ -3965,6 +3713,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0523474a50ed4f35b245d489830b4b3c')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_8538f8c0b5724a8b927c93a669a96891" data-id="feed_8538f8c0b5724a8b927c93a669a96891">
@@ -4040,6 +3789,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_8538f8c0b5724a8b927c93a669a96891')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_d423657be7a745d9a47d9f74360207a3" data-id="feed_d423657be7a745d9a47d9f74360207a3">
@@ -4115,6 +3865,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_d423657be7a745d9a47d9f74360207a3')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_83233276f1d146f98cbed51c4c3a158c" data-id="feed_83233276f1d146f98cbed51c4c3a158c">
@@ -4190,6 +3941,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_83233276f1d146f98cbed51c4c3a158c')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_6d4920541af640b0b53bad564563dc1a" data-id="feed_6d4920541af640b0b53bad564563dc1a">
@@ -4263,6 +4015,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6d4920541af640b0b53bad564563dc1a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_10b530eabd644f57aee5301945eca59f" data-id="feed_10b530eabd644f57aee5301945eca59f">
@@ -4336,6 +4089,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_10b530eabd644f57aee5301945eca59f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_7abf120d400741d198585057c4852e71" data-id="feed_7abf120d400741d198585057c4852e71">
@@ -4411,6 +4165,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7abf120d400741d198585057c4852e71')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_1043323898724593ad5b980e237946e6" data-id="feed_1043323898724593ad5b980e237946e6">
@@ -4486,6 +4241,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1043323898724593ad5b980e237946e6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_718eb31e78084a19b1d52b749d5c5889" data-id="feed_718eb31e78084a19b1d52b749d5c5889">
@@ -4561,6 +4317,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_718eb31e78084a19b1d52b749d5c5889')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f8819e9ecbfa4713abfc914b337f309f" data-id="feed_f8819e9ecbfa4713abfc914b337f309f">
@@ -4640,6 +4397,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_27eefdc74e464489a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f8819e9ecbfa4713abfc914b337f309f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_0ef5d5e40b1d4224a363d77c5c38baba" data-id="feed_0ef5d5e40b1d4224a363d77c5c38baba">
@@ -4732,6 +4490,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0ef5d5e40b1d4224a363d77c5c38baba')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_5d5b138bc3354f8289e02b077e8540d7" data-id="feed_5d5b138bc3354f8289e02b077e8540d7">
@@ -4811,6 +4570,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5d5b138bc3354f8289e02b077e8540d7')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f2a777ee27024e6589bc192735817421" data-id="feed_f2a777ee27024e6589bc192735817421">
@@ -4890,6 +4650,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f2a777ee27024e6589bc192735817421')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ca1ad752f047478488e0213b57eee287" data-id="feed_ca1ad752f047478488e0213b57eee287">
@@ -4969,6 +4730,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ca1ad752f047478488e0213b57eee287')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_b368cacba75b4a8aa831eeeece589f90" data-id="feed_b368cacba75b4a8aa831eeeece589f90">
@@ -5048,6 +4810,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b368cacba75b4a8aa831eeeece589f90')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f6dacaa068aa46889a3523f87977aa62" data-id="feed_f6dacaa068aa46889a3523f87977aa62">
@@ -5127,6 +4890,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f6dacaa068aa46889a3523f87977aa62')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_1406abfe6716416584cf3825be81bc27" data-id="feed_1406abfe6716416584cf3825be81bc27">
@@ -5208,6 +4972,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1406abfe6716416584cf3825be81bc27')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_a1865f5f894749daa209505d20169d46" data-id="feed_a1865f5f894749daa209505d20169d46">
@@ -5289,6 +5054,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a1865f5f894749daa209505d20169d46')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_c308e74322f440878c271486ad7ac217" data-id="feed_c308e74322f440878c271486ad7ac217">
@@ -5368,6 +5134,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c308e74322f440878c271486ad7ac217')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_803920fc4b354672a3f8ce58746511ae" data-id="feed_803920fc4b354672a3f8ce58746511ae">
@@ -5449,6 +5216,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_803920fc4b354672a3f8ce58746511ae')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_a219c991a2c04120a6453d2dd3fac2b9" data-id="feed_a219c991a2c04120a6453d2dd3fac2b9">
@@ -5528,6 +5296,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a219c991a2c04120a6453d2dd3fac2b9')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_3eff6cb012d0462baa700a474bc9ca0c" data-id="feed_3eff6cb012d0462baa700a474bc9ca0c">
@@ -5609,6 +5378,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_3eff6cb012d0462baa700a474bc9ca0c')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_6125b09cefb541159aa6bf56e439c8c4" data-id="feed_6125b09cefb541159aa6bf56e439c8c4">
@@ -5688,6 +5458,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6125b09cefb541159aa6bf56e439c8c4')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_099c2093e517478eabb1786c4d0f231a" data-id="feed_099c2093e517478eabb1786c4d0f231a">
@@ -5767,6 +5538,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_099c2093e517478eabb1786c4d0f231a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_5c922a95f7ab4d94ae8de754a47f689b" data-id="feed_5c922a95f7ab4d94ae8de754a47f689b">
@@ -5846,6 +5618,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5c922a95f7ab4d94ae8de754a47f689b')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ae32a483ceb84ebdbd376db47f0ffe26" data-id="feed_ae32a483ceb84ebdbd376db47f0ffe26">
@@ -5925,6 +5698,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ae32a483ceb84ebdbd376db47f0ffe26')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ee2e683a82a044a69052c66364ec5eec" data-id="feed_ee2e683a82a044a69052c66364ec5eec">
@@ -6004,6 +5778,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ee2e683a82a044a69052c66364ec5eec')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_67749d1eeced4863a6f511ecc2bd6f67" data-id="feed_67749d1eeced4863a6f511ecc2bd6f67">
@@ -6083,6 +5858,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_67749d1eeced4863a6f511ecc2bd6f67')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_cecf470dec2c4f488a6baa418810025d" data-id="feed_cecf470dec2c4f488a6baa418810025d">
@@ -6162,6 +5938,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_cecf470dec2c4f488a6baa418810025d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_de12f23a6b174b38b8bf97ab9bc8214c" data-id="feed_de12f23a6b174b38b8bf97ab9bc8214c">
@@ -6243,6 +6020,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_de12f23a6b174b38b8bf97ab9bc8214c')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_0fb75a35cf5f4fd484ffe19408e6957f" data-id="feed_0fb75a35cf5f4fd484ffe19408e6957f">
@@ -6322,6 +6100,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0fb75a35cf5f4fd484ffe19408e6957f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_1269cb5a67314fbcb9c5cc1312e8305f" data-id="feed_1269cb5a67314fbcb9c5cc1312e8305f">
@@ -6403,6 +6182,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1269cb5a67314fbcb9c5cc1312e8305f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_07a6e24ce25e4dd5bdf3ed1676222832" data-id="feed_07a6e24ce25e4dd5bdf3ed1676222832">
@@ -6484,6 +6264,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_07a6e24ce25e4dd5bdf3ed1676222832')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f3cba7e72b134041bf03c8eff57af3fa" data-id="feed_f3cba7e72b134041bf03c8eff57af3fa">
@@ -6563,6 +6344,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f3cba7e72b134041bf03c8eff57af3fa')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_0a84c9a631b1466a8f7324d3206cafb7" data-id="feed_0a84c9a631b1466a8f7324d3206cafb7">
@@ -6634,6 +6416,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0a84c9a631b1466a8f7324d3206cafb7')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_2efc0804164b4a218293bf263814b37a" data-id="feed_2efc0804164b4a218293bf263814b37a">
@@ -6713,6 +6496,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2efc0804164b4a218293bf263814b37a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e8cfeacef94648f4a2407c5d36addff6" data-id="feed_e8cfeacef94648f4a2407c5d36addff6">
@@ -6786,6 +6570,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e8cfeacef94648f4a2407c5d36addff6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_bb2239ff27a14f29b51fd9646745ed4d" data-id="feed_bb2239ff27a14f29b51fd9646745ed4d">
@@ -6859,6 +6644,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bb2239ff27a14f29b51fd9646745ed4d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_71b2ef0e7fdb49328a979f43f24081b0" data-id="feed_71b2ef0e7fdb49328a979f43f24081b0">
@@ -6930,6 +6716,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_71b2ef0e7fdb49328a979f43f24081b0')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_3132cd10b16c4d32baa3c829e14e62fe" data-id="feed_3132cd10b16c4d32baa3c829e14e62fe">
@@ -7001,6 +6788,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_3132cd10b16c4d32baa3c829e14e62fe')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_07edee45a70e49beb098a1583ca2a635" data-id="feed_07edee45a70e49beb098a1583ca2a635">
@@ -7074,6 +6862,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_07edee45a70e49beb098a1583ca2a635')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_82f84b81d6ee442a8f3006afc592a381" data-id="feed_82f84b81d6ee442a8f3006afc592a381">
@@ -7147,6 +6936,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_82f84b81d6ee442a8f3006afc592a381')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e4e87f86ca8841059e0ad0f534986627" data-id="feed_e4e87f86ca8841059e0ad0f534986627">
@@ -7220,6 +7010,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e4e87f86ca8841059e0ad0f534986627')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_8b0e533b59b4444593ab0773843467b3" data-id="feed_8b0e533b59b4444593ab0773843467b3">
@@ -7291,6 +7082,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_8b0e533b59b4444593ab0773843467b3')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_feddd68370f84e248f4e4ea2b602445d" data-id="feed_feddd68370f84e248f4e4ea2b602445d">
@@ -7364,6 +7156,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_feddd68370f84e248f4e4ea2b602445d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_c52c3c952e37461281b9fd2097d3a6d7" data-id="feed_c52c3c952e37461281b9fd2097d3a6d7">
@@ -7437,6 +7230,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c52c3c952e37461281b9fd2097d3a6d7')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ed44e842bedb46a1898b7784a7441723" data-id="feed_ed44e842bedb46a1898b7784a7441723">
@@ -7510,6 +7304,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ed44e842bedb46a1898b7784a7441723')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_b082ca3fe7394ddb9e2fceb9d6b4f6da" data-id="feed_b082ca3fe7394ddb9e2fceb9d6b4f6da">
@@ -7581,6 +7376,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b082ca3fe7394ddb9e2fceb9d6b4f6da')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_7996fead55e347d39c68a4273f32a09b" data-id="feed_7996fead55e347d39c68a4273f32a09b">
@@ -7652,6 +7448,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7996fead55e347d39c68a4273f32a09b')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_68f53d16b5d64443a90806efbe21796b" data-id="feed_68f53d16b5d64443a90806efbe21796b">
@@ -7723,6 +7520,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_68f53d16b5d64443a90806efbe21796b')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_46cceb7c5d3b44b1a13cdb8ffc1063d3" data-id="feed_46cceb7c5d3b44b1a13cdb8ffc1063d3">
@@ -7796,6 +7594,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_46cceb7c5d3b44b1a13cdb8ffc1063d3')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_2dfde400eccc465f8f7a7338e9954871" data-id="feed_2dfde400eccc465f8f7a7338e9954871">
@@ -7869,6 +7668,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2dfde400eccc465f8f7a7338e9954871')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_5ec0f268079d48ae845d2fcfaa081ca2" data-id="feed_5ec0f268079d48ae845d2fcfaa081ca2">
@@ -7940,6 +7740,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5ec0f268079d48ae845d2fcfaa081ca2')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_48f56116f564442f8f228ea10f09cd6f" data-id="feed_48f56116f564442f8f228ea10f09cd6f">
@@ -8011,6 +7812,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_48f56116f564442f8f228ea10f09cd6f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_a66c7c14f2ea4ae383624c2089d19d13" data-id="feed_a66c7c14f2ea4ae383624c2089d19d13">
@@ -8082,6 +7884,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a66c7c14f2ea4ae383624c2089d19d13')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f9afd8c71ae8489bb90e3e765b1e17a3" data-id="feed_f9afd8c71ae8489bb90e3e765b1e17a3">
@@ -8155,6 +7958,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f9afd8c71ae8489bb90e3e765b1e17a3')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_a2d8dc8c7f47430f80b0380725a6545a" data-id="feed_a2d8dc8c7f47430f80b0380725a6545a">
@@ -8226,6 +8030,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a2d8dc8c7f47430f80b0380725a6545a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_8089b3f21d4b4862a1dc0ebc26deec22" data-id="feed_8089b3f21d4b4862a1dc0ebc26deec22">
@@ -8297,6 +8102,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_8089b3f21d4b4862a1dc0ebc26deec22')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_81fafcbffaaf4177bdeed8b2f06c9a6a" data-id="feed_81fafcbffaaf4177bdeed8b2f06c9a6a">
@@ -8368,6 +8174,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_81fafcbffaaf4177bdeed8b2f06c9a6a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_182921b81894471eb93d82ed43164687" data-id="feed_182921b81894471eb93d82ed43164687">
@@ -8441,6 +8248,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_182921b81894471eb93d82ed43164687')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_042949e6084241c6ba471f9b99c4362a" data-id="feed_042949e6084241c6ba471f9b99c4362a">
@@ -8512,6 +8320,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_042949e6084241c6ba471f9b99c4362a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_d6a8b3123fc941c1989f510b2dba905a" data-id="feed_d6a8b3123fc941c1989f510b2dba905a">
@@ -8583,6 +8392,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_d6a8b3123fc941c1989f510b2dba905a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_357d4be2cc9742a5b74741a6781aadc2" data-id="feed_357d4be2cc9742a5b74741a6781aadc2">
@@ -8656,6 +8466,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_357d4be2cc9742a5b74741a6781aadc2')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_76c7383e576e41a29df4538889bcbbc4" data-id="feed_76c7383e576e41a29df4538889bcbbc4">
@@ -8727,6 +8538,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_76c7383e576e41a29df4538889bcbbc4')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e3a4dee74bd24a1c8fd778c21bd6f44a" data-id="feed_e3a4dee74bd24a1c8fd778c21bd6f44a">
@@ -8798,6 +8610,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e3a4dee74bd24a1c8fd778c21bd6f44a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_b926b48f32874b16ada35fde9fe9935d" data-id="feed_b926b48f32874b16ada35fde9fe9935d">
@@ -8869,6 +8682,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b926b48f32874b16ada35fde9fe9935d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ee03f11854114fc280015661e3a0c3cc" data-id="feed_ee03f11854114fc280015661e3a0c3cc">
@@ -8940,6 +8754,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ee03f11854114fc280015661e3a0c3cc')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_c47dbf3eed3e48539c81d7e577bc2420" data-id="feed_c47dbf3eed3e48539c81d7e577bc2420">
@@ -9013,6 +8828,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c47dbf3eed3e48539c81d7e577bc2420')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_a460423fe1004bc394381b3518431f30" data-id="feed_a460423fe1004bc394381b3518431f30">
@@ -9084,6 +8900,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a460423fe1004bc394381b3518431f30')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_670d398052614fea8e82550722ce9046" data-id="feed_670d398052614fea8e82550722ce9046">
@@ -9157,6 +8974,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_670d398052614fea8e82550722ce9046')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_333713a27ff14f4ea2ac21d9f6e565df" data-id="feed_333713a27ff14f4ea2ac21d9f6e565df">
@@ -9230,6 +9048,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_333713a27ff14f4ea2ac21d9f6e565df')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_6370af01082745c398974d2e4e01aed6" data-id="feed_6370af01082745c398974d2e4e01aed6">
@@ -9301,6 +9120,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6370af01082745c398974d2e4e01aed6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_763ebd35a18a4ae396c5c7581d08d9c2" data-id="feed_763ebd35a18a4ae396c5c7581d08d9c2">
@@ -9372,6 +9192,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_763ebd35a18a4ae396c5c7581d08d9c2')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_efe6c931673f4f50972182e93e454361" data-id="feed_efe6c931673f4f50972182e93e454361">
@@ -9445,6 +9266,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_efe6c931673f4f50972182e93e454361')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_bd855c3ee0db4f63b375b11c8942c75f" data-id="feed_bd855c3ee0db4f63b375b11c8942c75f">
@@ -9516,6 +9338,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bd855c3ee0db4f63b375b11c8942c75f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_83f626a092ce461dbebaec02a6fca388" data-id="feed_83f626a092ce461dbebaec02a6fca388">
@@ -9587,6 +9410,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_83f626a092ce461dbebaec02a6fca388')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_95cf2afaf3fb4b469c2057c035cccff2" data-id="feed_95cf2afaf3fb4b469c2057c035cccff2">
@@ -9658,6 +9482,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_95cf2afaf3fb4b469c2057c035cccff2')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_21613ba546654227ae4eff8b38ffd091" data-id="feed_21613ba546654227ae4eff8b38ffd091">
@@ -9729,6 +9554,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_21613ba546654227ae4eff8b38ffd091')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_721372183bc94c2fa4682c4d03929d2c" data-id="feed_721372183bc94c2fa4682c4d03929d2c">
@@ -9800,6 +9626,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_721372183bc94c2fa4682c4d03929d2c')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e53a6fd4050e4b0180035bad2b93744c" data-id="feed_e53a6fd4050e4b0180035bad2b93744c">
@@ -9871,6 +9698,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e53a6fd4050e4b0180035bad2b93744c')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_32fa2f887cd74ab8bcbf6654a1cfdae7" data-id="feed_32fa2f887cd74ab8bcbf6654a1cfdae7">
@@ -9942,6 +9770,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_32fa2f887cd74ab8bcbf6654a1cfdae7')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_54f13fc595cc4032a2d519522d60bb9d" data-id="feed_54f13fc595cc4032a2d519522d60bb9d">
@@ -10015,6 +9844,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_54f13fc595cc4032a2d519522d60bb9d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_654b660d54f34b2d8f9ace9a582b962a" data-id="feed_654b660d54f34b2d8f9ace9a582b962a">
@@ -10086,6 +9916,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_654b660d54f34b2d8f9ace9a582b962a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_6725e1dec889489398444778a7743298" data-id="feed_6725e1dec889489398444778a7743298">
@@ -10157,6 +9988,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6725e1dec889489398444778a7743298')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e401b371e7594855b440f0d34988df74" data-id="feed_e401b371e7594855b440f0d34988df74">
@@ -10230,6 +10062,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e401b371e7594855b440f0d34988df74')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_bebcec4bcf29422593a55b8fe550bdbd" data-id="feed_bebcec4bcf29422593a55b8fe550bdbd">
@@ -10301,6 +10134,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bebcec4bcf29422593a55b8fe550bdbd')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_45699b05b1d84516b15767789a23d9db" data-id="feed_45699b05b1d84516b15767789a23d9db">
@@ -10374,6 +10208,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_45699b05b1d84516b15767789a23d9db')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f1f39439516946cdba467f7c0e96ff07" data-id="feed_f1f39439516946cdba467f7c0e96ff07">
@@ -10447,6 +10282,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f1f39439516946cdba467f7c0e96ff07')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e80d787a319949bdb88982d6479c0eac" data-id="feed_e80d787a319949bdb88982d6479c0eac">
@@ -10518,6 +10354,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e80d787a319949bdb88982d6479c0eac')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_7f0fe8d184f84f78a729c03eebf23cd9" data-id="feed_7f0fe8d184f84f78a729c03eebf23cd9">
@@ -10589,6 +10426,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7f0fe8d184f84f78a729c03eebf23cd9')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_d8e13e07e1ec453cabddff510c7ce6ff" data-id="feed_d8e13e07e1ec453cabddff510c7ce6ff">
@@ -10660,6 +10498,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_d8e13e07e1ec453cabddff510c7ce6ff')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_2021c06296da475f87ccd9f142a02591" data-id="feed_2021c06296da475f87ccd9f142a02591">
@@ -10731,6 +10570,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2021c06296da475f87ccd9f142a02591')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_a116fc16be0c40609706f1e1d0f8488a" data-id="feed_a116fc16be0c40609706f1e1d0f8488a">
@@ -10804,6 +10644,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_a116fc16be0c40609706f1e1d0f8488a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ee9d28196a7c472f9f1c6f7ea6067213" data-id="feed_ee9d28196a7c472f9f1c6f7ea6067213">
@@ -10877,6 +10718,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ee9d28196a7c472f9f1c6f7ea6067213')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f57c7d6f47c44dd5b56513a248eb6029" data-id="feed_f57c7d6f47c44dd5b56513a248eb6029">
@@ -10950,6 +10792,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f57c7d6f47c44dd5b56513a248eb6029')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_4dbbef952bed4828b7b22153c302e9f3" data-id="feed_4dbbef952bed4828b7b22153c302e9f3">
@@ -11021,6 +10864,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_4dbbef952bed4828b7b22153c302e9f3')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_2b605231d81f4c6cb862a6476a9d3307" data-id="feed_2b605231d81f4c6cb862a6476a9d3307">
@@ -11094,6 +10938,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_2b605231d81f4c6cb862a6476a9d3307')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_bde5941f919642c6ab9bd846de8b5f59" data-id="feed_bde5941f919642c6ab9bd846de8b5f59">
@@ -11165,6 +11010,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bde5941f919642c6ab9bd846de8b5f59')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e556161034b746bea8b6e1971d2fbc48" data-id="feed_e556161034b746bea8b6e1971d2fbc48">
@@ -11236,6 +11082,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e556161034b746bea8b6e1971d2fbc48')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_340b12bbd6b845d7b8ecfa5edcf82f7a" data-id="feed_340b12bbd6b845d7b8ecfa5edcf82f7a">
@@ -11307,6 +11154,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_340b12bbd6b845d7b8ecfa5edcf82f7a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_4b2b1b28f59f45b888036cccda703ef0" data-id="feed_4b2b1b28f59f45b888036cccda703ef0">
@@ -11380,6 +11228,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_4b2b1b28f59f45b888036cccda703ef0')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_758e6552177545ba81d1a4c2af881503" data-id="feed_758e6552177545ba81d1a4c2af881503">
@@ -11451,6 +11300,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_758e6552177545ba81d1a4c2af881503')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_22f82bf2dd084bdeafe1fc6ff6fc42d4" data-id="feed_22f82bf2dd084bdeafe1fc6ff6fc42d4">
@@ -11522,6 +11372,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_22f82bf2dd084bdeafe1fc6ff6fc42d4')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_457148e2b816487991ed7ffcafe5750d" data-id="feed_457148e2b816487991ed7ffcafe5750d">
@@ -11593,6 +11444,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_457148e2b816487991ed7ffcafe5750d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_bcab50a55ce84847b3c8afc2397e1aad" data-id="feed_bcab50a55ce84847b3c8afc2397e1aad">
@@ -11658,6 +11510,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bcab50a55ce84847b3c8afc2397e1aad')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_319cf31751f44dc58021d984c69f69ed" data-id="feed_319cf31751f44dc58021d984c69f69ed">
@@ -11729,6 +11582,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_319cf31751f44dc58021d984c69f69ed')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_b96252568a2c4e57a4b533e201d86d95" data-id="feed_b96252568a2c4e57a4b533e201d86d95">
@@ -11800,6 +11654,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b96252568a2c4e57a4b533e201d86d95')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_71990f169a684ea7abecfc3995f50847" data-id="feed_71990f169a684ea7abecfc3995f50847">
@@ -11871,6 +11726,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_71990f169a684ea7abecfc3995f50847')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e451ae6c4fb34e989920a0a88aafedf5" data-id="feed_e451ae6c4fb34e989920a0a88aafedf5">
@@ -11936,6 +11792,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e451ae6c4fb34e989920a0a88aafedf5')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f120c8906d21427d922e69f4a0aacc1e" data-id="feed_f120c8906d21427d922e69f4a0aacc1e">
@@ -12009,6 +11866,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f120c8906d21427d922e69f4a0aacc1e')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_73c895c4df3d44a6ac28fdd0777c6f1a" data-id="feed_73c895c4df3d44a6ac28fdd0777c6f1a">
@@ -12074,6 +11932,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_73c895c4df3d44a6ac28fdd0777c6f1a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_ba9992cccc2141c691a189257921f6c5" data-id="feed_ba9992cccc2141c691a189257921f6c5">
@@ -12139,6 +11998,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_ba9992cccc2141c691a189257921f6c5')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_82ddd2cb4568446aa5764d9a2ff0f180" data-id="feed_82ddd2cb4568446aa5764d9a2ff0f180">
@@ -12204,6 +12064,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_82ddd2cb4568446aa5764d9a2ff0f180')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_7ecb2f253b9749c487fe16a805769bb0" data-id="feed_7ecb2f253b9749c487fe16a805769bb0">
@@ -12269,6 +12130,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_7ecb2f253b9749c487fe16a805769bb0')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_5587876345e4473e8995d9c865fbb96d" data-id="feed_5587876345e4473e8995d9c865fbb96d">
@@ -12359,6 +12221,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5587876345e4473e8995d9c865fbb96d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_5b3d133f5e8a4899bc1459235d0678f7" data-id="feed_5b3d133f5e8a4899bc1459235d0678f7">
@@ -12424,6 +12287,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5b3d133f5e8a4899bc1459235d0678f7')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f06051e0b9464fbf97c8dd76db66d68f" data-id="feed_f06051e0b9464fbf97c8dd76db66d68f">
@@ -12489,6 +12353,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f06051e0b9464fbf97c8dd76db66d68f')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f1fd8c8ff37141e9880e910b73ac15ee" data-id="feed_f1fd8c8ff37141e9880e910b73ac15ee">
@@ -12554,6 +12419,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f1fd8c8ff37141e9880e910b73ac15ee')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_0c412c3f35c045aeab2ba39a57f666a4" data-id="feed_0c412c3f35c045aeab2ba39a57f666a4">
@@ -12619,6 +12485,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0c412c3f35c045aeab2ba39a57f666a4')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_1bcd9a116ed14a049cf96c460ac63ddd" data-id="feed_1bcd9a116ed14a049cf96c460ac63ddd">
@@ -12684,6 +12551,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_1bcd9a116ed14a049cf96c460ac63ddd')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_fec8ad1e265347fbaf15649c1c0f41d2" data-id="feed_fec8ad1e265347fbaf15649c1c0f41d2">
@@ -12749,6 +12617,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fec8ad1e265347fbaf15649c1c0f41d2')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_fa0657321ef3454db4df1f4a69f61ef4" data-id="feed_fa0657321ef3454db4df1f4a69f61ef4">
@@ -12814,6 +12683,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fa0657321ef3454db4df1f4a69f61ef4')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_9a75bd2606c045ffbaf4156decf71339" data-id="feed_9a75bd2606c045ffbaf4156decf71339">
@@ -12886,6 +12756,7 @@ cd ~/dev/ai-feed &amp;&amp; .venv/bin/ai-feed board-local feed_0ef5d5e40b1d4224a
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_9a75bd2606c045ffbaf4156decf71339')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_22ca799ce6464c78ac54747340e7886a" data-id="feed_22ca799ce6464c78ac54747340e7886a">
@@ -12957,6 +12828,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_22ca799ce6464c78ac54747340e7886a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_e5a434bbb51d4642955b79ce227ba146" data-id="feed_e5a434bbb51d4642955b79ce227ba146">
@@ -13028,6 +12900,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_e5a434bbb51d4642955b79ce227ba146')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_5adce2c2ff5845e5897ae7bc540c7aa6" data-id="feed_5adce2c2ff5845e5897ae7bc540c7aa6">
@@ -13093,6 +12966,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_5adce2c2ff5845e5897ae7bc540c7aa6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_b7fbba95aa644f58b07abe9c834b3a68" data-id="feed_b7fbba95aa644f58b07abe9c834b3a68">
@@ -13166,6 +13040,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_b7fbba95aa644f58b07abe9c834b3a68')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_c8832a552fdc4ab38a121b595e76d63a" data-id="feed_c8832a552fdc4ab38a121b595e76d63a">
@@ -13244,6 +13119,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_c8832a552fdc4ab38a121b595e76d63a')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_0db1b15d8a914069b93b251fbc0ddc11" data-id="feed_0db1b15d8a914069b93b251fbc0ddc11">
@@ -13328,6 +13204,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_0db1b15d8a914069b93b251fbc0ddc11')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_34f5063145924ba2a7b25dc0165c9eb6" data-id="feed_34f5063145924ba2a7b25dc0165c9eb6">
@@ -13401,6 +13278,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_34f5063145924ba2a7b25dc0165c9eb6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_fc0ddf42843945449e909843d9c5b92d" data-id="feed_fc0ddf42843945449e909843d9c5b92d">
@@ -13474,6 +13352,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_fc0ddf42843945449e909843d9c5b92d')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_234e0426e1654ec6ae3714b5a87b6941" data-id="feed_234e0426e1654ec6ae3714b5a87b6941">
@@ -13545,6 +13424,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_234e0426e1654ec6ae3714b5a87b6941')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_9f76dcdc82314fea9584c9cbc65b0436" data-id="feed_9f76dcdc82314fea9584c9cbc65b0436">
@@ -13618,6 +13498,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_9f76dcdc82314fea9584c9cbc65b0436')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_27e80adff4d74a12adf365094f7baabf" data-id="feed_27e80adff4d74a12adf365094f7baabf">
@@ -13691,6 +13572,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_27e80adff4d74a12adf365094f7baabf')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_9f21f76b393540b3adf13607f6f455db" data-id="feed_9f21f76b393540b3adf13607f6f455db">
@@ -13764,6 +13646,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_9f21f76b393540b3adf13607f6f455db')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_bd0d34b8a97a4edab319781e44e04cd5" data-id="feed_bd0d34b8a97a4edab319781e44e04cd5">
@@ -13837,6 +13720,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_bd0d34b8a97a4edab319781e44e04cd5')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_25dbb6d139594137997cde6d89bdbe27" data-id="feed_25dbb6d139594137997cde6d89bdbe27">
@@ -13908,6 +13792,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_25dbb6d139594137997cde6d89bdbe27')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_6028001b5c44415ab8d4292796f5e2f6" data-id="feed_6028001b5c44415ab8d4292796f5e2f6">
@@ -13973,6 +13858,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_6028001b5c44415ab8d4292796f5e2f6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_8ecca1d7664e494db156b49ead7db9c5" data-id="feed_8ecca1d7664e494db156b49ead7db9c5">
@@ -14046,6 +13932,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_8ecca1d7664e494db156b49ead7db9c5')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_3f7499d0c75c45e4ba337741e2698bc6" data-id="feed_3f7499d0c75c45e4ba337741e2698bc6">
@@ -14119,6 +14006,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_3f7499d0c75c45e4ba337741e2698bc6')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_abc33c12724946db94b7af6d91a99c40" data-id="feed_abc33c12724946db94b7af6d91a99c40">
@@ -14184,6 +14072,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_abc33c12724946db94b7af6d91a99c40')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_3f8709ee060141eb80bd854448d53aaf" data-id="feed_3f8709ee060141eb80bd854448d53aaf">
@@ -14251,6 +14140,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_3f8709ee060141eb80bd854448d53aaf')">취소</button>
     </div>
   </div>
+  
 </div>
 
 <div class="card" id="card-feed_f5f7f285198b4fc384b02f20c95f5e61" data-id="feed_f5f7f285198b4fc384b02f20c95f5e61">
@@ -14316,6 +14206,7 @@ API call failed after 3 retries: HTTP 429: The usage limit has been reached
       <button class="btn-comment-cancel" onclick="toggleCommentBox('feed_f5f7f285198b4fc384b02f20c95f5e61')">취소</button>
     </div>
   </div>
+  
 </div>
 </div>
 <script>
