@@ -2840,17 +2840,26 @@
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;🎓 무료 강의·학습자료&#x27; 섹션에 반영.
 키워드 규칙(무료 + 강의)으로 붙는 라벨이며, 잘못 붙었으면 승인 전에 거절한다.</div>
   
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_e148243e4dfa402fbde0a95c7ed01926')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_e148243e4dfa402fbde0a95c7ed01926','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_e148243e4dfa402fbde0a95c7ed01926','debunk')">🚫 알고보니 별로</button>
-    
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-07T20:42</div>
+    <div class="response-body">이 피드백은 PM 태스크 25ba33da로 이미 등록됐습니다.
+
+현재 AI 분석이 1분봉 스켈핑 전략을 정리하지 않은 이유는, 캡션에 기술된 내용만으로는 구체적 전략이 드러나지 않기 때문입니다. 캡션은 강의의 존재와 키워드(차트분석, 추세매매, 타점)만 나열하고 있고, 실제 전략의 세부사항은 유튜브 영상 내부에만 있습니다. 
+
+AI 분석이 YouTube 영상 본문까지 자동으로 추출·정리하도록 개선되거나, 수동으로 영상을 검토해서 전략을 추가하는 게 필요한 상황입니다. 어느 쪽이 진행될지는 태스크의 우선순위와 리소스 계획에 달렸습니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_e148243e4dfa402fbde0a95c7ed01926')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_e148243e4dfa402fbde0a95c7ed01926','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_e148243e4dfa402fbde0a95c7ed01926','debunk')">❌ 터무니없음</button>
+      
       <button class="btn-secondary" onclick="decide('feed_e148243e4dfa402fbde0a95c7ed01926','reference')">📚 참고용</button>
       <button class="btn-secondary" onclick="decide('feed_e148243e4dfa402fbde0a95c7ed01926','already')">✔ 이미 있음</button>
 
-    <button class="btn-comment" onclick="toggleCommentBox('feed_e148243e4dfa402fbde0a95c7ed01926')">💬 의견</button>
-
+      <button class="btn-comment" onclick="toggleCommentBox('feed_e148243e4dfa402fbde0a95c7ed01926')">💬 재피드백</button>
+    </div>
+  </div>
+  <div class="actions">
+    
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_e148243e4dfa402fbde0a95c7ed01926&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_e148243e4dfa402fbde0a95c7ed01926" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DanD7S6huLs/" target="_blank" rel="noopener">🔗 원문</a>
   </div>
