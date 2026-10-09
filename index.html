@@ -2742,17 +2742,31 @@
   <div class="apply-plan">승인 시 승인 시 → `~/agent_hub/hub/ai-trends.md` 다이제스트의 &#x27;🛠 AI 도구·모델 동향&#x27; 섹션에 반영.
 섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
   
-  <div class="actions">
-    
-    <button class="btn-approve" onclick="toggleDelegateBox('feed_8c77d134540e4dfabf78f05bd98d5b91')">✅ 승인</button>
-    <button class="btn-reject" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','skip')">❌ 스킵</button>
-    <button class="btn-debunk" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','debunk')">🚫 알고보니 별로</button>
-    
+  <div class="claude-response">
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-09T17:36</div>
+    <div class="response-body">이 의견은 이미 PM 태스크 32d625b2로 등록되었습니다.
+
+**기술적으로는 가능합니다.** Contraction Hierarchies는 Sanders &amp; Schultes의 공개 논문(2006)에 나온 알고리즘이라 구현 가능하고, 실제로 여러 오픈소스가 존재합니다. 핵심은:
+
+1. **그래프 전처리**: 노드를 중요도순으로 정렬 → 중요한 노드부터 축약 → 축약할 때 지름길 간선 자동 추가
+2. **쿼리**: 양방향 Dijkstra로 축약되지 않은 노드만 탐색
+
+구현 난도는 중간~높음입니다 (우선순위 휴리스틱 설계, 수치 안정성, 메모리 효율이 까다로움). 다만 학습용·프로토타입이라면 단순 구현부터 시작할 수 있고, 나중에 성능이 필요하면 기존 라이브러리를 평가하는 것도 합리적입니다.
+
+태스크로 등록되어 있으니 진행 시 거기서 추적하면 됩니다.</div>
+    <div class="response-actions">
+      <button class="btn-approve" onclick="toggleDelegateBox('feed_8c77d134540e4dfabf78f05bd98d5b91')">✅ 승인</button>
+      <button class="btn-reject" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','skip')">⏭ 스킵</button>
+      <button class="btn-debunk" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','debunk')">❌ 터무니없음</button>
+      
       <button class="btn-secondary" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','reference')">📚 참고용</button>
       <button class="btn-secondary" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','already')">✔ 이미 있음</button>
 
-    <button class="btn-comment" onclick="toggleCommentBox('feed_8c77d134540e4dfabf78f05bd98d5b91')">💬 의견</button>
-
+      <button class="btn-comment" onclick="toggleCommentBox('feed_8c77d134540e4dfabf78f05bd98d5b91')">💬 재피드백</button>
+    </div>
+  </div>
+  <div class="actions">
+    
     <a class="btn-ocr" href="https://github.com/wsungAhn/ai-feed/issues/new?title=ocr%3Afeed_8c77d134540e4dfabf78f05bd98d5b91&labels=ai-feed-action&body=OCR+%EC%9A%94%EC%B2%AD%3A+feed_8c77d134540e4dfabf78f05bd98d5b91" target="_blank" onclick="lockOcrButtons(); return true;">🔍 OCR 요구</a>
     <a href="https://www.instagram.com/reel/DeN8186O-ae/?cplk=NjZiM2M3MzIxNA==" target="_blank" rel="noopener">🔗 원문</a>
   </div>
