@@ -2743,17 +2743,14 @@
 섹션은 target_surfaces의 첫 항목 기준이라, 이 라벨이 두 번째 이후면 다른 섹션에 실린다.</div>
   
   <div class="claude-response">
-    <div class="response-meta">🤖 Claude 응답 · 2026-10-09T17:36</div>
-    <div class="response-body">이 의견은 이미 PM 태스크 32d625b2로 등록되었습니다.
+    <div class="response-meta">🤖 Claude 응답 · 2026-10-09T17:56</div>
+    <div class="response-body">교통정보는 **동적(시간/위치 변함) 가중치**라서, CH의 정적 전처리와 맞지 않습니다. 해결책은 세 가지:
 
-**기술적으로는 가능합니다.** Contraction Hierarchies는 Sanders &amp; Schultes의 공개 논문(2006)에 나온 알고리즘이라 구현 가능하고, 실제로 여러 오픈소스가 존재합니다. 핵심은:
+1. **시간대별 CH 여러 개** — 오전/오후 러시 등 고정된 패턴을 미리 전처리 (빠르지만 경직됨)
+2. **Hybrid: CH로 후보 뽑기 + 현재 교통정보로 재평가** — 축약 경로들을 조회 시점의 교통정보로 다시 계산 (균형 잡힘)
+3. **Time-Dependent CH** — 시간을 매개변수로 포함해서 전처리 (복잡하고 최신)
 
-1. **그래프 전처리**: 노드를 중요도순으로 정렬 → 중요한 노드부터 축약 → 축약할 때 지름길 간선 자동 추가
-2. **쿼리**: 양방향 Dijkstra로 축약되지 않은 노드만 탐색
-
-구현 난도는 중간~높음입니다 (우선순위 휴리스틱 설계, 수치 안정성, 메모리 효율이 까다로움). 다만 학습용·프로토타입이라면 단순 구현부터 시작할 수 있고, 나중에 성능이 필요하면 기존 라이브러리를 평가하는 것도 합리적입니다.
-
-태스크로 등록되어 있으니 진행 시 거기서 추적하면 됩니다.</div>
+**다음 단계는:** 현재 지도 데이터에서 교통정보(택시·네비게이션 로그, API)에 접근할 수 있는지 먼저 확인하고, 시간대별 여행시간 분포를 수집한 뒤, Hybrid 방식부터 프로토타입해보는 게 합리적입니다.</div>
     <div class="response-actions">
       <button class="btn-approve" onclick="toggleDelegateBox('feed_8c77d134540e4dfabf78f05bd98d5b91')">✅ 승인</button>
       <button class="btn-reject" onclick="decide('feed_8c77d134540e4dfabf78f05bd98d5b91','skip')">⏭ 스킵</button>
